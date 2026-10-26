@@ -1,0 +1,15 @@
+{
+  "filas_train": 5716,
+  "potencia_media_mw": 453.92619839048285,
+  "correlacion_temperatura_potencia": -0.9484340122688852,
+  "criterios_correlacion": "|r| >=0.7 fuerte; >=0.4 moderada; resto débil; criterio descriptivo",
+  "vif": {
+    "AT": 6.0684868253625295,
+    "V": 3.9815469773093035,
+    "AP": 1.4459574732868845,
+    "RH": 1.7415552275178419
+  },
+  "vif_maximo": 6.0684868253625295,
+  "vif_variable_maxima": "AT",
+  "multicolinealidad": "moderada"
+}

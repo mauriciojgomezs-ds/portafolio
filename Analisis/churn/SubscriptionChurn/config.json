@@ -1,0 +1,19 @@
+{
+  "title": "Churn de suscripciones",
+  "source_zip": "data/raw/Customer Churn Dataset.zip",
+  "members": {
+    "train": "customer_churn_dataset-training-master.csv",
+    "test": "customer_churn_dataset-testing-master.csv"
+  },
+  "target": "Churn",
+  "id": "CustomerID",
+  "exclude": [
+    "CustomerID"
+  ],
+  "split": "provided",
+  "source_base": "project",
+  "decision_costs": {
+    "false_negative": 5.0,
+    "false_positive": 1.0
+  }
+}

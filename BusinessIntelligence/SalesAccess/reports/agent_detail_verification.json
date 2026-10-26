@@ -1,0 +1,17 @@
+{
+  "agent": "agente_39",
+  "name": "Mariana Cáceres",
+  "manager_contact_card": "passed",
+  "individual_sales_summary": "passed",
+  "summary": {
+    "importe": 1299713006.0,
+    "margen": 381039620.0,
+    "operaciones": 1150.0,
+    "clientes": 15.0,
+    "unidades": 5733.0,
+    "importe_por_operacion": 1130185.2226086957
+  },
+  "validation_date": "2026-10-07",
+  "streamlit_health": "ok",
+  "tests_passed": 52
+}

@@ -1,0 +1,26 @@
+{
+  "criterio": "ndcg_validacion",
+  "vecinos_elegidos": 30,
+  "candidatos": [
+    {
+      "vecinos": 10,
+      "usuarios_con_objetivo_positivo": 482,
+      "objetivos_sin_historial_item": 10,
+      "hit_rate_at_k": 0.1016597510373444,
+      "ndcg_at_k": 0.05035894461469735,
+      "recomendaciones_promedio": 10.0,
+      "cobertura_items_train": 0.04303384298230545,
+      "k": 10
+    },
+    {
+      "vecinos": 30,
+      "usuarios_con_objetivo_positivo": 482,
+      "objetivos_sin_historial_item": 10,
+      "hit_rate_at_k": 0.11825726141078838,
+      "ndcg_at_k": 0.05952374348645455,
+      "recomendaciones_promedio": 10.0,
+      "cobertura_items_train": 0.026026455935406288,
+      "k": 10
+    }
+  ]
+}

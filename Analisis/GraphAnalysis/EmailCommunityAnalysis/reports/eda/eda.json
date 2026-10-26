@@ -1,0 +1,8 @@
+{
+  "aristas_no_dirigidas": 16064,
+  "componentes": 20,
+  "componente_mayor": 986,
+  "aislados": 19,
+  "densidad": 0.031840796019900496,
+  "reciprocidad_dirigida": 0.7112198644149385
+}

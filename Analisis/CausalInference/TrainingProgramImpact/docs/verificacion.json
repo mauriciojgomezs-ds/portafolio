@@ -1,0 +1,10 @@
+{
+  "proyecto": "Analisis/CausalInference/TrainingProgramImpact",
+  "notebooks_validados_y_ejecutados": 7,
+  "celdas_codigo_ejecutadas": 21,
+  "maestro": "completado",
+  "contextos_bootstrap": 5,
+  "copia_renombrada": "back/.local/independencia_analisis_nuevos/Copia_TrainingProgramImpact",
+  "etapas_recalculadas_en_copia": 5,
+  "tests_aprobados_en_copia": 6
+}

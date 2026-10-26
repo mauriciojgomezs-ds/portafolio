@@ -1,0 +1,313 @@
+{
+  "proyecto": "Segmentación de clientes con RFM",
+  "generado_utc": "2026-10-07T16:39:15.525957+00:00",
+  "estado": "actualizado_por_etapas",
+  "estado_maestro": "completado",
+  "etapas_sin_reporte": [],
+  "notebooks": [
+    {
+      "notebook": "01_preparacion_datos.ipynb",
+      "celdas_con_salida": 0,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": null,
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "02_analisis_exploratorio.ipynb",
+      "celdas_con_salida": 2,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T14:26:10.057670Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "03_baseline.ipynb",
+      "celdas_con_salida": 0,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": null,
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "04_modelado.ipynb",
+      "celdas_con_salida": 0,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": null,
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "05_evaluacion.ipynb",
+      "celdas_con_salida": 2,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T14:26:13.464112Z",
+      "errores_guardados": 0
+    }
+  ],
+  "resultados": {
+    "preparacion": {
+      "fuente": "OnlineRetailUCI.zip",
+      "semilla": 42,
+      "sha256": "f5385cbb54bbebf7196389109c6b0621faab0c304e3702548165e71c84aede8b",
+      "filas_originales": 541909,
+      "politica_ventas": "Compras positivas; excluye cancelaciones, devoluciones, precios no positivos y duplicados exactos. No mide ingresos netos.",
+      "fecha_referencia": "2011-12-10T00:00:00",
+      "filas_preparadas": 4338
+    },
+    "eda": {
+      "poblacion": "catalogo",
+      "filas": 4338,
+      "columnas": 5,
+      "nulos": {
+        "CustomerID": 0,
+        "last_date": 0,
+        "frequency": 0,
+        "monetary": 0,
+        "recency": 0
+      },
+      "resumen_numerico": {
+        "frequency": {
+          "count": 4338.0,
+          "mean": 4.272,
+          "std": 7.698,
+          "min": 1.0,
+          "25%": 1.0,
+          "50%": 2.0,
+          "75%": 5.0,
+          "max": 209.0
+        },
+        "monetary": {
+          "count": 4338.0,
+          "mean": 2048.6881,
+          "std": 8985.2302,
+          "min": 3.75,
+          "25%": 306.4825,
+          "50%": 668.57,
+          "75%": 1660.5975,
+          "max": 280206.02
+        },
+        "recency": {
+          "count": 4338.0,
+          "mean": 92.5146,
+          "std": 100.0133,
+          "min": 0.4653,
+          "25%": 17.5377,
+          "50%": 50.5552,
+          "75%": 142.1958,
+          "max": 373.5882
+        }
+      }
+    },
+    "baseline": {
+      "regla": "Tres grupos por terciles de importe (desempates por orden de cliente).",
+      "silhouette": 0.1883222422228227
+    },
+    "modelado": {
+      "criterio": "silhouette_descriptiva",
+      "k_elegido": 4,
+      "candidatos": [
+        {
+          "k": 3,
+          "silhouette": 0.3284976594946409,
+          "inercia": 4870.4124287635495
+        },
+        {
+          "k": 4,
+          "silhouette": 0.3329247495263435,
+          "inercia": 3941.8004883581875
+        },
+        {
+          "k": 5,
+          "silhouette": 0.3204418987375077,
+          "inercia": 3300.075472708938
+        }
+      ]
+    },
+    "evaluacion": {
+      "k": 4,
+      "ari_entre_semillas": 0.998759488422091,
+      "varianza_pca_2d": 0.9386629886450324,
+      "perfiles": [
+        {
+          "cluster": 0,
+          "recency": 17.7303,
+          "frequency": 2.19,
+          "monetary": 556.8859,
+          "registros": 837
+        },
+        {
+          "cluster": 1,
+          "recency": 181.4929,
+          "frequency": 1.3175,
+          "monetary": 340.7382,
+          "registros": 1622
+        },
+        {
+          "cluster": 2,
+          "recency": 71.5331,
+          "frequency": 4.0814,
+          "monetary": 1801.8709,
+          "registros": 1167
+        },
+        {
+          "cluster": 3,
+          "recency": 12.117,
+          "frequency": 13.7626,
+          "monetary": 8097.8016,
+          "registros": 712
+        }
+      ],
+      "baseline": 0.1883222422228227
+    }
+  },
+  "fuentes": [
+    {
+      "ruta": "reports/preparacion/preparacion.json",
+      "sha256": "f7f57af714ab91b20460c8af8bc9532737adabe3203ad3e7edfd90028892906f",
+      "modificacion_utc": "2026-10-07T13:31:40.293531+00:00"
+    },
+    {
+      "ruta": "reports/preparacion/preparacion.md",
+      "sha256": "b1151ec571f39c01a4b701707a500dc159fecc5d2109f5d0504f262890155aef",
+      "modificacion_utc": "2026-10-07T13:31:40.310333+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.json",
+      "sha256": "c2d6b875691791f171f735e258611cec7de1b705eba7b4ece098b20ae42a420b",
+      "modificacion_utc": "2026-10-07T14:26:10.052723+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.md",
+      "sha256": "584a6fac37dffbce68ff972e5d2d9e3bf86b3022b2e0ce3383bfa251e23e653a",
+      "modificacion_utc": "2026-10-07T14:26:10.052723+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.png",
+      "sha256": "36d8b79a921db55c3ef1e300ddb74ac34601a5f1611df9453f3a4c7f6a8caae6",
+      "modificacion_utc": "2026-10-07T14:26:10.052723+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.json",
+      "sha256": "84981f6e7f296ae911b5d5b25665691a18450612fd7212017f69799e404e066f",
+      "modificacion_utc": "2026-10-07T13:32:07.395036+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.md",
+      "sha256": "dc5b4d5edf09b226386cc5bab70dd319275b04398279e40318f9d5d3239b8db7",
+      "modificacion_utc": "2026-10-07T13:32:07.418025+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.json",
+      "sha256": "c37e1ce8fb9bb835b95eb4bcb740c1e970fcb26d6446b604308bf561c306f75f",
+      "modificacion_utc": "2026-10-07T13:32:10.949956+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.md",
+      "sha256": "4fcfcf428a22994d363d76fa183ec9b5993fc534ad8b12d3e92eeb8ef99e3c4c",
+      "modificacion_utc": "2026-10-07T13:32:10.951956+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.json",
+      "sha256": "27a84d6927fc23d5a37091269f912b9fc318601b7f9c911ce02820dea5c3df68",
+      "modificacion_utc": "2026-10-07T14:26:13.443817+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.md",
+      "sha256": "08fa2f7aa3f55d87d8752db30631d1beb303d8912ff27d9b6694a05512f4d1b3",
+      "modificacion_utc": "2026-10-07T14:26:13.443817+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/clusters.png",
+      "sha256": "7063c3e4d837013802a66db68bf7d059372218f0a9ce714a99e109701e5653b1",
+      "modificacion_utc": "2026-10-07T14:26:13.443817+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/perfiles_clusters.csv",
+      "sha256": "0c0b8992f52c144ce1b2caa0b3ff6e4f429fd1263b2722252458eeff2f66b9ff",
+      "modificacion_utc": "2026-10-07T14:26:13.313814+00:00"
+    },
+    {
+      "ruta": "notebooks/01_preparacion_datos.ipynb",
+      "sha256": "44358eae3e3f90fa3f564b0fc0f7b699e888121a6281ea30a742c931c024608f",
+      "modificacion_utc": "2026-10-07T16:37:58.166181+00:00"
+    },
+    {
+      "ruta": "notebooks/02_analisis_exploratorio.ipynb",
+      "sha256": "247f05a4e9f7375a06e9aae3f893e946faf6b010709dab97010e6d57926c20f1",
+      "modificacion_utc": "2026-10-07T16:37:58.167181+00:00"
+    },
+    {
+      "ruta": "notebooks/03_baseline.ipynb",
+      "sha256": "6f63c219ebd3b2de50c57dd715f0cf91c5b734bc9ac14ff366c6e6fdfbdc8a5c",
+      "modificacion_utc": "2026-10-07T16:37:58.167181+00:00"
+    },
+    {
+      "ruta": "notebooks/04_modelado.ipynb",
+      "sha256": "9393c0330698d0644b3b82c2f79a2defa23a39608eeb70233638f9197d6d1c6b",
+      "modificacion_utc": "2026-10-07T16:37:58.168180+00:00"
+    },
+    {
+      "ruta": "notebooks/05_evaluacion.ipynb",
+      "sha256": "5fe1a339343dbdcea4ffae5447c4c468532ffb538aca09501453bf0a4399899b",
+      "modificacion_utc": "2026-10-07T16:37:58.170180+00:00"
+    },
+    {
+      "ruta": "reports/alertas/00_configuracion_entorno.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T14:26:06.892106+00:00"
+    },
+    {
+      "ruta": "reports/alertas/01_preparacion_datos.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T13:31:40.316750+00:00"
+    },
+    {
+      "ruta": "reports/alertas/02_analisis_exploratorio.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T14:26:10.059092+00:00"
+    },
+    {
+      "ruta": "reports/alertas/03_baseline.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T13:32:07.424526+00:00"
+    },
+    {
+      "ruta": "reports/alertas/04_modelado.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T13:32:10.959498+00:00"
+    },
+    {
+      "ruta": "reports/alertas/05_evaluacion.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T14:26:13.463523+00:00"
+    },
+    {
+      "ruta": "reports/alertas/06_ejecucion_completa.json",
+      "sha256": "1e848de256cb42422358d7adab1f486b122d02dfac23f7da952b7659092430df",
+      "modificacion_utc": "2026-10-07T13:32:15.148880+00:00"
+    },
+    {
+      "ruta": "README.md",
+      "sha256": "d553bac2a1ef610d8b7f7819d1ca14407d82cbcdb2de3184403a565a9051888c",
+      "modificacion_utc": "2026-10-07T14:41:02.669745+00:00"
+    },
+    {
+      "ruta": "config.json",
+      "sha256": "10311fb249cd713c487fa4ce17627131a9ee0e0739caee690b5093c4b7d369f8",
+      "modificacion_utc": "2026-10-07T14:05:27.304989+00:00"
+    },
+    {
+      "ruta": "reports/ejecucion/resumen.json",
+      "sha256": "b9a03104441e862b9ff944c85aacc126ddbe15f82175d30efaaa8a1ad4928f46",
+      "modificacion_utc": "2026-10-07T13:32:14.790972+00:00"
+    },
+    {
+      "ruta": "reports/entorno/environment.json",
+      "sha256": "edb1adc6c4e5bc89c6608651f01773f3e6d594efbc2838f9fc3b7ee0dcf90da5",
+      "modificacion_utc": "2026-10-07T14:26:06.887297+00:00"
+    }
+  ],
+  "limitaciones": "Los perfiles descriptivos y su estabilidad no demuestran impacto comercial ni beneficios netos.",
+  "proximos_pasos": [
+    "Comprobar procedencia, condiciones de uso y disponibilidad temporal de las variables.",
+    "Completar una pasada de 06 y revisar las alertas antes de publicar el informe.",
+    "Validar los perfiles con el uso previsto y estudiar sensibilidad a atributos, escalamiento y muestras."
+  ]
+}

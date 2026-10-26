@@ -1,0 +1,37 @@
+{
+  "feature": "Directorio en pestaña con filtros por zona y sucursal",
+  "accounts": [
+    {
+      "account": "gerente",
+      "zone": "Sur",
+      "branch": "Concepción",
+      "agents": 5,
+      "status": "passed"
+    },
+    {
+      "account": "analista",
+      "zone": "Sur",
+      "branch": "Concepción",
+      "agents": 5,
+      "status": "passed"
+    },
+    {
+      "account": "supervisor_norte",
+      "zone": "Norte",
+      "branch": "La Serena",
+      "agents": 5,
+      "status": "passed"
+    },
+    {
+      "account": "supervisor_sur",
+      "zone": "Sur",
+      "branch": "Concepción",
+      "agents": 5,
+      "status": "passed"
+    }
+  ],
+  "agent_own_tab": "passed",
+  "validation_date": "2026-10-07",
+  "streamlit_health": "ok",
+  "tests_passed": 55
+}

@@ -1,0 +1,16 @@
+
+Failed to find real location of C:\Users\mauro\AppData\Local\Programs\Python\Python314\python.exe
+test_coincide_con_enumeracion_y_respeta_tope (test_balance.BalanceTests.test_coincide_con_enumeracion_y_respeta_tope) ... ok
+test_preferencias_incompletas_se_rechazan (test_balance.BalanceTests.test_preferencias_incompletas_se_rechazan) ... ok
+test_comparacion_respeta_direccion_y_datos_ausentes (test_informe.InformeTest.test_comparacion_respeta_direccion_y_datos_ausentes) ... ok
+test_fallo_con_resultados_anteriores_no_se_presenta_como_completado (test_informe.InformeTest.test_fallo_con_resultados_anteriores_no_se_presenta_como_completado) ... ok
+test_manifiesto_identifica_artefactos_y_huellas (test_informe.InformeTest.test_manifiesto_identifica_artefactos_y_huellas) ... ok
+test_auditoria_detecta_doble_turno_y_disponibilidad (test_optimization.OptimizationTest.test_auditoria_detecta_doble_turno_y_disponibilidad) ... ok
+test_cobertura_incompleta_no_es_solucion_factible (test_optimization.OptimizationTest.test_cobertura_incompleta_no_es_solucion_factible) ... ok
+test_descansos_no_aportan_cobertura (test_optimization.OptimizationTest.test_descansos_no_aportan_cobertura) ... ok
+test_solver_coincide_con_enumeracion_completa (test_optimization.OptimizationTest.test_solver_coincide_con_enumeracion_completa) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.057s
+
+OK

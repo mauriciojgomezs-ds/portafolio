@@ -1,0 +1,94 @@
+{
+  "criterio": "f1_macro_validacion",
+  "C_elegido": 2.0,
+  "candidatos": [
+    {
+      "C": 0.5,
+      "casos": 4956,
+      "accuracy": 0.8859967715899919,
+      "f1_macro": 0.8859170638150075,
+      "clasificacion": {
+        "negativo": {
+          "precision": 0.9033078880407125,
+          "recall": 0.8633968382650993,
+          "f1-score": 0.8829015544041451,
+          "support": 2467.0
+        },
+        "positivo": {
+          "precision": 0.8702848344880677,
+          "recall": 0.9083969465648855,
+          "f1-score": 0.8889325732258698,
+          "support": 2489.0
+        },
+        "accuracy": 0.8859967715899919,
+        "macro avg": {
+          "precision": 0.8867963612643901,
+          "recall": 0.8858968924149924,
+          "f1-score": 0.8859170638150075,
+          "support": 4956.0
+        },
+        "weighted avg": {
+          "precision": 0.8867230655442369,
+          "recall": 0.8859967715899919,
+          "f1-score": 0.8859304498535544,
+          "support": 4956.0
+        }
+      },
+      "etiquetas_fuera_vocabulario_train": 0,
+      "matriz_confusion": [
+        [
+          2130,
+          337
+        ],
+        [
+          228,
+          2261
+        ]
+      ]
+    },
+    {
+      "C": 2.0,
+      "casos": 4956,
+      "accuracy": 0.8952784503631961,
+      "f1_macro": 0.8952331985965565,
+      "clasificacion": {
+        "negativo": {
+          "precision": 0.9082145850796312,
+          "recall": 0.8783948115119579,
+          "f1-score": 0.8930558417473727,
+          "support": 2467.0
+        },
+        "positivo": {
+          "precision": 0.8832684824902723,
+          "recall": 0.9120128565689032,
+          "f1-score": 0.8974105554457402,
+          "support": 2489.0
+        },
+        "accuracy": 0.8952784503631961,
+        "macro avg": {
+          "precision": 0.8957415337849517,
+          "recall": 0.8952038340404305,
+          "f1-score": 0.8952331985965565,
+          "support": 4956.0
+        },
+        "weighted avg": {
+          "precision": 0.8956861651149592,
+          "recall": 0.8952784503631961,
+          "f1-score": 0.8952428640224406,
+          "support": 4956.0
+        }
+      },
+      "etiquetas_fuera_vocabulario_train": 0,
+      "matriz_confusion": [
+        [
+          2167,
+          300
+        ],
+        [
+          219,
+          2270
+        ]
+      ]
+    }
+  ]
+}

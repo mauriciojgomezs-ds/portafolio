@@ -1,0 +1,10 @@
+{
+  "fecha_utc": "2026-10-26T14:29:24.861927+00:00",
+  "notebook": "01_preparacion_datos.ipynb",
+  "metricas": {
+    "recetas": 522517,
+    "reviews": 1401982,
+    "columnas_recetas": 28,
+    "columnas_reviews": 8
+  }
+}

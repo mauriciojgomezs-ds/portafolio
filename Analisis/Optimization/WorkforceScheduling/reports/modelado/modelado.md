@@ -1,0 +1,3 @@
+# Optimización de turnos y cobertura: modelado
+
+MILP binario minimiza coste pagado sujeto a cobertura, un turno diario por empleado, disponibilidad, máximo **40 horas semanales** y **4 días consecutivos**. Cada turno dura 8 horas y contiene dos pausas de 30 minutos sin cobertura. El solver **terminó dentro de la tolerancia configurada**; gap relativo **0.00%**, coste **5,904.00 unidades**. Se audita la solución fuera del solver. La certificación depende de la tolerancia y los patrones disponibles; no se afirma un óptimo exacto si el gap no es cero. El escenario de equilibrio terminó **por límite de tiempo, con plan factible y sin certificar optimalidad**, con gap de su objetivo **22.00%**.

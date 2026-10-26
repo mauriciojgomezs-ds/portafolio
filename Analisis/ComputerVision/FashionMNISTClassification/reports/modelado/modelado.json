@@ -1,0 +1,21 @@
+{
+  "criterio": "f1_macro_validacion; accuracy desempata",
+  "alpha_elegido": 0.001,
+  "neuronas_ocultas": 64,
+  "max_iter": 40,
+  "candidatos": [
+    {
+      "alpha": 0.0001,
+      "iteraciones": 40,
+      "accuracy": 0.8596666666666667,
+      "f1_macro": 0.8611634653283545
+    },
+    {
+      "alpha": 0.001,
+      "iteraciones": 40,
+      "accuracy": 0.8606666666666667,
+      "f1_macro": 0.8623505509124734
+    }
+  ],
+  "particion_seleccion": "valid"
+}

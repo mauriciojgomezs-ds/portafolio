@@ -1,0 +1,28 @@
+{
+  "title": "Churn de telecomunicaciones",
+  "source_zip": "data/raw/Telecom Churn Dataset.zip",
+  "members": {
+    "train": "churn-bigml-80.csv",
+    "test": "churn-bigml-20.csv"
+  },
+  "target": "Churn",
+  "id": null,
+  "exclude": [
+    "Total day charge",
+    "Total eve charge",
+    "Total night charge",
+    "Total intl charge"
+  ],
+  "categorical_columns": [
+    "State",
+    "Area code",
+    "International plan",
+    "Voice mail plan"
+  ],
+  "split": "provided",
+  "source_base": "project",
+  "decision_costs": {
+    "false_negative": 5.0,
+    "false_positive": 1.0
+  }
+}

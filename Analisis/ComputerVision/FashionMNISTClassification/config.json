@@ -1,0 +1,16 @@
+{
+  "title": "Clasificación visual de prendas",
+  "kind": "vision_classification",
+  "seed": 42,
+  "valid_fraction": 0.2,
+  "train_limit": 12000,
+  "valid_limit": 3000,
+  "hidden_units": 64,
+  "max_iter": 40,
+  "alphas": [
+    0.0001,
+    0.001
+  ],
+  "threads": 2,
+  "source_base": "project"
+}

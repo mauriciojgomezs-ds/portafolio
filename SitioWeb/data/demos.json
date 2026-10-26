@@ -1,0 +1,32 @@
+[
+  {
+    "project": "DataCopilot",
+    "title": "Preguntas sobre datos, cálculos verificables",
+    "description": "Una consulta de ventas por región, con el resultado y la política de calidad visibles.",
+    "screenshot": "IAG/PortfolioDemo/docs/capturas/datos.jpg",
+    "walkthrough": "IAG/PortfolioDemo/docs/demostracion.md",
+    "video_url": "",
+    "video_file": "",
+    "caption": "Captura de una ejecución en modo local con datos ficticios."
+  },
+  {
+    "project": "DocumentAnalyzer",
+    "title": "Documentos con evidencia y validaciones",
+    "description": "Revisión de facturas de ejemplo: discrepancias, campos ausentes y duplicados antes de consolidar importes.",
+    "screenshot": "IAG/PortfolioDemo/docs/capturas/documentos.jpg",
+    "walkthrough": "IAG/PortfolioDemo/docs/demostracion.md",
+    "video_url": "",
+    "video_file": "",
+    "caption": "Captura de validación de Markdown mediante reglas; no acredita OCR ni llamadas a IA."
+  },
+  {
+    "project": "MeetingCopilot",
+    "title": "Reuniones con fragmentos y marcas de tiempo",
+    "description": "Recuperación de evidencia sobre el presupuesto aprobado en una transcripción sintética.",
+    "screenshot": "IAG/PortfolioDemo/docs/capturas/reuniones.jpg",
+    "walkthrough": "IAG/PortfolioDemo/docs/demostracion.md",
+    "video_url": "",
+    "video_file": "",
+    "caption": "Captura de búsqueda léxica local; las llamadas a un proveedor generativo siguen pendientes."
+  }
+]

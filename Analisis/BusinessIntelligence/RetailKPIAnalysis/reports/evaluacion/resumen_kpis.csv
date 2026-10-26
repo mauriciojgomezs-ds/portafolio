@@ -1,0 +1,2 @@
+moneda,facturacion_positiva,ajustes_negativos_absolutos,facturacion_neta,ratio_ajustes_sobre_positiva,facturas_positivas,ticket_medio_factura_positiva,clientes_identificados,filas_sin_cliente,reconciliacion_gbp,reconciliacion_mensual_gbp,reconciliacion_paises_gbp,controles_aprobados,indicadores_descriptivos
+GBP,10642110.804000001,893979.73,9748131.074,0.08400398628287012,19960,533.1718839679359,4371,132565,1.862645149230957e-09,1.862645149230957e-09,0.0,True,True

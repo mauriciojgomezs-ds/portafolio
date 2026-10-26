@@ -1,0 +1,43 @@
+{
+  "casos": 88167,
+  "accuracy": 0.5671056064060249,
+  "average_precision": 0.5671056064060249,
+  "roc_auc": 0.5,
+  "matriz_confusion": [
+    [
+      0,
+      38167
+    ],
+    [
+      0,
+      50000
+    ]
+  ],
+  "clasificacion": {
+    "0": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 38167.0
+    },
+    "1": {
+      "precision": 0.5671056064060249,
+      "recall": 1.0,
+      "f1-score": 0.7237618244588071,
+      "support": 50000.0
+    },
+    "accuracy": 0.5671056064060249,
+    "macro avg": {
+      "precision": 0.28355280320301246,
+      "recall": 0.5,
+      "f1-score": 0.36188091222940355,
+      "support": 88167.0
+    },
+    "weighted avg": {
+      "precision": 0.32160876881714523,
+      "recall": 0.5671056064060249,
+      "f1-score": 0.41044938835324274,
+      "support": 88167.0
+    }
+  }
+}

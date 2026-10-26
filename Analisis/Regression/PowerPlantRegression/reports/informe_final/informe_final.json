@@ -1,0 +1,333 @@
+{
+  "proyecto": "Regresión de potencia eléctrica",
+  "generado_utc": "2026-10-26T14:18:15.376492+00:00",
+  "estado": "evidencia_disponible",
+  "estado_maestro": "completado",
+  "etapas_sin_reporte": [],
+  "notebooks": [
+    {
+      "notebook": "01_preparacion_datos.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-26T14:18:03.718420Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "02_analisis_exploratorio.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-26T14:18:06.409905Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "03_baseline.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-26T14:18:08.942283Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "04_modelado.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-26T14:18:11.574306Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "05_evaluacion.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-26T14:18:14.475738Z",
+      "errores_guardados": 0
+    }
+  ],
+  "resultados": {
+    "preparacion": {
+      "fuente": "https://archive.ics.uci.edu/dataset/294/combined+cycle+power+plant",
+      "sha256": "cc7b2a4977c0a44e8221c91d9a7e5746b3c68186cff7e5c61c70af6432b98c7a",
+      "hoja_utilizada": "Sheet1",
+      "hojas_disponibles": [
+        "Sheet1",
+        "Sheet2",
+        "Sheet3",
+        "Sheet4",
+        "Sheet5"
+      ],
+      "filas_hoja": 9568,
+      "duplicados_exactos_retirados": 41,
+      "features": [
+        "AT",
+        "V",
+        "AP",
+        "RH"
+      ],
+      "objetivo_unidad": "Potencia eléctrica PE en MW",
+      "particiones": {
+        "train": {
+          "filas": 5716
+        },
+        "valid": {
+          "filas": 952
+        },
+        "calibration": {
+          "filas": 953
+        },
+        "test": {
+          "filas": 1906
+        }
+      }
+    },
+    "eda": {
+      "filas_train": 5716,
+      "potencia_media_mw": 453.92619839048285,
+      "correlacion_temperatura_potencia": -0.9484340122688852,
+      "criterios_correlacion": "|r| >=0.7 fuerte; >=0.4 moderada; resto débil; criterio descriptivo",
+      "vif": {
+        "AT": 6.0684868253625295,
+        "V": 3.9815469773093035,
+        "AP": 1.4459574732868845,
+        "RH": 1.7415552275178419
+      },
+      "vif_maximo": 6.0684868253625295,
+      "vif_variable_maxima": "AT",
+      "multicolinealidad": "moderada"
+    },
+    "baseline": {
+      "casos": 952,
+      "mae_mw": 15.156424752721243,
+      "rmse_mw": 17.548544538131974,
+      "r2": -0.006303854568031841
+    },
+    "modelado": {
+      "criterio": "MAE de validación",
+      "modelo_elegido": "HGB_hojas_31",
+      "candidatos": [
+        {
+          "modelo": "Ridge_alpha_1.0",
+          "casos": 952,
+          "mae_mw": 3.71839776125271,
+          "rmse_mw": 4.821369702675333,
+          "r2": 0.9240395024736417
+        },
+        {
+          "modelo": "Ridge_alpha_10.0",
+          "casos": 952,
+          "mae_mw": 3.720854718554943,
+          "rmse_mw": 4.821585170359705,
+          "r2": 0.9240327129514778
+        },
+        {
+          "modelo": "Ridge_alpha_100.0",
+          "casos": 952,
+          "mae_mw": 3.753620619401894,
+          "rmse_mw": 4.847012354639748,
+          "r2": 0.9232293557623988
+        },
+        {
+          "modelo": "HGB_hojas_15",
+          "casos": 952,
+          "mae_mw": 2.6970842804907287,
+          "rmse_mw": 3.970914208167288,
+          "r2": 0.9484738207392411
+        },
+        {
+          "modelo": "HGB_hojas_31",
+          "casos": 952,
+          "mae_mw": 2.4895331863245307,
+          "rmse_mw": 3.7896117124216087,
+          "r2": 0.95307153384389
+        }
+      ],
+      "calibracion_filas": 953,
+      "radio_intervalo_mw": 4.942154240431819,
+      "cobertura_nominal": 0.9
+    },
+    "evaluacion": {
+      "baseline": {
+        "casos": 1906,
+        "mae_mw": 14.805805808624676,
+        "rmse_mw": 17.06248065102916,
+        "r2": -0.003013306910596647
+      },
+      "modelo": {
+        "casos": 1906,
+        "mae_mw": 2.4705222049714424,
+        "rmse_mw": 3.282124450695032,
+        "r2": 0.9628864549254649
+      },
+      "modelo_elegido": "HGB_hojas_31",
+      "cobertura_nominal": 0.9,
+      "cobertura_empirica_test": 0.8835257082896117,
+      "ancho_medio_intervalo_mw": 9.884308480863638,
+      "residuos_corr_pred_abs": 0.035441108753916165,
+      "residuos_sesgo": -0.22770589767267496
+    }
+  },
+  "fuentes": [
+    {
+      "ruta": "reports/preparacion/preparacion.json",
+      "sha256": "a9ac4802ecff9d515a3eb56e2cfd30c4f764074f70e816e8d890870fc4326a91",
+      "modificacion_utc": "2026-10-26T14:18:03.693614+00:00"
+    },
+    {
+      "ruta": "reports/preparacion/preparacion.md",
+      "sha256": "487237093d56d2240482d0e370f2cf4b1296a47a888ac41105295af9c14cdb6e",
+      "modificacion_utc": "2026-10-26T14:18:03.694615+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.json",
+      "sha256": "75495fdbc8d58fd89459d6567d2d4ad55b2ab7af2b97179821c246b3b7cde76f",
+      "modificacion_utc": "2026-10-26T14:18:06.379871+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.md",
+      "sha256": "73879d0af6f59ec9815ba178b28edecc9341ea2865b57a3099b97ceaef5f1580",
+      "modificacion_utc": "2026-10-26T14:18:06.379871+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.png",
+      "sha256": "a4c3159eeaf607524be554753f21d089e8e1002464e20a12219ec4328797d15a",
+      "modificacion_utc": "2026-10-26T14:18:06.378867+00:00"
+    },
+    {
+      "ruta": "reports/eda/correlaciones.csv",
+      "sha256": "0335e8149fa86b315666df9aae34f3f38ba2e47f8aadff7ec225e9cde56cd33a",
+      "modificacion_utc": "2026-10-26T14:18:06.166631+00:00"
+    },
+    {
+      "ruta": "reports/eda/vif.csv",
+      "sha256": "dd3f4e1924bfc8d1d39824921aa780a049cf315344d9e638edc17504df375986",
+      "modificacion_utc": "2026-10-26T14:18:06.215427+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.json",
+      "sha256": "8cf938a6f79ffb70a4ffad604a7d4701a6d0feb4e37564a0e7a25c626c0ef5d8",
+      "modificacion_utc": "2026-10-26T14:18:08.919578+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.md",
+      "sha256": "6cb9745fe17f390a97b42194a54f0042e24a33f66734f7a3066341c61b923530",
+      "modificacion_utc": "2026-10-26T14:18:08.919578+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.json",
+      "sha256": "aad068daab1cbd6284bc2547bc43a9aebfe0672fbdf57ccc3e66e9b95b87da62",
+      "modificacion_utc": "2026-10-26T14:18:11.544434+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.md",
+      "sha256": "b8959add95468a0e28a0f33beca1c3cfe36b45244aff90b6f293d5d44f84b384",
+      "modificacion_utc": "2026-10-26T14:18:11.544434+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.json",
+      "sha256": "7f37f45c5d7509b564fa243ea8b6db9505d08c49270124e4ad0a79b9f998eac5",
+      "modificacion_utc": "2026-10-26T14:18:14.424814+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.md",
+      "sha256": "4069d99e1368f5517960aace221a4c5a8ca88481b139ea63389702f8f8ce9298",
+      "modificacion_utc": "2026-10-26T14:18:14.424814+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.png",
+      "sha256": "49af1b81035e2171b4e85f45f0ab250c747cd073d259b332c4ba3cfaec79de20",
+      "modificacion_utc": "2026-10-26T14:18:14.423807+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/metricas_test.csv",
+      "sha256": "63c53004badaba4dd70928516615ab61a037cae8534fbac054d8690ce1454431",
+      "modificacion_utc": "2026-10-26T14:18:14.229507+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/predicciones_test.csv",
+      "sha256": "fe0718be18397fa4d5c18486948c8e60fb05b6b72b684724a191a06091b6076d",
+      "modificacion_utc": "2026-10-26T14:18:14.235018+00:00"
+    },
+    {
+      "ruta": "notebooks/01_preparacion_datos.ipynb",
+      "sha256": "a40c9eae51f5b183892d2e15ed02923f983c7c726392b10408dfc89edd7107ee",
+      "modificacion_utc": "2026-10-26T14:18:04.265320+00:00"
+    },
+    {
+      "ruta": "notebooks/02_analisis_exploratorio.ipynb",
+      "sha256": "795389c90065b3aabccae508c800b1b87c8d8050ed1041ad92b235b5a4e84913",
+      "modificacion_utc": "2026-10-26T14:18:06.971919+00:00"
+    },
+    {
+      "ruta": "notebooks/03_baseline.ipynb",
+      "sha256": "bfc64d7bac4b0602e342388afff05aaff6b25d5622f7de13b3e200bd3aa4e5a1",
+      "modificacion_utc": "2026-10-26T14:18:09.382287+00:00"
+    },
+    {
+      "ruta": "notebooks/04_modelado.ipynb",
+      "sha256": "fcff0c8b4b5d19fbae0701035a2795fc51620392a81cc229c5dcf31c48108141",
+      "modificacion_utc": "2026-10-26T14:18:12.135821+00:00"
+    },
+    {
+      "ruta": "notebooks/05_evaluacion.ipynb",
+      "sha256": "90410e33a10c4793f688ccda1bbca6b528471c94d658c175f03100c155205e73",
+      "modificacion_utc": "2026-10-26T14:18:15.043239+00:00"
+    },
+    {
+      "ruta": "reports/alertas/00_configuracion_entorno.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:13:06.010446+00:00"
+    },
+    {
+      "ruta": "reports/alertas/01_preparacion_datos.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:18:03.704690+00:00"
+    },
+    {
+      "ruta": "reports/alertas/02_analisis_exploratorio.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:18:06.397405+00:00"
+    },
+    {
+      "ruta": "reports/alertas/03_baseline.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:18:08.930525+00:00"
+    },
+    {
+      "ruta": "reports/alertas/04_modelado.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:18:11.558185+00:00"
+    },
+    {
+      "ruta": "reports/alertas/05_evaluacion.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:18:14.460490+00:00"
+    },
+    {
+      "ruta": "reports/alertas/06_ejecucion_completa.json",
+      "sha256": "1e848de256cb42422358d7adab1f486b122d02dfac23f7da952b7659092430df",
+      "modificacion_utc": "2026-10-26T14:18:15.368629+00:00"
+    },
+    {
+      "ruta": "README.md",
+      "sha256": "784213f4def0939f83292acebe0198bda3895e2e2a7436b32a99eaee35df1583",
+      "modificacion_utc": "2026-10-07T22:33:54.378635+00:00"
+    },
+    {
+      "ruta": "config.json",
+      "sha256": "18191aff570e048ac3826b1414bedd7dd0e12b9c00611de9013805a7f8182ea0",
+      "modificacion_utc": "2026-10-07T22:18:25.109585+00:00"
+    },
+    {
+      "ruta": "reports/ejecucion/resumen.json",
+      "sha256": "b1ac21fa1a4f8d2b0a6f441fb9ebf34d759fe9d3b61940cf031bada5ffaa6c3b",
+      "modificacion_utc": "2026-10-26T14:18:15.055746+00:00"
+    },
+    {
+      "ruta": "reports/entorno/environment.json",
+      "sha256": "0477ba398f549e7baabbc2a4d4299b0837e6fd78cd7451eec35ebda6f9858c48",
+      "modificacion_utc": "2026-10-26T14:13:06.004648+00:00"
+    }
+  ],
+  "limitaciones": "Regresión contemporánea en una central a plena carga. No es pronóstico temporal ni evaluación entre plantas. Los intervalos conformales suponen intercambiabilidad y su cobertura marginal no garantiza cobertura por grupo o periodo.",
+  "proximos_pasos": [
+    "Revisar fuentes, supuestos y alertas.",
+    "Validar en otra planta o periodo y estudiar cobertura por subgrupo con una evaluación nueva."
+  ]
+}

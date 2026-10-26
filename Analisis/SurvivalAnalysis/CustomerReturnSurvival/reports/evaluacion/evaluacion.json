@@ -1,0 +1,10 @@
+{
+  "clientes_test": 868,
+  "eventos_test": 386,
+  "baseline_c_index": 0.5,
+  "modelo_c_index": 0.5618708976093072,
+  "ci_bootstrap95_inferior": 0.5288627777944198,
+  "ci_bootstrap95_superior": 0.593725680121153,
+  "replicas_validas": 200,
+  "diagnostico": "Discriminación con censura; no mide calibración ni retorno comercial"
+}

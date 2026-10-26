@@ -1,0 +1,345 @@
+{
+  "proyecto": "Recomendación colaborativa de películas",
+  "generado_utc": "2026-10-07T16:39:25.803294+00:00",
+  "estado": "actualizado_por_etapas",
+  "estado_maestro": "completado",
+  "etapas_sin_reporte": [],
+  "notebooks": [
+    {
+      "notebook": "01_preparacion_datos.ipynb",
+      "celdas_con_salida": 0,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": null,
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "02_analisis_exploratorio.ipynb",
+      "celdas_con_salida": 2,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T14:22:58.132694Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "03_baseline.ipynb",
+      "celdas_con_salida": 0,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": null,
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "04_modelado.ipynb",
+      "celdas_con_salida": 0,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": null,
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "05_evaluacion.ipynb",
+      "celdas_con_salida": 2,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T14:23:01.354934Z",
+      "errores_guardados": 0
+    }
+  ],
+  "resultados": {
+    "preparacion": {
+      "fuente": "movieLens.zip",
+      "semilla": 42,
+      "sha256": "e4a68655d7386b8f95f2f2424b2ff975dfdd15ffd59e0d864a14dca43e99d6ee",
+      "filas_originales_usuarios": 200948,
+      "usuarios_muestreados": 800,
+      "ratings_muestra": 128845,
+      "protocolo": "Últimas dos valoraciones por usuario para valid/test; positivos rating >= 4. No es un corte temporal global.",
+      "filas_preparadas": 87585,
+      "particiones": {
+        "train": {
+          "filas": 127245
+        },
+        "valid": {
+          "filas": 800
+        },
+        "test": {
+          "filas": 800
+        }
+      }
+    },
+    "eda": {
+      "poblacion": "train",
+      "filas": 127245,
+      "columnas": 4,
+      "nulos": {
+        "userId": 0,
+        "movieId": 0,
+        "rating": 0,
+        "timestamp": 0
+      },
+      "resumen_numerico": {
+        "userId": {
+          "count": 127245.0,
+          "mean": 101080.3712,
+          "std": 60820.7286,
+          "min": 983.0,
+          "25%": 47275.0,
+          "50%": 96666.0,
+          "75%": 162036.0,
+          "max": 200917.0
+        },
+        "movieId": {
+          "count": 127245.0,
+          "mean": 31148.4383,
+          "std": 51909.0642,
+          "min": 1.0,
+          "25%": 1274.0,
+          "50%": 3681.0,
+          "75%": 49272.0,
+          "max": 290213.0
+        },
+        "rating": {
+          "count": 127245.0,
+          "mean": 3.5654,
+          "std": 1.0433,
+          "min": 0.5,
+          "25%": 3.0,
+          "50%": 4.0,
+          "75%": 4.0,
+          "max": 5.0
+        },
+        "timestamp": {
+          "count": 127245.0,
+          "mean": 1290064458.7544,
+          "std": 256422130.6216,
+          "min": 828708507.0,
+          "25%": 1058232967.0,
+          "50%": 1322115570.0,
+          "75%": 1514346118.0,
+          "max": 1697110011.0
+        }
+      }
+    },
+    "baseline": {
+      "usuarios_con_objetivo_positivo": 482,
+      "objetivos_sin_historial_item": 10,
+      "hit_rate_at_k": 0.06016597510373444,
+      "ndcg_at_k": 0.034968811963200674,
+      "recomendaciones_promedio": 10.0,
+      "cobertura_items_train": 0.008331901735097062,
+      "k": 10
+    },
+    "modelado": {
+      "criterio": "ndcg_validacion",
+      "vecinos_elegidos": 30,
+      "candidatos": [
+        {
+          "vecinos": 10,
+          "usuarios_con_objetivo_positivo": 482,
+          "objetivos_sin_historial_item": 10,
+          "hit_rate_at_k": 0.1016597510373444,
+          "ndcg_at_k": 0.05035894461469735,
+          "recomendaciones_promedio": 10.0,
+          "cobertura_items_train": 0.04303384298230545,
+          "k": 10
+        },
+        {
+          "vecinos": 30,
+          "usuarios_con_objetivo_positivo": 482,
+          "objetivos_sin_historial_item": 10,
+          "hit_rate_at_k": 0.11825726141078838,
+          "ndcg_at_k": 0.05952374348645455,
+          "recomendaciones_promedio": 10.0,
+          "cobertura_items_train": 0.026026455935406288,
+          "k": 10
+        }
+      ]
+    },
+    "evaluacion": {
+      "baseline": {
+        "usuarios_con_objetivo_positivo": 469,
+        "objetivos_sin_historial_item": 19,
+        "hit_rate_at_k": 0.046908315565031986,
+        "ndcg_at_k": 0.025254739914348238,
+        "recomendaciones_promedio": 10.0,
+        "cobertura_items_train": 0.009104964782683387,
+        "k": 10
+      },
+      "modelo": {
+        "usuarios_con_objetivo_positivo": 469,
+        "objetivos_sin_historial_item": 19,
+        "hit_rate_at_k": 0.08528784648187633,
+        "ndcg_at_k": 0.044847552257208934,
+        "recomendaciones_promedio": 10.0,
+        "cobertura_items_train": 0.025940560041230028,
+        "k": 10
+      },
+      "ejemplo": {
+        "usuario": 983,
+        "movie_ids": [
+          58559,
+          260,
+          593,
+          59315,
+          33794,
+          589,
+          527,
+          4011,
+          109487,
+          1210
+        ],
+        "titulos": [
+          "Dark Knight, The (2008)",
+          "Star Wars: Episode IV - A New Hope (1977)",
+          "Silence of the Lambs, The (1991)",
+          "Iron Man (2008)",
+          "Batman Begins (2005)",
+          "Terminator 2: Judgment Day (1991)",
+          "Schindler's List (1993)",
+          "Snatch (2000)",
+          "Interstellar (2014)",
+          "Star Wars: Episode VI - Return of the Jedi (1983)"
+        ]
+      }
+    }
+  },
+  "fuentes": [
+    {
+      "ruta": "reports/preparacion/preparacion.json",
+      "sha256": "dd500bafb02b25519bf598a80379bbe496ae314431aac536063c99811c4bb095",
+      "modificacion_utc": "2026-10-07T13:29:42.806139+00:00"
+    },
+    {
+      "ruta": "reports/preparacion/preparacion.md",
+      "sha256": "d6b93ec5825bfc2fc766c6513220dc1cb6887bf0cde7915a113d1678e2b16e8a",
+      "modificacion_utc": "2026-10-07T13:29:42.806139+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.json",
+      "sha256": "006eaea1e255c8fa4e8111773c0283b7f2e04056fa339fa604e18a5579a43842",
+      "modificacion_utc": "2026-10-07T14:22:58.127761+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.md",
+      "sha256": "118119958cbdd29685ea0ad8e59a04583335956f1172b225c184a202804c9f7e",
+      "modificacion_utc": "2026-10-07T14:22:58.127761+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.png",
+      "sha256": "9433049761cdf69a89bba7cc7e63fb3d2095a0e33f2a586b960a9e4d852d6670",
+      "modificacion_utc": "2026-10-07T14:22:58.126768+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.json",
+      "sha256": "9cd59785373f7550f67c98f5113400c6873acb3ef090c58d90574cb5c3b8416f",
+      "modificacion_utc": "2026-10-07T13:29:51.573563+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.md",
+      "sha256": "8ce55159bc11c3a90907e10c14654a991368acb12600840cf62f60f846878988",
+      "modificacion_utc": "2026-10-07T13:29:51.573563+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.json",
+      "sha256": "e18d0f6d04bff375a793c529d69888c7fed86105908738abcde71e595ae4caeb",
+      "modificacion_utc": "2026-10-07T13:29:54.761856+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.md",
+      "sha256": "f679a7143c8bbc21ad558a71f95b0edd26f376356f35d1fe2166cbb380552b42",
+      "modificacion_utc": "2026-10-07T13:29:54.762848+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.json",
+      "sha256": "ae5b281e10fbca9ac41c0c245f9d6d3e30de577b139fa854f0cc0c4a88a029f9",
+      "modificacion_utc": "2026-10-07T14:23:01.342500+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.md",
+      "sha256": "356866a6899d5e8b1ccbaec40756273146d1f2f9b656740256edd005d6d11d53",
+      "modificacion_utc": "2026-10-07T14:23:01.342500+00:00"
+    },
+    {
+      "ruta": "notebooks/01_preparacion_datos.ipynb",
+      "sha256": "4cf356319a95d5925c45694159c20403459962a87eee55a024395b7e9fa74552",
+      "modificacion_utc": "2026-10-07T16:37:58.207745+00:00"
+    },
+    {
+      "ruta": "notebooks/02_analisis_exploratorio.ipynb",
+      "sha256": "a07789065151a689efeab5d98f98a3f3137a4d71516702cbd538984730430e42",
+      "modificacion_utc": "2026-10-07T16:37:58.208738+00:00"
+    },
+    {
+      "ruta": "notebooks/03_baseline.ipynb",
+      "sha256": "c931faa0158d6c81c932f23696d182fae527b5ee2879603d8ff03762cf8b134d",
+      "modificacion_utc": "2026-10-07T16:37:58.208738+00:00"
+    },
+    {
+      "ruta": "notebooks/04_modelado.ipynb",
+      "sha256": "5701ac0f1bdd91826edd0db0d409ca86868ee02452f5acdfb1d131809188353d",
+      "modificacion_utc": "2026-10-07T16:37:58.209742+00:00"
+    },
+    {
+      "ruta": "notebooks/05_evaluacion.ipynb",
+      "sha256": "04dc130d4aa7570c6930a2c5f67ba40e4a36852bd8493bda858dae6fcc1fd786",
+      "modificacion_utc": "2026-10-07T16:37:58.209742+00:00"
+    },
+    {
+      "ruta": "reports/alertas/00_configuracion_entorno.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T14:22:51.875366+00:00"
+    },
+    {
+      "ruta": "reports/alertas/01_preparacion_datos.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T13:29:42.815341+00:00"
+    },
+    {
+      "ruta": "reports/alertas/02_analisis_exploratorio.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T14:22:58.134204+00:00"
+    },
+    {
+      "ruta": "reports/alertas/03_baseline.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T13:29:51.590153+00:00"
+    },
+    {
+      "ruta": "reports/alertas/04_modelado.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T13:29:54.773450+00:00"
+    },
+    {
+      "ruta": "reports/alertas/05_evaluacion.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T14:23:01.357122+00:00"
+    },
+    {
+      "ruta": "reports/alertas/06_ejecucion_completa.json",
+      "sha256": "1e848de256cb42422358d7adab1f486b122d02dfac23f7da952b7659092430df",
+      "modificacion_utc": "2026-10-07T13:29:58.761154+00:00"
+    },
+    {
+      "ruta": "README.md",
+      "sha256": "931c61bb4642fcdf87aa79b1761c9ff03509e2474c025191dd0463de16409ab6",
+      "modificacion_utc": "2026-10-07T14:41:02.659761+00:00"
+    },
+    {
+      "ruta": "config.json",
+      "sha256": "53244c40344d1ee056b37320c9848986da7d8b369866d7a80b223ab056445bf1",
+      "modificacion_utc": "2026-10-07T14:05:27.171318+00:00"
+    },
+    {
+      "ruta": "reports/ejecucion/resumen.json",
+      "sha256": "d70bce2ea541f9e23c877fadee1b9f70af42ea92806344bddd15e629f0049713",
+      "modificacion_utc": "2026-10-07T13:29:58.429374+00:00"
+    },
+    {
+      "ruta": "reports/entorno/environment.json",
+      "sha256": "8447a354d76dc381b811213bb838e7b6d67d49fb4b73c71ab8727d9cb8c9a1a3",
+      "modificacion_utc": "2026-10-07T14:22:51.869882+00:00"
+    }
+  ],
+  "limitaciones": "La muestra y el corte por usuario limitan el alcance. No equivale a una simulación temporal global ni a resultados de una plataforma real.",
+  "proximos_pasos": [
+    "Comprobar procedencia, condiciones de uso y disponibilidad temporal de las variables.",
+    "Completar una pasada de 06 y revisar las alertas antes de publicar el informe.",
+    "Definir relevancia y candidatos, y evaluar ranking con usuarios o interacciones independientes."
+  ]
+}

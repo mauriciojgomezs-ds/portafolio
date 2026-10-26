@@ -1,0 +1,24 @@
+{
+  "fecha_utc": "2026-10-26T14:30:28.319802+00:00",
+  "notebook": "05_clasificacion_ranking_svm.ipynb",
+  "metricas": {
+    "casos": 2065,
+    "baseline": {
+      "accuracy": 0.9380145278450364
+    },
+    "modelo": {
+      "accuracy": 0.9380145278450364,
+      "f1_macro": 0.484007996001999,
+      "matriz_confusion": [
+        [
+          0,
+          128
+        ],
+        [
+          0,
+          1937
+        ]
+      ]
+    }
+  }
+}

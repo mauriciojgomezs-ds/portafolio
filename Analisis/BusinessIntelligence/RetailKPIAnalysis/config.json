@@ -1,0 +1,7 @@
+{
+  "title": "Indicadores y devoluciones de retail",
+  "kind": "business_intelligence",
+  "seed": 42,
+  "source_base": "project",
+  "source": "data/raw/OnlineRetailUCI.zip"
+}

@@ -1,0 +1,9 @@
+{
+  "fuente": "OnlineRetailUCI.zip",
+  "semilla": 42,
+  "sha256": "f5385cbb54bbebf7196389109c6b0621faab0c304e3702548165e71c84aede8b",
+  "filas_originales": 541909,
+  "politica_ventas": "Compras positivas; excluye cancelaciones, devoluciones, precios no positivos y duplicados exactos. No mide ingresos netos.",
+  "fecha_referencia": "2011-12-10T00:00:00",
+  "filas_preparadas": 4338
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Sentimiento de reseñas de películas",
+  "kind": "text_sentiment",
+  "source": "data/raw/train.parquet",
+  "seed": 42,
+  "top_n": 10,
+  "test_source": "data/raw/test.parquet",
+  "source_base": "project"
+}

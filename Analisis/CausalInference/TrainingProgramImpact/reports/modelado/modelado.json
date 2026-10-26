@@ -1,0 +1,19 @@
+{
+  "efecto_usd": 1621.5831014447613,
+  "error_estandar_hc3": 716.8727509645109,
+  "ci_inferior": 212.5444984462208,
+  "ci_superior": 3030.6217044433015,
+  "confidence_level": 0.95,
+  "parametros": 18,
+  "covariables": [
+    "age",
+    "education",
+    "black",
+    "hispanic",
+    "married",
+    "nodegree",
+    "re74",
+    "re75"
+  ],
+  "metodo": "OLS Lin con interacciones y errores HC3"
+}

@@ -1,0 +1,8 @@
+{
+  "fecha_utc": "2026-10-26T14:30:17.842260+00:00",
+  "notebook": "03_baseline_perfil_usuario.ipynb",
+  "metricas": {
+    "top_n_solicitado": 5,
+    "recetas_devueltas": 5
+  }
+}

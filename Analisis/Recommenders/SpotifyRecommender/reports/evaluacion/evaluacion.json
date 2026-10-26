@@ -1,0 +1,169 @@
+{
+  "baseline": {
+    "consultas": 30,
+    "top_n_solicitado": 10,
+    "cobertura_catalogo": 0.00011143178703156863,
+    "categorias_distintas_promedio": 4.0,
+    "coincidencia_categoria_descriptiva": 0.013333333333333334
+  },
+  "modelo": {
+    "consultas": 30,
+    "top_n_solicitado": 10,
+    "cobertura_catalogo": 0.0033429536109470586,
+    "categorias_distintas_promedio": 7.566666666666666,
+    "coincidencia_categoria_descriptiva": 0.09
+  },
+  "ejemplos": {
+    "baseline": {
+      "consulta": "51hrri99KuNwhALxbRRJnq",
+      "recomendaciones": [
+        {
+          "track_id": "3nqQXoyQOWXiESFLlDF1hG",
+          "track_name": "Unholy (feat. Kim Petras)",
+          "artists": "Sam Smith;Kim Petras",
+          "track_genre": "dance",
+          "similitud": null
+        },
+        {
+          "track_id": "2tTmW7RDtMQtBk7m2rYeSw",
+          "track_name": "Quevedo: Bzrp Music Sessions, Vol. 52",
+          "artists": "Bizarrap;Quevedo",
+          "track_genre": "hip-hop",
+          "similitud": null
+        },
+        {
+          "track_id": "4uUG5RXrOk84mYEfFvj3cK",
+          "track_name": "I'm Good (Blue)",
+          "artists": "David Guetta;Bebe Rexha",
+          "track_genre": "dance",
+          "similitud": null
+        },
+        {
+          "track_id": "5ww2BF9slyYgNOk37BlC4u",
+          "track_name": "La Bachata",
+          "artists": "Manuel Turizo",
+          "track_genre": "latin",
+          "similitud": null
+        },
+        {
+          "track_id": "1IHWl5LamUGEuP4ozKQSXZ",
+          "track_name": "Tití Me Preguntó",
+          "artists": "Bad Bunny",
+          "track_genre": "latin",
+          "similitud": null
+        },
+        {
+          "track_id": "6Sq7ltF9Qa7SNFBsV5Cogx",
+          "track_name": "Me Porto Bonito",
+          "artists": "Bad Bunny;Chencho Corleone",
+          "track_genre": "latin",
+          "similitud": null
+        },
+        {
+          "track_id": "4h9wh7iOZ0GGn8QVp4RAOB",
+          "track_name": "I Ain't Worried",
+          "artists": "OneRepublic",
+          "track_genre": "piano",
+          "similitud": null
+        },
+        {
+          "track_id": "5Eax0qFko2dh7Rl2lYs3bx",
+          "track_name": "Efecto",
+          "artists": "Bad Bunny",
+          "track_genre": "latin",
+          "similitud": null
+        },
+        {
+          "track_id": "5IgjP7X4th6nMNDh4akUHb",
+          "track_name": "Under The Influence",
+          "artists": "Chris Brown",
+          "track_genre": "dance",
+          "similitud": null
+        },
+        {
+          "track_id": "3k3NWokhRRkEPhCzPmV8TW",
+          "track_name": "Ojitos Lindos",
+          "artists": "Bad Bunny;Bomba Estéreo",
+          "track_genre": "latin",
+          "similitud": null
+        }
+      ]
+    },
+    "modelo": {
+      "consulta": "51hrri99KuNwhALxbRRJnq",
+      "recomendaciones": [
+        {
+          "track_id": "7HXPkb3UzwZnGDObppA5e9",
+          "track_name": "Old Macdonald",
+          "artists": "Play School",
+          "track_genre": "children",
+          "similitud": 0.9797384732483144
+        },
+        {
+          "track_id": "33LizV83s7z1gwtmLiKlmv",
+          "track_name": "Dead and Cold",
+          "artists": "SadBoyProlific",
+          "track_genre": "sad",
+          "similitud": 0.9781560737410613
+        },
+        {
+          "track_id": "0hSTmN84rBWsU52Lu6lCj8",
+          "track_name": "Questão de Tempo",
+          "artists": "Yago Oproprio;Skeeter Beats",
+          "track_genre": "brazil",
+          "similitud": 0.9770053270545916
+        },
+        {
+          "track_id": "39I5xXLPaiTqNPBaKo0Rnw",
+          "track_name": "The Story of the Tucks",
+          "artists": "Carolee Carmello;Robert Lenzi;Andrew Keenan-Bolger;Sarah Charles Lewis",
+          "track_genre": "show-tunes",
+          "similitud": 0.9688172258163213
+        },
+        {
+          "track_id": "6xniBg7UJ03jcyvOgfWVJk",
+          "track_name": "FELT",
+          "artists": "Nate Traveller",
+          "track_genre": "chill",
+          "similitud": 0.9660792662220327
+        },
+        {
+          "track_id": "6t8mmZgaYAd9yVnBBhOuQG",
+          "track_name": "Crônicas de Um Babaca, Vol. 1",
+          "artists": "Zarastruta;DJ Cost",
+          "track_genre": "brazil",
+          "similitud": 0.9634063957451002
+        },
+        {
+          "track_id": "39rMmXKNwQkBiD62353haK",
+          "track_name": "I Picked One Pumpkin",
+          "artists": "The Laurie Berkner Band",
+          "track_genre": "children",
+          "similitud": 0.9624191519322084
+        },
+        {
+          "track_id": "5pVFQcYx5ESJDoB9ZZPVdb",
+          "track_name": "Disaster",
+          "artists": "Zamdane",
+          "track_genre": "french",
+          "similitud": 0.9619641649423825
+        },
+        {
+          "track_id": "13had99Svkmg0RAUiKVCq9",
+          "track_name": "Stop! Wait! What?!",
+          "artists": "Bryce Pinkham",
+          "track_genre": "show-tunes",
+          "similitud": 0.9608310026393251
+        },
+        {
+          "track_id": "55ri3hkeez28MnWTqAsg7L",
+          "track_name": "Swear to Jah",
+          "artists": "Vybz Kartel",
+          "track_genre": "j-dance",
+          "similitud": 0.9605498619200256
+        }
+      ]
+    }
+  },
+  "limite": "Sin interacciones ni juicios independientes de relevancia. La coincidencia de categoría no es accuracy ni satisfacción."
+}

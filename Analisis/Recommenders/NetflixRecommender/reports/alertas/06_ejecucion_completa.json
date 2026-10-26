@@ -1,0 +1,12 @@
+[
+  {
+    "tipo": "DeprecationWarning",
+    "mensaje": "Passing unrecognized arguments to super(KernelSpec).__init__(kernel_protocol_version='5.5').\nobject.__init__() takes exactly one argument (the instance to initialize)\nThis is deprecated in traitlets 4.2.This error will be raised in a future release of traitlets.",
+    "descripcion": "Se está utilizando una función o comportamiento en retirada.",
+    "accion_sugerida": "Consultar la alternativa indicada antes de actualizar dependencias.",
+    "apariciones": 5,
+    "origenes": [
+      "C:\\Users\\mauro\\AppData\\Roaming\\Python\\Python314\\site-packages\\traitlets\\traitlets.py:1385"
+    ]
+  }
+]

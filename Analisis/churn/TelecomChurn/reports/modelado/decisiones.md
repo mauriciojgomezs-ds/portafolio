@@ -1,0 +1,3 @@
+# Calibración y política de decisión
+
+Modelo adicional: **1599 filas para ajuste** y **533 para calibración**. Separación estratificada 75/25 dentro de train; sin ID no se comprueba independencia por persona. Se comparan dos ponderaciones por AP de validación; calibración sigmoid fijada de antemano. El umbral **0.17** minimiza coste ilustrativo FN=5.0, FP=1.0 en la grilla de validación. Se conserva el modelo original para su comparación histórica; las métricas de decisiones corresponden a este ajuste adicional. Validación selecciona modelo y umbral: su rendimiento es optimista y el test queda reservado.

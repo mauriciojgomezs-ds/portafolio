@@ -1,0 +1,371 @@
+{
+  "proyecto": "Anomalías industriales en sensores",
+  "generado_utc": "2026-10-07T16:39:06.635187+00:00",
+  "estado": "actualizado_por_etapas",
+  "estado_maestro": "completado",
+  "etapas_sin_reporte": [],
+  "notebooks": [
+    {
+      "notebook": "01_preparacion_datos.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T16:18:51.368450Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "02_analisis_exploratorio.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T16:18:54.620034Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "03_baseline.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T16:18:57.758578Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "04_modelado.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T16:19:04.073566Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "05_evaluacion.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T16:19:07.382323Z",
+      "errores_guardados": 0
+    }
+  ],
+  "resultados": {
+    "preparacion": {
+      "fuente_sintetica": true,
+      "sha256": "f601f14294bcf190f9d720676b7f0aea46a26cde9ab8ebc7b4f8174d9d26b252",
+      "filas_utilizables": 10000,
+      "variables_sensor": [
+        "Air temperature [K]",
+        "Process temperature [K]",
+        "Rotational speed [rpm]",
+        "Torque [Nm]",
+        "Tool wear [min]"
+      ],
+      "variables_excluidas": [
+        "UDI",
+        "Product ID",
+        "Type",
+        "Machine failure",
+        "TWF",
+        "HDF",
+        "PWF",
+        "OSF",
+        "RNF"
+      ],
+      "particiones": {
+        "train": {
+          "filas": 6000,
+          "fallos": 203
+        },
+        "valid": {
+          "filas": 2000,
+          "fallos": 68
+        },
+        "test": {
+          "filas": 2000,
+          "fallos": 68
+        }
+      }
+    },
+    "eda": {
+      "filas_train": 6000,
+      "fallos": 203,
+      "tasa_fallo": 0.03383333333333333,
+      "nulos": 0
+    },
+    "baseline": {
+      "casos": 2000,
+      "precision": 0.24,
+      "recall": 0.08823529411764706,
+      "f1": 0.12903225806451613,
+      "average_precision": 0.21731528891805277,
+      "matriz_confusion": [
+        [
+          1913,
+          19
+        ],
+        [
+          62,
+          6
+        ]
+      ],
+      "alertas": 25,
+      "fallos_reales": 68
+    },
+    "modelado": {
+      "criterio": "f1_validacion",
+      "threshold_elegido": 0.6239855777963655,
+      "quantile_elegido": 0.99,
+      "normales_entrenamiento": 5797,
+      "candidatos": [
+        {
+          "quantile": 0.95,
+          "threshold": 0.5696474803843664,
+          "casos": 2000,
+          "precision": 0.1440677966101695,
+          "recall": 0.25,
+          "f1": 0.1827956989247312,
+          "average_precision": 0.1729031599460739,
+          "matriz_confusion": [
+            [
+              1831,
+              101
+            ],
+            [
+              51,
+              17
+            ]
+          ],
+          "alertas": 118,
+          "fallos_reales": 68
+        },
+        {
+          "quantile": 0.975,
+          "threshold": 0.5935253166493399,
+          "casos": 2000,
+          "precision": 0.18032786885245902,
+          "recall": 0.16176470588235295,
+          "f1": 0.17054263565891473,
+          "average_precision": 0.1729031599460739,
+          "matriz_confusion": [
+            [
+              1882,
+              50
+            ],
+            [
+              57,
+              11
+            ]
+          ],
+          "alertas": 61,
+          "fallos_reales": 68
+        },
+        {
+          "quantile": 0.99,
+          "threshold": 0.6239855777963655,
+          "casos": 2000,
+          "precision": 0.3333333333333333,
+          "recall": 0.1323529411764706,
+          "f1": 0.18947368421052632,
+          "average_precision": 0.1729031599460739,
+          "matriz_confusion": [
+            [
+              1914,
+              18
+            ],
+            [
+              59,
+              9
+            ]
+          ],
+          "alertas": 27,
+          "fallos_reales": 68
+        }
+      ]
+    },
+    "evaluacion": {
+      "baseline": {
+        "casos": 2000,
+        "precision": 0.15,
+        "recall": 0.04411764705882353,
+        "f1": 0.06818181818181818,
+        "average_precision": 0.1524014436949742,
+        "matriz_confusion": [
+          [
+            1915,
+            17
+          ],
+          [
+            65,
+            3
+          ]
+        ],
+        "alertas": 20,
+        "fallos_reales": 68
+      },
+      "modelo": {
+        "casos": 2000,
+        "precision": 0.15384615384615385,
+        "recall": 0.058823529411764705,
+        "f1": 0.0851063829787234,
+        "average_precision": 0.12295893932226931,
+        "matriz_confusion": [
+          [
+            1910,
+            22
+          ],
+          [
+            64,
+            4
+          ]
+        ],
+        "alertas": 26,
+        "fallos_reales": 68
+      }
+    }
+  },
+  "fuentes": [
+    {
+      "ruta": "reports/preparacion/preparacion.json",
+      "sha256": "44edbb17643d385ee9dc226ea35cde5085b95d03df2833cce6ace778fc0c9931",
+      "modificacion_utc": "2026-10-07T16:18:51.347394+00:00"
+    },
+    {
+      "ruta": "reports/preparacion/preparacion.md",
+      "sha256": "020f134920357c45a8960c750b77a13a7c66813b02ad7dac9a9409cd01fa5347",
+      "modificacion_utc": "2026-10-07T16:18:51.347394+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.json",
+      "sha256": "70697b72d340c079de8cc47aafb1ca28403cb5b92a3cdadf6f786bd0bf031bde",
+      "modificacion_utc": "2026-10-07T16:18:54.596474+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.md",
+      "sha256": "db471737812c84f2b5fe2de7d6a5064ac7ff675e7542d9bb40b0e86d2c60029c",
+      "modificacion_utc": "2026-10-07T16:18:54.596474+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.png",
+      "sha256": "a7e6b140328cb8c3977ced49a9f5a394c92cd7f0677a5912a26450c27b5a2e12",
+      "modificacion_utc": "2026-10-07T16:18:54.595474+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.json",
+      "sha256": "97c6a7dda489ef45d36237a04599808d60633d6ea61139a11e413c3d35aba8ef",
+      "modificacion_utc": "2026-10-07T16:18:57.741313+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.md",
+      "sha256": "75d066aed5ca99be77b2c11ae4ccc9d934feff1ca9b1f9aad66b249e43cc6500",
+      "modificacion_utc": "2026-10-07T16:18:57.741313+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.json",
+      "sha256": "a9d034916f0a4fbb64f382df0d4566d42c96f56e3e5eca9599cb925d149b1f6b",
+      "modificacion_utc": "2026-10-07T16:19:04.051889+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.md",
+      "sha256": "a2ec334758c9ec9a94fad141905efd5fc11638eff6ae05108ba16468923e78ac",
+      "modificacion_utc": "2026-10-07T16:19:04.052914+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.json",
+      "sha256": "a4cafe97ac7a73e25d7d742c5cbd768e7c939f9f4cafde00a527fcbbfe95963c",
+      "modificacion_utc": "2026-10-07T16:19:07.359062+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.md",
+      "sha256": "76094cba34b85deac174fac58687e6d264bece80ec2f28dc9c839e706f10ce7e",
+      "modificacion_utc": "2026-10-07T16:19:07.361060+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.png",
+      "sha256": "fe82c6e57e507b4b98102366621bcc60323bd9657df248f074221ff59bddc57e",
+      "modificacion_utc": "2026-10-07T16:19:07.358054+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/predicciones_test.csv",
+      "sha256": "0e855560ad4208fff2539b26b8d7f5000a155c00552e4a985b8d0c1640258a85",
+      "modificacion_utc": "2026-10-07T16:19:07.224620+00:00"
+    },
+    {
+      "ruta": "notebooks/01_preparacion_datos.ipynb",
+      "sha256": "06798b6d5c122c5e5fdd832d532b07c504f395385d5679b52ccf1d04a348b986",
+      "modificacion_utc": "2026-10-07T16:37:58.135924+00:00"
+    },
+    {
+      "ruta": "notebooks/02_analisis_exploratorio.ipynb",
+      "sha256": "a0678499666d3132a7e01953aa8d2ac07103b39a4ad9d5a138743918cffb136c",
+      "modificacion_utc": "2026-10-07T16:37:58.136924+00:00"
+    },
+    {
+      "ruta": "notebooks/03_baseline.ipynb",
+      "sha256": "99d7d5406cc68fcf51ea10958b485179f72440700f33823c0ac5571d6830f9b0",
+      "modificacion_utc": "2026-10-07T16:37:58.137924+00:00"
+    },
+    {
+      "ruta": "notebooks/04_modelado.ipynb",
+      "sha256": "db98f0dc237d726fbc514d5068aa97785e9bb2b3f7e4043d766ac7a9196e17b0",
+      "modificacion_utc": "2026-10-07T16:37:58.137924+00:00"
+    },
+    {
+      "ruta": "notebooks/05_evaluacion.ipynb",
+      "sha256": "d232ebb267e6e372d9bab3f9798f0f78bb6ac0b63b67084fce565a4740068887",
+      "modificacion_utc": "2026-10-07T16:37:58.138924+00:00"
+    },
+    {
+      "ruta": "reports/alertas/00_configuracion_entorno.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T16:18:46.179530+00:00"
+    },
+    {
+      "ruta": "reports/alertas/01_preparacion_datos.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T16:18:51.360618+00:00"
+    },
+    {
+      "ruta": "reports/alertas/02_analisis_exploratorio.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T16:18:54.612516+00:00"
+    },
+    {
+      "ruta": "reports/alertas/03_baseline.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T16:18:57.750404+00:00"
+    },
+    {
+      "ruta": "reports/alertas/04_modelado.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T16:19:04.065010+00:00"
+    },
+    {
+      "ruta": "reports/alertas/05_evaluacion.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T16:19:07.373710+00:00"
+    },
+    {
+      "ruta": "reports/alertas/06_ejecucion_completa.json",
+      "sha256": "1e848de256cb42422358d7adab1f486b122d02dfac23f7da952b7659092430df",
+      "modificacion_utc": "2026-10-07T16:19:08.158473+00:00"
+    },
+    {
+      "ruta": "README.md",
+      "sha256": "5d2dc6c562aa06512aa52a5a7941072b8e72b1cae39c99eeb9c43c8dfda73fc2",
+      "modificacion_utc": "2026-10-07T16:25:26.439521+00:00"
+    },
+    {
+      "ruta": "config.json",
+      "sha256": "ab764966b66516d8ef16829b74c6dcceefcc9a1bb59eb2bdc0cc716fcda42001",
+      "modificacion_utc": "2026-10-07T16:04:40.546478+00:00"
+    },
+    {
+      "ruta": "reports/ejecucion/resumen.json",
+      "sha256": "82b3b5535bc12094f3c65faee338e1ecd37f7652c689bb70bfab5e74fd9467ef",
+      "modificacion_utc": "2026-10-07T16:19:07.824277+00:00"
+    },
+    {
+      "ruta": "reports/entorno/environment.json",
+      "sha256": "bd01fcdca4bdf7138085ce82fa1cd134cc764b4e5bc31a55740b87b31ad3fb24",
+      "modificacion_utc": "2026-10-07T16:18:46.167607+00:00"
+    }
+  ],
+  "limitaciones": "AI4I es sintético. Se usan etiquetas para definir train normal y seleccionar umbrales: protocolo semisupervisado, sin fechas ni evidencia de anticipación de averías. El recall bajo exige revisar costes y nuevos experimentos antes de proponer uso operativo.",
+  "proximos_pasos": [
+    "Revisar fuentes, protocolo y alertas de la ejecución.",
+    "Incorporar sensores reales con fecha, validar por periodos y estudiar el coste de falsas alarmas y fallos omitidos."
+  ]
+}

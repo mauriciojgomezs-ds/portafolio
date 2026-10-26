@@ -1,0 +1,48 @@
+{
+  "fecha_utc": "2026-10-07T16:25:26.528817+00:00",
+  "ejecucion": "00 y 06 completados; 01–05 con kernels separados",
+  "fuente_sha256": "f601f14294bcf190f9d720676b7f0aea46a26cde9ab8ebc7b4f8174d9d26b252",
+  "evaluacion": {
+    "baseline": {
+      "casos": 2000,
+      "precision": 0.15,
+      "recall": 0.04411764705882353,
+      "f1": 0.06818181818181818,
+      "average_precision": 0.1524014436949742,
+      "matriz_confusion": [
+        [
+          1915,
+          17
+        ],
+        [
+          65,
+          3
+        ]
+      ],
+      "alertas": 20,
+      "fallos_reales": 68
+    },
+    "modelo": {
+      "casos": 2000,
+      "precision": 0.15384615384615385,
+      "recall": 0.058823529411764705,
+      "f1": 0.0851063829787234,
+      "average_precision": 0.12295893932226931,
+      "matriz_confusion": [
+        [
+          1910,
+          22
+        ],
+        [
+          64,
+          4
+        ]
+      ],
+      "alertas": 26,
+      "fallos_reales": 68
+    }
+  },
+  "notebooks_validados": 7,
+  "celdas_codigo_ejecutadas": 21,
+  "particiones_sin_solapamiento": true
+}

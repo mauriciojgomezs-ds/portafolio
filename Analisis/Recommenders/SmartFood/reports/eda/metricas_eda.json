@@ -1,0 +1,129 @@
+{
+  "umbral": 270,
+  "originales": {
+    "recetas": 522517,
+    "filas_catalogo": 522517,
+    "reviews": 1401982,
+    "usuarios": 271907,
+    "items": 271678,
+    "pares": 1401982,
+    "pares_repetidos": 0,
+    "esparsidad": 99.99810212511782,
+    "rating_5": 72.18937190349091,
+    "rating_0": 5.438586230065721,
+    "rating_positivo": 88.53886854467461,
+    "nulos_reviews_claves": 0,
+    "items_fuera_catalogo": 19,
+    "calorias": {
+      "count": 522517.0,
+      "mean": 484.4385799887851,
+      "std": 1397.1166490876117,
+      "min": 0.0,
+      "25%": 174.2,
+      "50%": 317.1,
+      "75%": 529.1,
+      "max": 612854.6
+    },
+    "rating_agregado": {
+      "count": 269294.0,
+      "mean": 4.632013709922984,
+      "std": 0.6419341051272118,
+      "min": 1.0,
+      "25%": 4.5,
+      "50%": 5.0,
+      "75%": 5.0,
+      "max": 5.0
+    },
+    "rating_agregado_5": 33.399104718124,
+    "nulos_recetas": {
+      "aggregatedrating": 48.462155298296516,
+      "reviewcount": 47.36477473460194,
+      "recipeyield": 66.61429197518932,
+      "recipeservings": 35.00575100905808
+    },
+    "historial_usuarios": {
+      "count": 271907.0,
+      "mean": 5.156108522399203,
+      "std": 53.46823791889993,
+      "min": 1.0,
+      "25%": 1.0,
+      "50%": 1.0,
+      "75%": 2.0,
+      "max": 8842.0
+    },
+    "historial_recetas": {
+      "count": 271678.0,
+      "mean": 5.160454655879387,
+      "std": 19.708588925192903,
+      "min": 1.0,
+      "25%": 1.0,
+      "50%": 2.0,
+      "75%": 4.0,
+      "max": 2892.0
+    },
+    "matriz_gb": 590.969199568
+  },
+  "filtradas": {
+    "recetas": 190,
+    "filas_catalogo": 190,
+    "reviews": 10343,
+    "usuarios": 617,
+    "items": 190,
+    "pares": 10343,
+    "pares_repetidos": 0,
+    "esparsidad": 91.17717307856351,
+    "rating_5": 77.43401334235715,
+    "rating_0": 1.6242869573624674,
+    "rating_positivo": 93.60920429275839,
+    "nulos_reviews_claves": 0,
+    "items_fuera_catalogo": 0,
+    "calorias": {
+      "count": 190.0,
+      "mean": 402.5026315789474,
+      "std": 348.33367698535653,
+      "min": 0.0,
+      "25%": 200.125,
+      "50%": 322.95000000000005,
+      "75%": 506.35,
+      "max": 3343.8
+    },
+    "rating_agregado": {
+      "count": 190.0,
+      "mean": 4.934210526315789,
+      "std": 0.19145269739114634,
+      "min": 4.0,
+      "25%": 5.0,
+      "50%": 5.0,
+      "75%": 5.0,
+      "max": 5.0
+    },
+    "rating_agregado_5": 88.42105263157895,
+    "nulos_recetas": {
+      "aggregatedrating": 0.0,
+      "reviewcount": 0.0,
+      "recipeyield": 67.36842105263158,
+      "recipeservings": 40.0
+    },
+    "historial_usuarios": {
+      "count": 617.0,
+      "mean": 16.763371150729334,
+      "std": 15.534599641429162,
+      "min": 1.0,
+      "25%": 6.0,
+      "50%": 13.0,
+      "75%": 22.0,
+      "max": 167.0
+    },
+    "historial_recetas": {
+      "count": 190.0,
+      "mean": 54.43684210526316,
+      "std": 28.33835082606387,
+      "min": 1.0,
+      "25%": 36.25,
+      "50%": 48.5,
+      "75%": 66.0,
+      "max": 200.0
+    },
+    "matriz_gb": 0.00093784
+  }
+}

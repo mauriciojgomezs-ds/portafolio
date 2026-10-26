@@ -1,0 +1,362 @@
+{
+  "proyecto": "Pronóstico semanal de compras",
+  "generado_utc": "2026-10-07T16:39:21.841125+00:00",
+  "estado": "actualizado_por_etapas",
+  "estado_maestro": "completado",
+  "etapas_sin_reporte": [],
+  "notebooks": [
+    {
+      "notebook": "01_preparacion_datos.ipynb",
+      "celdas_con_salida": 0,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": null,
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "02_analisis_exploratorio.ipynb",
+      "celdas_con_salida": 2,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T14:26:35.414038Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "03_baseline.ipynb",
+      "celdas_con_salida": 0,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": null,
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "04_modelado.ipynb",
+      "celdas_con_salida": 0,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": null,
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "05_evaluacion.ipynb",
+      "celdas_con_salida": 2,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T14:26:38.597070Z",
+      "errores_guardados": 0
+    }
+  ],
+  "resultados": {
+    "preparacion": {
+      "fuente": "OnlineRetailUCI.zip",
+      "semilla": 42,
+      "sha256": "f5385cbb54bbebf7196389109c6b0621faab0c304e3702548165e71c84aede8b",
+      "filas_originales": 541909,
+      "politica_ventas": "Compras positivas; excluye cancelaciones, devoluciones, precios no positivos y duplicados exactos. No mide ingresos netos.",
+      "unidad": "Importe semanal de compras positivas, en moneda de la fuente (confirmar GBP).",
+      "filas_preparadas": 52,
+      "particiones": {
+        "train": {
+          "filas": 28
+        },
+        "valid": {
+          "filas": 10
+        },
+        "test": {
+          "filas": 10
+        }
+      }
+    },
+    "eda": {
+      "poblacion": "train",
+      "filas": 28,
+      "columnas": 9,
+      "nulos": {
+        "timestamp": 0,
+        "value": 0,
+        "lag_1": 0,
+        "lag_2": 0,
+        "lag_3": 0,
+        "lag_4": 0,
+        "media_4": 0,
+        "sin_semana": 0,
+        "cos_semana": 0
+      },
+      "resumen_numerico": {
+        "value": {
+          "count": 28.0,
+          "mean": 154609.1165,
+          "std": 34847.8721,
+          "min": 86364.58,
+          "25%": 134016.01,
+          "50%": 145030.375,
+          "75%": 180335.2025,
+          "max": 219836.76
+        },
+        "lag_1": {
+          "count": 28.0,
+          "mean": 149719.4211,
+          "std": 45423.6926,
+          "min": 0.0,
+          "25%": 133198.1775,
+          "50%": 145030.375,
+          "75%": 180335.2025,
+          "max": 219836.76
+        },
+        "lag_2": {
+          "count": 28.0,
+          "mean": 146689.5529,
+          "std": 46345.9723,
+          "min": 0.0,
+          "25%": 130839.5025,
+          "50%": 142442.285,
+          "75%": 171884.5925,
+          "max": 219836.76
+        },
+        "lag_3": {
+          "count": 28.0,
+          "mean": 149417.0522,
+          "std": 48090.2791,
+          "min": 0.0,
+          "25%": 130839.5025,
+          "50%": 145030.375,
+          "75%": 190507.93,
+          "max": 219836.76
+        },
+        "lag_4": {
+          "count": 28.0,
+          "mean": 156322.8561,
+          "std": 58755.2709,
+          "min": 0.0,
+          "25%": 130839.5025,
+          "50%": 147555.365,
+          "75%": 192546.5475,
+          "max": 329108.22
+        },
+        "media_4": {
+          "count": 28.0,
+          "mean": 150537.2206,
+          "std": 20604.9093,
+          "min": 104684.9175,
+          "25%": 134756.3256,
+          "50%": 155344.6078,
+          "75%": 165269.2762,
+          "max": 184921.4725
+        },
+        "sin_semana": {
+          "count": 28.0,
+          "mean": 0.5776,
+          "std": 0.3717,
+          "min": -0.2393,
+          "25%": 0.3258,
+          "50%": 0.6631,
+          "75%": 0.8978,
+          "max": 1.0
+        },
+        "cos_semana": {
+          "count": 28.0,
+          "mean": -0.1058,
+          "std": 0.7357,
+          "min": -1.0,
+          "25%": -0.8386,
+          "50%": -0.1799,
+          "75%": 0.5918,
+          "max": 0.9927
+        }
+      }
+    },
+    "baseline": {
+      "casos": 10,
+      "mae": 33730.4171,
+      "rmse": 45049.37843995229
+    },
+    "modelado": {
+      "criterio": "mae_validacion",
+      "alpha_elegido": 1.0,
+      "candidatos": [
+        {
+          "alpha": 1.0,
+          "casos": 10,
+          "mae": 38578.65160953459,
+          "rmse": 64487.394997948024
+        },
+        {
+          "alpha": 10.0,
+          "casos": 10,
+          "mae": 39023.82840595497,
+          "rmse": 63480.173022616575
+        },
+        {
+          "alpha": 100.0,
+          "casos": 10,
+          "mae": 43580.105851500295,
+          "rmse": 66180.23073781485
+        }
+      ]
+    },
+    "evaluacion": {
+      "baseline": {
+        "casos": 10,
+        "mae": 59811.13990000001,
+        "rmse": 71058.63619568762
+      },
+      "modelo": {
+        "casos": 10,
+        "mae": 220296.1079019229,
+        "rmse": 232499.013567352
+      },
+      "periodo_test": [
+        "2011-10-02 00:00:00",
+        "2011-12-04 00:00:00"
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "ruta": "reports/preparacion/preparacion.json",
+      "sha256": "7b1c530c63be83aec253bdd51b48e466fe4ddb0f18c8d3ca62c08e562ba7dd08",
+      "modificacion_utc": "2026-10-07T13:33:16.357543+00:00"
+    },
+    {
+      "ruta": "reports/preparacion/preparacion.md",
+      "sha256": "4a9db3f4414c42ca320f7078de9c32bc5328e3cf9d06a4b24b347d1242c0f1bb",
+      "modificacion_utc": "2026-10-07T13:33:16.357543+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.json",
+      "sha256": "bf442c2bee546142457cca890377262fa71d6e1c7868af2dc8bdf8db405a6041",
+      "modificacion_utc": "2026-10-07T14:26:35.404379+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.md",
+      "sha256": "db0320de215a1f0ccfa9a3fb42b9434317f71102f7e8bbe1346410477f87e2b7",
+      "modificacion_utc": "2026-10-07T14:26:35.404379+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.png",
+      "sha256": "5fe8f1f31d933234cabe3ce648f4c5c32b80e1049a3849f5629f7173d60c7bf7",
+      "modificacion_utc": "2026-10-07T14:26:35.403310+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.json",
+      "sha256": "e53cc806ee58dd790c286609fb743a767f3309b230c1dfcff796d6b865672930",
+      "modificacion_utc": "2026-10-07T13:33:22.805635+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.md",
+      "sha256": "15e8e266697e121fe7d1f41e917a690f26160d69f840b166206fbe456ab640b8",
+      "modificacion_utc": "2026-10-07T13:33:22.806636+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.json",
+      "sha256": "00cbe3bcb247bd01febe3ae828c68050b5bcb6ca4ff86543c3c810ac9e58be01",
+      "modificacion_utc": "2026-10-07T13:33:28.897862+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.md",
+      "sha256": "14090895cbafc64d457270d4df97197c12da84b79bd690f43aea9bb2dbf10941",
+      "modificacion_utc": "2026-10-07T13:33:28.897862+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.json",
+      "sha256": "fed34a906f7e77342b2d2fa42aaae56fe133abccb7b28d3fdf34b63c9b99955a",
+      "modificacion_utc": "2026-10-07T14:26:38.579011+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.md",
+      "sha256": "8ea925bacff2e1ba8ee93ad5d98d7c19b19fafca8433d5b4f0d6d91e8c50e667",
+      "modificacion_utc": "2026-10-07T14:26:38.580012+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.png",
+      "sha256": "7457fec10fe243f8f6ca63a7e0482cd7c42ac87d02b3e988d0021d1eb4841167",
+      "modificacion_utc": "2026-10-07T14:26:38.579011+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/predicciones_test.csv",
+      "sha256": "dad1e3e25cf8ea7a6c88c0faf316e29adce704c405a6fbbd1ab8f31b669bd02d",
+      "modificacion_utc": "2026-10-07T14:26:38.465497+00:00"
+    },
+    {
+      "ruta": "notebooks/01_preparacion_datos.ipynb",
+      "sha256": "e27faa2fd9e28c712b7bec5556dc67e2c3e0f956a293465c2cdd7f530c80d56b",
+      "modificacion_utc": "2026-10-07T16:37:58.192323+00:00"
+    },
+    {
+      "ruta": "notebooks/02_analisis_exploratorio.ipynb",
+      "sha256": "4464eeb192ec2b5073c6b116cd4a1b31112d6195d815670c1be8c1f34f5e3e86",
+      "modificacion_utc": "2026-10-07T16:37:58.195541+00:00"
+    },
+    {
+      "ruta": "notebooks/03_baseline.ipynb",
+      "sha256": "aecca4aaa8f1b521a18ab38515fed73794c63d21d0361db998465cb94ec38422",
+      "modificacion_utc": "2026-10-07T16:37:58.195541+00:00"
+    },
+    {
+      "ruta": "notebooks/04_modelado.ipynb",
+      "sha256": "87bd48b215b3c3fbdf69ba53d067e1e2fe741bbf1a236abe81920c661d9293a9",
+      "modificacion_utc": "2026-10-07T16:37:58.195541+00:00"
+    },
+    {
+      "ruta": "notebooks/05_evaluacion.ipynb",
+      "sha256": "a4204f6353cbc8cb140e193577c9e74a0bf12f46d6aa7360b5678a9866e40642",
+      "modificacion_utc": "2026-10-07T16:37:58.195541+00:00"
+    },
+    {
+      "ruta": "reports/alertas/00_configuracion_entorno.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T14:26:29.851992+00:00"
+    },
+    {
+      "ruta": "reports/alertas/01_preparacion_datos.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T13:33:16.363411+00:00"
+    },
+    {
+      "ruta": "reports/alertas/02_analisis_exploratorio.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T14:26:35.413419+00:00"
+    },
+    {
+      "ruta": "reports/alertas/03_baseline.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T13:33:22.811825+00:00"
+    },
+    {
+      "ruta": "reports/alertas/04_modelado.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T13:33:28.903131+00:00"
+    },
+    {
+      "ruta": "reports/alertas/05_evaluacion.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T14:26:38.598585+00:00"
+    },
+    {
+      "ruta": "reports/alertas/06_ejecucion_completa.json",
+      "sha256": "1e848de256cb42422358d7adab1f486b122d02dfac23f7da952b7659092430df",
+      "modificacion_utc": "2026-10-07T13:33:35.810371+00:00"
+    },
+    {
+      "ruta": "README.md",
+      "sha256": "baeb77853739e6176bff72078d1a4b2b75ed61d2084db95fa2213ba0d45180b7",
+      "modificacion_utc": "2026-10-07T14:41:02.669745+00:00"
+    },
+    {
+      "ruta": "config.json",
+      "sha256": "35202e84ed0a61457edf499c7e1284dc39b5a3b6954146131637501ffcf39af4",
+      "modificacion_utc": "2026-10-07T14:05:27.371295+00:00"
+    },
+    {
+      "ruta": "reports/ejecucion/resumen.json",
+      "sha256": "07bd2fe26cb82e083ef9441854cf8b6cba235e8bde337dcd8e537198d8ddb5c0",
+      "modificacion_utc": "2026-10-07T13:33:35.475763+00:00"
+    },
+    {
+      "ruta": "reports/entorno/environment.json",
+      "sha256": "302b5d0808f9ee29e360338ed67f417f09361264960f32805f74e2570f1f7deb",
+      "modificacion_utc": "2026-10-07T14:26:29.846618+00:00"
+    }
+  ],
+  "limitaciones": "El protocolo evalúa un paso con valores previos observados; no un pronóstico multisemana. Las compras positivas no representan ventas netas. El histórico corto limita las conclusiones entre temporadas.",
+  "proximos_pasos": [
+    "Comprobar procedencia, condiciones de uso y disponibilidad temporal de las variables.",
+    "Completar una pasada de 06 y revisar las alertas antes de publicar el informe.",
+    "Ampliar la evaluación temporal con varios cortes; en anomalías, incorporar métricas por evento."
+  ]
+}

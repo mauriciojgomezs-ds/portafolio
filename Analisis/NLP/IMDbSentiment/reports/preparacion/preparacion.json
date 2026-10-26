@@ -1,0 +1,32 @@
+{
+  "fuente": "datasets/IMDb/train.parquet",
+  "semilla": 42,
+  "sha256": "db47d16b5c297cc0dd625e519c81319c24c9149e70e8496de5475f6fa928342c",
+  "filas_originales": 50000,
+  "sha256_test": "b52e26e2f872d282ffac460bf9770b25ac6f102cda0e6ca7158df98c94e8b3da",
+  "filas_preparadas": 49578,
+  "particiones": {
+    "train": {
+      "filas": 19823,
+      "clases": {
+        "1": 9954,
+        "0": 9869
+      }
+    },
+    "valid": {
+      "filas": 4956,
+      "clases": {
+        "1": 2489,
+        "0": 2467
+      }
+    },
+    "test": {
+      "filas": 24799,
+      "clases": {
+        "1": 12439,
+        "0": 12360
+      }
+    }
+  },
+  "textos_compartidos": 0
+}

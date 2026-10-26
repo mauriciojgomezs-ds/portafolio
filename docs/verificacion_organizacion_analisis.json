@@ -1,0 +1,318 @@
+{
+  "fecha_utc": "2026-10-07T16:39:29.666332+00:00",
+  "tipo": "Reorganización de rutas sin reentrenar modelos",
+  "proyectos": [
+    {
+      "proyecto": "Analisis/AnomalyDetection/IndustrialAnomalyDetection",
+      "paquete": "industrial_anomaly_detection",
+      "notebooks_validados": 7,
+      "contextos_comprobados": [
+        "portafolio",
+        "Analisis",
+        "tema",
+        "proyecto",
+        "notebooks"
+      ],
+      "cli": "--help aprobado",
+      "informe": "regenerado con resultados existentes",
+      "estado_informe": "actualizado_por_etapas",
+      "entrenamiento_repetido": false
+    },
+    {
+      "proyecto": "Analisis/AnomalyDetection/NABAnomalyDetection",
+      "paquete": "nab_anomaly_detection",
+      "notebooks_validados": 7,
+      "contextos_comprobados": [
+        "portafolio",
+        "Analisis",
+        "tema",
+        "proyecto",
+        "notebooks"
+      ],
+      "cli": "--help aprobado",
+      "informe": "regenerado con resultados existentes",
+      "estado_informe": "actualizado_por_etapas",
+      "entrenamiento_repetido": false
+    },
+    {
+      "proyecto": "Analisis/BusinessIntelligence/RetailKPIAnalysis",
+      "paquete": "retail_kpi_analysis",
+      "notebooks_validados": 7,
+      "contextos_comprobados": [
+        "portafolio",
+        "Analisis",
+        "tema",
+        "proyecto",
+        "notebooks"
+      ],
+      "cli": "--help aprobado",
+      "informe": "regenerado con resultados existentes",
+      "estado_informe": "actualizado_por_etapas",
+      "entrenamiento_repetido": false
+    },
+    {
+      "proyecto": "Analisis/churn/ActivityChurn",
+      "paquete": "activity_churn",
+      "notebooks_validados": 7,
+      "contextos_comprobados": [
+        "portafolio",
+        "Analisis",
+        "tema",
+        "proyecto",
+        "notebooks"
+      ],
+      "cli": "--help aprobado",
+      "informe": "regenerado con resultados existentes",
+      "estado_informe": "actualizado_por_etapas",
+      "entrenamiento_repetido": false
+    },
+    {
+      "proyecto": "Analisis/churn/BankChurn",
+      "paquete": "bank_churn",
+      "notebooks_validados": 7,
+      "contextos_comprobados": [
+        "portafolio",
+        "Analisis",
+        "tema",
+        "proyecto",
+        "notebooks"
+      ],
+      "cli": "--help aprobado",
+      "informe": "regenerado con resultados existentes",
+      "estado_informe": "actualizado_por_etapas",
+      "entrenamiento_repetido": false
+    },
+    {
+      "proyecto": "Analisis/churn/SubscriptionChurn",
+      "paquete": "subscription_churn",
+      "notebooks_validados": 7,
+      "contextos_comprobados": [
+        "portafolio",
+        "Analisis",
+        "tema",
+        "proyecto",
+        "notebooks"
+      ],
+      "cli": "--help aprobado",
+      "informe": "regenerado con resultados existentes",
+      "estado_informe": "actualizado_por_etapas",
+      "entrenamiento_repetido": false
+    },
+    {
+      "proyecto": "Analisis/churn/TelecomChurn",
+      "paquete": "telecom_churn",
+      "notebooks_validados": 7,
+      "contextos_comprobados": [
+        "portafolio",
+        "Analisis",
+        "tema",
+        "proyecto",
+        "notebooks"
+      ],
+      "cli": "--help aprobado",
+      "informe": "regenerado con resultados existentes",
+      "estado_informe": "actualizado_por_etapas",
+      "entrenamiento_repetido": false
+    },
+    {
+      "proyecto": "Analisis/Clustering/CustomerSegmentation",
+      "paquete": "customer_segmentation",
+      "notebooks_validados": 7,
+      "contextos_comprobados": [
+        "portafolio",
+        "Analisis",
+        "tema",
+        "proyecto",
+        "notebooks"
+      ],
+      "cli": "--help aprobado",
+      "informe": "regenerado con resultados existentes",
+      "estado_informe": "actualizado_por_etapas",
+      "entrenamiento_repetido": false
+    },
+    {
+      "proyecto": "Analisis/Clustering/SpotifySegmentation",
+      "paquete": "spotify_segmentation",
+      "notebooks_validados": 7,
+      "contextos_comprobados": [
+        "portafolio",
+        "Analisis",
+        "tema",
+        "proyecto",
+        "notebooks"
+      ],
+      "cli": "--help aprobado",
+      "informe": "regenerado con resultados existentes",
+      "estado_informe": "actualizado_por_etapas",
+      "entrenamiento_repetido": false
+    },
+    {
+      "proyecto": "Analisis/ComputerVision/DigitsRecognition",
+      "paquete": "digits_recognition",
+      "notebooks_validados": 7,
+      "contextos_comprobados": [
+        "portafolio",
+        "Analisis",
+        "tema",
+        "proyecto",
+        "notebooks"
+      ],
+      "cli": "--help aprobado",
+      "informe": "regenerado con resultados existentes",
+      "estado_informe": "actualizado_por_etapas",
+      "entrenamiento_repetido": false
+    },
+    {
+      "proyecto": "Analisis/ComputerVision/FashionMNISTClassification",
+      "paquete": "fashion_mnist_classification",
+      "notebooks_validados": 7,
+      "contextos_comprobados": [
+        "portafolio",
+        "Analisis",
+        "tema",
+        "proyecto",
+        "notebooks"
+      ],
+      "cli": "--help aprobado",
+      "informe": "regenerado con resultados existentes",
+      "estado_informe": "actualizado_por_etapas",
+      "entrenamiento_repetido": false
+    },
+    {
+      "proyecto": "Analisis/Forecasting/CallCenterStaffing",
+      "paquete": "call_center_staffing",
+      "notebooks_validados": 7,
+      "contextos_comprobados": [
+        "portafolio",
+        "Analisis",
+        "tema",
+        "proyecto",
+        "notebooks"
+      ],
+      "cli": "--help aprobado",
+      "informe": "regenerado con resultados existentes",
+      "estado_informe": "actualizado_por_etapas",
+      "entrenamiento_repetido": false
+    },
+    {
+      "proyecto": "Analisis/Forecasting/RetailSalesForecasting",
+      "paquete": "retail_sales_forecasting",
+      "notebooks_validados": 7,
+      "contextos_comprobados": [
+        "portafolio",
+        "Analisis",
+        "tema",
+        "proyecto",
+        "notebooks"
+      ],
+      "cli": "--help aprobado",
+      "informe": "regenerado con resultados existentes",
+      "estado_informe": "actualizado_por_etapas",
+      "entrenamiento_repetido": false
+    },
+    {
+      "proyecto": "Analisis/NLP/IMDbSentiment",
+      "paquete": "imdb_sentiment",
+      "notebooks_validados": 7,
+      "contextos_comprobados": [
+        "portafolio",
+        "Analisis",
+        "tema",
+        "proyecto",
+        "notebooks"
+      ],
+      "cli": "--help aprobado",
+      "informe": "regenerado con resultados existentes",
+      "estado_informe": "actualizado_por_etapas",
+      "entrenamiento_repetido": false
+    },
+    {
+      "proyecto": "Analisis/NLP/NetflixGenreClassification",
+      "paquete": "netflix_genre_classification",
+      "notebooks_validados": 7,
+      "contextos_comprobados": [
+        "portafolio",
+        "Analisis",
+        "tema",
+        "proyecto",
+        "notebooks"
+      ],
+      "cli": "--help aprobado",
+      "informe": "regenerado con resultados existentes",
+      "estado_informe": "actualizado_por_etapas",
+      "entrenamiento_repetido": false
+    },
+    {
+      "proyecto": "Analisis/Recommenders/MovieLensRecommender",
+      "paquete": "movielens_recommender",
+      "notebooks_validados": 7,
+      "contextos_comprobados": [
+        "portafolio",
+        "Analisis",
+        "tema",
+        "proyecto",
+        "notebooks"
+      ],
+      "cli": "--help aprobado",
+      "informe": "regenerado con resultados existentes",
+      "estado_informe": "actualizado_por_etapas",
+      "entrenamiento_repetido": false
+    },
+    {
+      "proyecto": "Analisis/Recommenders/NetflixRecommender",
+      "paquete": "netflix_recommender",
+      "notebooks_validados": 7,
+      "contextos_comprobados": [
+        "portafolio",
+        "Analisis",
+        "tema",
+        "proyecto",
+        "notebooks"
+      ],
+      "cli": "--help aprobado",
+      "informe": "regenerado con resultados existentes",
+      "estado_informe": "actualizado_por_etapas",
+      "entrenamiento_repetido": false
+    },
+    {
+      "proyecto": "Analisis/Recommenders/SmartFood",
+      "paquete": "smartfood",
+      "notebooks_validados": 7,
+      "contextos_comprobados": [
+        "portafolio",
+        "Analisis",
+        "tema",
+        "proyecto",
+        "notebooks"
+      ],
+      "cli": "--help aprobado",
+      "informe": "regenerado con resultados existentes",
+      "estado_informe": "actualizado_por_etapas",
+      "entrenamiento_repetido": false
+    },
+    {
+      "proyecto": "Analisis/Recommenders/SpotifyRecommender",
+      "paquete": "spotify_recommender",
+      "notebooks_validados": 7,
+      "contextos_comprobados": [
+        "portafolio",
+        "Analisis",
+        "tema",
+        "proyecto",
+        "notebooks"
+      ],
+      "cli": "--help aprobado",
+      "informe": "regenerado con resultados existentes",
+      "estado_informe": "actualizado_por_etapas",
+      "entrenamiento_repetido": false
+    }
+  ],
+  "enlaces_invalidos": [],
+  "pendientes": [
+    {
+      "ruta": "Recommenders/SmartFood/notebooks",
+      "estado": "carpeta vacía bloqueada por proceso externo; cerrar kernel o editor para retirarla"
+    }
+  ],
+  "notebooks_validados": 133
+}

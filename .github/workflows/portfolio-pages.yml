@@ -1,0 +1,42 @@
+name: Publicar portafolio
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: portfolio-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: SitioWeb/requirements.txt
+      - run: python -m pip install -r SitioWeb/requirements.txt
+      - run: python SitioWeb/scripts/build_site.py
+      - run: python SitioWeb/scripts/test_site.py
+      - run: python SitioWeb/scripts/check_site.py
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: SitioWeb/dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publicar
+        id: deployment
+        uses: actions/deploy-pages@v4

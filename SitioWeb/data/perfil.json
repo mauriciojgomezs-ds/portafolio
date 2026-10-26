@@ -1,0 +1,33 @@
+{
+  "name": "Mauricio Jason Gómez Sandoval",
+  "brand": "Mauricio Gómez S",
+  "brand_mark": "MG",
+  "role": "AI & Data Solutions | Data Engineering | Automation | Business Intelligence",
+  "headline": "Del análisis a decisiones con evidencia.",
+  "description": "Conecto análisis, ingeniería de datos y automatización para resolver preguntas de negocio. Este portafolio reúne proyectos reproducibles y aplicaciones de IA, con sus resultados y límites documentados.",
+  "github_url": "https://github.com/mauriciojgomezs-ds",
+  "repository_url": "",
+  "repository_branch": "main",
+  "email": "mauriciojgomezs@outlook.es",
+  "linkedin_url": "",
+  "about": "Mi trayectoria combina análisis y control de gestión, Business Intelligence, ingeniería de datos y liderazgo técnico. He trabajado en integración de sistemas, automatización de procesos y diseño de soluciones de IA orientadas al negocio. En este portafolio profundizo en ciencia de datos mediante proyectos que explican la pregunta, el método, la evidencia y las limitaciones.",
+  "expertise": [
+    {"title": "Análisis y Business Intelligence", "description": "Indicadores, visualización y análisis para conectar los datos con decisiones operativas y de negocio.", "tools": "Python · SQL · Power BI · R Shiny"},
+    {"title": "Ingeniería de datos y automatización", "description": "Integración de sistemas y flujos ETL/ELT para consolidar información y reducir tareas manuales.", "tools": "Apache Airflow · n8n · PostgreSQL · SQL Server"},
+    {"title": "IA aplicada y productos", "description": "Diseño de asistentes, recuperación de información y arquitecturas de agentes con foco en experiencia de usuario.", "tools": "APIs de LLM · RAG · LangChain · MCP · Ollama"},
+    {"title": "Gobierno y calidad de datos", "description": "Documentación, calidad y trazabilidad para acompañar la adopción de soluciones de datos e IA.", "tools": "Gobierno de datos · Protección de datos · Validación · Auditoría"}
+  ],
+  "experience": [
+    {"period": "2012–2019 / Análisis y operación", "role": "Del análisis de datos al control de gestión y BI", "description": "Mi recorrido comenzó en análisis de carteras, migración y conciliación de información. Después incorporé auditoría de procesos y proyectos de Business Intelligence, con tableros y flujos de transformación de datos para la gestión operativa.", "achievement": "Desarrollé tableros en Power BI para el seguimiento y la gestión de más de 50 campañas."},
+    {"period": "2020–2025 / Ingeniería y automatización", "role": "Ingeniería de datos y automatización de procesos", "description": "Pasé de construir reportes a integrar sistemas y automatizar flujos ETL/ELT. Combiné Python, SQL, Airflow y n8n con consultoría analítica y desarrollo de asistentes para recuperar información operativa.", "achievement": "Integré cinco sistemas desconectados y eliminé diez horas semanales de reportabilidad manual."},
+    {"period": "2025–2026 / Liderazgo y arquitectura", "role": "Liderazgo de desarrollo y arquitectura de soluciones", "description": "Asumí el liderazgo de una célula de desarrollo y el diseño de productos internos: agentes de IA, herramientas comerciales e interfaces que simplifican configuraciones técnicas para usuarios de negocio.", "achievement": "Diseñé un agente generativo para configurar flujos de Genesys Cloud, adoptado por 12 equipos internos, con una reducción del 45 % en los tiempos de configuración."},
+    {"period": "Desde junio de 2026 / IA aplicada", "role": "Desarrollo independiente de soluciones de IA", "description": "Hoy desarrollo iniciativas que reúnen arquitecturas de agentes, modelos locales de lenguaje, recuperación documental y gobierno de datos. Este portafolio complementa ese trabajo con análisis reproducibles y MVP documentados.", "achievement": "He diseñado iniciativas de automatización del desarrollo de software, gobierno de datos y consulta documental mediante RAG."}
+  ],
+  "education": [
+    {"title": "Gobierno y Protección de Datos", "institution": "Universidad Adolfo Ibáñez", "period": "2026", "detail": "Formación en instalación de gobierno de datos y evaluación de impacto de la protección de datos."},
+    {"title": "Diplomado en Advanced Analytics", "institution": "Universidad Adolfo Ibáñez", "period": "2024–2025", "detail": "Formación en analítica avanzada."},
+    {"title": "Diplomado en Data Science", "institution": "Pontificia Universidad Católica de Chile", "period": "2020", "detail": "Formación en ciencia de datos."},
+    {"title": "Ingeniería en Ejecución Informática", "institution": "Universidad de las Américas", "period": "2012–2016", "detail": "Egresado."}
+  ],
+  "featured": ["PowerPlantRegression", "MovieLensRecommender", "WorkforceScheduling", "DataCopilot"]
+}

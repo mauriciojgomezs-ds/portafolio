@@ -1,0 +1,25 @@
+{
+  "stage": 1,
+  "feature": "comparador de periodos",
+  "source": "Kaggle - DataRegina",
+  "validation_date": "2026-10-07",
+  "axes": [
+    {
+      "axis": "producto",
+      "entities": 38,
+      "reconciles": true
+    },
+    {
+      "axis": "region",
+      "entities": 6,
+      "reconciles": true
+    },
+    {
+      "axis": "agente_id",
+      "entities": 4,
+      "reconciles": true
+    }
+  ],
+  "tests_passed": 32,
+  "streamlit_health": "ok"
+}

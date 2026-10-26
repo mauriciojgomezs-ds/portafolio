@@ -1,0 +1,35 @@
+{
+  "fuente": "https://archive.ics.uci.edu/dataset/294/combined+cycle+power+plant",
+  "sha256": "cc7b2a4977c0a44e8221c91d9a7e5746b3c68186cff7e5c61c70af6432b98c7a",
+  "hoja_utilizada": "Sheet1",
+  "hojas_disponibles": [
+    "Sheet1",
+    "Sheet2",
+    "Sheet3",
+    "Sheet4",
+    "Sheet5"
+  ],
+  "filas_hoja": 9568,
+  "duplicados_exactos_retirados": 41,
+  "features": [
+    "AT",
+    "V",
+    "AP",
+    "RH"
+  ],
+  "objetivo_unidad": "Potencia eléctrica PE en MW",
+  "particiones": {
+    "train": {
+      "filas": 5716
+    },
+    "valid": {
+      "filas": 952
+    },
+    "calibration": {
+      "filas": 953
+    },
+    "test": {
+      "filas": 1906
+    }
+  }
+}

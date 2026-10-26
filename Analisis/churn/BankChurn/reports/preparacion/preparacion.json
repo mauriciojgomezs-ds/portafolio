@@ -1,0 +1,31 @@
+{
+  "fuentes": [
+    {
+      "archivo": "Churn_Modelling.csv",
+      "sha256": "3996cd1fa372e0db0cd9c0ebac35bbd4e8e3c65fb942bb010c826e7b1eeef0a0",
+      "filas_originales": 10000,
+      "filas_sin_target": 0,
+      "filas_utilizables": 10000
+    }
+  ],
+  "particion": "stratified",
+  "semilla": 42,
+  "datasets": {
+    "train": {
+      "filas": 6000,
+      "columnas": 14,
+      "positivos": 1223
+    },
+    "valid": {
+      "filas": 2000,
+      "columnas": 14,
+      "positivos": 407
+    },
+    "test": {
+      "filas": 2000,
+      "columnas": 14,
+      "positivos": 407
+    }
+  },
+  "ids_compartidos_train_test": 0
+}

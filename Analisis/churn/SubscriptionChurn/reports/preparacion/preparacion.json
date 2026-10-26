@@ -1,0 +1,38 @@
+{
+  "fuentes": [
+    {
+      "archivo": "customer_churn_dataset-training-master.csv",
+      "sha256": "a41be7b96fb85110521bf03d1530879e9ca94b9f5de19866757f6d184300fff7",
+      "filas_originales": 440833,
+      "filas_sin_target": 1,
+      "filas_utilizables": 440832
+    },
+    {
+      "archivo": "customer_churn_dataset-testing-master.csv",
+      "sha256": "330af932f2dc1cae917f3bd0fb29395c4021319dd906189b7dc257d0ad58a617",
+      "filas_originales": 64374,
+      "filas_sin_target": 0,
+      "filas_utilizables": 64374
+    }
+  ],
+  "particion": "provided",
+  "semilla": 42,
+  "datasets": {
+    "train": {
+      "filas": 352665,
+      "columnas": 12,
+      "positivos": 199999
+    },
+    "valid": {
+      "filas": 88167,
+      "columnas": 12,
+      "positivos": 50000
+    },
+    "test": {
+      "filas": 64374,
+      "columnas": 12,
+      "positivos": 30493
+    }
+  },
+  "ids_compartidos_train_test": 50320
+}

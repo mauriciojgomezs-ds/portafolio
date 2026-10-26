@@ -1,0 +1,12 @@
+.venv/
+.local/
+data/raw/
+data/intermediate/
+data/processed/
+data/output/
+models/
+reports/runs/
+__pycache__/
+*.pyc
+*.egg-info/
+.ipynb_checkpoints/

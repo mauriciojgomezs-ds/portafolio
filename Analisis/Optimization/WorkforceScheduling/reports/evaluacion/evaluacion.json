@@ -1,0 +1,50 @@
+{
+  "baseline": {
+    "restricciones_laborales_cumplidas": true,
+    "cobertura_completa": false,
+    "deficit_agente_intervalos": 1.0,
+    "coste_unidades": 7222.4,
+    "turnos": 63,
+    "horas_pagadas": 504.0,
+    "exceso_agente_horas": 144.0,
+    "errores": []
+  },
+  "optimizado": {
+    "restricciones_laborales_cumplidas": true,
+    "cobertura_completa": true,
+    "deficit_agente_intervalos": 0.0,
+    "coste_unidades": 5904.000000000001,
+    "turnos": 53,
+    "horas_pagadas": 424.0,
+    "exceso_agente_horas": 73.5,
+    "errores": []
+  },
+  "gap_relativo": 0.0,
+  "escenario_mas20pct_deficit_agente_intervalos": 87.0,
+  "escenario_mas20pct_intervalos_sin_cobertura": 69,
+  "ahorro_frente_baseline_factible": null,
+  "escenarios_equilibrio": [
+    {
+      "escenario": "coste_minimo",
+      "coste_unidades": 5904.000000000001,
+      "horas_pagadas": 424.0,
+      "rango_horas": 40.0,
+      "desviacion_horas": 16.333263917664517,
+      "preferencias_incumplidas": 39,
+      "cobertura_completa": true
+    },
+    {
+      "escenario": "equilibrio_preferencias",
+      "coste_unidades": 6409.6,
+      "horas_pagadas": 440.0,
+      "rango_horas": 8.0,
+      "desviacion_horas": 2.0603150145508513,
+      "preferencias_incumplidas": 18,
+      "cobertura_completa": true
+    }
+  ],
+  "incremento_coste_relativo": 0.08563685636856366,
+  "tope_incremento_relativo": 0.1,
+  "equilibrio_solver_status": 1,
+  "equilibrio_gap_objetivo": 0.21999999999995346
+}

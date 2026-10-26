@@ -1,0 +1,298 @@
+{
+  "proyecto": "Efecto de capacitación sobre ingresos",
+  "generado_utc": "2026-10-07T22:33:54.372204+00:00",
+  "estado": "evidencia_disponible",
+  "estado_maestro": "completado",
+  "etapas_sin_reporte": [],
+  "notebooks": [
+    {
+      "notebook": "01_preparacion_datos.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T22:24:26.378067Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "02_analisis_exploratorio.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T22:24:29.297612Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "03_baseline.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T22:24:32.122068Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "04_modelado.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T22:24:37.200598Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "05_evaluacion.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T22:24:41.934558Z",
+      "errores_guardados": 0
+    }
+  ],
+  "resultados": {
+    "preparacion": {
+      "fuente": "https://users.nber.org/~rdehejia/data/.nswdata2.html",
+      "sha256": "e5a3a38aba34088094d817b7a3939bcfdb2d280474373a18b58dbad7a3fb3176",
+      "filas": 445,
+      "asignados_programa": 185,
+      "controles": 260,
+      "covariables_pretratamiento": [
+        "age",
+        "education",
+        "black",
+        "hispanic",
+        "married",
+        "nodegree",
+        "re74",
+        "re75"
+      ],
+      "resultado": "re78: ingresos anuales de 1978 en USD nominales",
+      "muestra": "Submuestra experimental NSW Dehejia–Wahba; no se incluyen controles CPS/PSID",
+      "particion_predictiva": "No aplica: estimación causal sobre la muestra experimental completa"
+    },
+    "eda": {
+      "max_diferencia_estandarizada_absoluta": 0.30398643906182043,
+      "covariables_sobre_01": 4,
+      "proporcion_ingresos_cero": 0.30786516853932583
+    },
+    "baseline": {
+      "efecto_usd": 1794.342404270271,
+      "error_estandar": 670.9965463815241,
+      "ci_inferior": 474.0104698178568,
+      "ci_superior": 3114.674338722685,
+      "confidence_level": 0.95
+    },
+    "modelado": {
+      "efecto_usd": 1621.5831014447613,
+      "error_estandar_hc3": 716.8727509645109,
+      "ci_inferior": 212.5444984462208,
+      "ci_superior": 3030.6217044433015,
+      "confidence_level": 0.95,
+      "parametros": 18,
+      "covariables": [
+        "age",
+        "education",
+        "black",
+        "hispanic",
+        "married",
+        "nodegree",
+        "re74",
+        "re75"
+      ],
+      "metodo": "OLS Lin con interacciones y errores HC3"
+    },
+    "evaluacion": {
+      "sin_ajuste": {
+        "efecto_usd": 1794.342404270271,
+        "error_estandar": 670.9965463815241,
+        "ci_inferior": 474.0104698178568,
+        "ci_superior": 3114.674338722685,
+        "confidence_level": 0.95
+      },
+      "ajustado": {
+        "efecto_usd": 1621.5831014447613,
+        "error_estandar_hc3": 716.8727509645109,
+        "ci_inferior": 212.5444984462208,
+        "ci_superior": 3030.6217044433015,
+        "confidence_level": 0.95,
+        "parametros": 18,
+        "covariables": [
+          "age",
+          "education",
+          "black",
+          "hispanic",
+          "married",
+          "nodegree",
+          "re74",
+          "re75"
+        ],
+        "metodo": "OLS Lin con interacciones y errores HC3"
+      },
+      "bootstrap_replicas_validas": 1000,
+      "bootstrap_replicas_solicitadas": 1000,
+      "bootstrap_ci_sin_ajuste": [
+        468.0270582206861,
+        3286.222295218293
+      ],
+      "bootstrap_ci_ajustado": [
+        247.88557934992113,
+        3176.4496791076353
+      ],
+      "estimando": "Efecto de asignación al programa en la muestra experimental seleccionada"
+    }
+  },
+  "fuentes": [
+    {
+      "ruta": "reports/preparacion/preparacion.json",
+      "sha256": "908cf2d9e0d0fda1ac3d7f97451dd15cdcc64cc6988781683ca00e83c444f07d",
+      "modificacion_utc": "2026-10-07T22:24:26.362423+00:00"
+    },
+    {
+      "ruta": "reports/preparacion/preparacion.md",
+      "sha256": "95d7bddbd6e966305f96dfdd54f460344f9f1cb024fc79ef8a9b18ed8f220427",
+      "modificacion_utc": "2026-10-07T22:24:26.362423+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.json",
+      "sha256": "d587d553757927e3ca9503671a0f2e3fa34198dbd79fe32bfdb84015c05638b2",
+      "modificacion_utc": "2026-10-07T22:24:29.264358+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.md",
+      "sha256": "7332d3c7609ebc5ecf23c042842d512c0e42cb06f52f76449dbfb867c51b6143",
+      "modificacion_utc": "2026-10-07T22:24:29.264358+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.png",
+      "sha256": "0ef76b7b7391089eec0ea5dc46991ffd5ce199f5ccca690eb3299c6b76b8869a",
+      "modificacion_utc": "2026-10-07T22:24:29.264358+00:00"
+    },
+    {
+      "ruta": "reports/eda/balance_pretratamiento.csv",
+      "sha256": "3c6e782005e721c789656abd0e4594ea967b501d1d2e67850304500980b71b9c",
+      "modificacion_utc": "2026-10-07T22:24:29.123190+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.json",
+      "sha256": "85df761cd3f9464c136d0af80f5acfc3410f72b4e6e721b1fa6f6098c16afa59",
+      "modificacion_utc": "2026-10-07T22:24:32.101175+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.md",
+      "sha256": "38b179cf045bc558f27135d69bd44da8f082f5997ca3a0a08dd51244e49aab41",
+      "modificacion_utc": "2026-10-07T22:24:32.101175+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.json",
+      "sha256": "3e88228349ea457d060b7fe0554f52f127f2c6e62380d1dfb1ca7a658d131fc5",
+      "modificacion_utc": "2026-10-07T22:24:37.182246+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.md",
+      "sha256": "5881f37c506d98f4920425657a97faca993d18d6a6d67995bae56e4f69fd46b1",
+      "modificacion_utc": "2026-10-07T22:24:37.182246+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.json",
+      "sha256": "b0b9578cdbfb66177af83f548380878ee0d9d9e8de25b26d71ffab5dec72afc5",
+      "modificacion_utc": "2026-10-07T22:24:41.880971+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.md",
+      "sha256": "3181745142cd42d9dad7e4ff874710a16c14017d6907832a432c67511a4ec657",
+      "modificacion_utc": "2026-10-07T22:24:41.882210+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.png",
+      "sha256": "e521cfdd9b71f97a2695fcf9036ce451ce38b1712ac260b56caebdcec117fba0",
+      "modificacion_utc": "2026-10-07T22:24:41.880971+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/bootstrap.csv",
+      "sha256": "2553cb51c8400fa336c7c3b37cd67743cacb97e9bd56b5f36f10bb6c58c7063f",
+      "modificacion_utc": "2026-10-07T22:24:41.622391+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/estimaciones.csv",
+      "sha256": "865d4fcce8cb908f2ba2670d3301504a7ef18154f65a1d5ab5fd1da495a3077b",
+      "modificacion_utc": "2026-10-07T22:24:41.618392+00:00"
+    },
+    {
+      "ruta": "notebooks/01_preparacion_datos.ipynb",
+      "sha256": "f6a05f3811ba0d88a175df00f76c5c33fbb91aa8ce7ac219be7981e582b56c8c",
+      "modificacion_utc": "2026-10-07T22:24:26.714224+00:00"
+    },
+    {
+      "ruta": "notebooks/02_analisis_exploratorio.ipynb",
+      "sha256": "f203e7d4a07e2325d6d1c9d35e22e9b5d327cdc2f220d6127271494ba955c223",
+      "modificacion_utc": "2026-10-07T22:24:29.652929+00:00"
+    },
+    {
+      "ruta": "notebooks/03_baseline.ipynb",
+      "sha256": "d0eb7502914e67ce09c4db7c81da3d7d248bd50aa96df49c73d8f5a4c5a9ce8f",
+      "modificacion_utc": "2026-10-07T22:24:34.783311+00:00"
+    },
+    {
+      "ruta": "notebooks/04_modelado.ipynb",
+      "sha256": "f0d31daf7655993208b16d3f44190e1970e115ab416ad95d7d98494c394a6de9",
+      "modificacion_utc": "2026-10-07T22:24:37.559004+00:00"
+    },
+    {
+      "ruta": "notebooks/05_evaluacion.ipynb",
+      "sha256": "df9bbfa08154b8ce6d63edb97bbefb513fe2a48a08eefd50c0a1a7486ac2a38d",
+      "modificacion_utc": "2026-10-07T22:24:42.483777+00:00"
+    },
+    {
+      "ruta": "reports/alertas/00_configuracion_entorno.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T22:24:18.937814+00:00"
+    },
+    {
+      "ruta": "reports/alertas/01_preparacion_datos.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T22:24:26.369221+00:00"
+    },
+    {
+      "ruta": "reports/alertas/02_analisis_exploratorio.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T22:24:29.289783+00:00"
+    },
+    {
+      "ruta": "reports/alertas/03_baseline.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T22:24:32.114420+00:00"
+    },
+    {
+      "ruta": "reports/alertas/04_modelado.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T22:24:37.191449+00:00"
+    },
+    {
+      "ruta": "reports/alertas/05_evaluacion.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T22:24:41.913472+00:00"
+    },
+    {
+      "ruta": "reports/alertas/06_ejecucion_completa.json",
+      "sha256": "1e848de256cb42422358d7adab1f486b122d02dfac23f7da952b7659092430df",
+      "modificacion_utc": "2026-10-07T22:24:43.244332+00:00"
+    },
+    {
+      "ruta": "README.md",
+      "sha256": "b9b1f078129d968fb95002cf276657cfed7b7f2d1300cefa4c75c6b2bbe18eed",
+      "modificacion_utc": "2026-10-07T22:33:54.297539+00:00"
+    },
+    {
+      "ruta": "config.json",
+      "sha256": "d353d9800297f52fbc35f0472746ad963861c25ca70352b73000bb7655ae5411",
+      "modificacion_utc": "2026-10-07T22:18:25.068416+00:00"
+    },
+    {
+      "ruta": "reports/ejecucion/resumen.json",
+      "sha256": "58d07c3096618c580d9452547dbdb081774bc33759c85da7cf932236d899ec19",
+      "modificacion_utc": "2026-10-07T22:24:42.497539+00:00"
+    },
+    {
+      "ruta": "reports/entorno/environment.json",
+      "sha256": "adef43c245b9e6fc0ee10cde15b7b86eb961864e9bdb129275d3392a1c8d93d6",
+      "modificacion_utc": "2026-10-07T22:24:18.914265+00:00"
+    }
+  ],
+  "limitaciones": "Efecto de asignación en una submuestra experimental histórica; condicionado a comparabilidad, consistencia y ausencia de interferencia. No efecto por completar capacitación ni generalización a programas actuales. El ajuste y bootstrap expresan incertidumbre, no un efecto verdadero conocido.",
+  "proximos_pasos": [
+    "Revisar fuentes, supuestos y alertas.",
+    "Estudiar sensibilidad e influencia, y definir otra población experimental antes de generalizar."
+  ]
+}

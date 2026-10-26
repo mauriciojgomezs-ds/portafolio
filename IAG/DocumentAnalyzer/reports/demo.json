@@ -1,0 +1,286 @@
+{
+  "documents": [
+    {
+      "document": {
+        "source": "factura_001.md",
+        "source_sha256": "b82e52b758b09d80647b4667f08292528f64bff7e391e2314db63d07937d71d4",
+        "method": "native_text",
+        "pages": [
+          {
+            "page": null,
+            "text": "# Factura ficticia\n\nProveedor: Proveedor Alfa\nNúmero: F001\nFecha: 2026-09-02\nMoneda: CLP\nNeto: 100.000\nIVA: 19.000\nTotal: 119.000\n"
+          }
+        ]
+      },
+      "fields": {
+        "supplier": {
+          "value": "Proveedor Alfa",
+          "quote": "Proveedor: Proveedor Alfa",
+          "page": null,
+          "line": 3
+        },
+        "invoice_id": {
+          "value": "F001",
+          "quote": "Número: F001",
+          "page": null,
+          "line": 4
+        },
+        "date": {
+          "value": "2026-09-02",
+          "quote": "Fecha: 2026-09-02",
+          "page": null,
+          "line": 5
+        },
+        "currency": {
+          "value": "CLP",
+          "quote": "Moneda: CLP",
+          "page": null,
+          "line": 6
+        },
+        "net": {
+          "value": "100.000",
+          "quote": "Neto: 100.000",
+          "page": null,
+          "line": 7
+        },
+        "tax": {
+          "value": "19.000",
+          "quote": "IVA: 19.000",
+          "page": null,
+          "line": 8
+        },
+        "total": {
+          "value": "119.000",
+          "quote": "Total: 119.000",
+          "page": null,
+          "line": 9
+        }
+      },
+      "validation": {
+        "issues": [],
+        "amounts": {
+          "net": "100000",
+          "tax": "19000",
+          "total": "119000"
+        },
+        "total_discrepancy": "0",
+        "check": "net + tax = total; no se infiere tasa de IVA ni se convierten monedas"
+      },
+      "provider": "local",
+      "duplicate_of": null
+    },
+    {
+      "document": {
+        "source": "factura_002_error.md",
+        "source_sha256": "aba9d84441fe7c9acd14e7eecce654e004e2c74cb70876f12b30751d48da3a75",
+        "method": "native_text",
+        "pages": [
+          {
+            "page": null,
+            "text": "# Factura ficticia con discrepancia\n\nProveedor: Proveedor Beta\nNúmero: F002\nFecha: 2026-09-05\nMoneda: CLP\nNeto: 200.000\nIVA: 38.000\nTotal: 238.500\n"
+          }
+        ]
+      },
+      "fields": {
+        "supplier": {
+          "value": "Proveedor Beta",
+          "quote": "Proveedor: Proveedor Beta",
+          "page": null,
+          "line": 3
+        },
+        "invoice_id": {
+          "value": "F002",
+          "quote": "Número: F002",
+          "page": null,
+          "line": 4
+        },
+        "date": {
+          "value": "2026-09-05",
+          "quote": "Fecha: 2026-09-05",
+          "page": null,
+          "line": 5
+        },
+        "currency": {
+          "value": "CLP",
+          "quote": "Moneda: CLP",
+          "page": null,
+          "line": 6
+        },
+        "net": {
+          "value": "200.000",
+          "quote": "Neto: 200.000",
+          "page": null,
+          "line": 7
+        },
+        "tax": {
+          "value": "38.000",
+          "quote": "IVA: 38.000",
+          "page": null,
+          "line": 8
+        },
+        "total": {
+          "value": "238.500",
+          "quote": "Total: 238.500",
+          "page": null,
+          "line": 9
+        }
+      },
+      "validation": {
+        "issues": [
+          "total_mismatch"
+        ],
+        "amounts": {
+          "net": "200000",
+          "tax": "38000",
+          "total": "238500"
+        },
+        "total_discrepancy": "500",
+        "check": "net + tax = total; no se infiere tasa de IVA ni se convierten monedas"
+      },
+      "provider": "local",
+      "duplicate_of": null
+    },
+    {
+      "document": {
+        "source": "factura_003_faltante.md",
+        "source_sha256": "6190b0f9190f9ede1b249dd2b96bff26da94d8350fc0f4f1704ea7cbef67cd72",
+        "method": "native_text",
+        "pages": [
+          {
+            "page": null,
+            "text": "# Factura ficticia incompleta\n\nProveedor: Proveedor Alfa\nNúmero: F003\nFecha: 2026-09-09\nMoneda: CLP\nNeto: 70.000\nTotal: 70.000\n"
+          }
+        ]
+      },
+      "fields": {
+        "supplier": {
+          "value": "Proveedor Alfa",
+          "quote": "Proveedor: Proveedor Alfa",
+          "page": null,
+          "line": 3
+        },
+        "invoice_id": {
+          "value": "F003",
+          "quote": "Número: F003",
+          "page": null,
+          "line": 4
+        },
+        "date": {
+          "value": "2026-09-09",
+          "quote": "Fecha: 2026-09-09",
+          "page": null,
+          "line": 5
+        },
+        "currency": {
+          "value": "CLP",
+          "quote": "Moneda: CLP",
+          "page": null,
+          "line": 6
+        },
+        "net": {
+          "value": "70.000",
+          "quote": "Neto: 70.000",
+          "page": null,
+          "line": 7
+        },
+        "tax": null,
+        "total": {
+          "value": "70.000",
+          "quote": "Total: 70.000",
+          "page": null,
+          "line": 8
+        }
+      },
+      "validation": {
+        "issues": [
+          "missing:tax"
+        ],
+        "amounts": {
+          "net": "70000",
+          "total": "70000"
+        },
+        "total_discrepancy": null,
+        "check": "net + tax = total; no se infiere tasa de IVA ni se convierten monedas"
+      },
+      "provider": "local",
+      "duplicate_of": null
+    },
+    {
+      "document": {
+        "source": "factura_004_duplicada.md",
+        "source_sha256": "408c7e61ce0d4b08b8f0fc815363f6f017b04c38a6dd8708595410e3aac43956",
+        "method": "native_text",
+        "pages": [
+          {
+            "page": null,
+            "text": "# Copia ficticia de factura\n\nProveedor: Proveedor Alfa\nNúmero: F001\nFecha: 2026-09-02\nMoneda: CLP\nNeto: 100.000\nIVA: 19.000\nTotal: 119.000\n"
+          }
+        ]
+      },
+      "fields": {
+        "supplier": {
+          "value": "Proveedor Alfa",
+          "quote": "Proveedor: Proveedor Alfa",
+          "page": null,
+          "line": 3
+        },
+        "invoice_id": {
+          "value": "F001",
+          "quote": "Número: F001",
+          "page": null,
+          "line": 4
+        },
+        "date": {
+          "value": "2026-09-02",
+          "quote": "Fecha: 2026-09-02",
+          "page": null,
+          "line": 5
+        },
+        "currency": {
+          "value": "CLP",
+          "quote": "Moneda: CLP",
+          "page": null,
+          "line": 6
+        },
+        "net": {
+          "value": "100.000",
+          "quote": "Neto: 100.000",
+          "page": null,
+          "line": 7
+        },
+        "tax": {
+          "value": "19.000",
+          "quote": "IVA: 19.000",
+          "page": null,
+          "line": 8
+        },
+        "total": {
+          "value": "119.000",
+          "quote": "Total: 119.000",
+          "page": null,
+          "line": 9
+        }
+      },
+      "validation": {
+        "issues": [],
+        "amounts": {
+          "net": "100000",
+          "tax": "19000",
+          "total": "119000"
+        },
+        "total_discrepancy": "0",
+        "check": "net + tax = total; no se infiere tasa de IVA ni se convierten monedas"
+      },
+      "provider": "local",
+      "duplicate_of": "factura_001.md"
+    }
+  ],
+  "summary": {
+    "validated_total_by_currency": {
+      "CLP": "119000"
+    },
+    "included_count": 1,
+    "policy": "Solo documentos completos, con importes válidos y sin discrepancias; duplicados excluidos; agrupación por moneda."
+  },
+  "automatic_decision": false
+}

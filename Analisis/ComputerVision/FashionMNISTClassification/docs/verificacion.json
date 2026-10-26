@@ -1,0 +1,28 @@
+{
+  "proyecto": "FashionMNISTClassification",
+  "fecha_utc": "2026-10-07T15:54:32.879730+00:00",
+  "estado": "comprobado",
+  "notebooks_ejecutados": [
+    "00",
+    "06",
+    "01",
+    "02",
+    "03",
+    "04",
+    "05"
+  ],
+  "tests": 6,
+  "copia_renombrada": "generador, tests y bootstrap desde notebooks aprobados; sin datos ni modelos en la copia de comprobación",
+  "enlaces": "validos",
+  "resultado": {
+    "baseline": {
+      "accuracy": 0.8101,
+      "f1_macro": 0.8039850202484307
+    },
+    "modelo": {
+      "accuracy": 0.8518,
+      "f1_macro": 0.8536318091338467
+    }
+  },
+  "alertas": "Dos avisos de convergencia de MLP en 04; registrados sin ocultarlos."
+}

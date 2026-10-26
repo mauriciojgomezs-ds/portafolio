@@ -1,0 +1,47 @@
+{
+  "baseline": {
+    "usuarios_con_objetivo_positivo": 469,
+    "objetivos_sin_historial_item": 19,
+    "hit_rate_at_k": 0.046908315565031986,
+    "ndcg_at_k": 0.025254739914348238,
+    "recomendaciones_promedio": 10.0,
+    "cobertura_items_train": 0.009104964782683387,
+    "k": 10
+  },
+  "modelo": {
+    "usuarios_con_objetivo_positivo": 469,
+    "objetivos_sin_historial_item": 19,
+    "hit_rate_at_k": 0.08528784648187633,
+    "ndcg_at_k": 0.044847552257208934,
+    "recomendaciones_promedio": 10.0,
+    "cobertura_items_train": 0.025940560041230028,
+    "k": 10
+  },
+  "ejemplo": {
+    "usuario": 983,
+    "movie_ids": [
+      58559,
+      260,
+      593,
+      59315,
+      33794,
+      589,
+      527,
+      4011,
+      109487,
+      1210
+    ],
+    "titulos": [
+      "Dark Knight, The (2008)",
+      "Star Wars: Episode IV - A New Hope (1977)",
+      "Silence of the Lambs, The (1991)",
+      "Iron Man (2008)",
+      "Batman Begins (2005)",
+      "Terminator 2: Judgment Day (1991)",
+      "Schindler's List (1993)",
+      "Snatch (2000)",
+      "Interstellar (2014)",
+      "Star Wars: Episode VI - Return of the Jedi (1983)"
+    ]
+  }
+}

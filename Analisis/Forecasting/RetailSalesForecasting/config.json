@@ -1,0 +1,8 @@
+{
+  "title": "Pronóstico semanal de compras",
+  "kind": "forecast",
+  "source": "data/raw/OnlineRetailUCI.zip",
+  "seed": 42,
+  "top_n": 10,
+  "source_base": "project"
+}

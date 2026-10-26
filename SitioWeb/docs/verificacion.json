@@ -1,0 +1,40 @@
+{
+  "fecha": "2026-10-13",
+  "alcance": "Construcción y vista previa local; publicación externa pendiente",
+  "contenido": {
+    "proyectos": 29,
+    "analisis": 24,
+    "temas_de_analisis": 13,
+    "aplicaciones_y_mvp": 5,
+    "informes_integrales": 24,
+    "paginas_html": 367,
+    "archivos_de_evidencia": 318
+  },
+  "comprobaciones": {
+    "enlaces_locales_y_anclas": 5609,
+    "errores_de_enlaces": 0,
+    "pruebas_de_publicacion": 7,
+    "resultado_pruebas": "OK",
+    "busqueda": "survival devuelve 1 proyecto",
+    "filtro_familia": "IA y MVP devuelve 4 proyectos",
+    "filtro_area": "Regresión devuelve 1 proyecto",
+    "busqueda_sin_resultados": "mensaje visible y recuperación mediante Limpiar filtros",
+    "carga_progresiva": "12 proyectos iniciales; 24 al pulsar Mostrar más proyectos",
+    "movil": "portada e informe de regresión con ancho de contenido igual al viewport",
+    "consola_portada": "sin errores ni advertencias observados",
+    "notebooks_ejecutados_para_generar_web": 0,
+    "perfil_profesional": "Nombre, presentación, cuatro áreas de trabajo, cuatro etapas de trayectoria con aportes del CV, cuatro formaciones y correo profesional; sin listado de empleadores",
+    "informes_por_tipo": "Análisis: 24 informes; BI e IA y MVP: estado sin informes integrales y enlaces a documentación; filtros comprobados en navegador",
+    "demos_independientes": "Página demos/index.html con tres demos, enlaces relativos, capturas y navegación propia; soporte de videos conservado",
+    "diseno_editorial": "Identidad Mauricio Gómez S y encabezados del CV; tipografía sans serif, portada asimétrica, secciones numeradas y terracota. Catálogo y filtros revisados; escritorio y Demos móvil sin desbordamiento horizontal observado.",
+    "navegacion_informes": "Los JSON originales se abren en una nueva pestaña y cuentan con enlace Descargar; los reportes de etapa conservan botones para regresar al informe del proyecto al inicio y al final. CSV con vista previa y descarga.",
+    "posicion_lectura": "BankChurn: ida y vuelta desde EDA conserva exactamente scrollY 2835.5554; desde modelado regresa a la sección de calibración, scrollY 4564.4443. La posición se guarda por informe en la misma pestaña."
+  },
+  "limites": [
+    "El workflow de GitHub Actions está preparado pero no se ha ejecutado en un repositorio remoto.",
+    "Las demos actuales muestran capturas; los videos quedan pendientes de aportar.",
+    "La validación automática cubre archivos y anclas locales; no verifica disponibilidad de sitios externos.",
+    "Se revisaron la portada y un informe en móvil; no se revisó visualmente cada documento exportado.",
+    "La vista previa se realizó con un entorno local existente; la instalación remota de CI sigue pendiente."
+  ]
+}

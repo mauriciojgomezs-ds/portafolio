@@ -1,0 +1,12 @@
+{
+  "title": "Anomalías industriales en sensores",
+  "kind": "anomaly_tabular",
+  "seed": 42,
+  "source_base": "project",
+  "source": "data/raw/AI4I.zip",
+  "threshold_quantiles": [
+    0.95,
+    0.975,
+    0.99
+  ]
+}

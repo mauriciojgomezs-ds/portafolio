@@ -1,0 +1,9 @@
+{
+  "origen": "Escenario didáctico sintético; no datos de operación ni pronóstico",
+  "fuente_sha256": "38aa8e71618f2b91f1268f4852e44879fc2b4bca96888416e3daf1225b73bc0e",
+  "empleados_sha256": "4807349031c2fa5563bc69d8cf43e166fa6dc893229ff2c6ed20f8c63d740f8d",
+  "empleados": 14,
+  "intervalos": 140,
+  "demanda_agente_horas": 297.5,
+  "particiones": "No aplica: optimización de un escenario fijo, sin aprendizaje predictivo"
+}

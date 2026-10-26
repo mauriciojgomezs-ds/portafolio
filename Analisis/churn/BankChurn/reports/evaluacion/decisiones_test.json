@@ -1,0 +1,89 @@
+{
+  "decision_probability_scores": [
+    {
+      "modelo": "sin_calibrar",
+      "brier": 0.13503064490550437,
+      "log_loss": 0.42508247476311156,
+      "ece_10_bins": 0.02159186068693733
+    },
+    {
+      "modelo": "sigmoid",
+      "brier": 0.1349906099835224,
+      "log_loss": 0.4247845182564933,
+      "ece_10_bins": 0.019943347887563148
+    }
+  ],
+  "decision_test_policies": [
+    {
+      "politica": "sin_calibrar_05",
+      "umbral": 0.5,
+      "casos": 2000,
+      "priorizados": 120,
+      "tp": 70,
+      "fp": 50,
+      "fn": 337,
+      "tn": 1543,
+      "precision": 0.5833333333333334,
+      "recall": 0.171990171990172,
+      "coste_error_total": 1735.0,
+      "coste_error_por_caso": 0.8675
+    },
+    {
+      "politica": "sigmoid_05",
+      "umbral": 0.5,
+      "casos": 2000,
+      "priorizados": 173,
+      "tp": 94,
+      "fp": 79,
+      "fn": 313,
+      "tn": 1514,
+      "precision": 0.5433526011560693,
+      "recall": 0.23095823095823095,
+      "coste_error_total": 1644.0,
+      "coste_error_por_caso": 0.822
+    },
+    {
+      "politica": "umbral_validacion",
+      "umbral": 0.18,
+      "casos": 2000,
+      "priorizados": 849,
+      "tp": 308,
+      "fp": 541,
+      "fn": 99,
+      "tn": 1052,
+      "precision": 0.3627797408716137,
+      "recall": 0.7567567567567568,
+      "coste_error_total": 1036.0,
+      "coste_error_por_caso": 0.518
+    },
+    {
+      "politica": "priorizar_todos",
+      "umbral": 0.0,
+      "casos": 2000,
+      "priorizados": 2000,
+      "tp": 407,
+      "fp": 1593,
+      "fn": 0,
+      "tn": 0,
+      "precision": 0.2035,
+      "recall": 1.0,
+      "coste_error_total": 1593.0,
+      "coste_error_por_caso": 0.7965
+    },
+    {
+      "politica": "priorizar_ninguno",
+      "umbral": 1.0000000000000002,
+      "casos": 2000,
+      "priorizados": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 407,
+      "tn": 1593,
+      "precision": 0.0,
+      "recall": 0.0,
+      "coste_error_total": 2035.0,
+      "coste_error_por_caso": 1.0175
+    }
+  ],
+  "decision_cost_scope": "Penalizaciones ilustrativas de clasificación, no coste real de campaña ni ahorro medido"
+}

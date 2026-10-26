@@ -1,0 +1,18 @@
+[
+  {
+    "proyecto": "NLP/IMDbSentiment",
+    "paquete": "imdb_sentiment",
+    "estado": "comprobado",
+    "fecha_local": "2026-10-07T10:57:09.834522-03:00",
+    "notebooks_reejecutados": [
+      "00",
+      "05"
+    ],
+    "contextos_bootstrap": [
+      "raiz",
+      "proyecto",
+      "notebooks"
+    ],
+    "entrada_cli": "--help comprobado"
+  }
+]

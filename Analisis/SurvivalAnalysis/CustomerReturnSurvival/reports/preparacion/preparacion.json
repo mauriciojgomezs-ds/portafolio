@@ -1,0 +1,22 @@
+{
+  "cierre_observacion": "2011-12-09T12:50:00",
+  "filas_originales": 541909,
+  "filas_compras_positivas_identificadas": 397884,
+  "ocasiones_compra": 18440,
+  "clientes_sin_seguimiento_excluidos": 0,
+  "fuente_sha256": "f5385cbb54bbebf7196389109c6b0621faab0c304e3702548165e71c84aede8b",
+  "clientes": 4338,
+  "eventos": 1927,
+  "censurados": 2411,
+  "horizonte_dias": 90,
+  "features": [
+    "log_basket_gbp",
+    "log_items",
+    "uk"
+  ],
+  "particiones": {
+    "train": 2602,
+    "valid": 868,
+    "test": 868
+  }
+}

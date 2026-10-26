@@ -1,0 +1,20 @@
+{
+  "title": "Churn bancario",
+  "source_zip": "data/raw/Banking Customer Churn Prediction Dataset.zip",
+  "members": {
+    "full": "Churn_Modelling.csv"
+  },
+  "target": "Exited",
+  "id": "CustomerId",
+  "exclude": [
+    "RowNumber",
+    "CustomerId",
+    "Surname"
+  ],
+  "split": "stratified",
+  "source_base": "project",
+  "decision_costs": {
+    "false_negative": 5.0,
+    "false_positive": 1.0
+  }
+}

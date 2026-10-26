@@ -1,0 +1,15 @@
+{
+  "synthetic": true,
+  "currency": "CLP",
+  "rows": 12,
+  "duplicate_rows": 1,
+  "ventas_missing": 1,
+  "ventas_invalid": 1,
+  "sum_ventas_with_duplicates": "1680000",
+  "mean_ventas_with_duplicates": "168000",
+  "group_sum_ventas_region": {
+    "Centro": "310000",
+    "Norte": "530000",
+    "Sur": "840000"
+  }
+}

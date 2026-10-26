@@ -1,0 +1,34 @@
+{
+  "dataset_rows": 2523,
+  "source": "https://www.kaggle.com/datasets/dataregina/datasets-para-proyecto-bi",
+  "accounts": [
+    {
+      "account": "gerente",
+      "status": "passed"
+    },
+    {
+      "account": "analista",
+      "status": "passed"
+    },
+    {
+      "account": "supervisor_norte",
+      "status": "passed"
+    },
+    {
+      "account": "supervisor_sur",
+      "status": "passed"
+    },
+    {
+      "account": "agente_1",
+      "status": "passed"
+    },
+    {
+      "account": "agente_2",
+      "status": "passed"
+    }
+  ],
+  "costs": "unavailable; no margin calculated",
+  "tests_passed": 21,
+  "streamlit_health": "ok",
+  "validation_date": "2026-10-07"
+}

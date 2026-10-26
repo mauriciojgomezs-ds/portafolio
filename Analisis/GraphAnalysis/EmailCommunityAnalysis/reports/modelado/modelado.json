@@ -1,0 +1,7 @@
+{
+  "comunidades": 28,
+  "modularidad": 0.4130212141349939,
+  "resolucion_fija": 1.0,
+  "semilla_declarada": 42,
+  "criterio": "Louvain con parámetros fijados sin consultar departamentos"
+}

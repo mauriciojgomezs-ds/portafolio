@@ -1,0 +1,22 @@
+{
+  "filas_train": 352665,
+  "positivos": 199999,
+  "proporcion_positiva": 0.5671075950264415,
+  "nulos": {
+    "CustomerID": 0,
+    "Age": 0,
+    "Gender": 0,
+    "Tenure": 0,
+    "Usage Frequency": 0,
+    "Support Calls": 0,
+    "Payment Delay": 0,
+    "Subscription Type": 0,
+    "Contract Length": 0,
+    "Total Spend": 0,
+    "Last Interaction": 0,
+    "Churn": 0
+  },
+  "features_excluidas": [
+    "CustomerID"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "usuarios_con_objetivo_positivo": 482,
+  "objetivos_sin_historial_item": 10,
+  "hit_rate_at_k": 0.06016597510373444,
+  "ndcg_at_k": 0.034968811963200674,
+  "recomendaciones_promedio": 10.0,
+  "cobertura_items_train": 0.008331901735097062,
+  "k": 10
+}

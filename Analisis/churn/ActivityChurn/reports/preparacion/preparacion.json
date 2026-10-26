@@ -1,0 +1,31 @@
+{
+  "fuentes": [
+    {
+      "archivo": "abt_churn.csv",
+      "sha256": "6f0d475e566a6d6c3539b03bca745ce47851169651e98e9ea0693dc8d3528811",
+      "filas_originales": 5496,
+      "filas_sin_target": 0,
+      "filas_utilizables": 5496
+    }
+  ],
+  "particion": "temporal",
+  "semilla": 42,
+  "datasets": {
+    "train": {
+      "filas": 4742,
+      "columnas": 43,
+      "positivos": 2173
+    },
+    "valid": {
+      "filas": 451,
+      "columnas": 43,
+      "positivos": 262
+    },
+    "test": {
+      "filas": 303,
+      "columnas": 43,
+      "positivos": 153
+    }
+  },
+  "ids_compartidos_train_test": 185
+}

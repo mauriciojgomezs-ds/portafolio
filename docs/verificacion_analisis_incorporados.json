@@ -1,0 +1,44 @@
+{
+  "fecha_utc": "2026-10-07T22:33:27.956321+00:00",
+  "alcance": "Maestros originales 00 y 06; repetición de las cinco etapas mediante API local en copias renombradas sin resultados previos. Mismo intérprete disponible; no instalación limpia.",
+  "proyectos": [
+    {
+      "proyecto": "Analisis/CausalInference/TrainingProgramImpact",
+      "notebooks_validados_y_ejecutados": 7,
+      "celdas_codigo_ejecutadas": 21,
+      "maestro": "completado",
+      "contextos_bootstrap": 5,
+      "copia_renombrada": "back/.local/independencia_analisis_nuevos/Copia_TrainingProgramImpact",
+      "etapas_recalculadas_en_copia": 5,
+      "tests_aprobados_en_copia": 6
+    },
+    {
+      "proyecto": "Analisis/Regression/PowerPlantRegression",
+      "notebooks_validados_y_ejecutados": 7,
+      "celdas_codigo_ejecutadas": 21,
+      "maestro": "completado",
+      "contextos_bootstrap": 5,
+      "copia_renombrada": "back/.local/independencia_analisis_nuevos/Copia_PowerPlantRegression",
+      "etapas_recalculadas_en_copia": 5,
+      "tests_aprobados_en_copia": 6
+    },
+    {
+      "proyecto": "Analisis/Optimization/WorkforceScheduling",
+      "notebooks_validados_y_ejecutados": 7,
+      "celdas_codigo_ejecutadas": 21,
+      "maestro": "completado",
+      "contextos_bootstrap": 5,
+      "copia_renombrada": "back/.local/independencia_analisis_nuevos/Copia_WorkforceScheduling",
+      "etapas_recalculadas_en_copia": 5,
+      "tests_aprobados_en_copia": 7
+    }
+  ],
+  "total_tests_aprobados": 19,
+  "total_notebooks_nuevos": 21,
+  "total_proyectos_portafolio": 22,
+  "total_notebooks_portafolio": 154,
+  "total_temas": 11,
+  "documentos_enlaces_locales_validados": 44,
+  "conteo_global_comprobado": true,
+  "sintaxis_python_comprobada": true
+}

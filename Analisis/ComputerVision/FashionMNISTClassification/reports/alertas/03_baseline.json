@@ -1,0 +1,12 @@
+[
+  {
+    "tipo": "ConvergenceWarning",
+    "mensaje": "Maximum number of iteration reached before convergence. Consider increasing max_iter to improve the fit.",
+    "descripcion": "El algoritmo terminó sin alcanzar el criterio de convergencia solicitado.",
+    "accion_sugerida": "Revisar escalamiento, tolerancia y número de iteraciones antes de interpretar el modelo.",
+    "apariciones": 1,
+    "origenes": [
+      "C:\\Users\\mauro\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\sklearn\\linear_model\\_stochastic_gradient.py:741"
+    ]
+  }
+]

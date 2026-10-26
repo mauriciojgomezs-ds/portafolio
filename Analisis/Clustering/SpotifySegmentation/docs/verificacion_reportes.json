@@ -1,0 +1,15 @@
+{
+  "proyecto": "SpotifySegmentation",
+  "fecha_utc": "2026-10-07T14:26:26.581897+00:00",
+  "estado": "comprobado",
+  "notebooks_reejecutados": [
+    "00_configuracion_entorno.ipynb",
+    "02_analisis_exploratorio.ipynb",
+    "05_evaluacion.ipynb"
+  ],
+  "tests_locales": "aprobados",
+  "enlaces_locales": "validos",
+  "archivos_sueltos_en_reports": 0,
+  "duracion_segundos": 11.35,
+  "alcance": "Rutas y persistencia verificadas; no se reentrenaron los modelos de 03 y 04. El resumen del maestro conserva la pasada completa anterior."
+}

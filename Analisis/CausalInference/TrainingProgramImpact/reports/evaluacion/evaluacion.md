@@ -1,0 +1,3 @@
+# Efecto de capacitación sobre ingresos: evaluacion
+
+El IC ajustado HC3 **excluye cero por el lado positivo**. Se contrastan ambas estimaciones con **1000 réplicas bootstrap**, muestreando participantes dentro de cada brazo y recalculando el centrado. Diferencias entre métodos reflejan ajuste y aproximaciones de incertidumbre; no se comparan mediante accuracy ni se conoce un efecto verdadero con el que medir error. Interpretación causal condicionada a la asignación experimental, consistencia, ausencia de interferencia y selección de la submuestra. No se generaliza a todos los trabajadores, programas actuales ni efectos por cumplimiento.

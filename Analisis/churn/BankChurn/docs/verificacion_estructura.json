@@ -1,0 +1,18 @@
+[
+  {
+    "proyecto": "churn/BankChurn",
+    "paquete": "bank_churn",
+    "estado": "comprobado",
+    "fecha_local": "2026-10-07T10:58:20.324863-03:00",
+    "notebooks_reejecutados": [
+      "00",
+      "05"
+    ],
+    "contextos_bootstrap": [
+      "raiz",
+      "proyecto",
+      "notebooks"
+    ],
+    "entrada_cli": "--help comprobado"
+  }
+]

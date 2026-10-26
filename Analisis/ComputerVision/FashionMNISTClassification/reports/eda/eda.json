@@ -1,0 +1,24 @@
+{
+  "poblacion": "train",
+  "filas": 12000,
+  "alto": 28,
+  "ancho": 28,
+  "canales": 1,
+  "clases": {
+    "Camiseta/top": 1200,
+    "Pantalón": 1200,
+    "Jersey": 1200,
+    "Vestido": 1200,
+    "Abrigo": 1200,
+    "Sandalia": 1200,
+    "Camisa": 1200,
+    "Zapatilla": 1200,
+    "Bolso": 1200,
+    "Botín": 1200
+  },
+  "rango_pixel": [
+    0,
+    255
+  ],
+  "proporcion_pixeles_cero": 0.5020462372448979
+}

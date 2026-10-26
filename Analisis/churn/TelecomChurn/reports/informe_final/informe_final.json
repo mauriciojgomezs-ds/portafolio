@@ -1,0 +1,619 @@
+{
+  "proyecto": "Churn de telecomunicaciones",
+  "generado_utc": "2026-10-26T14:10:48.662706+00:00",
+  "estado": "evidencia_disponible",
+  "estado_maestro": "completado",
+  "etapas_sin_reporte": [],
+  "notebooks": [
+    {
+      "notebook": "01_preparacion_datos.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-26T14:10:36.134364Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "02_analisis_exploratorio.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-26T14:10:38.355382Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "03_baseline.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-26T14:10:43.224926Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "04_modelado.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-26T14:10:45.327578Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "05_evaluacion.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-26T14:10:47.750898Z",
+      "errores_guardados": 0
+    }
+  ],
+  "resultados": {
+    "preparacion": {
+      "fuentes": [
+        {
+          "archivo": "churn-bigml-80.csv",
+          "sha256": "b8bbd0099748ba3b0f337538cfa5997b5255bdc23c35144ffabba3cafb192550",
+          "filas_originales": 2666,
+          "filas_sin_target": 0,
+          "filas_utilizables": 2666
+        },
+        {
+          "archivo": "churn-bigml-20.csv",
+          "sha256": "c73bb8e7a47c8fced62ddef54741bbbc4005243fb40a65996360337844fd17f7",
+          "filas_originales": 667,
+          "filas_sin_target": 0,
+          "filas_utilizables": 667
+        }
+      ],
+      "particion": "provided",
+      "semilla": 42,
+      "datasets": {
+        "train": {
+          "filas": 2132,
+          "columnas": 20,
+          "positivos": 310
+        },
+        "valid": {
+          "filas": 534,
+          "columnas": 20,
+          "positivos": 78
+        },
+        "test": {
+          "filas": 667,
+          "columnas": 20,
+          "positivos": 95
+        }
+      },
+      "ids_compartidos_train_test": null,
+      "limitacion_identidad": "Sin ID de cliente: no se puede comprobar independencia por persona.",
+      "filas_identicas_train_test": 0,
+      "filas_identicas_valid_test": 0
+    },
+    "eda": {
+      "filas_train": 2132,
+      "positivos": 310,
+      "proporcion_positiva": 0.14540337711069418,
+      "nulos": {
+        "State": 0,
+        "Account length": 0,
+        "Area code": 0,
+        "International plan": 0,
+        "Voice mail plan": 0,
+        "Number vmail messages": 0,
+        "Total day minutes": 0,
+        "Total day calls": 0,
+        "Total day charge": 0,
+        "Total eve minutes": 0,
+        "Total eve calls": 0,
+        "Total eve charge": 0,
+        "Total night minutes": 0,
+        "Total night calls": 0,
+        "Total night charge": 0,
+        "Total intl minutes": 0,
+        "Total intl calls": 0,
+        "Total intl charge": 0,
+        "Customer service calls": 0,
+        "Churn": 0
+      },
+      "features_excluidas": [
+        "Total day charge",
+        "Total eve charge",
+        "Total night charge",
+        "Total intl charge"
+      ]
+    },
+    "baseline": {
+      "casos": 534,
+      "accuracy": 0.8539325842696629,
+      "average_precision": 0.14606741573033707,
+      "roc_auc": 0.5,
+      "matriz_confusion": [
+        [
+          456,
+          0
+        ],
+        [
+          78,
+          0
+        ]
+      ],
+      "clasificacion": {
+        "0": {
+          "precision": 0.8539325842696629,
+          "recall": 1.0,
+          "f1-score": 0.9212121212121213,
+          "support": 456.0
+        },
+        "1": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 78.0
+        },
+        "accuracy": 0.8539325842696629,
+        "macro avg": {
+          "precision": 0.42696629213483145,
+          "recall": 0.5,
+          "f1-score": 0.46060606060606063,
+          "support": 534.0
+        },
+        "weighted avg": {
+          "precision": 0.729200858477465,
+          "recall": 0.8539325842696629,
+          "f1-score": 0.7866530473272048,
+          "support": 534.0
+        }
+      }
+    },
+    "modelado": {
+      "decision_protocol": "Separación estratificada 75/25 dentro de train; sin ID no se comprueba independencia por persona",
+      "decision_fit_cases": 1599,
+      "decision_calibration_cases": 533,
+      "decision_validation_cases": 534,
+      "decision_threshold": 0.17,
+      "decision_false_negative_cost": 5.0,
+      "decision_false_positive_cost": 1.0,
+      "decision_candidates": [
+        {
+          "class_weight": null,
+          "average_precision_validacion": 0.3375681781753926
+        },
+        {
+          "class_weight": "balanced",
+          "average_precision_validacion": 0.3320447288601154
+        }
+      ],
+      "decision_criterion": "AP validación para modelo; sigmoid fijo en calibración; coste FN/FP en validación para umbral",
+      "decision_test_used_for_selection": false,
+      "criterio": "average_precision_validacion",
+      "class_weight_elegido": null,
+      "candidatos": [
+        {
+          "class_weight": null,
+          "casos": 534,
+          "accuracy": 0.8426966292134831,
+          "average_precision": 0.35654747835084166,
+          "roc_auc": 0.7431399010346379,
+          "matriz_confusion": [
+            [
+              433,
+              23
+            ],
+            [
+              61,
+              17
+            ]
+          ],
+          "clasificacion": {
+            "0": {
+              "precision": 0.8765182186234818,
+              "recall": 0.9495614035087719,
+              "f1-score": 0.911578947368421,
+              "support": 456.0
+            },
+            "1": {
+              "precision": 0.425,
+              "recall": 0.21794871794871795,
+              "f1-score": 0.288135593220339,
+              "support": 78.0
+            },
+            "accuracy": 0.8426966292134831,
+            "macro avg": {
+              "precision": 0.6507591093117409,
+              "recall": 0.583755060728745,
+              "f1-score": 0.5998572702943801,
+              "support": 534.0
+            },
+            "weighted avg": {
+              "precision": 0.8105661192739844,
+              "recall": 0.8426966292134831,
+              "f1-score": 0.8205141877737574,
+              "support": 534.0
+            }
+          }
+        },
+        {
+          "class_weight": "balanced",
+          "casos": 534,
+          "accuracy": 0.7509363295880149,
+          "average_precision": 0.3396990972373537,
+          "roc_auc": 0.7455578047683311,
+          "matriz_confusion": [
+            [
+              352,
+              104
+            ],
+            [
+              29,
+              49
+            ]
+          ],
+          "clasificacion": {
+            "0": {
+              "precision": 0.9238845144356955,
+              "recall": 0.7719298245614035,
+              "f1-score": 0.8410991636798089,
+              "support": 456.0
+            },
+            "1": {
+              "precision": 0.3202614379084967,
+              "recall": 0.6282051282051282,
+              "f1-score": 0.42424242424242425,
+              "support": 78.0
+            },
+            "accuracy": 0.7509363295880149,
+            "macro avg": {
+              "precision": 0.6220729761720961,
+              "recall": 0.7000674763832658,
+              "f1-score": 0.6326707939611166,
+              "support": 534.0
+            },
+            "weighted avg": {
+              "precision": 0.8357148515721722,
+              "recall": 0.7509363295880149,
+              "f1-score": 0.7802099770204155,
+              "support": 534.0
+            }
+          }
+        }
+      ]
+    },
+    "evaluacion": {
+      "decision_probability_scores": [
+        {
+          "modelo": "sin_calibrar",
+          "brier": 0.10483763185856676,
+          "log_loss": 0.3390970735636318,
+          "ece_10_bins": 0.03871857545520155
+        },
+        {
+          "modelo": "sigmoid",
+          "brier": 0.10117341824258409,
+          "log_loss": 0.329624861644726,
+          "ece_10_bins": 0.04417519487324266
+        }
+      ],
+      "decision_test_policies": [
+        {
+          "politica": "sin_calibrar_05",
+          "umbral": 0.5,
+          "casos": 667,
+          "priorizados": 62,
+          "tp": 31,
+          "fp": 31,
+          "fn": 64,
+          "tn": 541,
+          "precision": 0.5,
+          "recall": 0.3263157894736842,
+          "coste_error_total": 351.0,
+          "coste_error_por_caso": 0.5262368815592204
+        },
+        {
+          "politica": "sigmoid_05",
+          "umbral": 0.5,
+          "casos": 667,
+          "priorizados": 19,
+          "tp": 8,
+          "fp": 11,
+          "fn": 87,
+          "tn": 561,
+          "precision": 0.42105263157894735,
+          "recall": 0.08421052631578947,
+          "coste_error_total": 446.0,
+          "coste_error_por_caso": 0.6686656671664168
+        },
+        {
+          "politica": "umbral_validacion",
+          "umbral": 0.17,
+          "casos": 667,
+          "priorizados": 186,
+          "tp": 63,
+          "fp": 123,
+          "fn": 32,
+          "tn": 449,
+          "precision": 0.3387096774193548,
+          "recall": 0.6631578947368421,
+          "coste_error_total": 283.0,
+          "coste_error_por_caso": 0.424287856071964
+        },
+        {
+          "politica": "priorizar_todos",
+          "umbral": 0.0,
+          "casos": 667,
+          "priorizados": 667,
+          "tp": 95,
+          "fp": 572,
+          "fn": 0,
+          "tn": 0,
+          "precision": 0.1424287856071964,
+          "recall": 1.0,
+          "coste_error_total": 572.0,
+          "coste_error_por_caso": 0.8575712143928036
+        },
+        {
+          "politica": "priorizar_ninguno",
+          "umbral": 1.0000000000000002,
+          "casos": 667,
+          "priorizados": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 95,
+          "tn": 572,
+          "precision": 0.0,
+          "recall": 0.0,
+          "coste_error_total": 475.0,
+          "coste_error_por_caso": 0.712143928035982
+        }
+      ],
+      "decision_cost_scope": "Penalizaciones ilustrativas de clasificación, no coste real de campaña ni ahorro medido",
+      "baseline": {
+        "casos": 667,
+        "accuracy": 0.8575712143928036,
+        "average_precision": 0.1424287856071964,
+        "roc_auc": 0.5,
+        "matriz_confusion": [
+          [
+            572,
+            0
+          ],
+          [
+            95,
+            0
+          ]
+        ],
+        "clasificacion": {
+          "0": {
+            "precision": 0.8575712143928036,
+            "recall": 1.0,
+            "f1-score": 0.9233252623083131,
+            "support": 572.0
+          },
+          "1": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 95.0
+          },
+          "accuracy": 0.8575712143928036,
+          "macro avg": {
+            "precision": 0.4287856071964018,
+            "recall": 0.5,
+            "f1-score": 0.46166263115415657,
+            "support": 667.0
+          },
+          "weighted avg": {
+            "precision": 0.735428387755148,
+            "recall": 0.8575712143928036,
+            "f1-score": 0.791817166477294,
+            "support": 667.0
+          }
+        }
+      },
+      "modelo": {
+        "casos": 667,
+        "accuracy": 0.8590704647676162,
+        "average_precision": 0.4219660948161861,
+        "roc_auc": 0.811704085388296,
+        "matriz_confusion": [
+          [
+            545,
+            27
+          ],
+          [
+            67,
+            28
+          ]
+        ],
+        "clasificacion": {
+          "0": {
+            "precision": 0.8905228758169934,
+            "recall": 0.9527972027972028,
+            "f1-score": 0.9206081081081081,
+            "support": 572.0
+          },
+          "1": {
+            "precision": 0.509090909090909,
+            "recall": 0.29473684210526313,
+            "f1-score": 0.37333333333333335,
+            "support": 95.0
+          },
+          "accuracy": 0.8590704647676162,
+          "macro avg": {
+            "precision": 0.6998068924539512,
+            "recall": 0.6237670224512329,
+            "f1-score": 0.6469707207207207,
+            "support": 667.0
+          },
+          "weighted avg": {
+            "precision": 0.8361959840044326,
+            "recall": 0.8590704647676162,
+            "f1-score": 0.842660426543485,
+            "support": 667.0
+          }
+        }
+      }
+    }
+  },
+  "fuentes": [
+    {
+      "ruta": "reports/preparacion/preparacion.json",
+      "sha256": "5d624d9df414711ac541e0f4770f35ccf47fa39639bd57f8c1f07d0acd5e5891",
+      "modificacion_utc": "2026-10-26T14:10:36.117162+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.json",
+      "sha256": "3d27a2d24356b790eaa958bf06a74cb5e31e3b6c7c3161fae32e2a6f9b202cbf",
+      "modificacion_utc": "2026-10-26T14:10:38.278729+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.md",
+      "sha256": "5d6a6ca393b95cd9b3519fdb8b4a17c65b0120b291c0acec72c64b0b7b8358d2",
+      "modificacion_utc": "2026-10-26T14:10:38.280768+00:00"
+    },
+    {
+      "ruta": "reports/eda/distribucion_target.png",
+      "sha256": "884f08a42ad0107e49c7a7c03d0c1ea72ab3d3a4b6efce08ee07d25b0bf06caa",
+      "modificacion_utc": "2026-10-26T14:10:38.335097+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline_validacion.json",
+      "sha256": "66a62f26e338baae36eef2713ad8a726433025e1c0c7c1568b2b9b877f2ce3cd",
+      "modificacion_utc": "2026-10-26T14:10:43.195673+00:00"
+    },
+    {
+      "ruta": "reports/modelado/decisiones_validacion.json",
+      "sha256": "f266b1562dbd4e0e26fe384a31ef8cd18fa26bf3528787eecfab311f6b5e96e3",
+      "modificacion_utc": "2026-10-26T14:10:45.294783+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelos_validacion.json",
+      "sha256": "e49dbbe7ab3b9b022f142c6c204722fd61798b519df0e30bfc952cd1e73e2d43",
+      "modificacion_utc": "2026-10-26T14:10:45.171770+00:00"
+    },
+    {
+      "ruta": "reports/modelado/decisiones.md",
+      "sha256": "f616cd8ec1f045f3c77d66c64c1a3d33939f1f781bd63d5aa62c02b7106b52ab",
+      "modificacion_utc": "2026-10-26T14:10:45.294783+00:00"
+    },
+    {
+      "ruta": "reports/modelado/particion_calibracion.csv",
+      "sha256": "a9f83a54e8465ec73931762cd79eccc83d97613010821e44d6f50c008cd68b8e",
+      "modificacion_utc": "2026-10-26T14:10:45.294783+00:00"
+    },
+    {
+      "ruta": "reports/modelado/umbrales_validacion.csv",
+      "sha256": "f4bf1634a4f9c64330628a5eda39cd9856f0dcb2562073c3bd3c324d45f08b23",
+      "modificacion_utc": "2026-10-26T14:10:45.294783+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/decisiones_test.json",
+      "sha256": "f64f04ee70888944da0cb0c43024dabde6200e28a74bced328d7bf692b688036",
+      "modificacion_utc": "2026-10-26T14:10:47.714830+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion_test.json",
+      "sha256": "28990c3ac3f9cd2623d19757161360ba28c703a048a4c32a462786cc610f20d3",
+      "modificacion_utc": "2026-10-26T14:10:47.367682+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.md",
+      "sha256": "499decfb1df61ef98516ee10571095fd01aa4cff9eee494c803ebc7eef76691b",
+      "modificacion_utc": "2026-10-26T14:10:47.714830+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/decisiones.png",
+      "sha256": "7302d716bf3a1cde4272c6bfa419e4638175a96f098754166829c5d0af2d26c5",
+      "modificacion_utc": "2026-10-26T14:10:47.714830+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/calibracion_test.csv",
+      "sha256": "87abfa4f5b363b86706748e83f914b8c7151224ef2799c418a38b61e5a83efe9",
+      "modificacion_utc": "2026-10-26T14:10:47.383526+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/fiabilidad_bins.csv",
+      "sha256": "131d01f2428c4657630e38e4176eabbfecbb96d07bb6251fee67acda97716159",
+      "modificacion_utc": "2026-10-26T14:10:47.383526+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/politicas_test.csv",
+      "sha256": "c094d199f0c318ef34d54985e1dd7efdbf738c4f09382c057b48c61d11eb071d",
+      "modificacion_utc": "2026-10-26T14:10:47.383526+00:00"
+    },
+    {
+      "ruta": "notebooks/01_preparacion_datos.ipynb",
+      "sha256": "0da7aa645cd5104870acccabbb9f31e0928a516ddebccdea88fe25b3f8f59548",
+      "modificacion_utc": "2026-10-26T14:10:36.473565+00:00"
+    },
+    {
+      "ruta": "notebooks/02_analisis_exploratorio.ipynb",
+      "sha256": "8ca66534364a98dfb949d3afe1080276bdb652fd38112ca601a12247ab643d44",
+      "modificacion_utc": "2026-10-26T14:10:41.607335+00:00"
+    },
+    {
+      "ruta": "notebooks/03_baseline.ipynb",
+      "sha256": "ded2a8ceb7d7b618862402b24118113aca9f53e9322f6a8ca2e979ee7cb54074",
+      "modificacion_utc": "2026-10-26T14:10:43.572574+00:00"
+    },
+    {
+      "ruta": "notebooks/04_modelado.ipynb",
+      "sha256": "c7ab0dbb6b52bba025d3b930dbda1bdba8fb0b7c3159beb31857e87eceb5479c",
+      "modificacion_utc": "2026-10-26T14:10:45.778039+00:00"
+    },
+    {
+      "ruta": "notebooks/05_evaluacion.ipynb",
+      "sha256": "0b17b60c77331f5d3305a46b262117dfaca43131ac4bd44350f57f655436b1c2",
+      "modificacion_utc": "2026-10-26T14:10:48.178094+00:00"
+    },
+    {
+      "ruta": "reports/alertas/00_configuracion_entorno.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:10:23.493384+00:00"
+    },
+    {
+      "ruta": "reports/alertas/01_preparacion_datos.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:10:36.123932+00:00"
+    },
+    {
+      "ruta": "reports/alertas/02_analisis_exploratorio.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:10:38.342776+00:00"
+    },
+    {
+      "ruta": "reports/alertas/03_baseline.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:10:43.215188+00:00"
+    },
+    {
+      "ruta": "reports/alertas/04_modelado.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:10:45.318098+00:00"
+    },
+    {
+      "ruta": "reports/alertas/05_evaluacion.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:10:47.741237+00:00"
+    },
+    {
+      "ruta": "README.md",
+      "sha256": "05be16f8335133544a9df7dc87023ff3e527c015810510b7484a2c65fe1e52d7",
+      "modificacion_utc": "2026-10-26T13:54:39.961700+00:00"
+    },
+    {
+      "ruta": "config.json",
+      "sha256": "6aff88f6883a82921816a373a983119faf5567d23d95cc3b6cd0659654b61b2d",
+      "modificacion_utc": "2026-10-08T12:27:49.059878+00:00"
+    },
+    {
+      "ruta": "reports/ejecucion/resumen.json",
+      "sha256": "4221306e0273133310ed16eee78e6db852690d55df693d322ad1590605b310b0",
+      "modificacion_utc": "2026-10-26T14:10:48.194767+00:00"
+    },
+    {
+      "ruta": "reports/entorno/environment.json",
+      "sha256": "926a2b2a0508e6ccf0bb680ce5e3909043c58430ce4d3836082708e2c9eba21d",
+      "modificacion_utc": "2026-10-26T14:10:23.338996+00:00"
+    }
+  ],
+  "limitaciones": "La definición del churn y la disponibilidad temporal de las variables deben confirmarse. Revisa recall por clase y posibles diferencias entre train y test; las métricas de proyectos distintos no son directamente comparables.",
+  "proximos_pasos": [
+    "Comprobar procedencia, condiciones de uso y disponibilidad temporal de las variables.",
+    "Completar una pasada de 06 y revisar las alertas antes de publicar el informe.",
+    "Revisar métricas por clase y errores frecuentes; ajustar decisiones en validación, conservando test independiente."
+  ]
+}

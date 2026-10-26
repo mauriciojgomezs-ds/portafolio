@@ -1,0 +1,21 @@
+{
+  "decision_protocol": "Separación 75/25 por ID de cliente dentro de train",
+  "decision_fit_cases": 4500,
+  "decision_calibration_cases": 1500,
+  "decision_validation_cases": 2000,
+  "decision_threshold": 0.18,
+  "decision_false_negative_cost": 5.0,
+  "decision_false_positive_cost": 1.0,
+  "decision_candidates": [
+    {
+      "class_weight": null,
+      "average_precision_validacion": 0.46169313115783833
+    },
+    {
+      "class_weight": "balanced",
+      "average_precision_validacion": 0.45452786394225503
+    }
+  ],
+  "decision_criterion": "AP validación para modelo; sigmoid fijo en calibración; coste FN/FP en validación para umbral",
+  "decision_test_used_for_selection": false
+}

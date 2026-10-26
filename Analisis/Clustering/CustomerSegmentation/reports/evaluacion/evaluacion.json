@@ -1,0 +1,36 @@
+{
+  "k": 4,
+  "ari_entre_semillas": 0.998759488422091,
+  "varianza_pca_2d": 0.9386629886450324,
+  "perfiles": [
+    {
+      "cluster": 0,
+      "recency": 17.7303,
+      "frequency": 2.19,
+      "monetary": 556.8859,
+      "registros": 837
+    },
+    {
+      "cluster": 1,
+      "recency": 181.4929,
+      "frequency": 1.3175,
+      "monetary": 340.7382,
+      "registros": 1622
+    },
+    {
+      "cluster": 2,
+      "recency": 71.5331,
+      "frequency": 4.0814,
+      "monetary": 1801.8709,
+      "registros": 1167
+    },
+    {
+      "cluster": 3,
+      "recency": 12.117,
+      "frequency": 13.7626,
+      "monetary": 8097.8016,
+      "registros": 712
+    }
+  ],
+  "baseline": 0.1883222422228227
+}

@@ -1,0 +1,343 @@
+{
+  "proyecto": "Optimización de turnos y cobertura",
+  "generado_utc": "2026-10-08T12:44:39.694634+00:00",
+  "estado": "evidencia_disponible",
+  "estado_maestro": "completado",
+  "etapas_sin_reporte": [],
+  "notebooks": [
+    {
+      "notebook": "01_preparacion_datos.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-08T12:43:27.319332Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "02_analisis_exploratorio.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-08T12:43:29.955853Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "03_baseline.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-08T12:43:33.040319Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "04_modelado.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-08T12:44:36.101179Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "05_evaluacion.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-08T12:44:38.981671Z",
+      "errores_guardados": 0
+    }
+  ],
+  "resultados": {
+    "preparacion": {
+      "origen": "Escenario didáctico sintético; no datos de operación ni pronóstico",
+      "fuente_sha256": "38aa8e71618f2b91f1268f4852e44879fc2b4bca96888416e3daf1225b73bc0e",
+      "empleados_sha256": "4807349031c2fa5563bc69d8cf43e166fa6dc893229ff2c6ed20f8c63d740f8d",
+      "empleados": 14,
+      "intervalos": 140,
+      "demanda_agente_horas": 297.5,
+      "particiones": "No aplica: optimización de un escenario fijo, sin aprendizaje predictivo"
+    },
+    "eda": {
+      "demanda_minima": 2,
+      "demanda_maxima": 7,
+      "agente_horas_requeridas": 297.5
+    },
+    "baseline": {
+      "restricciones_laborales_cumplidas": true,
+      "cobertura_completa": false,
+      "deficit_agente_intervalos": 1.0,
+      "coste_unidades": 7222.4,
+      "turnos": 63,
+      "horas_pagadas": 504.0,
+      "exceso_agente_horas": 144.0,
+      "errores": []
+    },
+    "modelado": {
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap_relativo": 0.0,
+      "cota_inferior_coste": 5904.0,
+      "objetivo_coste": 5904.0,
+      "variables_binarias": 3360,
+      "tolerancia_gap": 0.01,
+      "restricciones_laborales_cumplidas": true,
+      "cobertura_completa": true,
+      "deficit_agente_intervalos": 0.0,
+      "coste_unidades": 5904.000000000001,
+      "turnos": 53,
+      "horas_pagadas": 424.0,
+      "exceso_agente_horas": 73.5,
+      "errores": [],
+      "escenario_equilibrio": {
+        "solver_status": 1,
+        "solver_message": "Time limit reached. (HiGHS Status 13: Time limit reached)",
+        "gap_objetivo_equilibrio": 0.21999999999995346,
+        "objetivo_puntuacion": 12.5,
+        "tope_coste_unidades": 6494.400000000001,
+        "coste_referencia_unidades": 5904.0,
+        "rango_horas": 8.0,
+        "preferencias_incumplidas": 18,
+        "restricciones_laborales_cumplidas": true,
+        "cobertura_completa": true,
+        "deficit_agente_intervalos": 0.0,
+        "coste_unidades": 6409.6,
+        "turnos": 55,
+        "horas_pagadas": 440.0,
+        "exceso_agente_horas": 87.5,
+        "errores": [],
+        "preferencias_sha256": "b0c7a11f92c5b2d30ac3fdcbd2b5b90d8f0f045856f1b7a68d7665044b26a3ef"
+      }
+    },
+    "evaluacion": {
+      "escenarios_equilibrio": [
+        {
+          "escenario": "coste_minimo",
+          "coste_unidades": 5904.000000000001,
+          "horas_pagadas": 424.0,
+          "rango_horas": 40.0,
+          "desviacion_horas": 16.333263917664517,
+          "preferencias_incumplidas": 39,
+          "cobertura_completa": true
+        },
+        {
+          "escenario": "equilibrio_preferencias",
+          "coste_unidades": 6409.6,
+          "horas_pagadas": 440.0,
+          "rango_horas": 8.0,
+          "desviacion_horas": 2.0603150145508513,
+          "preferencias_incumplidas": 18,
+          "cobertura_completa": true
+        }
+      ],
+      "incremento_coste_relativo": 0.08563685636856366,
+      "tope_incremento_relativo": 0.1,
+      "equilibrio_solver_status": 1,
+      "equilibrio_gap_objetivo": 0.21999999999995346,
+      "baseline": {
+        "restricciones_laborales_cumplidas": true,
+        "cobertura_completa": false,
+        "deficit_agente_intervalos": 1.0,
+        "coste_unidades": 7222.4,
+        "turnos": 63,
+        "horas_pagadas": 504.0,
+        "exceso_agente_horas": 144.0,
+        "errores": []
+      },
+      "optimizado": {
+        "restricciones_laborales_cumplidas": true,
+        "cobertura_completa": true,
+        "deficit_agente_intervalos": 0.0,
+        "coste_unidades": 5904.000000000001,
+        "turnos": 53,
+        "horas_pagadas": 424.0,
+        "exceso_agente_horas": 73.5,
+        "errores": []
+      },
+      "gap_relativo": 0.0,
+      "escenario_mas20pct_deficit_agente_intervalos": 87.0,
+      "escenario_mas20pct_intervalos_sin_cobertura": 69,
+      "ahorro_frente_baseline_factible": null
+    }
+  },
+  "fuentes": [
+    {
+      "ruta": "reports/preparacion/preparacion.json",
+      "sha256": "488dbeaff77dfae26b453591e1cc4f5e2bbef859120b0da537568d7e42733180",
+      "modificacion_utc": "2026-10-08T12:43:27.298540+00:00"
+    },
+    {
+      "ruta": "reports/preparacion/preparacion.md",
+      "sha256": "8a64df2aed57ec768eef115cfc5983759e5776028da2310a1fed48362c8f5ae9",
+      "modificacion_utc": "2026-10-08T12:43:27.298540+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.json",
+      "sha256": "e1ab1786d838c17cfa952e4573fb079ee0fce85f6a7613f25cd5b036a6d0e6d0",
+      "modificacion_utc": "2026-10-08T12:43:29.935527+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.md",
+      "sha256": "5e04ff5f39c5e35a1e6fc55fc62ebc3d94d52d67120204474d95872b0d492f7d",
+      "modificacion_utc": "2026-10-08T12:43:29.936530+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.png",
+      "sha256": "fc4e6924808a5ecc37d5afbbe90c865c8c3bc2d30ef724219a27533279ea32dd",
+      "modificacion_utc": "2026-10-08T12:43:29.935527+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.json",
+      "sha256": "0197016a939a2d8b060da385ebd1ddfe95d2568506d8e63f5ccb3e97a59ddfcd",
+      "modificacion_utc": "2026-10-08T12:43:33.018111+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.md",
+      "sha256": "9c7e600da1ba6a44b20ff54db2cc00761a042ab9d7c53e9b00569afc08592bc6",
+      "modificacion_utc": "2026-10-08T12:43:33.018111+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.json",
+      "sha256": "76c42fb1060ee61c367a0103dad8e04f471706278f89025dd2b186ae13013315",
+      "modificacion_utc": "2026-10-08T12:44:36.078967+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.md",
+      "sha256": "5dbb92eaadc2cee7d7028aaa418f3941f182d34917239e07843db4a48cbbbee4",
+      "modificacion_utc": "2026-10-08T12:44:36.078967+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/equilibrio.json",
+      "sha256": "ffc617994e769d1721d79ae5cbaebf601ce9f0b5275c5089f664fa20fff01077",
+      "modificacion_utc": "2026-10-08T12:44:38.956565+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.json",
+      "sha256": "e7dc6b87b19d6af044bd918ae54f0db43fb7130543e0dbed194436e96f29c881",
+      "modificacion_utc": "2026-10-08T12:44:38.958067+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/equilibrio.md",
+      "sha256": "a6d44b6d052c096b8ebff0dfabcecb8a87b63c8a3a36f06d29d7f078324fd5d5",
+      "modificacion_utc": "2026-10-08T12:44:38.958067+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.md",
+      "sha256": "2db9dca21abfe6eea6d433a275a38595f544d8bbbc4b44438ff683571243f4ab",
+      "modificacion_utc": "2026-10-08T12:44:38.958067+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.png",
+      "sha256": "b6a4390bca975f00d81155edef36ec184d3a7a890fda62d8f4a2b42504e35cff",
+      "modificacion_utc": "2026-10-08T12:44:38.825141+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/equilibrio.png",
+      "sha256": "aa6afa3f8f2b2572874a408345e608c9667f4990633735530050736c5d1c04f0",
+      "modificacion_utc": "2026-10-08T12:44:38.956565+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/cobertura_por_intervalo.csv",
+      "sha256": "47a6d480af8e1a8dd0c23c7ef7c68f96bab6a0d05cff1ab53dd135acabc7e3cb",
+      "modificacion_utc": "2026-10-08T12:44:38.636832+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/comparacion_equilibrio.csv",
+      "sha256": "526c7b7e9ec91ff1a05a4d4813fd12bb5325d4c0d4631c081263cceeb8e83bcd",
+      "modificacion_utc": "2026-10-08T12:44:38.838345+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/horas_comparadas.csv",
+      "sha256": "8703864802ebb2a03a26b04894b0bd702545ac67a866494a4b7d90e4a5d7ca68",
+      "modificacion_utc": "2026-10-08T12:44:38.838345+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/horas_por_empleado.csv",
+      "sha256": "f0679a78450dd941d378dcb5d2314839587738b3efa20b810eef83bc09a156f3",
+      "modificacion_utc": "2026-10-08T12:44:38.640831+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/turnos_programados.csv",
+      "sha256": "9440a03b1d635b381840a697fc8c5be700adb07e90c42aa4e5218e9af98915dc",
+      "modificacion_utc": "2026-10-08T12:44:38.641832+00:00"
+    },
+    {
+      "ruta": "notebooks/01_preparacion_datos.ipynb",
+      "sha256": "9a2fab4f9c137214dad4dfb9ceee057d06dd4c63d40692c494ff1464b2340861",
+      "modificacion_utc": "2026-10-08T12:43:27.665978+00:00"
+    },
+    {
+      "ruta": "notebooks/02_analisis_exploratorio.ipynb",
+      "sha256": "e442cf48432c45fe78db922af556ed5dea29baef485387b6c7e37f5d256e94c4",
+      "modificacion_utc": "2026-10-08T12:43:30.294848+00:00"
+    },
+    {
+      "ruta": "notebooks/03_baseline.ipynb",
+      "sha256": "21d3b5b94f0fb24be00c237eceddaad4b478ceaa67ef87f2a9dd004b508688e8",
+      "modificacion_utc": "2026-10-08T12:43:33.404854+00:00"
+    },
+    {
+      "ruta": "notebooks/04_modelado.ipynb",
+      "sha256": "e99944b5ca3c701c757ce701a0db1fa0d80d3d2e72ffa3943652e577a66dfc2e",
+      "modificacion_utc": "2026-10-08T12:44:36.450075+00:00"
+    },
+    {
+      "ruta": "notebooks/05_evaluacion.ipynb",
+      "sha256": "06079227d8c7fd241d63705a7210cd7c96e9613ab1f7807942349133004a6d6e",
+      "modificacion_utc": "2026-10-08T12:44:39.330746+00:00"
+    },
+    {
+      "ruta": "reports/alertas/00_configuracion_entorno.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-08T12:43:22.659532+00:00"
+    },
+    {
+      "ruta": "reports/alertas/01_preparacion_datos.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-08T12:43:27.305366+00:00"
+    },
+    {
+      "ruta": "reports/alertas/02_analisis_exploratorio.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-08T12:43:29.945906+00:00"
+    },
+    {
+      "ruta": "reports/alertas/03_baseline.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-08T12:43:33.030407+00:00"
+    },
+    {
+      "ruta": "reports/alertas/04_modelado.json",
+      "sha256": "cd8acf3035bf9a9f2057f773ef606df20510afedbe7f3395bc2eebc6e83ffd02",
+      "modificacion_utc": "2026-10-08T12:44:36.087103+00:00"
+    },
+    {
+      "ruta": "reports/alertas/05_evaluacion.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-08T12:44:38.969655+00:00"
+    },
+    {
+      "ruta": "reports/alertas/06_ejecucion_completa.json",
+      "sha256": "1e848de256cb42422358d7adab1f486b122d02dfac23f7da952b7659092430df",
+      "modificacion_utc": "2026-10-08T12:44:39.685862+00:00"
+    },
+    {
+      "ruta": "README.md",
+      "sha256": "4eb008a39653c54644ec90d7b7be4419cbe6dccddecf49de1730ead164a8a575",
+      "modificacion_utc": "2026-10-08T12:38:56.198313+00:00"
+    },
+    {
+      "ruta": "config.json",
+      "sha256": "427a11a32dbec1dd3c45c82af9e28a839e9331232eb993d0389c18d71a963180",
+      "modificacion_utc": "2026-10-08T12:25:10.624053+00:00"
+    },
+    {
+      "ruta": "reports/ejecucion/resumen.json",
+      "sha256": "2114066d5f23ab2c3871557e362cb383235146a032c9e491578f8e2b712b45a4",
+      "modificacion_utc": "2026-10-08T12:44:39.330746+00:00"
+    },
+    {
+      "ruta": "reports/entorno/environment.json",
+      "sha256": "9fa1cdaebe82cf3433cc019e912642b1d5e3e8d3d9d9f8716d5be1cbd4b324e3",
+      "modificacion_utc": "2026-10-08T12:43:22.655398+00:00"
+    }
+  ],
+  "limitaciones": "Escenario sintético con requisitos exógenos y costes arbitrarios. No predice llamadas, calcula Erlang C o mide SLA. Optimalidad limitada a patrones y tolerancia; las restricciones didácticas no acreditan legislación laboral ni preferencias reales de empleados.",
+  "proximos_pasos": [
+    "Revisar fuentes, supuestos y alertas.",
+    "Incorporar preferencias, habilidades y datos operativos; verificar factibilidad con las reglas reales."
+  ]
+}

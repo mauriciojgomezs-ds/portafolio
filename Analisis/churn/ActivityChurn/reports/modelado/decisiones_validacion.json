@@ -1,0 +1,21 @@
+{
+  "decision_protocol": "Última fecha de train para calibración; ajuste solo fechas anteriores",
+  "decision_fit_cases": 4368,
+  "decision_calibration_cases": 374,
+  "decision_validation_cases": 451,
+  "decision_threshold": 0.32,
+  "decision_false_negative_cost": 5.0,
+  "decision_false_positive_cost": 1.0,
+  "decision_candidates": [
+    {
+      "class_weight": null,
+      "average_precision_validacion": 0.8617727802627547
+    },
+    {
+      "class_weight": "balanced",
+      "average_precision_validacion": 0.8620710953258179
+    }
+  ],
+  "decision_criterion": "AP validación para modelo; sigmoid fijo en calibración; coste FN/FP en validación para umbral",
+  "decision_test_used_for_selection": false
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Red de comunicación y comunidades",
+  "kind": "graph_analysis",
+  "seed": 42,
+  "source_base": "project",
+  "source": "data/raw/email-Eu-core.txt.gz",
+  "labels_source": "data/raw/email-Eu-core-department-labels.txt.gz",
+  "louvain_resolution": 1.0,
+  "stability_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "null_permutations": 100
+}

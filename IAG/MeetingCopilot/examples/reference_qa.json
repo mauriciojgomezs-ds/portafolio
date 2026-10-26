@@ -1,0 +1,158 @@
+{
+  "meeting_id": "demo-001",
+  "origin": "synthetic_reference",
+  "cases": [
+    {
+      "id": "Q1",
+      "question": "¿Cuál fue el presupuesto final aprobado?",
+      "expected_answer": "Se aprobó un máximo de 3.200.000 pesos chilenos para el piloto, sin soporte posterior. La cifra inicial de 3.500.000 fue reemplazada.",
+      "insufficient_evidence": false,
+      "evidence": [
+        {
+          "segment_id": "S06",
+          "quote": "De acuerdo con eliminar el servicio adicional. La propuesta de 3.500.000 queda reemplazada por 3.200.000."
+        },
+        {
+          "segment_id": "S07",
+          "quote": "Queda aprobado un máximo de 3.200.000 pesos chilenos para el piloto, sin incluir soporte posterior. Los tres estamos de acuerdo."
+        },
+        {
+          "segment_id": "S20",
+          "quote": "Correcto: el presupuesto aprobado es 3.200.000, el inicio no está confirmado y las entregas de datos y calidad quedan para el 14 y el 16 de octubre. Seguridad y retención se pospone: no hemos analizado permisos ni plazos de conservación y no hay acuerdos sobre ese tema."
+        }
+      ]
+    },
+    {
+      "id": "Q2",
+      "question": "¿Por qué se aprobó un presupuesto de 3.500.000?",
+      "expected_answer": "La premisa es incorrecta: 3.500.000 fue una propuesta inicial. El monto final aprobado fue 3.200.000 al retirar un servicio adicional.",
+      "insufficient_evidence": false,
+      "evidence": [
+        {
+          "segment_id": "S02",
+          "quote": "Traigo una propuesta de presupuesto de 3.500.000 pesos chilenos, incluyendo un servicio adicional de reportes."
+        },
+        {
+          "segment_id": "S03",
+          "quote": "Ese servicio adicional no es necesario para el piloto. Si lo dejamos fuera, el costo baja a 3.200.000 pesos chilenos."
+        },
+        {
+          "segment_id": "S06",
+          "quote": "De acuerdo con eliminar el servicio adicional. La propuesta de 3.500.000 queda reemplazada por 3.200.000."
+        },
+        {
+          "segment_id": "S07",
+          "quote": "Queda aprobado un máximo de 3.200.000 pesos chilenos para el piloto, sin incluir soporte posterior. Los tres estamos de acuerdo."
+        }
+      ]
+    },
+    {
+      "id": "Q3",
+      "question": "¿El piloto empieza definitivamente el 23 de octubre?",
+      "expected_answer": "No. El 23 de octubre de 2026 es una fecha tentativa, pendiente de confirmación de Operaciones. Diego debe traerla el 16 de octubre.",
+      "insufficient_evidence": false,
+      "evidence": [
+        {
+          "segment_id": "S08",
+          "quote": "Propongo iniciar el piloto el 23 de octubre de 2026, si Operaciones confirma disponibilidad."
+        },
+        {
+          "segment_id": "S09",
+          "quote": "Todavía no tenemos esa confirmación. No presentemos el 23 como fecha definitiva."
+        },
+        {
+          "segment_id": "S10",
+          "quote": "Entonces el 23 de octubre queda como fecha tentativa. Diego consultará a Operaciones y traerá la confirmación el 16 de octubre. Hoy no aprobamos una fecha final."
+        }
+      ]
+    },
+    {
+      "id": "Q4",
+      "question": "¿Quién carga los datos y quién revisa la calidad?",
+      "expected_answer": "Diego hará la carga para el 14 de octubre de 2026. Carla validará calidad para el 16 de octubre. La propuesta inicial de que Carla hiciera la carga no fue el acuerdo final.",
+      "insufficient_evidence": false,
+      "evidence": [
+        {
+          "segment_id": "S11",
+          "quote": "Inicialmente pensé que Carla podía encargarse de la carga de datos."
+        },
+        {
+          "segment_id": "S12",
+          "quote": "Yo puedo revisar calidad, pero no hacer la carga. Diego tiene acceso al proceso de carga."
+        },
+        {
+          "segment_id": "S13",
+          "quote": "Confirmo que yo haré la carga de datos y la entregaré el 14 de octubre de 2026."
+        },
+        {
+          "segment_id": "S14",
+          "quote": "Confirmo que yo validaré la calidad de los datos y entregaré los resultados el 16 de octubre de 2026."
+        },
+        {
+          "segment_id": "S15",
+          "quote": "Quedan esas dos tareas: carga a cargo de Diego para el 14 y validación de calidad a cargo de Carla para el 16. Son compromisos; todavía no están ejecutados."
+        }
+      ]
+    },
+    {
+      "id": "Q5",
+      "question": "¿Diego ya terminó la carga de datos?",
+      "expected_answer": "La reunión solo acredita el compromiso de Diego. No hay evidencia de ejecución o entrega posterior.",
+      "insufficient_evidence": true,
+      "evidence": [
+        {
+          "segment_id": "S15",
+          "quote": "Quedan esas dos tareas: carga a cargo de Diego para el 14 y validación de calidad a cargo de Carla para el 16. Son compromisos; todavía no están ejecutados."
+        },
+        {
+          "segment_id": "S21",
+          "quote": "Entendido. Hoy no podemos afirmar que se hayan completado esas tareas; solo asumimos los compromisos."
+        }
+      ]
+    },
+    {
+      "id": "Q6",
+      "question": "¿Qué se acordó sobre el plan de pruebas?",
+      "expected_answer": "No se puede determinar: el tema se anuncia y falta el fragmento posterior entre 11:40 y 15:00.",
+      "insufficient_evidence": true,
+      "evidence": [
+        {
+          "segment_id": "S17",
+          "quote": "Ahora pasemos al plan de pruebas del piloto."
+        }
+      ]
+    },
+    {
+      "id": "Q7",
+      "question": "¿Qué plazo de retención de datos se aprobó?",
+      "expected_answer": "No se aprobó un plazo de retención. En el cierre se confirma que seguridad y retención se pospone sin analizar permisos ni plazos y sin acuerdos.",
+      "insufficient_evidence": false,
+      "evidence": [
+        {
+          "segment_id": "S20",
+          "quote": "Correcto: el presupuesto aprobado es 3.200.000, el inicio no está confirmado y las entregas de datos y calidad quedan para el 14 y el 16 de octubre. Seguridad y retención se pospone: no hemos analizado permisos ni plazos de conservación y no hay acuerdos sobre ese tema."
+        }
+      ]
+    },
+    {
+      "id": "Q8",
+      "question": "¿Qué quedó pendiente sobre el inicio?",
+      "expected_answer": "Obtener la confirmación de Operaciones para fijar una fecha definitiva. Diego asumió traer esa confirmación el 16 de octubre de 2026.",
+      "insufficient_evidence": false,
+      "evidence": [
+        {
+          "segment_id": "S10",
+          "quote": "Entonces el 23 de octubre queda como fecha tentativa. Diego consultará a Operaciones y traerá la confirmación el 16 de octubre. Hoy no aprobamos una fecha final."
+        },
+        {
+          "segment_id": "S20",
+          "quote": "Correcto: el presupuesto aprobado es 3.200.000, el inicio no está confirmado y las entregas de datos y calidad quedan para el 14 y el 16 de octubre. Seguridad y retención se pospone: no hemos analizado permisos ni plazos de conservación y no hay acuerdos sobre ese tema."
+        },
+        {
+          "segment_id": "S22",
+          "quote": "Cerramos aquí. Revisaremos los pendientes cuando tengamos la respuesta de Operaciones."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Recomendación colaborativa de películas",
+  "kind": "collaborative",
+  "source": "data/raw/movieLens.zip",
+  "seed": 42,
+  "top_n": 10,
+  "max_users": 800,
+  "source_base": "project"
+}

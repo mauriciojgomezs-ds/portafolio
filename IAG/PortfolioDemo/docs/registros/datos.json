@@ -1,0 +1,58 @@
+{
+  "source": "ventas.csv",
+  "source_sha256": "9bdca201e7f37b7582bb377dee6be60e0b0fa7224d6c81a66149249e46fb0459",
+  "provider": "local",
+  "question": "total de ventas por region",
+  "profile": {
+    "rows": 12,
+    "columns": {
+      "pedido": {
+        "missing": 0,
+        "numeric_valid": 0,
+        "non_numeric_nonempty": 12
+      },
+      "fecha": {
+        "missing": 0,
+        "numeric_valid": 0,
+        "non_numeric_nonempty": 12
+      },
+      "region": {
+        "missing": 0,
+        "numeric_valid": 0,
+        "non_numeric_nonempty": 12
+      },
+      "ventas": {
+        "missing": 1,
+        "numeric_valid": 10,
+        "non_numeric_nonempty": 1
+      },
+      "costo": {
+        "missing": 0,
+        "numeric_valid": 12,
+        "non_numeric_nonempty": 0
+      }
+    },
+    "duplicate_rows": 1
+  },
+  "plan": {
+    "operation": "group_sum",
+    "column": "ventas",
+    "group_by": "region"
+  },
+  "result": {
+    "status": "calculated",
+    "value": {
+      "Centro": "310000",
+      "Norte": "530000",
+      "Sur": "840000"
+    },
+    "valid_rows": 10,
+    "missing_line_numbers": [
+      8
+    ],
+    "invalid_line_numbers": [
+      9
+    ],
+    "policy": "Cálculo sobre valores válidos; filas duplicadas conservadas; faltantes y no numéricos excluidos y declarados. Importes sin conversión de moneda."
+  }
+}

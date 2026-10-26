@@ -1,0 +1,16 @@
+{
+  "sha256": "e5dd6c6dc3a5b49e4526d8403b07295730cd8d76624f30da0fc652eafcd2b3d8",
+  "filas_originales": 1797,
+  "duplicados_retirados": 0,
+  "particiones": {
+    "train": {
+      "filas": 1078
+    },
+    "valid": {
+      "filas": 359
+    },
+    "test": {
+      "filas": 360
+    }
+  }
+}

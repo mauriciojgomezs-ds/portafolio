@@ -1,0 +1,23 @@
+[
+  {
+    "proyecto": "Recommenders/MovieLensRecommender",
+    "estado": "completado",
+    "segundos": 38.43,
+    "alertas_por_notebook": {
+      "00_configuracion_entorno": 0,
+      "01_preparacion_datos": 0,
+      "02_analisis_exploratorio": 0,
+      "03_baseline": 0,
+      "04_modelado": 0,
+      "05_evaluacion": 0,
+      "06_ejecucion_completa": 1
+    },
+    "actualizacion_presentacion": {
+      "fecha_local": "2026-10-07T10:35:21.954152-03:00",
+      "etapas": [
+        "05_evaluacion"
+      ],
+      "estado": "completado"
+    }
+  }
+]

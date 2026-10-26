@@ -1,0 +1,33 @@
+{
+  "filas_train": 2132,
+  "positivos": 310,
+  "proporcion_positiva": 0.14540337711069418,
+  "nulos": {
+    "State": 0,
+    "Account length": 0,
+    "Area code": 0,
+    "International plan": 0,
+    "Voice mail plan": 0,
+    "Number vmail messages": 0,
+    "Total day minutes": 0,
+    "Total day calls": 0,
+    "Total day charge": 0,
+    "Total eve minutes": 0,
+    "Total eve calls": 0,
+    "Total eve charge": 0,
+    "Total night minutes": 0,
+    "Total night calls": 0,
+    "Total night charge": 0,
+    "Total intl minutes": 0,
+    "Total intl calls": 0,
+    "Total intl charge": 0,
+    "Customer service calls": 0,
+    "Churn": 0
+  },
+  "features_excluidas": [
+    "Total day charge",
+    "Total eve charge",
+    "Total night charge",
+    "Total intl charge"
+  ]
+}

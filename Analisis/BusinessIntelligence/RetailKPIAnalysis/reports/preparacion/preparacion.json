@@ -1,0 +1,11 @@
+{
+  "filas_originales": 541909,
+  "duplicados_retirados": 5268,
+  "filas_invalidas_retiradas": 2512,
+  "filas_preparadas": 534129,
+  "sha256": "f5385cbb54bbebf7196389109c6b0621faab0c304e3702548165e71c84aede8b",
+  "fecha_min": "2010-12-01 08:26:00",
+  "fecha_max": "2011-12-09 12:50:00",
+  "cancelaciones_con_importe_positivo": 0,
+  "moneda": "GBP"
+}

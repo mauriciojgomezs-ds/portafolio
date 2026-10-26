@@ -1,0 +1,12 @@
+{
+  "moneda": "GBP",
+  "facturacion_positiva": 10642110.804000001,
+  "ajustes_negativos_absolutos": 893979.73,
+  "facturacion_neta": 9748131.074,
+  "ratio_ajustes_sobre_positiva": 0.08400398628287012,
+  "facturas_positivas": 19960,
+  "ticket_medio_factura_positiva": 533.1718839679359,
+  "clientes_identificados": 4371,
+  "filas_sin_cliente": 132565,
+  "reconciliacion_gbp": 1.862645149230957e-09
+}

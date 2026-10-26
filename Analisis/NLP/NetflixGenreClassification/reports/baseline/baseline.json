@@ -1,0 +1,197 @@
+{
+  "casos": 1221,
+  "exact_match_etiquetas_conocidas": 0.0,
+  "f1_macro": 0.0,
+  "clasificacion": {
+    "Action & Adventure": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 164.0
+    },
+    "Anime Features": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 14.0
+    },
+    "Children & Family Movies": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 144.0
+    },
+    "Classic Movies": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 21.0
+    },
+    "Comedies": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 339.0
+    },
+    "Cult Movies": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 16.0
+    },
+    "Documentaries": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 171.0
+    },
+    "Dramas": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 457.0
+    },
+    "Faith & Spirituality": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 6.0
+    },
+    "Horror Movies": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 70.0
+    },
+    "Independent Movies": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 149.0
+    },
+    "International Movies": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 519.0
+    },
+    "LGBTQ Movies": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 22.0
+    },
+    "Movies": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 14.0
+    },
+    "Music & Musicals": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 82.0
+    },
+    "Romantic Movies": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 119.0
+    },
+    "Sci-Fi & Fantasy": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 47.0
+    },
+    "Sports Movies": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 43.0
+    },
+    "Stand-Up Comedy": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 68.0
+    },
+    "Thrillers": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 107.0
+    },
+    "micro avg": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 2572.0
+    },
+    "macro avg": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 2572.0
+    },
+    "weighted avg": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 2572.0
+    },
+    "samples avg": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 2572.0
+    }
+  },
+  "etiquetas_fuera_vocabulario_train": 0,
+  "etiquetas_train": [
+    "Action & Adventure",
+    "Anime Features",
+    "Children & Family Movies",
+    "Classic Movies",
+    "Comedies",
+    "Cult Movies",
+    "Documentaries",
+    "Dramas",
+    "Faith & Spirituality",
+    "Horror Movies",
+    "Independent Movies",
+    "International Movies",
+    "LGBTQ Movies",
+    "Movies",
+    "Music & Musicals",
+    "Romantic Movies",
+    "Sci-Fi & Fantasy",
+    "Sports Movies",
+    "Stand-Up Comedy",
+    "Thrillers"
+  ],
+  "f1_micro": 0.0,
+  "categorias_con_soporte_sin_deteccion": [
+    "Action & Adventure",
+    "Anime Features",
+    "Children & Family Movies",
+    "Classic Movies",
+    "Comedies",
+    "Cult Movies",
+    "Documentaries",
+    "Dramas",
+    "Faith & Spirituality",
+    "Horror Movies",
+    "Independent Movies",
+    "International Movies",
+    "LGBTQ Movies",
+    "Movies",
+    "Music & Musicals",
+    "Romantic Movies",
+    "Sci-Fi & Fantasy",
+    "Sports Movies",
+    "Stand-Up Comedy",
+    "Thrillers"
+  ]
+}

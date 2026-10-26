@@ -1,0 +1,17 @@
+{
+  "synthetic": true,
+  "expected_validated_total_CLP": "119000",
+  "expected_included_count": 1,
+  "cases": {
+    "factura_001.md": [],
+    "factura_002_error.md": [
+      "total_mismatch"
+    ],
+    "factura_003_faltante.md": [
+      "missing:tax"
+    ],
+    "factura_004_duplicada.md": [
+      "duplicate"
+    ]
+  }
+}

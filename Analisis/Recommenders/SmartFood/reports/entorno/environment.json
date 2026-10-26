@@ -1,0 +1,240 @@
+{
+  "checked_at_utc": "2026-10-26T14:20:10.268258+00:00",
+  "project_root": "D:\\portafolio\\Analisis\\Recommenders\\SmartFood",
+  "python_executable": "c:\\Users\\mauro\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+  "python_version": "3.14.4",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "virtual_environment": false,
+  "installation_performed": true,
+  "kernel_restart_recommended": true,
+  "environment_ready": true,
+  "versions": [
+    {
+      "package": "numpy",
+      "required": ">=1.24",
+      "installed": "2.3.5",
+      "compatible": true,
+      "state": "OK"
+    },
+    {
+      "package": "pandas",
+      "required": ">=2.0",
+      "installed": "2.3.3",
+      "compatible": true,
+      "state": "OK"
+    },
+    {
+      "package": "scipy",
+      "required": ">=1.10",
+      "installed": "1.18.1",
+      "compatible": true,
+      "state": "OK"
+    },
+    {
+      "package": "scikit-learn",
+      "required": ">=1.3",
+      "installed": "1.9.1",
+      "compatible": true,
+      "state": "OK"
+    },
+    {
+      "package": "pyarrow",
+      "required": ">=12",
+      "installed": "25.0.1",
+      "compatible": true,
+      "state": "OK"
+    },
+    {
+      "package": "matplotlib",
+      "required": ">=3.7",
+      "installed": "3.11.2",
+      "compatible": true,
+      "state": "OK"
+    },
+    {
+      "package": "seaborn",
+      "required": ">=0.12",
+      "installed": "0.13.2",
+      "compatible": true,
+      "state": "OK"
+    },
+    {
+      "package": "tqdm",
+      "required": ">=4.65",
+      "installed": "4.70.1",
+      "compatible": true,
+      "state": "OK"
+    },
+    {
+      "package": "tabulate",
+      "required": ">=0.9",
+      "installed": "0.10.0",
+      "compatible": true,
+      "state": "OK"
+    },
+    {
+      "package": "ipython",
+      "required": ">=8",
+      "installed": "9.8.0",
+      "compatible": true,
+      "state": "OK"
+    },
+    {
+      "package": "ipywidgets",
+      "required": ">=8",
+      "installed": "8.1.9",
+      "compatible": true,
+      "state": "OK"
+    },
+    {
+      "package": "jupyterlab",
+      "required": ">=4",
+      "installed": "4.6.4",
+      "compatible": true,
+      "state": "OK"
+    },
+    {
+      "package": "ipykernel",
+      "required": ">=6",
+      "installed": "7.1.0",
+      "compatible": true,
+      "state": "OK"
+    },
+    {
+      "package": "nbclient",
+      "required": ">=0.10",
+      "installed": "0.11.0",
+      "compatible": true,
+      "state": "OK"
+    },
+    {
+      "package": "nbformat",
+      "required": ">=5.9",
+      "installed": "5.11.1",
+      "compatible": true,
+      "state": "OK"
+    },
+    {
+      "package": "packaging",
+      "required": ">=23",
+      "installed": "25.0",
+      "compatible": true,
+      "state": "OK"
+    }
+  ],
+  "imports": [
+    {
+      "package": "numpy",
+      "state": "OK",
+      "returncode": 0,
+      "detail": ""
+    },
+    {
+      "package": "pandas",
+      "state": "OK",
+      "returncode": 0,
+      "detail": ""
+    },
+    {
+      "package": "scipy",
+      "state": "OK",
+      "returncode": 0,
+      "detail": ""
+    },
+    {
+      "package": "scikit-learn",
+      "state": "OK",
+      "returncode": 0,
+      "detail": ""
+    },
+    {
+      "package": "pyarrow",
+      "state": "OK",
+      "returncode": 0,
+      "detail": ""
+    },
+    {
+      "package": "matplotlib",
+      "state": "OK",
+      "returncode": 0,
+      "detail": ""
+    },
+    {
+      "package": "seaborn",
+      "state": "OK",
+      "returncode": 0,
+      "detail": ""
+    },
+    {
+      "package": "tqdm",
+      "state": "OK",
+      "returncode": 0,
+      "detail": ""
+    },
+    {
+      "package": "tabulate",
+      "state": "OK",
+      "returncode": 0,
+      "detail": ""
+    },
+    {
+      "package": "ipython",
+      "state": "OK",
+      "returncode": 0,
+      "detail": ""
+    },
+    {
+      "package": "ipywidgets",
+      "state": "OK",
+      "returncode": 0,
+      "detail": ""
+    },
+    {
+      "package": "jupyterlab",
+      "state": "OK",
+      "returncode": 0,
+      "detail": ""
+    },
+    {
+      "package": "ipykernel",
+      "state": "OK",
+      "returncode": 0,
+      "detail": ""
+    },
+    {
+      "package": "nbclient",
+      "state": "OK",
+      "returncode": 0,
+      "detail": ""
+    },
+    {
+      "package": "nbformat",
+      "state": "OK",
+      "returncode": 0,
+      "detail": ""
+    },
+    {
+      "package": "packaging",
+      "state": "OK",
+      "returncode": 0,
+      "detail": ""
+    },
+    {
+      "package": "smartfood",
+      "state": "OK",
+      "returncode": 0,
+      "detail": ""
+    }
+  ],
+  "pip_check": {
+    "returncode": 0,
+    "stdout": "No broken requirements found.\n",
+    "stderr": ""
+  },
+  "input_files_available": {
+    "recipes.csv": false,
+    "reviews.csv": false,
+    "recipes.parquet": true,
+    "reviews.parquet": true
+  }
+}

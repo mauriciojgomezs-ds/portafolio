@@ -1,0 +1,8 @@
+{
+  "title": "Segmentación de clientes con RFM",
+  "kind": "cluster_customers",
+  "source": "data/raw/OnlineRetailUCI.zip",
+  "seed": 42,
+  "top_n": 10,
+  "source_base": "project"
+}

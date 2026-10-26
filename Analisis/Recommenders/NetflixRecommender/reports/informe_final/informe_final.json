@@ -1,0 +1,406 @@
+{
+  "proyecto": "Recomendación de títulos de Netflix",
+  "generado_utc": "2026-10-07T16:39:27.029078+00:00",
+  "estado": "actualizado_por_etapas",
+  "estado_maestro": "completado",
+  "etapas_sin_reporte": [],
+  "notebooks": [
+    {
+      "notebook": "01_preparacion_datos.ipynb",
+      "celdas_con_salida": 0,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": null,
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "02_analisis_exploratorio.ipynb",
+      "celdas_con_salida": 2,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T14:23:12.948617Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "03_baseline.ipynb",
+      "celdas_con_salida": 0,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": null,
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "04_modelado.ipynb",
+      "celdas_con_salida": 0,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": null,
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "05_evaluacion.ipynb",
+      "celdas_con_salida": 2,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T14:23:19.283682Z",
+      "errores_guardados": 0
+    }
+  ],
+  "resultados": {
+    "preparacion": {
+      "fuente": "Netflix Movies and TV Shows.zip",
+      "semilla": 42,
+      "sha256": "1e5477bbbe868845be3b852d80eec2f1da6570340860668549a6dd5da0b00054",
+      "filas_originales": 8807,
+      "filas_preparadas": 8807
+    },
+    "eda": {
+      "poblacion": "catalogo",
+      "filas": 8807,
+      "columnas": 13,
+      "nulos": {
+        "show_id": 0,
+        "type": 0,
+        "title": 0,
+        "director": 2634,
+        "cast": 825,
+        "country": 831,
+        "date_added": 10,
+        "release_year": 0,
+        "rating": 4,
+        "duration": 3,
+        "listed_in": 0,
+        "description": 0,
+        "text": 0
+      },
+      "resumen_numerico": {
+        "release_year": {
+          "count": 8807.0,
+          "mean": 2014.1802,
+          "std": 8.8193,
+          "min": 1925.0,
+          "25%": 2013.0,
+          "50%": 2017.0,
+          "75%": 2019.0,
+          "max": 2021.0
+        }
+      }
+    },
+    "baseline": {
+      "regla": "release_year",
+      "catalogo": 8807
+    },
+    "modelado": {
+      "filas": 8807,
+      "features": 30000,
+      "metrica": "cosine"
+    },
+    "evaluacion": {
+      "baseline": {
+        "consultas": 30,
+        "top_n_solicitado": 10,
+        "cobertura_catalogo": 0.0011354604292040423,
+        "categorias_distintas_promedio": 10.0,
+        "coincidencia_categoria_descriptiva": 0.31
+      },
+      "modelo": {
+        "consultas": 30,
+        "top_n_solicitado": 10,
+        "cobertura_catalogo": 0.034063812876121265,
+        "categorias_distintas_promedio": 6.7,
+        "coincidencia_categoria_descriptiva": 0.79
+      },
+      "ejemplos": {
+        "baseline": {
+          "consulta": "s5668",
+          "recomendaciones": [
+            {
+              "show_id": "s10",
+              "title": "The Starling",
+              "listed_in": "Comedies, Dramas",
+              "description": "A woman adjusting to life after a loss contends with a feisty bird that's taken over her garden — and a husband who's struggling to find a way forward.",
+              "similitud": null
+            },
+            {
+              "show_id": "s100",
+              "title": "On the Verge",
+              "listed_in": "TV Comedies, TV Dramas",
+              "description": "Four women — a chef, a single mom, an heiress and a job seeker — dig into love and work, with a generous side of midlife crises, in pre-pandemic LA.",
+              "similitud": null
+            },
+            {
+              "show_id": "s1000",
+              "title": "Stowaway",
+              "listed_in": "Dramas, International Movies, Thrillers",
+              "description": "A three-person crew on a mission to Mars faces an impossible choice when an unplanned passenger jeopardizes the lives of everyone on board.",
+              "similitud": null
+            },
+            {
+              "show_id": "s1003",
+              "title": "Tell Me When",
+              "listed_in": "Comedies, International Movies",
+              "description": "Workaholic Will puts his humdrum life in LA on hold to fulfill his grandpa's last wish: visiting Mexico City's most iconic sights and falling in love.",
+              "similitud": null
+            },
+            {
+              "show_id": "s1004",
+              "title": "Zero",
+              "listed_in": "International TV Shows, TV Comedies, TV Dramas",
+              "description": "A shy teen with the power to turn invisible must get it under control to help defend his neighborhood, putting aside the pursuit of his artistic dream.",
+              "similitud": null
+            },
+            {
+              "show_id": "s1005",
+              "title": "Izzy's Koala World",
+              "listed_in": "Kids' TV",
+              "description": "Young koala caretaker Izzy Bee and her family rescue cuddly creatures in need and help them head back into the wild on Australia’s Magnetic Island.",
+              "similitud": null
+            },
+            {
+              "show_id": "s1013",
+              "title": "Luis Miguel - The Series",
+              "listed_in": "International TV Shows, Spanish-Language TV Shows, TV Dramas",
+              "description": "This series dramatizes the life story of Mexican superstar singer Luis Miguel, who has captivated audiences in Latin America and beyond for decades.",
+              "similitud": null
+            },
+            {
+              "show_id": "s102",
+              "title": "Untold: Breaking Point",
+              "listed_in": "Documentaries, Sports Movies",
+              "description": "Under pressure to continue a winning tradition in American tennis, Mardy Fish faced mental health challenges that changed his life on and off the court.",
+              "similitud": null
+            },
+            {
+              "show_id": "s1024",
+              "title": "Ajeeb Daastaans",
+              "listed_in": "Dramas, Independent Movies, International Movies",
+              "description": "Four shorts explore the surprising ways in which unexpected catalysts inflame the uncomfortable emotions simmering under fractured relationships.",
+              "similitud": null
+            },
+            {
+              "show_id": "s1025",
+              "title": "Arlo the Alligator Boy",
+              "listed_in": "Children & Family Movies, Comedies, Music & Musicals",
+              "description": "To find the father he never knew, optimistic Arlo leaves his swampy Southern home for New York City, making friends along the way. A musical adventure.",
+              "similitud": null
+            }
+          ]
+        },
+        "modelo": {
+          "consulta": "s5668",
+          "recomendaciones": [
+            {
+              "show_id": "s3641",
+              "title": "My First First Love",
+              "listed_in": "International TV Shows, Korean TV Shows, Romantic TV Shows",
+              "description": "Due to various personal reasons, a group of Yun Tae-o’s friends move into his house, where they experience love, friendship, and everything in between.",
+              "similitud": 0.3246668330403325
+            },
+            {
+              "show_id": "s3462",
+              "title": "Cheese in the Trap",
+              "listed_in": "International TV Shows, Korean TV Shows, Romantic TV Shows",
+              "description": "In this adaptation of a popular webtoon, a poor student trying to navigate college life gains the attention of a wealthy upperclassman with a dark side.",
+              "similitud": 0.3074883740563177
+            },
+            {
+              "show_id": "s6414",
+              "title": "Can We Get Married?",
+              "listed_in": "International TV Shows, Korean TV Shows, Romantic TV Shows",
+              "description": "On the cusp of marriage or divorce, four couples consider the meaning of love, sharing a life, meddling families and the weight of their commitment.",
+              "similitud": 0.3065080622037738
+            },
+            {
+              "show_id": "s5666",
+              "title": "Color of Woman",
+              "listed_in": "International TV Shows, Korean TV Shows, Romantic TV Shows",
+              "description": "Two women at a cosmetics company compete for love and success. One uses her brain and diligence, while the other works her beauty and charm.",
+              "similitud": 0.3026910307176849
+            },
+            {
+              "show_id": "s1504",
+              "title": "Lovestruck in the City",
+              "listed_in": "International TV Shows, Romantic TV Shows, TV Comedies",
+              "description": "Heart stolen by a free-spirited woman after a beachside romance, a passionate architect sets out to reunite with her on the streets of Seoul.",
+              "similitud": 0.29832747522901215
+            },
+            {
+              "show_id": "s4995",
+              "title": "Bad Guys: Vile City",
+              "listed_in": "Crime TV Shows, International TV Shows, Korean TV Shows",
+              "description": "Ordered to take down a villainous business leader who controls the city, a prosecutor gathers a team of men who may not be so clean themselves.",
+              "similitud": 0.29406160638633017
+            },
+            {
+              "show_id": "s3475",
+              "title": "The Liar and His Lover",
+              "listed_in": "International TV Shows, Korean TV Shows, Romantic TV Shows",
+              "description": "A talented singer falls in love at first sight with a music prodigy who has an affinity for lies – and a knack for being a hit-making producer.",
+              "similitud": 0.28731631752222664
+            },
+            {
+              "show_id": "s2350",
+              "title": "It's Okay to Not Be Okay",
+              "listed_in": "International TV Shows, Korean TV Shows, Romantic TV Shows",
+              "description": "An extraordinary road to emotional healing opens up for an antisocial children's book writer and a selfless psych ward caretaker when they cross paths.",
+              "similitud": 0.2859042663269613
+            },
+            {
+              "show_id": "s2607",
+              "title": "Extracurricular",
+              "listed_in": "Crime TV Shows, International TV Shows, Korean TV Shows",
+              "description": "A model high school student who's steeped in a world of serious crime finds his double life upended when a classmate takes an interest in his secret.",
+              "similitud": 0.2828241016460523
+            },
+            {
+              "show_id": "s2943",
+              "title": "My Holo Love",
+              "listed_in": "International TV Shows, Korean TV Shows, Romantic TV Shows",
+              "description": "Unexpected love finds a lonely woman when she forms a connection with a humanlike hologram who looks exactly like his prickly creator.",
+              "similitud": 0.28213005787883216
+            }
+          ]
+        }
+      },
+      "limite": "Sin interacciones ni juicios independientes de relevancia. La coincidencia de categoría no es accuracy ni satisfacción. En Netflix las categorías también son entradas: su coincidencia no constituye una validación independiente."
+    }
+  },
+  "fuentes": [
+    {
+      "ruta": "reports/preparacion/preparacion.json",
+      "sha256": "bda300a865437ff26c0a1b516b13590eede2b2a5496cfcfe008dce1636637653",
+      "modificacion_utc": "2026-10-07T13:29:08.861868+00:00"
+    },
+    {
+      "ruta": "reports/preparacion/preparacion.md",
+      "sha256": "4c87aaf1c3e2eec190832e01268cb9af9f51591c571432a2b29b9182f135f097",
+      "modificacion_utc": "2026-10-07T13:29:08.861868+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.json",
+      "sha256": "11eaf965beac920339620e7c8873871c29427fcc810623d99ff829e1843d53a3",
+      "modificacion_utc": "2026-10-07T14:23:12.940985+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.md",
+      "sha256": "4818e5947e95f15725aee303ff468bdc603fb521d3135d3de5e382b09388a7af",
+      "modificacion_utc": "2026-10-07T14:23:12.940985+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.png",
+      "sha256": "39558fe1f42a7765d5abb47612760b3b4802e3e8237c43529db0c931b5d8bcf4",
+      "modificacion_utc": "2026-10-07T14:23:12.939982+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.json",
+      "sha256": "c2debce8b58a67a54f70e613edb91b5d516fa0c0361b82011035a8e512c8cccd",
+      "modificacion_utc": "2026-10-07T13:29:14.973222+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.md",
+      "sha256": "a07067d93d0683d74614d5d91c31109522897adf72a5d8623e28a7273f559509",
+      "modificacion_utc": "2026-10-07T13:29:14.973222+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.json",
+      "sha256": "aade13ff25bae9df59c6e2d065433d717e0dee7ccffa036688f2f8dc92160d29",
+      "modificacion_utc": "2026-10-07T13:29:18.797481+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.md",
+      "sha256": "d1f38cc5fb99ed0c101e8ee17e686a78ca2c88f56c5dacd9246da0b9e8f0ee0c",
+      "modificacion_utc": "2026-10-07T13:29:18.798473+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.json",
+      "sha256": "57bb552a5cc73d317eb0dc1877e3490033c8399395a2324558f023dac31f1fbf",
+      "modificacion_utc": "2026-10-07T14:23:19.267776+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.md",
+      "sha256": "cee6be62f12ad76c7bbdb6bc8b4eea611760bee96a9b9ee054b029b28d7a7872",
+      "modificacion_utc": "2026-10-07T14:23:19.267776+00:00"
+    },
+    {
+      "ruta": "notebooks/01_preparacion_datos.ipynb",
+      "sha256": "69c7db668214b529eb89afa27e6b4c3133bdb5de33ec08ddab51480b38ca9dcd",
+      "modificacion_utc": "2026-10-07T16:37:58.211741+00:00"
+    },
+    {
+      "ruta": "notebooks/02_analisis_exploratorio.ipynb",
+      "sha256": "3812b6bbac62a934f48540113903ce9daae08037751fd16f1d032572d479c977",
+      "modificacion_utc": "2026-10-07T16:37:58.212742+00:00"
+    },
+    {
+      "ruta": "notebooks/03_baseline.ipynb",
+      "sha256": "8e2e53f3c6912bed95943f76cc87325ee61e767d9cc60ce4933eb3b0d3ce64fc",
+      "modificacion_utc": "2026-10-07T16:37:58.213742+00:00"
+    },
+    {
+      "ruta": "notebooks/04_modelado.ipynb",
+      "sha256": "0352af20807b9fb5a4be56f1d93df836fb1943eebe4e296c2d29ee3262acc47a",
+      "modificacion_utc": "2026-10-07T16:37:58.213742+00:00"
+    },
+    {
+      "ruta": "notebooks/05_evaluacion.ipynb",
+      "sha256": "1de2d7376d2b9627959ff140089c9dfca51e07fda86a5d79b7e77cbeb8bc26e0",
+      "modificacion_utc": "2026-10-07T16:37:58.214741+00:00"
+    },
+    {
+      "ruta": "reports/alertas/00_configuracion_entorno.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T14:23:06.579407+00:00"
+    },
+    {
+      "ruta": "reports/alertas/01_preparacion_datos.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T13:29:08.867824+00:00"
+    },
+    {
+      "ruta": "reports/alertas/02_analisis_exploratorio.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T14:23:12.950299+00:00"
+    },
+    {
+      "ruta": "reports/alertas/03_baseline.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T13:29:14.990412+00:00"
+    },
+    {
+      "ruta": "reports/alertas/04_modelado.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T13:29:18.905736+00:00"
+    },
+    {
+      "ruta": "reports/alertas/05_evaluacion.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T14:23:19.285205+00:00"
+    },
+    {
+      "ruta": "reports/alertas/06_ejecucion_completa.json",
+      "sha256": "1e848de256cb42422358d7adab1f486b122d02dfac23f7da952b7659092430df",
+      "modificacion_utc": "2026-10-07T13:29:23.090442+00:00"
+    },
+    {
+      "ruta": "README.md",
+      "sha256": "dcda209061824a9cfee054d824f6b610cc52c9cb36dfa6a93a7dc79476b704ea",
+      "modificacion_utc": "2026-10-07T14:41:02.661762+00:00"
+    },
+    {
+      "ruta": "config.json",
+      "sha256": "3cc9bc8bcb371929f620c7e4326d13c04c27bdbfcc3833a1951f5c1fe8afb5ff",
+      "modificacion_utc": "2026-10-07T14:05:26.937850+00:00"
+    },
+    {
+      "ruta": "reports/ejecucion/resumen.json",
+      "sha256": "9f8445f3a50e92aa840673c7e17cfc275dab5f63d5841254d77b9ace1b9b52e1",
+      "modificacion_utc": "2026-10-07T13:29:22.753549+00:00"
+    },
+    {
+      "ruta": "reports/entorno/environment.json",
+      "sha256": "ea94f0a20a672099c5209b666a3aa926bf965fbd8b671d1cdab65d2bf5603492",
+      "modificacion_utc": "2026-10-07T14:23:06.572607+00:00"
+    }
+  ],
+  "limitaciones": "Las categorías forman parte del contenido y de los diagnósticos; su coincidencia no constituye una validación independiente.",
+  "proximos_pasos": [
+    "Comprobar procedencia, condiciones de uso y disponibilidad temporal de las variables.",
+    "Completar una pasada de 06 y revisar las alertas antes de publicar el informe.",
+    "Definir relevancia y candidatos, y evaluar ranking con usuarios o interacciones independientes."
+  ]
+}

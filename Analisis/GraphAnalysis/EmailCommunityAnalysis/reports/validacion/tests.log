@@ -1,0 +1,14 @@
+
+Failed to find real location of C:\Users\mauro\AppData\Local\Programs\Python\Python314\python.exe
+test_ari_no_depende_del_numero_de_etiqueta (test_graph.GraphTests.test_ari_no_depende_del_numero_de_etiqueta) ... ok
+test_arista_sin_etiqueta_se_rechaza (test_graph.GraphTests.test_arista_sin_etiqueta_se_rechaza) ... ok
+test_comunidad_solapada_se_rechaza (test_graph.GraphTests.test_comunidad_solapada_se_rechaza) ... ok
+test_particion_conserva_aislado (test_graph.GraphTests.test_particion_conserva_aislado) ... ok
+test_comparacion_respeta_direccion_y_datos_ausentes (test_informe.InformeTest.test_comparacion_respeta_direccion_y_datos_ausentes) ... ok
+test_fallo_con_resultados_anteriores_no_se_presenta_como_completado (test_informe.InformeTest.test_fallo_con_resultados_anteriores_no_se_presenta_como_completado) ... ok
+test_manifiesto_identifica_artefactos_y_huellas (test_informe.InformeTest.test_manifiesto_identifica_artefactos_y_huellas) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.045s
+
+OK

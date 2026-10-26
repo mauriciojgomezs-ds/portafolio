@@ -1,0 +1,602 @@
+{
+  "proyecto": "Churn bancario",
+  "generado_utc": "2026-10-26T14:08:36.305013+00:00",
+  "estado": "evidencia_disponible",
+  "estado_maestro": "completado",
+  "etapas_sin_reporte": [],
+  "notebooks": [
+    {
+      "notebook": "01_preparacion_datos.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-26T14:08:21.192200Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "02_analisis_exploratorio.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-26T14:08:23.327061Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "03_baseline.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-26T14:08:28.216380Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "04_modelado.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-26T14:08:33.518394Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "05_evaluacion.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-26T14:08:35.599268Z",
+      "errores_guardados": 0
+    }
+  ],
+  "resultados": {
+    "preparacion": {
+      "fuentes": [
+        {
+          "archivo": "Churn_Modelling.csv",
+          "sha256": "3996cd1fa372e0db0cd9c0ebac35bbd4e8e3c65fb942bb010c826e7b1eeef0a0",
+          "filas_originales": 10000,
+          "filas_sin_target": 0,
+          "filas_utilizables": 10000
+        }
+      ],
+      "particion": "stratified",
+      "semilla": 42,
+      "datasets": {
+        "train": {
+          "filas": 6000,
+          "columnas": 14,
+          "positivos": 1223
+        },
+        "valid": {
+          "filas": 2000,
+          "columnas": 14,
+          "positivos": 407
+        },
+        "test": {
+          "filas": 2000,
+          "columnas": 14,
+          "positivos": 407
+        }
+      },
+      "ids_compartidos_train_test": 0
+    },
+    "eda": {
+      "filas_train": 6000,
+      "positivos": 1223,
+      "proporcion_positiva": 0.20383333333333334,
+      "nulos": {
+        "RowNumber": 0,
+        "CustomerId": 0,
+        "Surname": 0,
+        "CreditScore": 0,
+        "Geography": 0,
+        "Gender": 0,
+        "Age": 0,
+        "Tenure": 0,
+        "Balance": 0,
+        "NumOfProducts": 0,
+        "HasCrCard": 0,
+        "IsActiveMember": 0,
+        "EstimatedSalary": 0,
+        "Exited": 0
+      },
+      "features_excluidas": [
+        "RowNumber",
+        "CustomerId",
+        "Surname"
+      ]
+    },
+    "baseline": {
+      "casos": 2000,
+      "accuracy": 0.7965,
+      "average_precision": 0.2035,
+      "roc_auc": 0.5,
+      "matriz_confusion": [
+        [
+          1593,
+          0
+        ],
+        [
+          407,
+          0
+        ]
+      ],
+      "clasificacion": {
+        "0": {
+          "precision": 0.7965,
+          "recall": 1.0,
+          "f1-score": 0.8867241859170609,
+          "support": 1593.0
+        },
+        "1": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 407.0
+        },
+        "accuracy": 0.7965,
+        "macro avg": {
+          "precision": 0.39825,
+          "recall": 0.5,
+          "f1-score": 0.44336209295853046,
+          "support": 2000.0
+        },
+        "weighted avg": {
+          "precision": 0.63441225,
+          "recall": 0.7965,
+          "f1-score": 0.706275814082939,
+          "support": 2000.0
+        }
+      }
+    },
+    "modelado": {
+      "decision_protocol": "Separación 75/25 por ID de cliente dentro de train",
+      "decision_fit_cases": 4500,
+      "decision_calibration_cases": 1500,
+      "decision_validation_cases": 2000,
+      "decision_threshold": 0.18,
+      "decision_false_negative_cost": 5.0,
+      "decision_false_positive_cost": 1.0,
+      "decision_candidates": [
+        {
+          "class_weight": null,
+          "average_precision_validacion": 0.46169313115783833
+        },
+        {
+          "class_weight": "balanced",
+          "average_precision_validacion": 0.45452786394225503
+        }
+      ],
+      "decision_criterion": "AP validación para modelo; sigmoid fijo en calibración; coste FN/FP en validación para umbral",
+      "decision_test_used_for_selection": false,
+      "criterio": "average_precision_validacion",
+      "class_weight_elegido": null,
+      "candidatos": [
+        {
+          "class_weight": null,
+          "casos": 2000,
+          "accuracy": 0.809,
+          "average_precision": 0.4630210725431227,
+          "roc_auc": 0.7566364515517057,
+          "matriz_confusion": [
+            [
+              1531,
+              62
+            ],
+            [
+              320,
+              87
+            ]
+          ],
+          "clasificacion": {
+            "0": {
+              "precision": 0.8271204754186926,
+              "recall": 0.9610797237915882,
+              "f1-score": 0.889082462253194,
+              "support": 1593.0
+            },
+            "1": {
+              "precision": 0.5838926174496645,
+              "recall": 0.21375921375921375,
+              "f1-score": 0.3129496402877698,
+              "support": 407.0
+            },
+            "accuracy": 0.809,
+            "macro avg": {
+              "precision": 0.7055065464341785,
+              "recall": 0.587419468775401,
+              "f1-score": 0.6010160512704819,
+              "support": 2000.0
+            },
+            "weighted avg": {
+              "precision": 0.7776236063219953,
+              "recall": 0.809,
+              "f1-score": 0.7718394329832301,
+              "support": 2000.0
+            }
+          }
+        },
+        {
+          "class_weight": "balanced",
+          "casos": 2000,
+          "accuracy": 0.7075,
+          "average_precision": 0.4552910879778903,
+          "roc_auc": 0.7611293882480322,
+          "matriz_confusion": [
+            [
+              1144,
+              449
+            ],
+            [
+              136,
+              271
+            ]
+          ],
+          "clasificacion": {
+            "0": {
+              "precision": 0.89375,
+              "recall": 0.7181418706842435,
+              "f1-score": 0.7963800904977375,
+              "support": 1593.0
+            },
+            "1": {
+              "precision": 0.3763888888888889,
+              "recall": 0.6658476658476659,
+              "f1-score": 0.48092280390417036,
+              "support": 407.0
+            },
+            "accuracy": 0.7075,
+            "macro avg": {
+              "precision": 0.6350694444444445,
+              "recall": 0.6919947682659546,
+              "f1-score": 0.6386514472009539,
+              "support": 2000.0
+            },
+            "weighted avg": {
+              "precision": 0.788467013888889,
+              "recall": 0.7075,
+              "f1-score": 0.7321845326759466,
+              "support": 2000.0
+            }
+          }
+        }
+      ]
+    },
+    "evaluacion": {
+      "decision_probability_scores": [
+        {
+          "modelo": "sin_calibrar",
+          "brier": 0.13503064490550437,
+          "log_loss": 0.42508247476311156,
+          "ece_10_bins": 0.02159186068693733
+        },
+        {
+          "modelo": "sigmoid",
+          "brier": 0.1349906099835224,
+          "log_loss": 0.4247845182564933,
+          "ece_10_bins": 0.019943347887563148
+        }
+      ],
+      "decision_test_policies": [
+        {
+          "politica": "sin_calibrar_05",
+          "umbral": 0.5,
+          "casos": 2000,
+          "priorizados": 120,
+          "tp": 70,
+          "fp": 50,
+          "fn": 337,
+          "tn": 1543,
+          "precision": 0.5833333333333334,
+          "recall": 0.171990171990172,
+          "coste_error_total": 1735.0,
+          "coste_error_por_caso": 0.8675
+        },
+        {
+          "politica": "sigmoid_05",
+          "umbral": 0.5,
+          "casos": 2000,
+          "priorizados": 173,
+          "tp": 94,
+          "fp": 79,
+          "fn": 313,
+          "tn": 1514,
+          "precision": 0.5433526011560693,
+          "recall": 0.23095823095823095,
+          "coste_error_total": 1644.0,
+          "coste_error_por_caso": 0.822
+        },
+        {
+          "politica": "umbral_validacion",
+          "umbral": 0.18,
+          "casos": 2000,
+          "priorizados": 849,
+          "tp": 308,
+          "fp": 541,
+          "fn": 99,
+          "tn": 1052,
+          "precision": 0.3627797408716137,
+          "recall": 0.7567567567567568,
+          "coste_error_total": 1036.0,
+          "coste_error_por_caso": 0.518
+        },
+        {
+          "politica": "priorizar_todos",
+          "umbral": 0.0,
+          "casos": 2000,
+          "priorizados": 2000,
+          "tp": 407,
+          "fp": 1593,
+          "fn": 0,
+          "tn": 0,
+          "precision": 0.2035,
+          "recall": 1.0,
+          "coste_error_total": 1593.0,
+          "coste_error_por_caso": 0.7965
+        },
+        {
+          "politica": "priorizar_ninguno",
+          "umbral": 1.0000000000000002,
+          "casos": 2000,
+          "priorizados": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 407,
+          "tn": 1593,
+          "precision": 0.0,
+          "recall": 0.0,
+          "coste_error_total": 2035.0,
+          "coste_error_por_caso": 1.0175
+        }
+      ],
+      "decision_cost_scope": "Penalizaciones ilustrativas de clasificación, no coste real de campaña ni ahorro medido",
+      "baseline": {
+        "casos": 2000,
+        "accuracy": 0.7965,
+        "average_precision": 0.2035,
+        "roc_auc": 0.5,
+        "matriz_confusion": [
+          [
+            1593,
+            0
+          ],
+          [
+            407,
+            0
+          ]
+        ],
+        "clasificacion": {
+          "0": {
+            "precision": 0.7965,
+            "recall": 1.0,
+            "f1-score": 0.8867241859170609,
+            "support": 1593.0
+          },
+          "1": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 407.0
+          },
+          "accuracy": 0.7965,
+          "macro avg": {
+            "precision": 0.39825,
+            "recall": 0.5,
+            "f1-score": 0.44336209295853046,
+            "support": 2000.0
+          },
+          "weighted avg": {
+            "precision": 0.63441225,
+            "recall": 0.7965,
+            "f1-score": 0.706275814082939,
+            "support": 2000.0
+          }
+        }
+      },
+      "modelo": {
+        "casos": 2000,
+        "accuracy": 0.81,
+        "average_precision": 0.48062014544678683,
+        "roc_auc": 0.7752081819878429,
+        "matriz_confusion": [
+          [
+            1541,
+            52
+          ],
+          [
+            328,
+            79
+          ]
+        ],
+        "clasificacion": {
+          "0": {
+            "precision": 0.8245050829320493,
+            "recall": 0.9673571876961707,
+            "f1-score": 0.8902368573079145,
+            "support": 1593.0
+          },
+          "1": {
+            "precision": 0.6030534351145038,
+            "recall": 0.1941031941031941,
+            "f1-score": 0.2936802973977695,
+            "support": 407.0
+          },
+          "accuracy": 0.81,
+          "macro avg": {
+            "precision": 0.7137792590232765,
+            "recall": 0.5807301908996825,
+            "f1-score": 0.591958577352842,
+            "support": 2000.0
+          },
+          "weighted avg": {
+            "precision": 0.7794396726011789,
+            "recall": 0.81,
+            "f1-score": 0.7688375973661999,
+            "support": 2000.0
+          }
+        }
+      }
+    }
+  },
+  "fuentes": [
+    {
+      "ruta": "reports/preparacion/preparacion.json",
+      "sha256": "48339a739e5e094cf1f14f56366e0c16069658caa9a249acef2212abceb2bfca",
+      "modificacion_utc": "2026-10-26T14:08:21.169986+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.json",
+      "sha256": "7170ca291937bc3e70ce4a1ad658db31e05237c5dc0a17acb912e424579ab016",
+      "modificacion_utc": "2026-10-26T14:08:23.244420+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.md",
+      "sha256": "5040c6ef55101e453e130c2c3581b581f668dcf22799914c777e1a53320d36ac",
+      "modificacion_utc": "2026-10-26T14:08:23.244420+00:00"
+    },
+    {
+      "ruta": "reports/eda/distribucion_target.png",
+      "sha256": "31b4cd612bdfc3183ed7e9126c9abe94bedfb87cdcab4c237a924d9111a34415",
+      "modificacion_utc": "2026-10-26T14:08:23.312643+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline_validacion.json",
+      "sha256": "419f007578d1395664d53295abfa04453e55cc90d418d64918b0433f28ccf39b",
+      "modificacion_utc": "2026-10-26T14:08:28.200585+00:00"
+    },
+    {
+      "ruta": "reports/modelado/decisiones_validacion.json",
+      "sha256": "d1cc80654269523d026cea96e4d67c9c0c60c610fd41c92f2ba1960024b46d1b",
+      "modificacion_utc": "2026-10-26T14:08:33.493571+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelos_validacion.json",
+      "sha256": "1695a12a32849398a8e4f6b43629210ad43d585d381e35e99cac7a08368097ac",
+      "modificacion_utc": "2026-10-26T14:08:33.362553+00:00"
+    },
+    {
+      "ruta": "reports/modelado/decisiones.md",
+      "sha256": "0498bd706eacd4d3bacf0dea605fdb57ee85ff9dea8f4ef255daeaaa008b554d",
+      "modificacion_utc": "2026-10-26T14:08:33.493571+00:00"
+    },
+    {
+      "ruta": "reports/modelado/particion_calibracion.csv",
+      "sha256": "eaeeabf34192fc068135ff34583eca6f6810a1a2d150412c8f400c2a6a128835",
+      "modificacion_utc": "2026-10-26T14:08:33.493571+00:00"
+    },
+    {
+      "ruta": "reports/modelado/umbrales_validacion.csv",
+      "sha256": "62642ba104cc586cc50b558aef05d9520231bbfd8a366db0a755c453d105c3b6",
+      "modificacion_utc": "2026-10-26T14:08:33.493571+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/decisiones_test.json",
+      "sha256": "329eb37babf83dd6e3055f9ffeb18829644eacc7d2db112917bfc81066ff2ea0",
+      "modificacion_utc": "2026-10-26T14:08:35.562598+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion_test.json",
+      "sha256": "2a49f0a73bad60f2f8f44e6407dc25c2722b2efdfe65a81d84f8ac8ff81f952e",
+      "modificacion_utc": "2026-10-26T14:08:35.194364+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.md",
+      "sha256": "5e4563108ad88a72697073c620be870ab01380872c02c626f91f5fbe2495a6dd",
+      "modificacion_utc": "2026-10-26T14:08:35.562598+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/decisiones.png",
+      "sha256": "1f9daa7e9a5f3918ed9559026413828c085c595631a392bc89ae5d2ed741f2c7",
+      "modificacion_utc": "2026-10-26T14:08:35.562598+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/calibracion_test.csv",
+      "sha256": "0ed1238fe3000f260d0a846c42acf540f55f59409a3f5699afee6847389a781d",
+      "modificacion_utc": "2026-10-26T14:08:35.226498+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/fiabilidad_bins.csv",
+      "sha256": "93fbc0f7e168e8fee5b737e2d0eb9be74afbf84f2f402a94aeb1f46deb55865c",
+      "modificacion_utc": "2026-10-26T14:08:35.226498+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/politicas_test.csv",
+      "sha256": "99263e6e9d8cb6110a9847ec67075ffd6f6e3ffbf39100a8320a13bce429179a",
+      "modificacion_utc": "2026-10-26T14:08:35.226498+00:00"
+    },
+    {
+      "ruta": "notebooks/01_preparacion_datos.ipynb",
+      "sha256": "58aa7614f72312e532a32b47ce6eb4dcf831088f74eb66a9621ca9c54a932bd7",
+      "modificacion_utc": "2026-10-26T14:08:21.521253+00:00"
+    },
+    {
+      "ruta": "notebooks/02_analisis_exploratorio.ipynb",
+      "sha256": "ed79362cfe871e1d528f837d8159a51c8fdb00e60ed9ea4604591a41b504b753",
+      "modificacion_utc": "2026-10-26T14:08:26.669588+00:00"
+    },
+    {
+      "ruta": "notebooks/03_baseline.ipynb",
+      "sha256": "818b22ffa58c583355750505159cfc6b8aa34f3c1bd409b2e3fadbc5d23bf817",
+      "modificacion_utc": "2026-10-26T14:08:31.762300+00:00"
+    },
+    {
+      "ruta": "notebooks/04_modelado.ipynb",
+      "sha256": "8c228715009bf5058587fcdf274749d7cb4e54d265eff6605f849e1b63d3e8c6",
+      "modificacion_utc": "2026-10-26T14:08:33.647497+00:00"
+    },
+    {
+      "ruta": "notebooks/05_evaluacion.ipynb",
+      "sha256": "3c1fc4a8b5653e12edfff71c293125bbac27e8f6c780960fc12a2ec4bb7641c3",
+      "modificacion_utc": "2026-10-26T14:08:36.028715+00:00"
+    },
+    {
+      "ruta": "reports/alertas/00_configuracion_entorno.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:08:03.691974+00:00"
+    },
+    {
+      "ruta": "reports/alertas/01_preparacion_datos.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:08:21.180139+00:00"
+    },
+    {
+      "ruta": "reports/alertas/02_analisis_exploratorio.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:08:23.315915+00:00"
+    },
+    {
+      "ruta": "reports/alertas/03_baseline.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:08:28.206671+00:00"
+    },
+    {
+      "ruta": "reports/alertas/04_modelado.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:08:33.506984+00:00"
+    },
+    {
+      "ruta": "reports/alertas/05_evaluacion.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:08:35.588781+00:00"
+    },
+    {
+      "ruta": "README.md",
+      "sha256": "21f99d8181a35eac271aa06231c6b3ea7d15f59028f3355f154070dd9af4a41e",
+      "modificacion_utc": "2026-10-08T12:27:49.041404+00:00"
+    },
+    {
+      "ruta": "config.json",
+      "sha256": "45685b172338c557074601653f9d1479b72ee0d8c77278430baa914bdb7318c8",
+      "modificacion_utc": "2026-10-08T12:27:49.010303+00:00"
+    },
+    {
+      "ruta": "reports/ejecucion/resumen.json",
+      "sha256": "bb26bdd2cdbe97d8db94683c5363e58f6aeaf9cda9e1c8ae8186ef00b93804da",
+      "modificacion_utc": "2026-10-26T14:08:36.028715+00:00"
+    },
+    {
+      "ruta": "reports/entorno/environment.json",
+      "sha256": "93147204f885462aab5cfb7b44c1e7a5940ae68fc42c64e0506e69d079fabdff",
+      "modificacion_utc": "2026-10-26T14:08:03.364306+00:00"
+    }
+  ],
+  "limitaciones": "La definición del churn y la disponibilidad temporal de las variables deben confirmarse. Revisa recall por clase y posibles diferencias entre train y test; las métricas de proyectos distintos no son directamente comparables.",
+  "proximos_pasos": [
+    "Comprobar procedencia, condiciones de uso y disponibilidad temporal de las variables.",
+    "Completar una pasada de 06 y revisar las alertas antes de publicar el informe.",
+    "Revisar métricas por clase y errores frecuentes; ajustar decisiones en validación, conservando test independiente."
+  ]
+}

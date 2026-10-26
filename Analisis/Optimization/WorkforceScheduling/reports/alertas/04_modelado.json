@@ -1,0 +1,12 @@
+[
+  {
+    "tipo": "SolverLimitWarning",
+    "mensaje": "El solver del escenario de equilibrio alcanzó su límite de tiempo. Plan factible auditado; gap del objetivo alternativo 22.00%, sin certificar optimalidad.",
+    "descripcion": "El solver entregó un plan factible, pero terminó sin cerrar el gap solicitado.",
+    "accion_sugerida": "Revisar el gap y el plan auditado; aumentar el límite o estudiar otra formulación si se necesita certificar optimalidad.",
+    "apariciones": 1,
+    "origenes": [
+      "D:\\portafolio\\Analisis\\Optimization\\WorkforceScheduling\\src\\workforce_scheduling\\balance.py:52"
+    ]
+  }
+]

@@ -1,0 +1,88 @@
+{
+  "baseline": {
+    "casos": 24799,
+    "accuracy": 0.5015928061615388,
+    "f1_macro": 0.3340404962672539,
+    "clasificacion": {
+      "negativo": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 12360.0
+      },
+      "positivo": {
+        "precision": 0.5015928061615388,
+        "recall": 1.0,
+        "f1-score": 0.6680809925345078,
+        "support": 12439.0
+      },
+      "accuracy": 0.5015928061615388,
+      "macro avg": {
+        "precision": 0.2507964030807694,
+        "recall": 0.5,
+        "f1-score": 0.3340404962672539,
+        "support": 24799.0
+      },
+      "weighted avg": {
+        "precision": 0.251595343193007,
+        "recall": 0.5015928061615388,
+        "f1-score": 0.33510461978856976,
+        "support": 24799.0
+      }
+    },
+    "etiquetas_fuera_vocabulario_train": 0,
+    "matriz_confusion": [
+      [
+        0,
+        12360
+      ],
+      [
+        0,
+        12439
+      ]
+    ]
+  },
+  "modelo": {
+    "casos": 24799,
+    "accuracy": 0.8799951610952055,
+    "f1_macro": 0.8799938168098399,
+    "clasificacion": {
+      "negativo": {
+        "precision": 0.8797345419229524,
+        "recall": 0.8794498381877023,
+        "f1-score": 0.8795921670173167,
+        "support": 12360.0
+      },
+      "positivo": {
+        "precision": 0.8802539580487021,
+        "recall": 0.8805370206608248,
+        "f1-score": 0.8803954666023631,
+        "support": 12439.0
+      },
+      "accuracy": 0.8799951610952055,
+      "macro avg": {
+        "precision": 0.8799942499858273,
+        "recall": 0.8799934294242635,
+        "f1-score": 0.8799938168098399,
+        "support": 24799.0
+      },
+      "weighted avg": {
+        "precision": 0.8799950773150327,
+        "recall": 0.8799951610952055,
+        "f1-score": 0.8799950963103684,
+        "support": 24799.0
+      }
+    },
+    "etiquetas_fuera_vocabulario_train": 0,
+    "matriz_confusion": [
+      [
+        10870,
+        1490
+      ],
+      [
+        1486,
+        10953
+      ]
+    ]
+  }
+}

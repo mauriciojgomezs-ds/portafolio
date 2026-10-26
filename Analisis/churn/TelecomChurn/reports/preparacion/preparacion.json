@@ -1,0 +1,41 @@
+{
+  "fuentes": [
+    {
+      "archivo": "churn-bigml-80.csv",
+      "sha256": "b8bbd0099748ba3b0f337538cfa5997b5255bdc23c35144ffabba3cafb192550",
+      "filas_originales": 2666,
+      "filas_sin_target": 0,
+      "filas_utilizables": 2666
+    },
+    {
+      "archivo": "churn-bigml-20.csv",
+      "sha256": "c73bb8e7a47c8fced62ddef54741bbbc4005243fb40a65996360337844fd17f7",
+      "filas_originales": 667,
+      "filas_sin_target": 0,
+      "filas_utilizables": 667
+    }
+  ],
+  "particion": "provided",
+  "semilla": 42,
+  "datasets": {
+    "train": {
+      "filas": 2132,
+      "columnas": 20,
+      "positivos": 310
+    },
+    "valid": {
+      "filas": 534,
+      "columnas": 20,
+      "positivos": 78
+    },
+    "test": {
+      "filas": 667,
+      "columnas": 20,
+      "positivos": 95
+    }
+  },
+  "ids_compartidos_train_test": null,
+  "limitacion_identidad": "Sin ID de cliente: no se puede comprobar independencia por persona.",
+  "filas_identicas_train_test": 0,
+  "filas_identicas_valid_test": 0
+}

@@ -1,0 +1,610 @@
+{
+  "proyecto": "Churn de suscripciones",
+  "generado_utc": "2026-10-26T14:10:02.548313+00:00",
+  "estado": "evidencia_disponible",
+  "estado_maestro": "completado",
+  "etapas_sin_reporte": [],
+  "notebooks": [
+    {
+      "notebook": "01_preparacion_datos.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-26T14:09:46.842790Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "02_analisis_exploratorio.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-26T14:09:49.095416Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "03_baseline.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-26T14:09:51.200511Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "04_modelado.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-26T14:09:56.443241Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "05_evaluacion.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-26T14:10:01.825374Z",
+      "errores_guardados": 0
+    }
+  ],
+  "resultados": {
+    "preparacion": {
+      "fuentes": [
+        {
+          "archivo": "customer_churn_dataset-training-master.csv",
+          "sha256": "a41be7b96fb85110521bf03d1530879e9ca94b9f5de19866757f6d184300fff7",
+          "filas_originales": 440833,
+          "filas_sin_target": 1,
+          "filas_utilizables": 440832
+        },
+        {
+          "archivo": "customer_churn_dataset-testing-master.csv",
+          "sha256": "330af932f2dc1cae917f3bd0fb29395c4021319dd906189b7dc257d0ad58a617",
+          "filas_originales": 64374,
+          "filas_sin_target": 0,
+          "filas_utilizables": 64374
+        }
+      ],
+      "particion": "provided",
+      "semilla": 42,
+      "datasets": {
+        "train": {
+          "filas": 352665,
+          "columnas": 12,
+          "positivos": 199999
+        },
+        "valid": {
+          "filas": 88167,
+          "columnas": 12,
+          "positivos": 50000
+        },
+        "test": {
+          "filas": 64374,
+          "columnas": 12,
+          "positivos": 30493
+        }
+      },
+      "ids_compartidos_train_test": 50320
+    },
+    "eda": {
+      "filas_train": 352665,
+      "positivos": 199999,
+      "proporcion_positiva": 0.5671075950264415,
+      "nulos": {
+        "CustomerID": 0,
+        "Age": 0,
+        "Gender": 0,
+        "Tenure": 0,
+        "Usage Frequency": 0,
+        "Support Calls": 0,
+        "Payment Delay": 0,
+        "Subscription Type": 0,
+        "Contract Length": 0,
+        "Total Spend": 0,
+        "Last Interaction": 0,
+        "Churn": 0
+      },
+      "features_excluidas": [
+        "CustomerID"
+      ]
+    },
+    "baseline": {
+      "casos": 88167,
+      "accuracy": 0.5671056064060249,
+      "average_precision": 0.5671056064060249,
+      "roc_auc": 0.5,
+      "matriz_confusion": [
+        [
+          0,
+          38167
+        ],
+        [
+          0,
+          50000
+        ]
+      ],
+      "clasificacion": {
+        "0": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 38167.0
+        },
+        "1": {
+          "precision": 0.5671056064060249,
+          "recall": 1.0,
+          "f1-score": 0.7237618244588071,
+          "support": 50000.0
+        },
+        "accuracy": 0.5671056064060249,
+        "macro avg": {
+          "precision": 0.28355280320301246,
+          "recall": 0.5,
+          "f1-score": 0.36188091222940355,
+          "support": 88167.0
+        },
+        "weighted avg": {
+          "precision": 0.32160876881714523,
+          "recall": 0.5671056064060249,
+          "f1-score": 0.41044938835324274,
+          "support": 88167.0
+        }
+      }
+    },
+    "modelado": {
+      "decision_protocol": "Separación 75/25 por ID de cliente dentro de train",
+      "decision_fit_cases": 264498,
+      "decision_calibration_cases": 88167,
+      "decision_validation_cases": 88167,
+      "decision_threshold": 0.18,
+      "decision_false_negative_cost": 5.0,
+      "decision_false_positive_cost": 1.0,
+      "decision_candidates": [
+        {
+          "class_weight": null,
+          "average_precision_validacion": 0.9739290995072748
+        },
+        {
+          "class_weight": "balanced",
+          "average_precision_validacion": 0.9739326348943391
+        }
+      ],
+      "decision_criterion": "AP validación para modelo; sigmoid fijo en calibración; coste FN/FP en validación para umbral",
+      "decision_test_used_for_selection": false,
+      "criterio": "average_precision_validacion",
+      "class_weight_elegido": "balanced",
+      "candidatos": [
+        {
+          "class_weight": null,
+          "casos": 88167,
+          "accuracy": 0.8933728038835392,
+          "average_precision": 0.973933633515634,
+          "roc_auc": 0.9590262336573478,
+          "matriz_confusion": [
+            [
+              34492,
+              3675
+            ],
+            [
+              5726,
+              44274
+            ]
+          ],
+          "clasificacion": {
+            "0": {
+              "precision": 0.8576259386344423,
+              "recall": 0.9037126313307308,
+              "f1-score": 0.8800663392230657,
+              "support": 38167.0
+            },
+            "1": {
+              "precision": 0.9233560658199337,
+              "recall": 0.88548,
+              "f1-score": 0.9040214805664172,
+              "support": 50000.0
+            },
+            "accuracy": 0.8933728038835392,
+            "macro avg": {
+              "precision": 0.8904910022271879,
+              "recall": 0.8945963156653653,
+              "f1-score": 0.8920439098947415,
+              "support": 88167.0
+            },
+            "weighted avg": {
+              "precision": 0.8949018622711155,
+              "recall": 0.8933728038835392,
+              "f1-score": 0.8936514341811291,
+              "support": 88167.0
+            }
+          }
+        },
+        {
+          "class_weight": "balanced",
+          "casos": 88167,
+          "accuracy": 0.894586409881248,
+          "average_precision": 0.9739347608285088,
+          "roc_auc": 0.9589705861084181,
+          "matriz_confusion": [
+            [
+              35359,
+              2808
+            ],
+            [
+              6486,
+              43514
+            ]
+          ],
+          "clasificacion": {
+            "0": {
+              "precision": 0.8449994025570559,
+              "recall": 0.9264285901433176,
+              "f1-score": 0.8838424236364545,
+              "support": 38167.0
+            },
+            "1": {
+              "precision": 0.9393808557488882,
+              "recall": 0.87028,
+              "f1-score": 0.9035111397188597,
+              "support": 50000.0
+            },
+            "accuracy": 0.894586409881248,
+            "macro avg": {
+              "precision": 0.892190129152972,
+              "recall": 0.8983542950716588,
+              "f1-score": 0.8936767816776571,
+              "support": 88167.0
+            },
+            "weighted avg": {
+              "precision": 0.8985236538028918,
+              "recall": 0.894586409881248,
+              "f1-score": 0.8949966627975948,
+              "support": 88167.0
+            }
+          }
+        }
+      ]
+    },
+    "evaluacion": {
+      "decision_probability_scores": [
+        {
+          "modelo": "sin_calibrar",
+          "brier": 0.37482233274687493,
+          "log_loss": 2.8337753032613664,
+          "ece_10_bins": 0.39006100136323496
+        },
+        {
+          "modelo": "sigmoid",
+          "brier": 0.3835708723117338,
+          "log_loss": 2.8751854400197847,
+          "ece_10_bins": 0.4018522765913891
+        }
+      ],
+      "decision_test_policies": [
+        {
+          "politica": "sin_calibrar_05",
+          "umbral": 0.5,
+          "casos": 64374,
+          "priorizados": 56706,
+          "tp": 30113,
+          "fp": 26593,
+          "fn": 380,
+          "tn": 7288,
+          "precision": 0.5310372800056431,
+          "recall": 0.9875381235037549,
+          "coste_error_total": 28493.0,
+          "coste_error_por_caso": 0.44261658433529066
+        },
+        {
+          "politica": "sigmoid_05",
+          "umbral": 0.5,
+          "casos": 64374,
+          "priorizados": 57526,
+          "tp": 30206,
+          "fp": 27320,
+          "fn": 287,
+          "tn": 6561,
+          "precision": 0.5250843097034384,
+          "recall": 0.9905880038041518,
+          "coste_error_total": 28755.0,
+          "coste_error_por_caso": 0.44668655047068695
+        },
+        {
+          "politica": "umbral_validacion",
+          "umbral": 0.18,
+          "casos": 64374,
+          "priorizados": 61193,
+          "tp": 30446,
+          "fp": 30747,
+          "fn": 47,
+          "tn": 3134,
+          "precision": 0.49754056836566274,
+          "recall": 0.9984586626438855,
+          "coste_error_total": 30982.0,
+          "coste_error_por_caso": 0.4812812626215553
+        },
+        {
+          "politica": "priorizar_todos",
+          "umbral": 0.0,
+          "casos": 64374,
+          "priorizados": 64374,
+          "tp": 30493,
+          "fp": 33881,
+          "fn": 0,
+          "tn": 0,
+          "precision": 0.47368502811694163,
+          "recall": 1.0,
+          "coste_error_total": 33881.0,
+          "coste_error_por_caso": 0.5263149718830584
+        },
+        {
+          "politica": "priorizar_ninguno",
+          "umbral": 1.0000000000000002,
+          "casos": 64374,
+          "priorizados": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 30493,
+          "tn": 33881,
+          "precision": 0.0,
+          "recall": 0.0,
+          "coste_error_total": 152465.0,
+          "coste_error_por_caso": 2.368425140584708
+        }
+      ],
+      "decision_cost_scope": "Penalizaciones ilustrativas de clasificación, no coste real de campaña ni ahorro medido",
+      "baseline": {
+        "casos": 64374,
+        "accuracy": 0.47368502811694163,
+        "average_precision": 0.47368502811694163,
+        "roc_auc": 0.5,
+        "matriz_confusion": [
+          [
+            0,
+            33881
+          ],
+          [
+            0,
+            30493
+          ]
+        ],
+        "clasificacion": {
+          "0": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 33881.0
+          },
+          "1": {
+            "precision": 0.47368502811694163,
+            "recall": 1.0,
+            "f1-score": 0.6428578957909494,
+            "support": 30493.0
+          },
+          "accuracy": 0.47368502811694163,
+          "macro avg": {
+            "precision": 0.23684251405847082,
+            "recall": 0.5,
+            "f1-score": 0.3214289478954747,
+            "support": 64374.0
+          },
+          "weighted avg": {
+            "precision": 0.22437750586214777,
+            "recall": 0.47368502811694163,
+            "f1-score": 0.3045121604429338,
+            "support": 64374.0
+          }
+        }
+      },
+      "modelo": {
+        "casos": 64374,
+        "accuracy": 0.5809954329387641,
+        "average_precision": 0.6389122828775279,
+        "roc_auc": 0.6887409091078083,
+        "matriz_confusion": [
+          [
+            7288,
+            26593
+          ],
+          [
+            380,
+            30113
+          ]
+        ],
+        "clasificacion": {
+          "0": {
+            "precision": 0.9504434011476265,
+            "recall": 0.21510581151677932,
+            "f1-score": 0.35081470071481863,
+            "support": 33881.0
+          },
+          "1": {
+            "precision": 0.5310372800056431,
+            "recall": 0.9875381235037549,
+            "f1-score": 0.6906730581772726,
+            "support": 30493.0
+          },
+          "accuracy": 0.5809954329387641,
+          "macro avg": {
+            "precision": 0.7407403405766348,
+            "recall": 0.6013219675102671,
+            "f1-score": 0.5207438794460456,
+            "support": 64374.0
+          },
+          "weighted avg": {
+            "precision": 0.7517770008620687,
+            "recall": 0.5809954329387641,
+            "f1-score": 0.5118005163251987,
+            "support": 64374.0
+          }
+        }
+      }
+    }
+  },
+  "fuentes": [
+    {
+      "ruta": "reports/preparacion/preparacion.json",
+      "sha256": "9fa78bfc54e430e2a34b654c6aa8575a979a7a0f946ddfabfc9185d9a6e29f7d",
+      "modificacion_utc": "2026-10-26T14:09:46.812187+00:00"
+    },
+    {
+      "ruta": "reports/eda/auditoria_distribuciones.json",
+      "sha256": "e7948783b6f9d5d26918078e30635a45bd57c8ef82f8fb557833e659018f3a5a",
+      "modificacion_utc": "2026-10-07T02:06:34.654658+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.json",
+      "sha256": "5086a94d3b1ddf4b0acca0216244ce0e9c9e13170aee58e518cd4e9d980e3929",
+      "modificacion_utc": "2026-10-26T14:09:48.979871+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.md",
+      "sha256": "88e06dee1544542cb1bddfd0d6f27bae0edaef2aeae205ff6c6da0d18ece180a",
+      "modificacion_utc": "2026-10-26T14:09:48.995511+00:00"
+    },
+    {
+      "ruta": "reports/eda/distribucion_target.png",
+      "sha256": "930863834287d191984557252b54c6a62f94eb039a7bd100b27d9c3a2182083c",
+      "modificacion_utc": "2026-10-26T14:09:49.074641+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline_validacion.json",
+      "sha256": "d908172b92bc9c167f865da8d57f7184c314558d2431bd5ba7fbc3ea6b5d5742",
+      "modificacion_utc": "2026-10-26T14:09:51.177231+00:00"
+    },
+    {
+      "ruta": "reports/modelado/decisiones_validacion.json",
+      "sha256": "dd86b44f5a8704763cc4f6661605036571d03b974898d58492f9d8f0e3f449c4",
+      "modificacion_utc": "2026-10-26T14:09:56.402869+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelos_validacion.json",
+      "sha256": "bfb94a70095f0f3a8e99525a7ece9c5f3ee8035bf67e38c7d312e539012158c6",
+      "modificacion_utc": "2026-10-26T14:09:54.434795+00:00"
+    },
+    {
+      "ruta": "reports/modelado/decisiones.md",
+      "sha256": "8382da7fef604e2b4ef3de16a859825f28217434836dc72456adcf84778b0796",
+      "modificacion_utc": "2026-10-26T14:09:56.402869+00:00"
+    },
+    {
+      "ruta": "reports/modelado/particion_calibracion.csv",
+      "sha256": "bce20dc15dd6c63fd68c2393d511340c9e7fcff961d441d7815f47e8a0f5a395",
+      "modificacion_utc": "2026-10-26T14:09:56.402869+00:00"
+    },
+    {
+      "ruta": "reports/modelado/umbrales_validacion.csv",
+      "sha256": "44a783b9ca1281b36f7de8331055e23040f024f9b51f42e6918b6f344dbb4582",
+      "modificacion_utc": "2026-10-26T14:09:56.263343+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/decisiones_test.json",
+      "sha256": "f3a95dbf08dbfe97a88743e887e9e973619beef74499106528e145ee09727e6c",
+      "modificacion_utc": "2026-10-26T14:10:01.789031+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion_test.json",
+      "sha256": "82b6ce43ed2a692064296c9cefaf5d360cf3c76161ffef2dbe5ced33320c0de0",
+      "modificacion_utc": "2026-10-26T14:10:01.337774+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.md",
+      "sha256": "5a3e79b52bd9df93fc8adac78699dccf9371bcc0ef7c1f3054cbacd0201a3ad3",
+      "modificacion_utc": "2026-10-26T14:10:01.790294+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/decisiones.png",
+      "sha256": "b839cfc3980de25a24c3f7406ab5c2c00af8a0e2293e309380014b390183f515",
+      "modificacion_utc": "2026-10-26T14:10:01.789031+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/calibracion_test.csv",
+      "sha256": "d6189953f9ca53a823699fb3f8a59d358800233dc2a21a6ae858eafd02a0897a",
+      "modificacion_utc": "2026-10-26T14:10:01.433117+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/fiabilidad_bins.csv",
+      "sha256": "3353792d548273600aa9d51abc8bc7a59167fcd7f71aaea50971f987c0ddf1c3",
+      "modificacion_utc": "2026-10-26T14:10:01.433117+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/politicas_test.csv",
+      "sha256": "103a9a37f9b4b6bd987345cc823d583507000eeedec2b4ee0b313864bbeee8b1",
+      "modificacion_utc": "2026-10-26T14:10:01.433117+00:00"
+    },
+    {
+      "ruta": "notebooks/01_preparacion_datos.ipynb",
+      "sha256": "142f68df2268e2036d912692727a99f5e562a71295341686a9883294cdd949db",
+      "modificacion_utc": "2026-10-26T14:09:47.178819+00:00"
+    },
+    {
+      "ruta": "notebooks/02_analisis_exploratorio.ipynb",
+      "sha256": "94101ac70a1835218b3f795ff46c5c0a9998a7c2c88298f6701893ef49f964a2",
+      "modificacion_utc": "2026-10-26T14:09:49.545508+00:00"
+    },
+    {
+      "ruta": "notebooks/03_baseline.ipynb",
+      "sha256": "f4b2ef9703e730c35467afa9f87a9f9ae39ebe10796848925c23725ed3f54f3e",
+      "modificacion_utc": "2026-10-26T14:09:51.547659+00:00"
+    },
+    {
+      "ruta": "notebooks/04_modelado.ipynb",
+      "sha256": "fae926fa5aad3d36a068d0a33dae081d27f96bf8a680c35a0403c5309a8414d2",
+      "modificacion_utc": "2026-10-26T14:09:59.671031+00:00"
+    },
+    {
+      "ruta": "notebooks/05_evaluacion.ipynb",
+      "sha256": "a520cbf0846077c220cd117b9375bca33abafca48f979552d98523e2f37a87b6",
+      "modificacion_utc": "2026-10-26T14:10:02.280490+00:00"
+    },
+    {
+      "ruta": "reports/alertas/00_configuracion_entorno.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:09:31.702321+00:00"
+    },
+    {
+      "ruta": "reports/alertas/01_preparacion_datos.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:09:46.828676+00:00"
+    },
+    {
+      "ruta": "reports/alertas/02_analisis_exploratorio.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:09:49.079674+00:00"
+    },
+    {
+      "ruta": "reports/alertas/03_baseline.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:09:51.183643+00:00"
+    },
+    {
+      "ruta": "reports/alertas/04_modelado.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:09:56.428254+00:00"
+    },
+    {
+      "ruta": "reports/alertas/05_evaluacion.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:10:01.809844+00:00"
+    },
+    {
+      "ruta": "README.md",
+      "sha256": "51de9f4100880fd36fad320c0c65bdede80ba9cd7d9226bf60b3689cb5280dc0",
+      "modificacion_utc": "2026-10-08T12:27:49.057102+00:00"
+    },
+    {
+      "ruta": "config.json",
+      "sha256": "e305f6da2fffa884f14e45eb2a97a6ee696878dc98b89cbb4115ef7f2d580a75",
+      "modificacion_utc": "2026-10-08T12:27:49.041404+00:00"
+    },
+    {
+      "ruta": "reports/ejecucion/resumen.json",
+      "sha256": "a32f35263ee6237a626d24fc83ce6334608c8b1b0abed277a7693cf51a142be5",
+      "modificacion_utc": "2026-10-26T14:10:02.280490+00:00"
+    },
+    {
+      "ruta": "reports/entorno/environment.json",
+      "sha256": "89fb8a508ef811fed5b08f5b7a4e015948ecf4d05494fa2e8a6e23e22195c5a8",
+      "modificacion_utc": "2026-10-26T14:09:31.692346+00:00"
+    }
+  ],
+  "limitaciones": "La definición del churn y la disponibilidad temporal de las variables deben confirmarse. Revisa recall por clase y posibles diferencias entre train y test; las métricas de proyectos distintos no son directamente comparables.",
+  "proximos_pasos": [
+    "Comprobar procedencia, condiciones de uso y disponibilidad temporal de las variables.",
+    "Completar una pasada de 06 y revisar las alertas antes de publicar el informe.",
+    "Revisar métricas por clase y errores frecuentes; ajustar decisiones en validación, conservando test independiente."
+  ]
+}

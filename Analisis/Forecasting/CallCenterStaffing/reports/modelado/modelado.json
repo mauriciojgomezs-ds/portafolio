@@ -1,0 +1,19 @@
+{
+  "criterio": "mae_validacion",
+  "max_leaf_nodes_elegido": 30,
+  "candidatos": [
+    {
+      "max_leaf_nodes": 10,
+      "casos": 360,
+      "mae": 1.9248197348475702,
+      "rmse": 2.5252727634328007
+    },
+    {
+      "max_leaf_nodes": 30,
+      "casos": 360,
+      "mae": 1.9190475532739202,
+      "rmse": 2.54957664715748
+    }
+  ],
+  "atributos": "Solo calendario conocido a futuro; sin AHT ni respuestas futuras"
+}

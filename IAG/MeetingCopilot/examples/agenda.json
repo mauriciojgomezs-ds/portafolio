@@ -1,0 +1,49 @@
+{
+  "meeting_id": "demo-001",
+  "title": "Planificación de un piloto de análisis de ventas",
+  "date": "2026-10-06",
+  "synthetic": true,
+  "context": "Equipo ficticio que prepara un piloto interno. Los objetivos y pesos se fijan antes de la reunión. El inicio depende de contar con datos y disponibilidad operativa. No se presupone aprobación de propuestas ni ejecución de tareas.",
+  "objectives": [
+    {
+      "id": "O1",
+      "topic": "Presupuesto",
+      "weight": 30,
+      "objective": "Aprobar un presupuesto máximo para el piloto.",
+      "fulfilled_criterion": "Acuerdo explícito sobre un importe máximo final.",
+      "partial_criterion": "Se comparan alternativas, pero la aprobación o el importe quedan pendientes."
+    },
+    {
+      "id": "O2",
+      "topic": "Fecha del piloto",
+      "weight": 25,
+      "objective": "Confirmar una fecha de inicio del piloto.",
+      "fulfilled_criterion": "Fecha final aprobada sin depender de una confirmación posterior.",
+      "partial_criterion": "Se propone una fecha concreta, pero sigue pendiente una condición o confirmación."
+    },
+    {
+      "id": "O3",
+      "topic": "Responsables y entregables",
+      "weight": 20,
+      "objective": "Asignar responsable y fecha a la carga de datos y a la validación de calidad.",
+      "fulfilled_criterion": "Las dos tareas tienen responsable final y fecha de entrega explícitos.",
+      "partial_criterion": "Solo una de las dos tareas tiene responsable y fecha confirmados."
+    },
+    {
+      "id": "O4",
+      "topic": "Seguridad y retención",
+      "weight": 15,
+      "objective": "Acordar permisos de acceso y plazo de conservación de los datos del piloto.",
+      "fulfilled_criterion": "Se acuerdan tanto acceso como retención.",
+      "partial_criterion": "Se acuerda uno de los dos componentes y el otro queda pendiente."
+    },
+    {
+      "id": "O5",
+      "topic": "Plan de pruebas",
+      "weight": 10,
+      "objective": "Definir criterios de aceptación y quién ejecutará las pruebas.",
+      "fulfilled_criterion": "Se acuerdan los criterios de aceptación y el responsable de probar.",
+      "partial_criterion": "Se acuerda uno de los dos componentes."
+    }
+  ]
+}

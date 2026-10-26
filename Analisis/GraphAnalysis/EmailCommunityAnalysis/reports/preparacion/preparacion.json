@@ -1,0 +1,11 @@
+{
+  "nodos": 1005,
+  "departamentos": 42,
+  "aristas_originales": 25571,
+  "aristas_dirigidas_sin_bucles": 24929,
+  "bucles_retirados": 642,
+  "duplicados_retirados": 0,
+  "fuente_sha256": "4b47acdb80197b085fe63c819c357ae488131ee904ed93d1b219a68b0f9e245f",
+  "etiquetas_sha256": "e5abe5b4581a480032a63adcf2576c161785f45692642c6ebb0b1276f0f33669",
+  "particion": "Grafo completo descriptivo; sin partición predictiva"
+}

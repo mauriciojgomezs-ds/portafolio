@@ -1,0 +1,17 @@
+
+Failed to find real location of C:\Users\mauro\AppData\Local\Programs\Python\Python314\python.exe
+test_calibracion_temporal_no_usa_fechas_futuras (test_decisiones.DecisionTests.test_calibracion_temporal_no_usa_fechas_futuras) ... ok
+test_fiabilidad_incluye_probabilidad_uno_y_soporte (test_decisiones.DecisionTests.test_fiabilidad_incluye_probabilidad_uno_y_soporte) ... ok
+test_separacion_por_cliente (test_decisiones.DecisionTests.test_separacion_por_cliente) ... ok
+test_umbral_costes_y_politica_ninguno (test_decisiones.DecisionTests.test_umbral_costes_y_politica_ninguno) ... ok
+test_comparacion_respeta_direccion_y_datos_ausentes (test_informe.InformeTest.test_comparacion_respeta_direccion_y_datos_ausentes) ... ok
+test_fallo_con_resultados_anteriores_no_se_presenta_como_completado (test_informe.InformeTest.test_fallo_con_resultados_anteriores_no_se_presenta_como_completado) ... ok
+test_manifiesto_identifica_artefactos_y_huellas (test_informe.InformeTest.test_manifiesto_identifica_artefactos_y_huellas) ... ok
+test_fuente_sin_id_y_codigo_categorico (test_protocolos.FlujoTest.test_fuente_sin_id_y_codigo_categorico) ... ok
+test_particion_temporal_conserva_el_orden (test_protocolos.FlujoTest.test_particion_temporal_conserva_el_orden) ... ok
+test_recorrido_y_target_ausente (test_protocolos.FlujoTest.test_recorrido_y_target_ausente) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.930s
+
+OK

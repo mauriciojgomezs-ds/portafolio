@@ -1,0 +1,20 @@
+{
+  "title": "Optimización de turnos y cobertura",
+  "kind": "optimization",
+  "seed": 42,
+  "source_base": "project",
+  "source": "data/raw/demand.csv",
+  "employees_source": "data/raw/employees.csv",
+  "interval_minutes": 30,
+  "open_hour": 9,
+  "close_hour": 19,
+  "shift_hours": 8,
+  "max_weekly_hours": 40,
+  "max_consecutive_days": 4,
+  "solver_time_limit_seconds": 60,
+  "solver_relative_gap": 0.01,
+  "preferences_source": "data/raw/preferences.csv",
+  "balanced_extra_cost_ratio": 0.1,
+  "balance_hours_weight": 1.0,
+  "preference_miss_weight": 0.25
+}

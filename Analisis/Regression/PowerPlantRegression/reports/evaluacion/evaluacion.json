@@ -1,0 +1,20 @@
+{
+  "baseline": {
+    "casos": 1906,
+    "mae_mw": 14.805805808624676,
+    "rmse_mw": 17.06248065102916,
+    "r2": -0.003013306910596647
+  },
+  "modelo": {
+    "casos": 1906,
+    "mae_mw": 2.4705222049714424,
+    "rmse_mw": 3.282124450695032,
+    "r2": 0.9628864549254649
+  },
+  "modelo_elegido": "HGB_hojas_31",
+  "cobertura_nominal": 0.9,
+  "cobertura_empirica_test": 0.8835257082896117,
+  "ancho_medio_intervalo_mw": 9.884308480863638,
+  "residuos_corr_pred_abs": 0.035441108753916165,
+  "residuos_sesgo": -0.22770589767267496
+}

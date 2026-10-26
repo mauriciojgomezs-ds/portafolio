@@ -1,0 +1,255 @@
+[
+  {
+    "proyecto": "Analisis/Recommenders/SpotifyRecommender",
+    "estado": "completado",
+    "segundos": 26.88,
+    "alertas_por_notebook": {
+      "00_configuracion_entorno": 0,
+      "01_preparacion_datos": 0,
+      "02_analisis_exploratorio": 0,
+      "03_baseline": 0,
+      "04_modelado": 0,
+      "05_evaluacion": 0,
+      "06_ejecucion_completa": 1
+    },
+    "actualizacion_presentacion": {
+      "fecha_local": "2026-10-07T10:35:12.441986-03:00",
+      "etapas": [
+        "05_evaluacion"
+      ],
+      "estado": "completado"
+    }
+  },
+  {
+    "proyecto": "Analisis/Recommenders/NetflixRecommender",
+    "estado": "completado",
+    "segundos": 23.31,
+    "alertas_por_notebook": {
+      "00_configuracion_entorno": 0,
+      "01_preparacion_datos": 0,
+      "02_analisis_exploratorio": 0,
+      "03_baseline": 0,
+      "04_modelado": 0,
+      "05_evaluacion": 0,
+      "06_ejecucion_completa": 1
+    },
+    "actualizacion_presentacion": {
+      "fecha_local": "2026-10-07T10:35:15.841234-03:00",
+      "etapas": [
+        "05_evaluacion"
+      ],
+      "estado": "completado"
+    }
+  },
+  {
+    "proyecto": "Analisis/Recommenders/MovieLensRecommender",
+    "estado": "completado",
+    "segundos": 38.43,
+    "alertas_por_notebook": {
+      "00_configuracion_entorno": 0,
+      "01_preparacion_datos": 0,
+      "02_analisis_exploratorio": 0,
+      "03_baseline": 0,
+      "04_modelado": 0,
+      "05_evaluacion": 0,
+      "06_ejecucion_completa": 1
+    },
+    "actualizacion_presentacion": {
+      "fecha_local": "2026-10-07T10:35:21.954152-03:00",
+      "etapas": [
+        "05_evaluacion"
+      ],
+      "estado": "completado"
+    }
+  },
+  {
+    "proyecto": "Analisis/NLP/IMDbSentiment",
+    "estado": "completado",
+    "segundos": 40.38,
+    "alertas_por_notebook": {
+      "00_configuracion_entorno": 0,
+      "01_preparacion_datos": 0,
+      "02_analisis_exploratorio": 0,
+      "03_baseline": 0,
+      "04_modelado": 0,
+      "05_evaluacion": 0,
+      "06_ejecucion_completa": 1
+    },
+    "actualizacion_presentacion": {
+      "fecha_local": "2026-10-07T10:35:45.339849-03:00",
+      "etapas": [
+        "03_baseline",
+        "04_modelado",
+        "05_evaluacion"
+      ],
+      "estado": "completado"
+    }
+  },
+  {
+    "proyecto": "Analisis/NLP/NetflixGenreClassification",
+    "estado": "completado",
+    "segundos": 29.02,
+    "alertas_por_notebook": {
+      "00_configuracion_entorno": 0,
+      "01_preparacion_datos": 0,
+      "02_analisis_exploratorio": 0,
+      "03_baseline": 0,
+      "04_modelado": 0,
+      "05_evaluacion": 0,
+      "06_ejecucion_completa": 1
+    },
+    "actualizacion_presentacion": {
+      "fecha_local": "2026-10-07T10:35:57.619646-03:00",
+      "etapas": [
+        "03_baseline",
+        "04_modelado",
+        "05_evaluacion"
+      ],
+      "estado": "completado"
+    }
+  },
+  {
+    "proyecto": "Analisis/Clustering/CustomerSegmentation",
+    "estado": "completado",
+    "segundos": 64.2,
+    "alertas_por_notebook": {
+      "00_configuracion_entorno": 0,
+      "01_preparacion_datos": 0,
+      "02_analisis_exploratorio": 0,
+      "03_baseline": 0,
+      "04_modelado": 0,
+      "05_evaluacion": 0,
+      "06_ejecucion_completa": 1
+    },
+    "actualizacion_presentacion": {
+      "fecha_local": "2026-10-07T10:41:56.156398-03:00",
+      "etapas": [
+        "05_evaluacion"
+      ],
+      "estado": "completado"
+    }
+  },
+  {
+    "proyecto": "Analisis/Clustering/SpotifySegmentation",
+    "estado": "completado",
+    "segundos": 32.37,
+    "alertas_por_notebook": {
+      "00_configuracion_entorno": 0,
+      "01_preparacion_datos": 0,
+      "02_analisis_exploratorio": 0,
+      "03_baseline": 0,
+      "04_modelado": 0,
+      "05_evaluacion": 0,
+      "06_ejecucion_completa": 1
+    },
+    "actualizacion_presentacion": {
+      "fecha_local": "2026-10-07T10:42:00.063549-03:00",
+      "etapas": [
+        "05_evaluacion"
+      ],
+      "estado": "completado"
+    }
+  },
+  {
+    "proyecto": "Analisis/Forecasting/RetailSalesForecasting",
+    "estado": "completado",
+    "segundos": 48.28,
+    "alertas_por_notebook": {
+      "00_configuracion_entorno": 0,
+      "01_preparacion_datos": 0,
+      "02_analisis_exploratorio": 0,
+      "03_baseline": 0,
+      "04_modelado": 0,
+      "05_evaluacion": 0,
+      "06_ejecucion_completa": 1
+    },
+    "actualizacion_presentacion": {
+      "fecha_local": "2026-10-07T10:37:56.287055-03:00",
+      "etapas": [
+        "05_evaluacion"
+      ],
+      "estado": "completado"
+    }
+  },
+  {
+    "proyecto": "Analisis/AnomalyDetection/NABAnomalyDetection",
+    "estado": "completado",
+    "segundos": 25.31,
+    "alertas_por_notebook": {
+      "00_configuracion_entorno": 0,
+      "01_preparacion_datos": 0,
+      "02_analisis_exploratorio": 0,
+      "03_baseline": 0,
+      "04_modelado": 0,
+      "05_evaluacion": 0,
+      "06_ejecucion_completa": 1
+    },
+    "actualizacion_presentacion": {
+      "fecha_local": "2026-10-07T10:37:59.542911-03:00",
+      "etapas": [
+        "05_evaluacion"
+      ],
+      "estado": "completado"
+    }
+  },
+  {
+    "proyecto": "Analisis/AnomalyDetection/IndustrialAnomalyDetection",
+    "fecha_utc": "2026-10-07T16:27:14.452940+00:00",
+    "estado": "completado",
+    "segundos": 19.15,
+    "alertas_por_notebook": {
+      "00_configuracion_entorno": 0,
+      "01_preparacion_datos": 0,
+      "02_analisis_exploratorio": 0,
+      "03_baseline": 0,
+      "04_modelado": 0,
+      "05_evaluacion": 0,
+      "06_ejecucion_completa": 1
+    }
+  },
+  {
+    "proyecto": "Analisis/BusinessIntelligence/RetailKPIAnalysis",
+    "fecha_utc": "2026-10-07T16:27:14.452940+00:00",
+    "estado": "completado",
+    "segundos": 32.4,
+    "alertas_por_notebook": {
+      "00_configuracion_entorno": 0,
+      "01_preparacion_datos": 0,
+      "02_analisis_exploratorio": 0,
+      "03_baseline": 0,
+      "04_modelado": 0,
+      "05_evaluacion": 0,
+      "06_ejecucion_completa": 1
+    }
+  },
+  {
+    "proyecto": "Analisis/ComputerVision/DigitsRecognition",
+    "fecha_utc": "2026-10-07T16:27:14.452940+00:00",
+    "estado": "completado",
+    "segundos": 19.0,
+    "alertas_por_notebook": {
+      "00_configuracion_entorno": 0,
+      "01_preparacion_datos": 0,
+      "02_analisis_exploratorio": 0,
+      "03_baseline": 1,
+      "04_modelado": 0,
+      "05_evaluacion": 0,
+      "06_ejecucion_completa": 1
+    }
+  },
+  {
+    "proyecto": "Analisis/Forecasting/CallCenterStaffing",
+    "fecha_utc": "2026-10-07T16:27:14.452940+00:00",
+    "estado": "completado",
+    "segundos": 22.07,
+    "alertas_por_notebook": {
+      "00_configuracion_entorno": 0,
+      "01_preparacion_datos": 0,
+      "02_analisis_exploratorio": 0,
+      "03_baseline": 0,
+      "04_modelado": 0,
+      "05_evaluacion": 0,
+      "06_ejecucion_completa": 1
+    }
+  }
+]

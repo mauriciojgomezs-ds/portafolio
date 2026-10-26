@@ -1,0 +1,57 @@
+{
+  "poblacion": "train",
+  "filas": 3662,
+  "columnas": 16,
+  "nulos": {
+    "show_id": 0,
+    "type": 0,
+    "title": 0,
+    "director": 111,
+    "cast": 291,
+    "country": 267,
+    "date_added": 0,
+    "release_year": 0,
+    "rating": 0,
+    "duration": 1,
+    "listed_in": 0,
+    "description": 0,
+    "text": 0,
+    "labels": 0,
+    "title_key": 0,
+    "text_key": 0
+  },
+  "resumen_numerico": {
+    "release_year": {
+      "count": 3662.0,
+      "mean": 2013.186,
+      "std": 9.7098,
+      "min": 1942.0,
+      "25%": 2012.0,
+      "50%": 2016.0,
+      "75%": 2018.0,
+      "max": 2021.0
+    }
+  },
+  "etiquetas": {
+    "Documentaries": 525,
+    "Comedies": 988,
+    "Dramas": 1448,
+    "International Movies": 1654,
+    "Children & Family Movies": 372,
+    "Romantic Movies": 374,
+    "Music & Musicals": 212,
+    "Thrillers": 351,
+    "Independent Movies": 453,
+    "Action & Adventure": 514,
+    "Classic Movies": 75,
+    "Horror Movies": 209,
+    "Anime Features": 33,
+    "Sports Movies": 125,
+    "Sci-Fi & Fantasy": 148,
+    "Cult Movies": 39,
+    "Faith & Spirituality": 45,
+    "LGBTQ Movies": 65,
+    "Stand-Up Comedy": 217,
+    "Movies": 32
+  }
+}

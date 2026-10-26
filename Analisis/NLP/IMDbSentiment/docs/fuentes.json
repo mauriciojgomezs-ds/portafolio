@@ -1,0 +1,12 @@
+[
+  {
+    "archivo": "data/raw/train.parquet",
+    "bytes": 20979968,
+    "sha256": "db47d16b5c297cc0dd625e519c81319c24c9149e70e8496de5475f6fa928342c"
+  },
+  {
+    "archivo": "data/raw/test.parquet",
+    "bytes": 20470363,
+    "sha256": "b52e26e2f872d282ffac460bf9770b25ac6f102cda0e6ca7158df98c94e8b3da"
+  }
+]

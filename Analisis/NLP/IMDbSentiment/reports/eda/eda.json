@@ -1,0 +1,26 @@
+{
+  "poblacion": "train",
+  "filas": 19823,
+  "columnas": 3,
+  "nulos": {
+    "text": 0,
+    "label": 0,
+    "text_key": 0
+  },
+  "resumen_numerico": {
+    "label": {
+      "count": 19823.0,
+      "mean": 0.5021,
+      "std": 0.5,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 1.0,
+      "75%": 1.0,
+      "max": 1.0
+    }
+  },
+  "balance": {
+    "0": 9869,
+    "1": 9954
+  }
+}

@@ -1,0 +1,3 @@
+## Probabilidades y decisiones
+
+Brier sigmoid **0.3836**, mayor que sin calibrar **0.3748**. Brier y log loss combinan calibración y discriminación; ECE depende de los bins. Las tablas de fiabilidad incluyen soporte y omiten bins vacíos. Con umbral fijado en validación **0.18**, se priorizan **61193 de 64374 casos**: recall **99.85%**, precisión **49.75%**, coste de error **0.481 unidades por caso**. FN=5.0, FP=1.0 son supuestos ilustrativos, no importes reales ni ahorro de retención. Se muestran todas las políticas sin elegir una nueva con test. SubscriptionChurn registra 50320 IDs compartidos entre train y test; la independencia por persona sigue pendiente de confirmar.

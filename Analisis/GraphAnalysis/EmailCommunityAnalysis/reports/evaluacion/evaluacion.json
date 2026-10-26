@@ -1,0 +1,15 @@
+{
+  "baseline": {
+    "ari_departamentos": -0.0007319958862987065,
+    "nmi_departamentos": 0.032918662260284524
+  },
+  "modelo": {
+    "ari_departamentos": 0.3504538057743716,
+    "nmi_departamentos": 0.594641706940955
+  },
+  "ari_estabilidad_medio_otras_semillas": 0.646249366862101,
+  "ari_nulo_media": -0.00013299332848728753,
+  "ari_nulo_percentil95": 0.001800683129788786,
+  "permutaciones": 100,
+  "protocolo": "Diagnóstico transductivo en la misma red; no accuracy ni evaluación fuera de muestra"
+}

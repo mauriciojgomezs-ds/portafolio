@@ -1,0 +1,20 @@
+{
+  "baseline": {
+    "casos": 360,
+    "mae": 1.6070436507936505,
+    "rmse": 2.1556669041360035
+  },
+  "modelo": {
+    "casos": 360,
+    "mae": 1.6117801039743413,
+    "rmse": 2.142629818567631
+  },
+  "aht_estimado_train_segundos": 256.8421261404205,
+  "target_service_level": 0.8,
+  "target_wait_seconds": 20,
+  "max_occupancy": 0.85,
+  "shrinkage": 0.3,
+  "agentes_programables_maximo": 3,
+  "proporcion_intervalos_sl_teorico_bajo_objetivo": 0.12222222222222222,
+  "escenario_mas20pct_maximo": 5
+}

@@ -1,0 +1,136 @@
+{
+  "fecha_utc": "2026-10-07T22:32:06.150595+00:00",
+  "archivos": [
+    {
+      "archivo": "back/movieLens.zip",
+      "bytes": 238950008,
+      "sha256": "e4a68655d7386b8f95f2f2424b2ff975dfdd15ffd59e0d864a14dca43e99d6ee",
+      "archivos_internos": 6
+    },
+    {
+      "archivo": "back/NAB.zip",
+      "bytes": 48012310,
+      "sha256": "560c86161cdbd487a52f8e1050f7c4129744d862bcbd9d985a4fe8cf8f788bd5",
+      "archivos_internos": 1186
+    },
+    {
+      "archivo": "back/Netflix Movies and TV Shows.zip",
+      "bytes": 1400865,
+      "sha256": "1e5477bbbe868845be3b852d80eec2f1da6570340860668549a6dd5da0b00054",
+      "archivos_internos": 1
+    },
+    {
+      "archivo": "back/OneDrive_1_6-10-2026.zip",
+      "bytes": 352485642,
+      "sha256": "1bf910147b9a801a323b76dad140e7980a22d3ccf671a002192015d693d6cf1d",
+      "archivos_internos": 2
+    },
+    {
+      "archivo": "back/OnlineRetailUCI.zip",
+      "bytes": 23715478,
+      "sha256": "f5385cbb54bbebf7196389109c6b0621faab0c304e3702548165e71c84aede8b",
+      "archivos_internos": 1
+    },
+    {
+      "archivo": "back/Spotify Tracks Dataset.zip",
+      "bytes": 8571542,
+      "sha256": "be5216c0c811283c5db3e3af83cffa59873cc5fa375222f3280782776e289176",
+      "archivos_internos": 1
+    },
+    {
+      "archivo": "back/IMDb/test.parquet",
+      "bytes": 20470363,
+      "sha256": "b52e26e2f872d282ffac460bf9770b25ac6f102cda0e6ca7158df98c94e8b3da",
+      "filas": 25000,
+      "columnas": [
+        "text",
+        "label"
+      ]
+    },
+    {
+      "archivo": "back/IMDb/train.parquet",
+      "bytes": 20979968,
+      "sha256": "db47d16b5c297cc0dd625e519c81319c24c9149e70e8496de5475f6fa928342c",
+      "filas": 25000,
+      "columnas": [
+        "text",
+        "label"
+      ]
+    },
+    {
+      "archivo": "Analisis/AnomalyDetection/IndustrialAnomalyDetection/data/raw/AI4I.zip",
+      "bytes": 522170,
+      "sha256": "f601f14294bcf190f9d720676b7f0aea46a26cde9ab8ebc7b4f8174d9d26b252"
+    },
+    {
+      "archivo": "Analisis/BusinessIntelligence/RetailKPIAnalysis/data/raw/OnlineRetailUCI.zip",
+      "bytes": 23715478,
+      "sha256": "f5385cbb54bbebf7196389109c6b0621faab0c304e3702548165e71c84aede8b"
+    },
+    {
+      "archivo": "Analisis/ComputerVision/DigitsRecognition/data/raw/digits.npz",
+      "bytes": 46017,
+      "sha256": "e5dd6c6dc3a5b49e4526d8403b07295730cd8d76624f30da0fc652eafcd2b3d8"
+    },
+    {
+      "archivo": "Analisis/Forecasting/CallCenterStaffing/data/raw/CallCenterKaggle.zip",
+      "bytes": 241762,
+      "sha256": "8d57d20fff56e84c23de6fce05bc31fb23d932ed00c3ee645afbc9494590b807"
+    },
+    {
+      "archivo": "Analisis/CausalInference/TrainingProgramImpact/data/raw/nswre74_control.txt",
+      "bytes": 41860,
+      "sha256": "a1364cea459d953dc691a667d99194b4ad335d6d550354fe23a5d2dc58d729b5"
+    },
+    {
+      "archivo": "Analisis/CausalInference/TrainingProgramImpact/data/raw/nswre74_treated.txt",
+      "bytes": 29785,
+      "sha256": "e7b742fe0ff07a0f45e129b4ff108bb9611cd83d53604732c48a8a0a3e20eda3"
+    },
+    {
+      "archivo": "Analisis/CausalInference/TrainingProgramImpact/data/raw/nsw_dw.csv",
+      "bytes": 21932,
+      "sha256": "e5a3a38aba34088094d817b7a3939bcfdb2d280474373a18b58dbad7a3fb3176"
+    },
+    {
+      "archivo": "Analisis/Regression/PowerPlantRegression/data/raw/CCPP.zip",
+      "bytes": 3674852,
+      "sha256": "cc7b2a4977c0a44e8221c91d9a7e5746b3c68186cff7e5c61c70af6432b98c7a"
+    },
+    {
+      "archivo": "Analisis/Optimization/WorkforceScheduling/data/raw/demand.csv",
+      "bytes": 1076,
+      "sha256": "38aa8e71618f2b91f1268f4852e44879fc2b4bca96888416e3daf1225b73bc0e"
+    },
+    {
+      "archivo": "Analisis/Optimization/WorkforceScheduling/data/raw/employees.csv",
+      "bytes": 212,
+      "sha256": "4807349031c2fa5563bc69d8cf43e166fa6dc893229ff2c6ed20f8c63d740f8d"
+    },
+    {
+      "archivo": "Analisis/Optimization/WorkforceScheduling/data/raw/scenario_origin.json",
+      "bytes": 394,
+      "sha256": "fceac5c99330119be96b549e79997233ce545865cd50db572f5d91b03305fa22"
+    },
+    {
+      "archivo": "Analisis/GraphAnalysis/EmailCommunityAnalysis/data/raw/email-Eu-core-department-labels.txt.gz",
+      "bytes": 2663,
+      "sha256": "e5abe5b4581a480032a63adcf2576c161785f45692642c6ebb0b1276f0f33669"
+    },
+    {
+      "archivo": "Analisis/GraphAnalysis/EmailCommunityAnalysis/data/raw/email-Eu-core.txt.gz",
+      "bytes": 79754,
+      "sha256": "4b47acdb80197b085fe63c819c357ae488131ee904ed93d1b219a68b0f9e245f"
+    },
+    {
+      "archivo": "Analisis/SurvivalAnalysis/CustomerReturnSurvival/data/raw/OnlineRetailUCI.zip",
+      "bytes": 23715478,
+      "sha256": "f5385cbb54bbebf7196389109c6b0621faab0c304e3702548165e71c84aede8b"
+    },
+    {
+      "archivo": "Analisis/Optimization/WorkforceScheduling/data/raw/preferences.csv",
+      "bytes": 129,
+      "sha256": "b0c7a11f92c5b2d30ac3fdcbd2b5b90d8f0f045856f1b7a68d7665044b26a3ef"
+    }
+  ]
+}

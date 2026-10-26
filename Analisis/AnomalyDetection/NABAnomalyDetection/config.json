@@ -1,0 +1,10 @@
+{
+  "title": "Anomalías en temperatura de una máquina",
+  "kind": "anomaly",
+  "source": "data/raw/NAB.zip",
+  "seed": 42,
+  "top_n": 10,
+  "series": "realKnownCause/machine_temperature_system_failure.csv",
+  "window": 48,
+  "source_base": "project"
+}

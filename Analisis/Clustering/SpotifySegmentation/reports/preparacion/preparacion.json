@@ -1,0 +1,8 @@
+{
+  "fuente": "Spotify Tracks Dataset.zip",
+  "semilla": 42,
+  "sha256": "be5216c0c811283c5db3e3af83cffa59873cc5fa375222f3280782776e289176",
+  "filas_originales": 114000,
+  "duplicados_track_id": 24259,
+  "filas_preparadas": 20000
+}

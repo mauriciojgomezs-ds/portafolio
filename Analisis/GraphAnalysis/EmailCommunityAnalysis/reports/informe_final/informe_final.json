@@ -1,0 +1,258 @@
+{
+  "proyecto": "Red de comunicación y comunidades",
+  "generado_utc": "2026-10-08T12:38:56.280632+00:00",
+  "estado": "evidencia_disponible",
+  "estado_maestro": "completado",
+  "etapas_sin_reporte": [],
+  "notebooks": [
+    {
+      "notebook": "01_preparacion_datos.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-08T12:21:35.482235Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "02_analisis_exploratorio.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-08T12:21:41.707347Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "03_baseline.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-08T12:21:44.889026Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "04_modelado.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-08T12:21:48.192717Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "05_evaluacion.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-08T12:21:52.108948Z",
+      "errores_guardados": 0
+    }
+  ],
+  "resultados": {
+    "preparacion": {
+      "nodos": 1005,
+      "departamentos": 42,
+      "aristas_originales": 25571,
+      "aristas_dirigidas_sin_bucles": 24929,
+      "bucles_retirados": 642,
+      "duplicados_retirados": 0,
+      "fuente_sha256": "4b47acdb80197b085fe63c819c357ae488131ee904ed93d1b219a68b0f9e245f",
+      "etiquetas_sha256": "e5abe5b4581a480032a63adcf2576c161785f45692642c6ebb0b1276f0f33669",
+      "particion": "Grafo completo descriptivo; sin partición predictiva"
+    },
+    "eda": {
+      "aristas_no_dirigidas": 16064,
+      "componentes": 20,
+      "componente_mayor": 986,
+      "aislados": 19,
+      "densidad": 0.031840796019900496,
+      "reciprocidad_dirigida": 0.7112198644149385
+    },
+    "baseline": {
+      "comunidades": 20,
+      "modularidad": 0.0
+    },
+    "modelado": {
+      "comunidades": 28,
+      "modularidad": 0.4130212141349939,
+      "resolucion_fija": 1.0,
+      "semilla_declarada": 42,
+      "criterio": "Louvain con parámetros fijados sin consultar departamentos"
+    },
+    "evaluacion": {
+      "baseline": {
+        "ari_departamentos": -0.0007319958862987065,
+        "nmi_departamentos": 0.032918662260284524
+      },
+      "modelo": {
+        "ari_departamentos": 0.3504538057743716,
+        "nmi_departamentos": 0.594641706940955
+      },
+      "ari_estabilidad_medio_otras_semillas": 0.646249366862101,
+      "ari_nulo_media": -0.00013299332848728753,
+      "ari_nulo_percentil95": 0.001800683129788786,
+      "permutaciones": 100,
+      "protocolo": "Diagnóstico transductivo en la misma red; no accuracy ni evaluación fuera de muestra"
+    }
+  },
+  "fuentes": [
+    {
+      "ruta": "reports/preparacion/preparacion.json",
+      "sha256": "062f4850dbbd1dbee74b5c96277465b6d04ace28d77fb83e210398f11d2cd72f",
+      "modificacion_utc": "2026-10-08T12:21:35.465966+00:00"
+    },
+    {
+      "ruta": "reports/preparacion/preparacion.md",
+      "sha256": "1a4b1a4c601177ad39f9e534f9b51dd285746cf2fa1243bbc3a5281427ce688c",
+      "modificacion_utc": "2026-10-08T12:21:35.465966+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.json",
+      "sha256": "954a69b645f5ed81219d2b6abe6a253884641ac9d28585317d4605183cf30a66",
+      "modificacion_utc": "2026-10-08T12:21:41.685841+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.md",
+      "sha256": "add1359a49df7d596594a1b8af09470c7956b80072483826f7d3ee90b1c6fb35",
+      "modificacion_utc": "2026-10-08T12:21:41.685841+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.png",
+      "sha256": "0bc2b5c68267bbfa1f927dc493bd3feeaeaff87a9f01035dcf06c5955a80846e",
+      "modificacion_utc": "2026-10-08T12:21:41.669735+00:00"
+    },
+    {
+      "ruta": "reports/eda/centralidad.csv",
+      "sha256": "1559b104c860bda793eb91962fbcdaf33f6c0d0280b715d114254486f5a47556",
+      "modificacion_utc": "2026-10-08T12:21:41.527906+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.json",
+      "sha256": "c469fe65198ebf72da1e450386fda656f24ef1abdc9c0aba9989d86c9310dee7",
+      "modificacion_utc": "2026-10-08T12:21:44.868588+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.md",
+      "sha256": "99537f26ca6f5906a1aecd1182496c366e9d2d1fd1731dd11eca2b853fff51c1",
+      "modificacion_utc": "2026-10-08T12:21:44.868588+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.json",
+      "sha256": "224cda0cb4ff892335c81516f1b8055927c27d27952975a03d35619d2542530b",
+      "modificacion_utc": "2026-10-08T12:21:48.172331+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.md",
+      "sha256": "1cf5fb1c05628686d1494b5ca789fd43868f7f3db85604523c6e35a5b7256e6c",
+      "modificacion_utc": "2026-10-08T12:21:48.173331+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.json",
+      "sha256": "42705c5d4bb37f71aecc28f8a37fbdf8066c75c712f7a7232032b76fab992b25",
+      "modificacion_utc": "2026-10-08T12:21:52.086350+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.md",
+      "sha256": "41f6973f89ca9fbb3d823e5f02e88a5d808ad948666b129a9b89ca4b1fd0b053",
+      "modificacion_utc": "2026-10-08T12:21:52.086946+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.png",
+      "sha256": "b8334cbff94e0cf961791fdd62abb76ab8e29e4cf09fe0421a652acc01eacd8a",
+      "modificacion_utc": "2026-10-08T12:21:52.070569+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/comunidades_departamentos.csv",
+      "sha256": "74f203451610b746285ed531218710c8be72921787a8836eaea112848833ee59",
+      "modificacion_utc": "2026-10-08T12:21:51.923199+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/estabilidad_semillas.csv",
+      "sha256": "97c9ed1b9cb08fc4fc04407db22e0b3e2b04ff0c3389144b9e5f7ea30941c2b4",
+      "modificacion_utc": "2026-10-08T12:21:51.923199+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/referencia_permutada.csv",
+      "sha256": "01a70bc0a429ba4df93cae89ddfaa02272cdabdc663df9b6dca8f2a1e1dac1bc",
+      "modificacion_utc": "2026-10-08T12:21:51.923199+00:00"
+    },
+    {
+      "ruta": "notebooks/01_preparacion_datos.ipynb",
+      "sha256": "8f55c35093065b9e1c8f3f81980127ccdbf09cf50fae9aebcdc0b50de408ee16",
+      "modificacion_utc": "2026-10-08T12:21:38.795298+00:00"
+    },
+    {
+      "ruta": "notebooks/02_analisis_exploratorio.ipynb",
+      "sha256": "44c58389a785e988c0b15223274ca40c4b1e8ab1cb9eaa76dbc28c157e299333",
+      "modificacion_utc": "2026-10-08T12:21:42.160621+00:00"
+    },
+    {
+      "ruta": "notebooks/03_baseline.ipynb",
+      "sha256": "884b0e127c96f1c478efbcb87b88fd430c1c2e38d0ab8b7326165374f7be8fa5",
+      "modificacion_utc": "2026-10-08T12:21:45.344014+00:00"
+    },
+    {
+      "ruta": "notebooks/04_modelado.ipynb",
+      "sha256": "5d9f4a8f79ae9f9e5d40eed121431ec0a53c131e3640bdf780182f432362b470",
+      "modificacion_utc": "2026-10-08T12:21:48.652894+00:00"
+    },
+    {
+      "ruta": "notebooks/05_evaluacion.ipynb",
+      "sha256": "c55deb7157e602df811be0caf8355fe9ef5f0ff3bc6621dcaf0b643a887b4e46",
+      "modificacion_utc": "2026-10-08T12:21:52.566746+00:00"
+    },
+    {
+      "ruta": "reports/alertas/00_configuracion_entorno.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-08T12:21:27.487100+00:00"
+    },
+    {
+      "ruta": "reports/alertas/01_preparacion_datos.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-08T12:21:35.474810+00:00"
+    },
+    {
+      "ruta": "reports/alertas/02_analisis_exploratorio.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-08T12:21:41.697978+00:00"
+    },
+    {
+      "ruta": "reports/alertas/03_baseline.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-08T12:21:44.878863+00:00"
+    },
+    {
+      "ruta": "reports/alertas/04_modelado.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-08T12:21:48.180889+00:00"
+    },
+    {
+      "ruta": "reports/alertas/05_evaluacion.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-08T12:21:52.097207+00:00"
+    },
+    {
+      "ruta": "reports/alertas/06_ejecucion_completa.json",
+      "sha256": "1e848de256cb42422358d7adab1f486b122d02dfac23f7da952b7659092430df",
+      "modificacion_utc": "2026-10-08T12:21:52.921614+00:00"
+    },
+    {
+      "ruta": "README.md",
+      "sha256": "be6f1ab06e4cd29e0de2bad1ce6993a547fc81b582394283b76c27900b8ffabe",
+      "modificacion_utc": "2026-10-08T12:21:22.208714+00:00"
+    },
+    {
+      "ruta": "config.json",
+      "sha256": "094d3b188f17085cfef3ee5e78936d93c42b6b3ae2fa9840b33aca201b6eee59",
+      "modificacion_utc": "2026-10-08T12:14:44.037432+00:00"
+    },
+    {
+      "ruta": "reports/ejecucion/resumen.json",
+      "sha256": "ea5dcfa038e9147ce65a945533e96383219bf8ef527176ee4b170d29e01bd4c8",
+      "modificacion_utc": "2026-10-08T12:21:52.566746+00:00"
+    },
+    {
+      "ruta": "reports/entorno/environment.json",
+      "sha256": "63142c94cb945a76eb9644e50e57600de6fd06a6d0679ea954948765980db5c6",
+      "modificacion_utc": "2026-10-08T12:21:27.459538+00:00"
+    }
+  ],
+  "limitaciones": "Red estática interna, sin contenido, volumen ni cronología de correos. Comunidades y centralidad son descriptivas; departamentos solo se usan al evaluar. No hay test predictivo ni inferencia de productividad.",
+  "proximos_pasos": [
+    "Estudiar proyecciones y resoluciones alternativas con un protocolo declarado.",
+    "Ampliar fuentes de comunicación; conservar evaluación descriptiva explícita."
+  ]
+}

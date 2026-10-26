@@ -1,0 +1,17 @@
+{
+  "criterio": "f1_macro_validacion",
+  "C_elegido": 10,
+  "candidatos": [
+    {
+      "C": 1,
+      "accuracy": 0.9805013927576601,
+      "f1_macro": 0.9804239643010207
+    },
+    {
+      "C": 10,
+      "accuracy": 0.9832869080779945,
+      "f1_macro": 0.9832094827387129
+    }
+  ],
+  "features": 192
+}

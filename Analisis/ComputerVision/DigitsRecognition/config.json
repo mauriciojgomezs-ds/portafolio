@@ -1,0 +1,11 @@
+{
+  "title": "Reconocimiento de dígitos escritos",
+  "kind": "vision_classification",
+  "seed": 42,
+  "source_base": "project",
+  "source": "data/raw/digits.npz",
+  "candidates_C": [
+    1,
+    10
+  ]
+}

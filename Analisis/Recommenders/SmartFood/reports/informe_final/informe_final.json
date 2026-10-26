@@ -1,0 +1,590 @@
+{
+  "proyecto": "SmartFood",
+  "generado_utc": "2026-10-26T14:30:29.860138+00:00",
+  "estado": "evidencia_disponible",
+  "estado_maestro": "completado",
+  "etapas_sin_reporte": [],
+  "notebooks": [
+    {
+      "notebook": "01_preparacion_datos.ipynb",
+      "celdas_con_salida": 7,
+      "celdas_codigo": 7,
+      "ultima_ejecucion_utc": "2026-10-26T14:29:24.885446Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "02_analisis_exploratorio.ipynb",
+      "celdas_con_salida": 32,
+      "celdas_codigo": 32,
+      "ultima_ejecucion_utc": "2026-10-26T14:30:15.788327Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "03_baseline_perfil_usuario.ipynb",
+      "celdas_con_salida": 6,
+      "celdas_codigo": 6,
+      "ultima_ejecucion_utc": "2026-10-26T14:30:17.864775Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "04_filtrado_colaborativo_nmf.ipynb",
+      "celdas_con_salida": 19,
+      "celdas_codigo": 19,
+      "ultima_ejecucion_utc": "2026-10-26T14:30:26.044133Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "05_clasificacion_ranking_svm.ipynb",
+      "celdas_con_salida": 22,
+      "celdas_codigo": 22,
+      "ultima_ejecucion_utc": "2026-10-26T14:30:29.206414Z",
+      "errores_guardados": 0
+    }
+  ],
+  "resultados": {
+    "preparacion": {
+      "recetas": 522517,
+      "reviews": 1401982,
+      "columnas_recetas": 28,
+      "columnas_reviews": 8
+    },
+    "eda": {
+      "umbral": 270,
+      "originales": {
+        "recetas": 522517,
+        "filas_catalogo": 522517,
+        "reviews": 1401982,
+        "usuarios": 271907,
+        "items": 271678,
+        "pares": 1401982,
+        "pares_repetidos": 0,
+        "esparsidad": 99.99810212511782,
+        "rating_5": 72.18937190349091,
+        "rating_0": 5.438586230065721,
+        "rating_positivo": 88.53886854467461,
+        "nulos_reviews_claves": 0,
+        "items_fuera_catalogo": 19,
+        "calorias": {
+          "count": 522517.0,
+          "mean": 484.4385799887851,
+          "std": 1397.1166490876117,
+          "min": 0.0,
+          "25%": 174.2,
+          "50%": 317.1,
+          "75%": 529.1,
+          "max": 612854.6
+        },
+        "rating_agregado": {
+          "count": 269294.0,
+          "mean": 4.632013709922984,
+          "std": 0.6419341051272118,
+          "min": 1.0,
+          "25%": 4.5,
+          "50%": 5.0,
+          "75%": 5.0,
+          "max": 5.0
+        },
+        "rating_agregado_5": 33.399104718124,
+        "nulos_recetas": {
+          "aggregatedrating": 48.462155298296516,
+          "reviewcount": 47.36477473460194,
+          "recipeyield": 66.61429197518932,
+          "recipeservings": 35.00575100905808
+        },
+        "historial_usuarios": {
+          "count": 271907.0,
+          "mean": 5.156108522399203,
+          "std": 53.46823791889993,
+          "min": 1.0,
+          "25%": 1.0,
+          "50%": 1.0,
+          "75%": 2.0,
+          "max": 8842.0
+        },
+        "historial_recetas": {
+          "count": 271678.0,
+          "mean": 5.160454655879387,
+          "std": 19.708588925192903,
+          "min": 1.0,
+          "25%": 1.0,
+          "50%": 2.0,
+          "75%": 4.0,
+          "max": 2892.0
+        },
+        "matriz_gb": 590.969199568
+      },
+      "filtradas": {
+        "recetas": 190,
+        "filas_catalogo": 190,
+        "reviews": 10343,
+        "usuarios": 617,
+        "items": 190,
+        "pares": 10343,
+        "pares_repetidos": 0,
+        "esparsidad": 91.17717307856351,
+        "rating_5": 77.43401334235715,
+        "rating_0": 1.6242869573624674,
+        "rating_positivo": 93.60920429275839,
+        "nulos_reviews_claves": 0,
+        "items_fuera_catalogo": 0,
+        "calorias": {
+          "count": 190.0,
+          "mean": 402.5026315789474,
+          "std": 348.33367698535653,
+          "min": 0.0,
+          "25%": 200.125,
+          "50%": 322.95000000000005,
+          "75%": 506.35,
+          "max": 3343.8
+        },
+        "rating_agregado": {
+          "count": 190.0,
+          "mean": 4.934210526315789,
+          "std": 0.19145269739114634,
+          "min": 4.0,
+          "25%": 5.0,
+          "50%": 5.0,
+          "75%": 5.0,
+          "max": 5.0
+        },
+        "rating_agregado_5": 88.42105263157895,
+        "nulos_recetas": {
+          "aggregatedrating": 0.0,
+          "reviewcount": 0.0,
+          "recipeyield": 67.36842105263158,
+          "recipeservings": 40.0
+        },
+        "historial_usuarios": {
+          "count": 617.0,
+          "mean": 16.763371150729334,
+          "std": 15.534599641429162,
+          "min": 1.0,
+          "25%": 6.0,
+          "50%": 13.0,
+          "75%": 22.0,
+          "max": 167.0
+        },
+        "historial_recetas": {
+          "count": 190.0,
+          "mean": 54.43684210526316,
+          "std": 28.33835082606387,
+          "min": 1.0,
+          "25%": 36.25,
+          "50%": 48.5,
+          "75%": 66.0,
+          "max": 200.0
+        },
+        "matriz_gb": 0.00093784
+      }
+    },
+    "baseline": {
+      "top_n_solicitado": 5,
+      "recetas_devueltas": 5
+    },
+    "modelado": {
+      "componentes_seleccionados": 70,
+      "grid": [
+        {
+          "componentes": 10,
+          "mse": 17.63695201305154,
+          "rmse": 4.199637128735237,
+          "interacciones_test": 2035,
+          "tiempo": 0.04,
+          "init": "nndsvda",
+          "solver": "mu",
+          "max_iter": 1000,
+          "alpha_W": 0.01,
+          "alpha_H": 0.01,
+          "l1_ratio": 0.5
+        },
+        {
+          "componentes": 20,
+          "mse": 18.419942776990812,
+          "rmse": 4.291846080300505,
+          "interacciones_test": 2035,
+          "tiempo": 0.05,
+          "init": "nndsvda",
+          "solver": "mu",
+          "max_iter": 1000,
+          "alpha_W": 0.01,
+          "alpha_H": 0.01,
+          "l1_ratio": 0.5
+        },
+        {
+          "componentes": 30,
+          "mse": 18.733102721999614,
+          "rmse": 4.328175449539866,
+          "interacciones_test": 2035,
+          "tiempo": 0.07,
+          "init": "nndsvda",
+          "solver": "mu",
+          "max_iter": 1000,
+          "alpha_W": 0.01,
+          "alpha_H": 0.01,
+          "l1_ratio": 0.5
+        },
+        {
+          "componentes": 40,
+          "mse": 19.267457102832484,
+          "rmse": 4.389471164369631,
+          "interacciones_test": 2035,
+          "tiempo": 0.13,
+          "init": "nndsvda",
+          "solver": "mu",
+          "max_iter": 1000,
+          "alpha_W": 0.01,
+          "alpha_H": 0.01,
+          "l1_ratio": 0.5
+        },
+        {
+          "componentes": 50,
+          "mse": 19.624370244580135,
+          "rmse": 4.429940207788378,
+          "interacciones_test": 2035,
+          "tiempo": 0.18,
+          "init": "nndsvda",
+          "solver": "mu",
+          "max_iter": 1000,
+          "alpha_W": 0.01,
+          "alpha_H": 0.01,
+          "l1_ratio": 0.5
+        },
+        {
+          "componentes": 60,
+          "mse": 19.861609632695817,
+          "rmse": 4.456636582973287,
+          "interacciones_test": 2035,
+          "tiempo": 0.11,
+          "init": "nndsvda",
+          "solver": "mu",
+          "max_iter": 1000,
+          "alpha_W": 0.01,
+          "alpha_H": 0.01,
+          "l1_ratio": 0.5
+        },
+        {
+          "componentes": 70,
+          "mse": 20.145732711914505,
+          "rmse": 4.488399794126466,
+          "interacciones_test": 2035,
+          "tiempo": 0.12,
+          "init": "nndsvda",
+          "solver": "mu",
+          "max_iter": 1000,
+          "alpha_W": 0.01,
+          "alpha_H": 0.01,
+          "l1_ratio": 0.5
+        },
+        {
+          "componentes": 80,
+          "mse": 20.426066250283895,
+          "rmse": 4.519520577482074,
+          "interacciones_test": 2035,
+          "tiempo": 0.14,
+          "init": "nndsvda",
+          "solver": "mu",
+          "max_iter": 1000,
+          "alpha_W": 0.01,
+          "alpha_H": 0.01,
+          "l1_ratio": 0.5
+        },
+        {
+          "componentes": 90,
+          "mse": 20.84345519662158,
+          "rmse": 4.565463305801678,
+          "interacciones_test": 2035,
+          "tiempo": 0.2,
+          "init": "nndsvda",
+          "solver": "mu",
+          "max_iter": 1000,
+          "alpha_W": 0.01,
+          "alpha_H": 0.01,
+          "l1_ratio": 0.5
+        },
+        {
+          "componentes": 100,
+          "mse": 20.9026899810301,
+          "rmse": 4.5719459731092735,
+          "interacciones_test": 2035,
+          "tiempo": 0.29,
+          "init": "nndsvda",
+          "solver": "mu",
+          "max_iter": 1000,
+          "alpha_W": 0.01,
+          "alpha_H": 0.01,
+          "l1_ratio": 0.5
+        },
+        {
+          "componentes": 110,
+          "mse": 21.028911410990013,
+          "rmse": 4.585729103533048,
+          "interacciones_test": 2035,
+          "tiempo": 0.33,
+          "init": "nndsvda",
+          "solver": "mu",
+          "max_iter": 1000,
+          "alpha_W": 0.01,
+          "alpha_H": 0.01,
+          "l1_ratio": 0.5
+        },
+        {
+          "componentes": 120,
+          "mse": 21.04093451175254,
+          "rmse": 4.587039841962629,
+          "interacciones_test": 2035,
+          "tiempo": 0.46,
+          "init": "nndsvda",
+          "solver": "mu",
+          "max_iter": 1000,
+          "alpha_W": 0.01,
+          "alpha_H": 0.01,
+          "l1_ratio": 0.5
+        },
+        {
+          "componentes": 130,
+          "mse": 21.2275714065709,
+          "rmse": 4.607338863874775,
+          "interacciones_test": 2035,
+          "tiempo": 0.28,
+          "init": "nndsvda",
+          "solver": "mu",
+          "max_iter": 1000,
+          "alpha_W": 0.01,
+          "alpha_H": 0.01,
+          "l1_ratio": 0.5
+        },
+        {
+          "componentes": 140,
+          "mse": 21.161027108942985,
+          "rmse": 4.600111640921662,
+          "interacciones_test": 2035,
+          "tiempo": 0.55,
+          "init": "nndsvda",
+          "solver": "mu",
+          "max_iter": 1000,
+          "alpha_W": 0.01,
+          "alpha_H": 0.01,
+          "l1_ratio": 0.5
+        },
+        {
+          "componentes": 150,
+          "mse": 21.022424044353826,
+          "rmse": 4.5850217059850245,
+          "interacciones_test": 2035,
+          "tiempo": 0.41,
+          "init": "nndsvda",
+          "solver": "mu",
+          "max_iter": 1000,
+          "alpha_W": 0.01,
+          "alpha_H": 0.01,
+          "l1_ratio": 0.5
+        },
+        {
+          "componentes": 160,
+          "mse": 21.016451380005854,
+          "rmse": 4.584370336262752,
+          "interacciones_test": 2035,
+          "tiempo": 0.41,
+          "init": "nndsvda",
+          "solver": "mu",
+          "max_iter": 1000,
+          "alpha_W": 0.01,
+          "alpha_H": 0.01,
+          "l1_ratio": 0.5
+        },
+        {
+          "componentes": 170,
+          "mse": 21.07953219598141,
+          "rmse": 4.591245168359169,
+          "interacciones_test": 2035,
+          "tiempo": 0.58,
+          "init": "nndsvda",
+          "solver": "mu",
+          "max_iter": 1000,
+          "alpha_W": 0.01,
+          "alpha_H": 0.01,
+          "l1_ratio": 0.5
+        },
+        {
+          "componentes": 180,
+          "mse": 21.08754309529036,
+          "rmse": 4.5921174958063045,
+          "interacciones_test": 2035,
+          "tiempo": 0.52,
+          "init": "nndsvda",
+          "solver": "mu",
+          "max_iter": 1000,
+          "alpha_W": 0.01,
+          "alpha_H": 0.01,
+          "l1_ratio": 0.5
+        },
+        {
+          "componentes": 190,
+          "mse": 21.106294512966755,
+          "rmse": 4.594158738329223,
+          "interacciones_test": 2035,
+          "tiempo": 0.56,
+          "init": "nndsvda",
+          "solver": "mu",
+          "max_iter": 1000,
+          "alpha_W": 0.01,
+          "alpha_H": 0.01,
+          "l1_ratio": 0.5
+        }
+      ]
+    },
+    "evaluacion": {
+      "casos": 2065,
+      "baseline": {
+        "accuracy": 0.9380145278450364
+      },
+      "modelo": {
+        "accuracy": 0.9380145278450364,
+        "f1_macro": 0.484007996001999,
+        "matriz_confusion": [
+          [
+            0,
+            128
+          ],
+          [
+            0,
+            1937
+          ]
+        ]
+      }
+    }
+  },
+  "fuentes": [
+    {
+      "ruta": "reports/preparacion/preparacion.json",
+      "sha256": "f902d5c0c69bafa6a530f5c5ed859a95ccd479d790b7bf0091d16a524c624c6f",
+      "modificacion_utc": "2026-10-26T14:29:24.852030+00:00"
+    },
+    {
+      "ruta": "reports/preparacion/preparacion.md",
+      "sha256": "3df3267ec054560be316a8a45c4500ffa51f54bdb2d4cadacbd9eaebf8ce89e2",
+      "modificacion_utc": "2026-10-26T14:29:24.852030+00:00"
+    },
+    {
+      "ruta": "reports/eda/metricas_eda.json",
+      "sha256": "501ff4dddd5d4d77d57c3214e8082174963d1f960debec3aa51df4a4e8dc4570",
+      "modificacion_utc": "2026-10-26T14:30:15.759197+00:00"
+    },
+    {
+      "ruta": "reports/eda/conclusiones_eda.md",
+      "sha256": "db9cf2c63d82017f946d0a5900d065695c48afc6209d87a6197d604343bcfc6e",
+      "modificacion_utc": "2026-10-26T14:30:15.759197+00:00"
+    },
+    {
+      "ruta": "reports/eda/recipes_filtrado/recipes_filtrado_correlacion.png",
+      "sha256": "9ff939fb877b636431100ffae49a7b585dc99c286e565c3c73d97c880b38ab79",
+      "modificacion_utc": "2026-10-26T14:30:15.468495+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.json",
+      "sha256": "a296fe34863957c22106c61974c80027b2eb6ae20a141b0f3d5cb3d6e0688467",
+      "modificacion_utc": "2026-10-26T14:30:17.841594+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.md",
+      "sha256": "5121e8ae20dfc2c2ecf1ac004070d51f46eda4880fd3f0bea42e987183501ae2",
+      "modificacion_utc": "2026-10-26T14:30:17.842597+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.json",
+      "sha256": "1e5d6c33f706c9f1c23213e443c36799b7c3a41246ea3e4e12664da840e8f454",
+      "modificacion_utc": "2026-10-26T14:30:25.643832+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.md",
+      "sha256": "15b58188753c3a9b063a2e6b514fdeae9ca00dd176bb88e6d48eaab8fd6b2fd6",
+      "modificacion_utc": "2026-10-26T14:30:25.643832+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.json",
+      "sha256": "c743bfe00fd74977d3b8d0829e48560fb98dde35344fd41bfadd7f680877a769",
+      "modificacion_utc": "2026-10-26T14:30:28.318215+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.md",
+      "sha256": "f446cdc141c0085419ca40cbce9916e6111432d81bf4ef90f8274120885d82e1",
+      "modificacion_utc": "2026-10-26T14:30:28.320348+00:00"
+    },
+    {
+      "ruta": "notebooks/01_preparacion_datos.ipynb",
+      "sha256": "154e00a5dcb11087cfc1249a87d94b2a90b470770f8cbc67cac0222781c0a159",
+      "modificacion_utc": "2026-10-26T14:29:25.435094+00:00"
+    },
+    {
+      "ruta": "notebooks/02_analisis_exploratorio.ipynb",
+      "sha256": "06ceb8149fea6c0e1e1269496d65732c9123624998874efe3e48b17afbdbf886",
+      "modificacion_utc": "2026-10-26T14:30:16.771153+00:00"
+    },
+    {
+      "ruta": "notebooks/03_baseline_perfil_usuario.ipynb",
+      "sha256": "fda3660e036ddcb86d7270b9fcec80ee61e48e48417ca4a3b8cf261c6ac8a50d",
+      "modificacion_utc": "2026-10-26T14:30:18.099236+00:00"
+    },
+    {
+      "ruta": "notebooks/04_filtrado_colaborativo_nmf.ipynb",
+      "sha256": "671060e0a0e9738536b744056e886f311f669ac639b76899c1a42162ad29dfaa",
+      "modificacion_utc": "2026-10-26T14:30:26.486787+00:00"
+    },
+    {
+      "ruta": "notebooks/05_clasificacion_ranking_svm.ipynb",
+      "sha256": "a3b21c7be7555677f18a9af24730511545857961834203db59e94318c359418c",
+      "modificacion_utc": "2026-10-26T14:30:29.553408+00:00"
+    },
+    {
+      "ruta": "reports/alertas/00_configuracion_entorno.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:20:10.647922+00:00"
+    },
+    {
+      "ruta": "reports/alertas/01_preparacion_datos.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:29:24.863950+00:00"
+    },
+    {
+      "ruta": "reports/alertas/02_analisis_exploratorio.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:30:15.763302+00:00"
+    },
+    {
+      "ruta": "reports/alertas/03_baseline_perfil_usuario.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:30:17.845811+00:00"
+    },
+    {
+      "ruta": "reports/alertas/04_filtrado_colaborativo_nmf.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:30:26.024045+00:00"
+    },
+    {
+      "ruta": "reports/alertas/05_clasificacion_ranking_svm.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:30:29.185193+00:00"
+    },
+    {
+      "ruta": "README.md",
+      "sha256": "016c5becb8ad911c8340f2fc1ac0dfd900de8c40b12cea38a669328b84dc2e44",
+      "modificacion_utc": "2026-10-07T16:34:15.925428+00:00"
+    },
+    {
+      "ruta": "reports/ejecucion/resumen.json",
+      "sha256": "5af95d9a88f0f8fa3723d0f53aa2412628824d54a824946b2fb481efd2d2f533",
+      "modificacion_utc": "2026-10-26T14:30:29.569409+00:00"
+    },
+    {
+      "ruta": "reports/entorno/environment.json",
+      "sha256": "cfa64f386d73539e9b8be058b733a4b90cc165d1dfa38043f523b0aeb58f989b",
+      "modificacion_utc": "2026-10-26T14:20:10.276476+00:00"
+    }
+  ],
+  "limitaciones": "Las tareas de reconstrucción, clasificación y ranking tienen protocolos distintos. La accuracy no demuestra personalización. Revisa la disponibilidad temporal de aggregatedrating y reserva validación y test para seleccionar parámetros.",
+  "proximos_pasos": [
+    "Comprobar procedencia, condiciones de uso y disponibilidad temporal de las variables.",
+    "Completar una pasada de 06 y revisar las alertas antes de publicar el informe.",
+    "Definir relevancia y candidatos, y evaluar ranking con usuarios o interacciones independientes."
+  ]
+}

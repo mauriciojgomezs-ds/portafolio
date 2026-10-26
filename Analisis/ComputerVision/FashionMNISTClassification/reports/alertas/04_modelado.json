@@ -1,0 +1,12 @@
+[
+  {
+    "tipo": "ConvergenceWarning",
+    "mensaje": "Stochastic Optimizer: Maximum iterations (40) reached and the optimization hasn't converged yet.",
+    "descripcion": "El algoritmo terminó sin alcanzar el criterio de convergencia solicitado.",
+    "accion_sugerida": "Revisar escalamiento, tolerancia y número de iteraciones antes de interpretar el modelo.",
+    "apariciones": 2,
+    "origenes": [
+      "C:\\Users\\mauro\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\sklearn\\neural_network\\_multilayer_perceptron.py:785"
+    ]
+  }
+]

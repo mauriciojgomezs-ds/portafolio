@@ -1,0 +1,21 @@
+{
+  "fuente": "movieLens.zip",
+  "semilla": 42,
+  "sha256": "e4a68655d7386b8f95f2f2424b2ff975dfdd15ffd59e0d864a14dca43e99d6ee",
+  "filas_originales_usuarios": 200948,
+  "usuarios_muestreados": 800,
+  "ratings_muestra": 128845,
+  "protocolo": "Últimas dos valoraciones por usuario para valid/test; positivos rating >= 4. No es un corte temporal global.",
+  "filas_preparadas": 87585,
+  "particiones": {
+    "train": {
+      "filas": 127245
+    },
+    "valid": {
+      "filas": 800
+    },
+    "test": {
+      "filas": 800
+    }
+  }
+}

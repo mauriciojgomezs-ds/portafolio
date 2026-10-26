@@ -1,0 +1,17 @@
+{
+  "casos": 4537,
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "matriz_confusion": [
+    [
+      3970,
+      0
+    ],
+    [
+      567,
+      0
+    ]
+  ],
+  "positivos_reales": 567
+}

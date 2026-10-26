@@ -1,0 +1,3 @@
+## Probabilidades y decisiones
+
+Brier sigmoid **0.1012**, menor que sin calibrar **0.1048**. Brier y log loss combinan calibración y discriminación; ECE depende de los bins. Las tablas de fiabilidad incluyen soporte y omiten bins vacíos. Con umbral fijado en validación **0.17**, se priorizan **186 de 667 casos**: recall **66.32%**, precisión **33.87%**, coste de error **0.424 unidades por caso**. FN=5.0, FP=1.0 son supuestos ilustrativos, no importes reales ni ahorro de retención. Se muestran todas las políticas sin elegir una nueva con test. Sin ID de cliente: no se puede comprobar independencia por persona.

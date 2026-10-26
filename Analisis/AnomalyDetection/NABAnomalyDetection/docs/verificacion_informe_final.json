@@ -1,0 +1,9 @@
+{
+  "proyecto": "NABAnomalyDetection",
+  "fecha_utc": "2026-10-07T14:48:47.703506+00:00",
+  "estado_informe": "evidencia_disponible",
+  "tests_locales": "aprobados",
+  "enlaces": "validos",
+  "maestro_completo_comprobado_en_esta_revision": true,
+  "informe": "reports/informe_final/informe_final.md"
+}

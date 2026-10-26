@@ -1,0 +1,275 @@
+[
+  {
+    "proyecto": "MovieLensRecommender",
+    "fecha_utc": "2026-10-07T14:23:03.070761+00:00",
+    "estado": "comprobado",
+    "notebooks_reejecutados": [
+      "00_configuracion_entorno.ipynb",
+      "02_analisis_exploratorio.ipynb",
+      "05_evaluacion.ipynb"
+    ],
+    "tests_locales": "aprobados",
+    "enlaces_locales": "validos",
+    "archivos_sueltos_en_reports": 0,
+    "duracion_segundos": 15.84,
+    "alcance": "Rutas y persistencia verificadas; no se reentrenaron los modelos de 03 y 04. El resumen del maestro conserva la pasada completa anterior."
+  },
+  {
+    "proyecto": "NetflixRecommender",
+    "fecha_utc": "2026-10-07T14:23:20.356157+00:00",
+    "estado": "comprobado",
+    "notebooks_reejecutados": [
+      "00_configuracion_entorno.ipynb",
+      "02_analisis_exploratorio.ipynb",
+      "05_evaluacion.ipynb"
+    ],
+    "tests_locales": "aprobados",
+    "enlaces_locales": "validos",
+    "archivos_sueltos_en_reports": 0,
+    "duracion_segundos": 17.28,
+    "alcance": "Rutas y persistencia verificadas; no se reentrenaron los modelos de 03 y 04. El resumen del maestro conserva la pasada completa anterior."
+  },
+  {
+    "proyecto": "SmartFood",
+    "fecha_utc": "2026-10-07T14:25:24.895501+00:00",
+    "estado": "comprobado",
+    "notebooks_reejecutados": [
+      "00_configuracion_entorno.ipynb",
+      "02_analisis_exploratorio.ipynb"
+    ],
+    "tests_locales": "aprobados",
+    "enlaces_locales": "validos",
+    "archivos_sueltos_en_reports": 0,
+    "duracion_segundos": 3.01,
+    "alcance": "Rutas y persistencia verificadas; no se reentrenaron los modelos de 03 y 04. El resumen del maestro conserva la pasada completa anterior."
+  },
+  {
+    "proyecto": "SpotifyRecommender",
+    "fecha_utc": "2026-10-07T14:25:37.654675+00:00",
+    "estado": "comprobado",
+    "notebooks_reejecutados": [
+      "00_configuracion_entorno.ipynb",
+      "02_analisis_exploratorio.ipynb",
+      "05_evaluacion.ipynb"
+    ],
+    "tests_locales": "aprobados",
+    "enlaces_locales": "validos",
+    "archivos_sueltos_en_reports": 0,
+    "duracion_segundos": 12.76,
+    "alcance": "Rutas y persistencia verificadas; no se reentrenaron los modelos de 03 y 04. El resumen del maestro conserva la pasada completa anterior."
+  },
+  {
+    "proyecto": "IMDbSentiment",
+    "fecha_utc": "2026-10-07T14:25:51.639355+00:00",
+    "estado": "comprobado",
+    "notebooks_reejecutados": [
+      "00_configuracion_entorno.ipynb",
+      "02_analisis_exploratorio.ipynb",
+      "05_evaluacion.ipynb"
+    ],
+    "tests_locales": "aprobados",
+    "enlaces_locales": "validos",
+    "archivos_sueltos_en_reports": 0,
+    "duracion_segundos": 13.98,
+    "alcance": "Rutas y persistencia verificadas; no se reentrenaron los modelos de 03 y 04. El resumen del maestro conserva la pasada completa anterior."
+  },
+  {
+    "proyecto": "NetflixGenreClassification",
+    "fecha_utc": "2026-10-07T14:26:03.264964+00:00",
+    "estado": "comprobado",
+    "notebooks_reejecutados": [
+      "00_configuracion_entorno.ipynb",
+      "02_analisis_exploratorio.ipynb",
+      "05_evaluacion.ipynb"
+    ],
+    "tests_locales": "aprobados",
+    "enlaces_locales": "validos",
+    "archivos_sueltos_en_reports": 0,
+    "duracion_segundos": 11.63,
+    "alcance": "Rutas y persistencia verificadas; no se reentrenaron los modelos de 03 y 04. El resumen del maestro conserva la pasada completa anterior."
+  },
+  {
+    "proyecto": "CustomerSegmentation",
+    "fecha_utc": "2026-10-07T14:26:15.231520+00:00",
+    "estado": "comprobado",
+    "notebooks_reejecutados": [
+      "00_configuracion_entorno.ipynb",
+      "02_analisis_exploratorio.ipynb",
+      "05_evaluacion.ipynb"
+    ],
+    "tests_locales": "aprobados",
+    "enlaces_locales": "validos",
+    "archivos_sueltos_en_reports": 0,
+    "duracion_segundos": 11.97,
+    "alcance": "Rutas y persistencia verificadas; no se reentrenaron los modelos de 03 y 04. El resumen del maestro conserva la pasada completa anterior."
+  },
+  {
+    "proyecto": "SpotifySegmentation",
+    "fecha_utc": "2026-10-07T14:26:26.581897+00:00",
+    "estado": "comprobado",
+    "notebooks_reejecutados": [
+      "00_configuracion_entorno.ipynb",
+      "02_analisis_exploratorio.ipynb",
+      "05_evaluacion.ipynb"
+    ],
+    "tests_locales": "aprobados",
+    "enlaces_locales": "validos",
+    "archivos_sueltos_en_reports": 0,
+    "duracion_segundos": 11.35,
+    "alcance": "Rutas y persistencia verificadas; no se reentrenaron los modelos de 03 y 04. El resumen del maestro conserva la pasada completa anterior."
+  },
+  {
+    "proyecto": "RetailSalesForecasting",
+    "fecha_utc": "2026-10-07T14:26:40.391193+00:00",
+    "estado": "comprobado",
+    "notebooks_reejecutados": [
+      "00_configuracion_entorno.ipynb",
+      "02_analisis_exploratorio.ipynb",
+      "05_evaluacion.ipynb"
+    ],
+    "tests_locales": "aprobados",
+    "enlaces_locales": "validos",
+    "archivos_sueltos_en_reports": 0,
+    "duracion_segundos": 13.81,
+    "alcance": "Rutas y persistencia verificadas; no se reentrenaron los modelos de 03 y 04. El resumen del maestro conserva la pasada completa anterior."
+  },
+  {
+    "proyecto": "ActivityChurn",
+    "fecha_utc": "2026-10-07T14:26:55.973210+00:00",
+    "estado": "comprobado",
+    "notebooks_reejecutados": [
+      "00_configuracion_entorno.ipynb",
+      "02_analisis_exploratorio.ipynb",
+      "05_evaluacion.ipynb"
+    ],
+    "tests_locales": "aprobados",
+    "enlaces_locales": "validos",
+    "archivos_sueltos_en_reports": 0,
+    "duracion_segundos": 15.58,
+    "alcance": "Rutas y persistencia verificadas; no se reentrenaron los modelos de 03 y 04. El resumen del maestro conserva la pasada completa anterior."
+  },
+  {
+    "proyecto": "BankChurn",
+    "fecha_utc": "2026-10-07T14:27:07.596694+00:00",
+    "estado": "comprobado",
+    "notebooks_reejecutados": [
+      "00_configuracion_entorno.ipynb",
+      "02_analisis_exploratorio.ipynb",
+      "05_evaluacion.ipynb"
+    ],
+    "tests_locales": "aprobados",
+    "enlaces_locales": "validos",
+    "archivos_sueltos_en_reports": 0,
+    "duracion_segundos": 11.62,
+    "alcance": "Rutas y persistencia verificadas; no se reentrenaron los modelos de 03 y 04. El resumen del maestro conserva la pasada completa anterior."
+  },
+  {
+    "proyecto": "SubscriptionChurn",
+    "fecha_utc": "2026-10-07T14:27:19.385218+00:00",
+    "estado": "comprobado",
+    "notebooks_reejecutados": [
+      "00_configuracion_entorno.ipynb",
+      "02_analisis_exploratorio.ipynb",
+      "05_evaluacion.ipynb"
+    ],
+    "tests_locales": "aprobados",
+    "enlaces_locales": "validos",
+    "archivos_sueltos_en_reports": 0,
+    "duracion_segundos": 11.79,
+    "alcance": "Rutas y persistencia verificadas; no se reentrenaron los modelos de 03 y 04. El resumen del maestro conserva la pasada completa anterior."
+  },
+  {
+    "proyecto": "TelecomChurn",
+    "fecha_utc": "2026-10-07T14:27:33.982558+00:00",
+    "estado": "comprobado",
+    "notebooks_reejecutados": [
+      "00_configuracion_entorno.ipynb",
+      "02_analisis_exploratorio.ipynb",
+      "05_evaluacion.ipynb"
+    ],
+    "tests_locales": "aprobados",
+    "enlaces_locales": "validos",
+    "archivos_sueltos_en_reports": 0,
+    "duracion_segundos": 14.6,
+    "alcance": "Rutas y persistencia verificadas; no se reentrenaron los modelos de 03 y 04. El resumen del maestro conserva la pasada completa anterior."
+  },
+  {
+    "fecha_utc": "2026-10-07T14:19:24.110712+00:00",
+    "estado": "completado",
+    "comprobaciones": [
+      "00 y 06 ejecutados; maestro completó 01–05",
+      "Siete notebooks sin salidas de error",
+      "Reportes esperados presentes y no vacíos",
+      "Sin archivos sueltos en reports",
+      "Enlaces locales de README y docs válidos",
+      "Prueba de causalidad temporal aprobada"
+    ],
+    "carpetas_por_etapa": {
+      "entorno": [
+        "environment.json"
+      ],
+      "preparacion": [
+        "preparacion.json",
+        "preparacion.md"
+      ],
+      "eda": [
+        "eda.json",
+        "eda.md",
+        "eda.png"
+      ],
+      "baseline": [
+        "baseline.json",
+        "baseline.md"
+      ],
+      "modelado": [
+        "modelado.json",
+        "modelado.md"
+      ],
+      "evaluacion": [
+        "evaluacion.json",
+        "evaluacion.md",
+        "evaluacion.png",
+        "predicciones_test.csv"
+      ]
+    },
+    "resumen_ejecucion": "../reports/ejecucion/resumen.json",
+    "proyecto": "NABAnomalyDetection",
+    "alcance": "Verificación de 00 y 06 completada antes de extender la organización al resto del portafolio; el maestro ejecutó 01–05."
+  },
+  {
+    "proyecto": "Analisis/AnomalyDetection/IndustrialAnomalyDetection",
+    "fecha_utc": "2026-10-07T16:27:14.452940+00:00",
+    "estado": "comprobado",
+    "tests_locales": "aprobados",
+    "enlaces_locales": "validos",
+    "archivos_sueltos_en_reports": 0,
+    "alcance": "Pasada completa; modelos ajustados y evaluados en este proyecto"
+  },
+  {
+    "proyecto": "Analisis/BusinessIntelligence/RetailKPIAnalysis",
+    "fecha_utc": "2026-10-07T16:27:14.452940+00:00",
+    "estado": "comprobado",
+    "tests_locales": "aprobados",
+    "enlaces_locales": "validos",
+    "archivos_sueltos_en_reports": 0,
+    "alcance": "Pasada completa; modelos ajustados y evaluados en este proyecto"
+  },
+  {
+    "proyecto": "Analisis/ComputerVision/DigitsRecognition",
+    "fecha_utc": "2026-10-07T16:27:14.452940+00:00",
+    "estado": "comprobado",
+    "tests_locales": "aprobados",
+    "enlaces_locales": "validos",
+    "archivos_sueltos_en_reports": 0,
+    "alcance": "Pasada completa; modelos ajustados y evaluados en este proyecto"
+  },
+  {
+    "proyecto": "Analisis/Forecasting/CallCenterStaffing",
+    "fecha_utc": "2026-10-07T16:27:14.452940+00:00",
+    "estado": "comprobado",
+    "tests_locales": "aprobados",
+    "enlaces_locales": "validos",
+    "archivos_sueltos_en_reports": 0,
+    "alcance": "Pasada completa; modelos ajustados y evaluados en este proyecto"
+  }
+]

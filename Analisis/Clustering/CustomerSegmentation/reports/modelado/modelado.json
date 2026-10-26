@@ -1,0 +1,21 @@
+{
+  "criterio": "silhouette_descriptiva",
+  "k_elegido": 4,
+  "candidatos": [
+    {
+      "k": 3,
+      "silhouette": 0.3284976594946409,
+      "inercia": 4870.4124287635495
+    },
+    {
+      "k": 4,
+      "silhouette": 0.3329247495263435,
+      "inercia": 3941.8004883581875
+    },
+    {
+      "k": 5,
+      "silhouette": 0.3204418987375077,
+      "inercia": 3300.075472708938
+    }
+  ]
+}

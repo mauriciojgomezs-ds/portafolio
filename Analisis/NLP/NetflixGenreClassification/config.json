@@ -1,0 +1,8 @@
+{
+  "title": "Categorías de películas desde su sinopsis",
+  "kind": "text_genre",
+  "source": "data/raw/Netflix Movies and TV Shows.zip",
+  "seed": 42,
+  "top_n": 10,
+  "source_base": "project"
+}

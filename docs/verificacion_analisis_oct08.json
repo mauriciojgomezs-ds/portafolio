@@ -1,0 +1,142 @@
+{
+  "fecha_utc": "2026-10-08T12:34:27.107141+00:00",
+  "alcance": "Dos nuevos proyectos; complemento de turnos y cuatro proyectos churn. Secuencias 01–05 completas. Autonomía de los nuevos proyectos mediante copias sin datos procesados/modelos/resultados previos; mismo intérprete disponible, no instalación limpia.",
+  "proyectos": [
+    {
+      "proyecto": "Analisis/GraphAnalysis/EmailCommunityAnalysis",
+      "tests_aprobados": 7,
+      "estado_secuencia": "completado",
+      "celdas_ejecutadas_01_05": 15,
+      "python": "C:\\Users\\mauro\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "copia_independiente": "back/.local/independencia_oct08/Copia_EmailCommunityAnalysis",
+      "etapas_recalculadas_en_copia": 5,
+      "evaluacion_identica": true,
+      "contextos_bootstrap": 5,
+      "log_tests": "Analisis/GraphAnalysis/EmailCommunityAnalysis/reports/validacion/tests.log",
+      "codigo_actual_sha256": {
+        "src/email_community_analysis/alerts.py": "fc2a888e6c037836cbecbdff722fa6e563c667b79486ba36d5232ffea35de835",
+        "src/email_community_analysis/analysis.py": "65913ad491b83dd99caa9be23a66efb7bcad625818459b7781fd7e3733d78497",
+        "src/email_community_analysis/common.py": "19ec1103ec393ed34915fd52835083e4030cf1802603d58238ac995b630f1030",
+        "src/email_community_analysis/execution.py": "c1843d28dc8bf16621f11ae686837fb1bdffebdf5c9d62957c976f211f1757cd",
+        "src/email_community_analysis/informe.py": "7e2da07be2b8d7ac0f1b5653b518b9a319b80146d20e717acfe7dce12635a9b8",
+        "src/email_community_analysis/__init__.py": "2a2010968c6681b5289d302c7ac4215439677ab27c9f3b3adf2dcff38e63f8dc"
+      }
+    },
+    {
+      "proyecto": "Analisis/SurvivalAnalysis/CustomerReturnSurvival",
+      "tests_aprobados": 7,
+      "estado_secuencia": "completado",
+      "celdas_ejecutadas_01_05": 15,
+      "python": "D:\\portafolio\\Analisis\\SurvivalAnalysis\\CustomerReturnSurvival\\.venv\\Scripts\\python.exe",
+      "copia_independiente": "back/.local/independencia_oct08/Copia_CustomerReturnSurvival",
+      "etapas_recalculadas_en_copia": 5,
+      "evaluacion_identica": true,
+      "contextos_bootstrap": 5,
+      "log_tests": "Analisis/SurvivalAnalysis/CustomerReturnSurvival/reports/validacion/tests.log",
+      "codigo_actual_sha256": {
+        "src/customer_return_survival/alerts.py": "fc2a888e6c037836cbecbdff722fa6e563c667b79486ba36d5232ffea35de835",
+        "src/customer_return_survival/analysis.py": "d3f105b14ea1dfd597e5f6720b25fb71abea37ba1d69f5b40cfb4e622c210d7d",
+        "src/customer_return_survival/common.py": "d4f2d1ffa140a9fce153997a5f4f37d86df1d19488f06ff2d783d21f108a0156",
+        "src/customer_return_survival/execution.py": "c1843d28dc8bf16621f11ae686837fb1bdffebdf5c9d62957c976f211f1757cd",
+        "src/customer_return_survival/informe.py": "63abd249c861fa17c2e98429da12d3ffc1fd09f4b374f195c4366a8548ec39b4",
+        "src/customer_return_survival/__init__.py": "2a2010968c6681b5289d302c7ac4215439677ab27c9f3b3adf2dcff38e63f8dc"
+      }
+    },
+    {
+      "proyecto": "Analisis/Optimization/WorkforceScheduling",
+      "tests_aprobados": 9,
+      "estado_secuencia": "completado",
+      "celdas_ejecutadas_01_05": 15,
+      "python": "C:\\Users\\mauro\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "log_tests": "Analisis/Optimization/WorkforceScheduling/reports/validacion/tests.log",
+      "codigo_actual_sha256": {
+        "src/workforce_scheduling/alerts.py": "31aaa4f00a408c627bf653537adf4897fda7ec056741625033050fc1e15ebf17",
+        "src/workforce_scheduling/analysis.py": "664b8bc1f7063e838b38955681175c49f668e81f190a7edebcf4d9802fa658e9",
+        "src/workforce_scheduling/balance.py": "0c72bb9c886a5e24382ab4e474cb9feb89782b7b8c95c3e266c2920af09939a3",
+        "src/workforce_scheduling/common.py": "9d2a2faf393b88dcf1e932f50e07b9678447151dcdf77f490cb156cc89baa7f3",
+        "src/workforce_scheduling/execution.py": "c1843d28dc8bf16621f11ae686837fb1bdffebdf5c9d62957c976f211f1757cd",
+        "src/workforce_scheduling/informe.py": "0b97c737e671995c8d63e2ec4bd8aaf8281a01bb7d335971f8a665e33a597579",
+        "src/workforce_scheduling/__init__.py": "2a2010968c6681b5289d302c7ac4215439677ab27c9f3b3adf2dcff38e63f8dc"
+      },
+      "solver_alternativo_limite_registrado_en_alertas": true,
+      "gap_equilibrio_actual": 0.21999999999995346
+    },
+    {
+      "proyecto": "Analisis/churn/BankChurn",
+      "tests_aprobados": 10,
+      "estado_secuencia": "completado",
+      "celdas_ejecutadas_01_05": 15,
+      "python": "C:\\Users\\mauro\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "log_tests": "Analisis/churn/BankChurn/reports/validacion/tests.log",
+      "codigo_actual_sha256": {
+        "src/bank_churn/alertas.py": "fc2a888e6c037836cbecbdff722fa6e563c667b79486ba36d5232ffea35de835",
+        "src/bank_churn/decisiones.py": "8c0c80d5902401602f831ed3e60f5bc3b4665b41b95cd0204cff19bd45a380a1",
+        "src/bank_churn/ejecucion.py": "c1843d28dc8bf16621f11ae686837fb1bdffebdf5c9d62957c976f211f1757cd",
+        "src/bank_churn/flujo.py": "5dce0257ce7c980bd849f17c17017b62121f2535895a94383f7ec4f37ed68033",
+        "src/bank_churn/informe.py": "16adc8d868540397821cac43de8523abf4b8bd8b24dd95957118f85aeb5d06e6",
+        "src/bank_churn/__init__.py": "ab16960d13ecc20b60607addfdc76972cf1c7848700628be48f647a9c8ef8b6c"
+      }
+    },
+    {
+      "proyecto": "Analisis/churn/SubscriptionChurn",
+      "tests_aprobados": 10,
+      "estado_secuencia": "completado",
+      "celdas_ejecutadas_01_05": 15,
+      "python": "C:\\Users\\mauro\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "log_tests": "Analisis/churn/SubscriptionChurn/reports/validacion/tests.log",
+      "codigo_actual_sha256": {
+        "src/subscription_churn/alertas.py": "fc2a888e6c037836cbecbdff722fa6e563c667b79486ba36d5232ffea35de835",
+        "src/subscription_churn/decisiones.py": "8c0c80d5902401602f831ed3e60f5bc3b4665b41b95cd0204cff19bd45a380a1",
+        "src/subscription_churn/ejecucion.py": "c1843d28dc8bf16621f11ae686837fb1bdffebdf5c9d62957c976f211f1757cd",
+        "src/subscription_churn/flujo.py": "5dce0257ce7c980bd849f17c17017b62121f2535895a94383f7ec4f37ed68033",
+        "src/subscription_churn/informe.py": "16adc8d868540397821cac43de8523abf4b8bd8b24dd95957118f85aeb5d06e6",
+        "src/subscription_churn/__init__.py": "a17ae7568ae895f7719b688385ec68ad9a65a3d8a4771b861b48c7156e212772"
+      }
+    },
+    {
+      "proyecto": "Analisis/churn/ActivityChurn",
+      "tests_aprobados": 10,
+      "estado_secuencia": "completado",
+      "celdas_ejecutadas_01_05": 15,
+      "python": "C:\\Users\\mauro\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "log_tests": "Analisis/churn/ActivityChurn/reports/validacion/tests.log",
+      "codigo_actual_sha256": {
+        "src/activity_churn/alertas.py": "fc2a888e6c037836cbecbdff722fa6e563c667b79486ba36d5232ffea35de835",
+        "src/activity_churn/decisiones.py": "8c0c80d5902401602f831ed3e60f5bc3b4665b41b95cd0204cff19bd45a380a1",
+        "src/activity_churn/ejecucion.py": "c1843d28dc8bf16621f11ae686837fb1bdffebdf5c9d62957c976f211f1757cd",
+        "src/activity_churn/flujo.py": "5dce0257ce7c980bd849f17c17017b62121f2535895a94383f7ec4f37ed68033",
+        "src/activity_churn/informe.py": "16adc8d868540397821cac43de8523abf4b8bd8b24dd95957118f85aeb5d06e6",
+        "src/activity_churn/__init__.py": "d627b1523f68b4487e05625de72158e023ececd13ae0d6f67d9dbc261424f941"
+      }
+    },
+    {
+      "proyecto": "Analisis/churn/TelecomChurn",
+      "tests_aprobados": 10,
+      "estado_secuencia": "completado",
+      "celdas_ejecutadas_01_05": 15,
+      "python": "C:\\Users\\mauro\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "log_tests": "Analisis/churn/TelecomChurn/reports/validacion/tests.log",
+      "codigo_actual_sha256": {
+        "src/telecom_churn/alertas.py": "fc2a888e6c037836cbecbdff722fa6e563c667b79486ba36d5232ffea35de835",
+        "src/telecom_churn/decisiones.py": "8c0c80d5902401602f831ed3e60f5bc3b4665b41b95cd0204cff19bd45a380a1",
+        "src/telecom_churn/ejecucion.py": "c1843d28dc8bf16621f11ae686837fb1bdffebdf5c9d62957c976f211f1757cd",
+        "src/telecom_churn/flujo.py": "5dce0257ce7c980bd849f17c17017b62121f2535895a94383f7ec4f37ed68033",
+        "src/telecom_churn/informe.py": "16adc8d868540397821cac43de8523abf4b8bd8b24dd95957118f85aeb5d06e6",
+        "src/telecom_churn/__init__.py": "910f240c49ee029ce681c5712756adcf9a8d298fcd38cd356495082e2ee362e1"
+      }
+    }
+  ],
+  "total_tests_aprobados": 63,
+  "total_proyectos_analisis": 24,
+  "total_notebooks_analisis": 168,
+  "total_temas": 13,
+  "documentos_enlaces_locales_validados": 98,
+  "conteo_global_comprobado": true,
+  "figuras_revisadas": [
+    "EmailCommunityAnalysis/evaluacion.png",
+    "CustomerReturnSurvival/evaluacion.png",
+    "TelecomChurn/decisiones.png",
+    "WorkforceScheduling/equilibrio.png"
+  ],
+  "revision_final_utc": "2026-10-08T12:46:45.587777+00:00"
+}

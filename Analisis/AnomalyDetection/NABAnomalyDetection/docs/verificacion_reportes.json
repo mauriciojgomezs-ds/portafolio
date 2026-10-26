@@ -1,0 +1,41 @@
+{
+  "fecha_utc": "2026-10-07T14:19:24.110712+00:00",
+  "estado": "completado",
+  "comprobaciones": [
+    "00 y 06 ejecutados; maestro completó 01–05",
+    "Siete notebooks sin salidas de error",
+    "Reportes esperados presentes y no vacíos",
+    "Sin archivos sueltos en reports",
+    "Enlaces locales de README y docs válidos",
+    "Prueba de causalidad temporal aprobada"
+  ],
+  "carpetas_por_etapa": {
+    "entorno": [
+      "environment.json"
+    ],
+    "preparacion": [
+      "preparacion.json",
+      "preparacion.md"
+    ],
+    "eda": [
+      "eda.json",
+      "eda.md",
+      "eda.png"
+    ],
+    "baseline": [
+      "baseline.json",
+      "baseline.md"
+    ],
+    "modelado": [
+      "modelado.json",
+      "modelado.md"
+    ],
+    "evaluacion": [
+      "evaluacion.json",
+      "evaluacion.md",
+      "evaluacion.png",
+      "predicciones_test.csv"
+    ]
+  },
+  "resumen_ejecucion": "../reports/ejecucion/resumen.json"
+}

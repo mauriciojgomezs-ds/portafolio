@@ -1,0 +1,57 @@
+{
+  "source": "Demo sintética · 40 agentes · 20 Norte / 20 Sur · CLP · enero–septiembre 2026",
+  "rows": 30733,
+  "agents": 40,
+  "zones": {
+    "Norte": 20,
+    "Sur": 20
+  },
+  "clients": 600,
+  "products": 12,
+  "authenticated_agent_accounts": 40,
+  "account_views": [
+    {
+      "account": "gerente",
+      "visible_agents": 40,
+      "status": "passed"
+    },
+    {
+      "account": "analista",
+      "visible_agents": 40,
+      "status": "passed"
+    },
+    {
+      "account": "supervisor_norte",
+      "visible_agents": 20,
+      "status": "passed"
+    },
+    {
+      "account": "supervisor_sur",
+      "visible_agents": 20,
+      "status": "passed"
+    },
+    {
+      "account": "agente_1",
+      "visible_agents": 1,
+      "status": "passed"
+    },
+    {
+      "account": "agente_2",
+      "visible_agents": 1,
+      "status": "passed"
+    },
+    {
+      "account": "agente_39",
+      "visible_agents": 1,
+      "status": "passed"
+    },
+    {
+      "account": "agente_40",
+      "visible_agents": 1,
+      "status": "passed"
+    }
+  ],
+  "validation_date": "2026-10-07",
+  "tests_passed": 37,
+  "streamlit_health": "ok"
+}

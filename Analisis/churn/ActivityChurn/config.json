@@ -1,0 +1,21 @@
+{
+  "title": "Churn de actividad",
+  "source_zip": "data/raw/Analytical Base Table Churn Tabela de modelagem preditiva no contexto de Churn em SaaS.zip",
+  "members": {
+    "full": "abt_churn.csv"
+  },
+  "target": "flagChurn",
+  "id": "idUsuario",
+  "date": "dtRef",
+  "exclude": [
+    "idUsuario",
+    "dtRef",
+    "qtdeChurn"
+  ],
+  "split": "temporal",
+  "source_base": "project",
+  "decision_costs": {
+    "false_negative": 5.0,
+    "false_positive": 1.0
+  }
+}

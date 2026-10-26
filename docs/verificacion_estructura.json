@@ -1,0 +1,294 @@
+[
+  {
+    "proyecto": "Analisis/Recommenders/SpotifyRecommender",
+    "paquete": "spotify_recommender",
+    "estado": "comprobado",
+    "fecha_local": "2026-10-07T10:56:26.679070-03:00",
+    "notebooks_reejecutados": [
+      "00",
+      "05"
+    ],
+    "contextos_bootstrap": [
+      "raiz",
+      "proyecto",
+      "notebooks"
+    ],
+    "entrada_cli": "--help comprobado"
+  },
+  {
+    "proyecto": "Analisis/Recommenders/NetflixRecommender",
+    "paquete": "netflix_recommender",
+    "estado": "comprobado",
+    "fecha_local": "2026-10-07T10:56:39.817724-03:00",
+    "notebooks_reejecutados": [
+      "00",
+      "05"
+    ],
+    "contextos_bootstrap": [
+      "raiz",
+      "proyecto",
+      "notebooks"
+    ],
+    "entrada_cli": "--help comprobado"
+  },
+  {
+    "proyecto": "Analisis/Recommenders/MovieLensRecommender",
+    "paquete": "movielens_recommender",
+    "estado": "comprobado",
+    "fecha_local": "2026-10-07T10:56:55.561365-03:00",
+    "notebooks_reejecutados": [
+      "00",
+      "05"
+    ],
+    "contextos_bootstrap": [
+      "raiz",
+      "proyecto",
+      "notebooks"
+    ],
+    "entrada_cli": "--help comprobado"
+  },
+  {
+    "proyecto": "Analisis/NLP/IMDbSentiment",
+    "paquete": "imdb_sentiment",
+    "estado": "comprobado",
+    "fecha_local": "2026-10-07T10:57:09.834522-03:00",
+    "notebooks_reejecutados": [
+      "00",
+      "05"
+    ],
+    "contextos_bootstrap": [
+      "raiz",
+      "proyecto",
+      "notebooks"
+    ],
+    "entrada_cli": "--help comprobado"
+  },
+  {
+    "proyecto": "Analisis/NLP/NetflixGenreClassification",
+    "paquete": "netflix_genre_classification",
+    "estado": "comprobado",
+    "fecha_local": "2026-10-07T10:57:22.668715-03:00",
+    "notebooks_reejecutados": [
+      "00",
+      "05"
+    ],
+    "contextos_bootstrap": [
+      "raiz",
+      "proyecto",
+      "notebooks"
+    ],
+    "entrada_cli": "--help comprobado"
+  },
+  {
+    "proyecto": "Analisis/Clustering/CustomerSegmentation",
+    "paquete": "customer_segmentation",
+    "estado": "comprobado",
+    "fecha_local": "2026-10-07T10:57:35.876432-03:00",
+    "notebooks_reejecutados": [
+      "00",
+      "05"
+    ],
+    "contextos_bootstrap": [
+      "raiz",
+      "proyecto",
+      "notebooks"
+    ],
+    "entrada_cli": "--help comprobado"
+  },
+  {
+    "proyecto": "Analisis/Clustering/SpotifySegmentation",
+    "paquete": "spotify_segmentation",
+    "estado": "comprobado",
+    "fecha_local": "2026-10-07T10:57:49.384984-03:00",
+    "notebooks_reejecutados": [
+      "00",
+      "05"
+    ],
+    "contextos_bootstrap": [
+      "raiz",
+      "proyecto",
+      "notebooks"
+    ],
+    "entrada_cli": "--help comprobado"
+  },
+  {
+    "proyecto": "Analisis/Forecasting/RetailSalesForecasting",
+    "paquete": "retail_sales_forecasting",
+    "estado": "comprobado",
+    "fecha_local": "2026-10-07T10:57:59.178644-03:00",
+    "notebooks_reejecutados": [
+      "00",
+      "05"
+    ],
+    "contextos_bootstrap": [
+      "raiz",
+      "proyecto",
+      "notebooks"
+    ],
+    "entrada_cli": "--help comprobado"
+  },
+  {
+    "proyecto": "Analisis/AnomalyDetection/NABAnomalyDetection",
+    "paquete": "nab_anomaly_detection",
+    "estado": "comprobado",
+    "fecha_local": "2026-10-07T10:58:08.810934-03:00",
+    "notebooks_reejecutados": [
+      "00",
+      "05"
+    ],
+    "contextos_bootstrap": [
+      "raiz",
+      "proyecto",
+      "notebooks"
+    ],
+    "entrada_cli": "--help comprobado"
+  },
+  {
+    "proyecto": "Analisis/churn/BankChurn",
+    "paquete": "bank_churn",
+    "estado": "comprobado",
+    "fecha_local": "2026-10-07T10:58:20.324863-03:00",
+    "notebooks_reejecutados": [
+      "00",
+      "05"
+    ],
+    "contextos_bootstrap": [
+      "raiz",
+      "proyecto",
+      "notebooks"
+    ],
+    "entrada_cli": "--help comprobado"
+  },
+  {
+    "proyecto": "Analisis/churn/SubscriptionChurn",
+    "paquete": "subscription_churn",
+    "estado": "comprobado",
+    "fecha_local": "2026-10-07T10:58:29.627848-03:00",
+    "notebooks_reejecutados": [
+      "00",
+      "05"
+    ],
+    "contextos_bootstrap": [
+      "raiz",
+      "proyecto",
+      "notebooks"
+    ],
+    "entrada_cli": "--help comprobado"
+  },
+  {
+    "proyecto": "Analisis/churn/ActivityChurn",
+    "paquete": "activity_churn",
+    "estado": "comprobado",
+    "fecha_local": "2026-10-07T10:58:38.928217-03:00",
+    "notebooks_reejecutados": [
+      "00",
+      "05"
+    ],
+    "contextos_bootstrap": [
+      "raiz",
+      "proyecto",
+      "notebooks"
+    ],
+    "entrada_cli": "--help comprobado"
+  },
+  {
+    "proyecto": "Analisis/churn/TelecomChurn",
+    "paquete": "telecom_churn",
+    "estado": "comprobado",
+    "fecha_local": "2026-10-07T10:58:48.189286-03:00",
+    "notebooks_reejecutados": [
+      "00",
+      "05"
+    ],
+    "contextos_bootstrap": [
+      "raiz",
+      "proyecto",
+      "notebooks"
+    ],
+    "entrada_cli": "--help comprobado"
+  },
+  {
+    "proyecto": "Analisis/AnomalyDetection/IndustrialAnomalyDetection",
+    "fecha_utc": "2026-10-07T16:27:14.452940+00:00",
+    "estado": "comprobado",
+    "paquete": "industrial_anomaly_detection",
+    "notebooks_reejecutados": [
+      "00",
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06"
+    ],
+    "contextos_bootstrap": [
+      "proyecto",
+      "notebooks",
+      "copia_renombrada"
+    ],
+    "entrada_cli": "--help comprobado"
+  },
+  {
+    "proyecto": "Analisis/BusinessIntelligence/RetailKPIAnalysis",
+    "fecha_utc": "2026-10-07T16:27:14.452940+00:00",
+    "estado": "comprobado",
+    "paquete": "retail_kpi_analysis",
+    "notebooks_reejecutados": [
+      "00",
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06"
+    ],
+    "contextos_bootstrap": [
+      "proyecto",
+      "notebooks",
+      "copia_renombrada"
+    ],
+    "entrada_cli": "--help comprobado"
+  },
+  {
+    "proyecto": "Analisis/ComputerVision/DigitsRecognition",
+    "fecha_utc": "2026-10-07T16:27:14.452940+00:00",
+    "estado": "comprobado",
+    "paquete": "digits_recognition",
+    "notebooks_reejecutados": [
+      "00",
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06"
+    ],
+    "contextos_bootstrap": [
+      "proyecto",
+      "notebooks",
+      "copia_renombrada"
+    ],
+    "entrada_cli": "--help comprobado"
+  },
+  {
+    "proyecto": "Analisis/Forecasting/CallCenterStaffing",
+    "fecha_utc": "2026-10-07T16:27:14.452940+00:00",
+    "estado": "comprobado",
+    "paquete": "call_center_staffing",
+    "notebooks_reejecutados": [
+      "00",
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06"
+    ],
+    "contextos_bootstrap": [
+      "proyecto",
+      "notebooks",
+      "copia_renombrada"
+    ],
+    "entrada_cli": "--help comprobado"
+  }
+]

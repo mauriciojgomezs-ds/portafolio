@@ -1,0 +1,8 @@
+{
+  "title": "Recomendación musical por contenido",
+  "kind": "music_content",
+  "source": "data/raw/Spotify Tracks Dataset.zip",
+  "seed": 42,
+  "top_n": 10,
+  "source_base": "project"
+}

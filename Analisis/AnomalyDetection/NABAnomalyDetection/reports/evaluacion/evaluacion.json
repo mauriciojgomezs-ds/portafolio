@@ -1,0 +1,38 @@
+{
+  "baseline": {
+    "casos": 4537,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "matriz_confusion": [
+      [
+        3970,
+        0
+      ],
+      [
+        567,
+        0
+      ]
+    ],
+    "positivos_reales": 567
+  },
+  "modelo": {
+    "casos": 4537,
+    "precision": 0.08064516129032258,
+    "recall": 0.026455026455026454,
+    "f1": 0.0398406374501992,
+    "matriz_confusion": [
+      [
+        3799,
+        171
+      ],
+      [
+        552,
+        15
+      ]
+    ],
+    "positivos_reales": 567
+  },
+  "threshold": 2.649164849848661,
+  "protocolo": "Métricas por punto dentro de ventanas; no puntuación NAB oficial."
+}

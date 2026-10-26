@@ -1,0 +1,41 @@
+agente_id,equipo,sector,region,nombre,email,movil,oficina,anexo,sucursal,iniciales
+agente_1,Norte,Retail,Antofagasta,Camila Rojas,agente.01@ventas.example,+56 9 XXXX 1001,+56 XX XXXX 2000,101,Antofagasta Centro,CR
+agente_2,Sur,Empresas,Biobío,Diego Muñoz,agente.02@ventas.example,+56 9 XXXX 1002,+56 XX XXXX 2004,102,Concepción,DM
+agente_3,Norte,Empresas,Tarapacá,Valentina Soto,agente.03@ventas.example,+56 9 XXXX 1003,+56 XX XXXX 2001,103,Iquique,VS
+agente_4,Sur,Retail,Los Lagos,Matías Vargas,agente.04@ventas.example,+56 9 XXXX 1004,+56 XX XXXX 2005,104,Puerto Montt,MV
+agente_5,Norte,Retail,Atacama,Francisca Silva,agente.05@ventas.example,+56 9 XXXX 1005,+56 XX XXXX 2002,105,Copiapó,FS
+agente_6,Sur,Empresas,La Araucanía,Sebastián Torres,agente.06@ventas.example,+56 9 XXXX 1006,+56 XX XXXX 2006,106,Temuco,ST
+agente_7,Norte,Empresas,Coquimbo,Catalina Flores,agente.07@ventas.example,+56 9 XXXX 1007,+56 XX XXXX 2003,107,La Serena,CF
+agente_8,Sur,Retail,Los Ríos,Tomás Díaz,agente.08@ventas.example,+56 9 XXXX 1008,+56 XX XXXX 2007,108,Valdivia,TD
+agente_9,Norte,Retail,Antofagasta,Javiera Castro,agente.09@ventas.example,+56 9 XXXX 1009,+56 XX XXXX 2000,109,Antofagasta Centro,JC
+agente_10,Sur,Empresas,Biobío,Nicolás Morales,agente.10@ventas.example,+56 9 XXXX 1010,+56 XX XXXX 2004,110,Concepción,NM
+agente_11,Norte,Empresas,Tarapacá,Antonia Reyes,agente.11@ventas.example,+56 9 XXXX 1011,+56 XX XXXX 2001,111,Iquique,AR
+agente_12,Sur,Retail,Los Lagos,Felipe Herrera,agente.12@ventas.example,+56 9 XXXX 1012,+56 XX XXXX 2005,112,Puerto Montt,FH
+agente_13,Norte,Retail,Atacama,Constanza Navarro,agente.13@ventas.example,+56 9 XXXX 1013,+56 XX XXXX 2002,113,Copiapó,CN
+agente_14,Sur,Empresas,La Araucanía,Benjamín Fuentes,agente.14@ventas.example,+56 9 XXXX 1014,+56 XX XXXX 2006,114,Temuco,BF
+agente_15,Norte,Empresas,Coquimbo,Paula Sepúlveda,agente.15@ventas.example,+56 9 XXXX 1015,+56 XX XXXX 2003,115,La Serena,PS
+agente_16,Sur,Retail,Los Ríos,Gabriel Contreras,agente.16@ventas.example,+56 9 XXXX 1016,+56 XX XXXX 2007,116,Valdivia,GC
+agente_17,Norte,Retail,Antofagasta,Daniela Araya,agente.17@ventas.example,+56 9 XXXX 1017,+56 XX XXXX 2000,117,Antofagasta Centro,DA
+agente_18,Sur,Empresas,Biobío,Vicente Espinoza,agente.18@ventas.example,+56 9 XXXX 1018,+56 XX XXXX 2004,118,Concepción,VE
+agente_19,Norte,Empresas,Tarapacá,Fernanda González,agente.19@ventas.example,+56 9 XXXX 1019,+56 XX XXXX 2001,119,Iquique,FG
+agente_20,Sur,Retail,Los Lagos,Ignacio Pérez,agente.20@ventas.example,+56 9 XXXX 1020,+56 XX XXXX 2005,120,Puerto Montt,IP
+agente_21,Norte,Retail,Atacama,Isidora Medina,agente.21@ventas.example,+56 9 XXXX 1021,+56 XX XXXX 2002,121,Copiapó,IM
+agente_22,Sur,Empresas,La Araucanía,Joaquín Salazar,agente.22@ventas.example,+56 9 XXXX 1022,+56 XX XXXX 2006,122,Temuco,JS
+agente_23,Norte,Empresas,Coquimbo,Carolina Cortés,agente.23@ventas.example,+56 9 XXXX 1023,+56 XX XXXX 2003,123,La Serena,CC
+agente_24,Sur,Retail,Los Ríos,Alonso Carrasco,agente.24@ventas.example,+56 9 XXXX 1024,+56 XX XXXX 2007,124,Valdivia,AC
+agente_25,Norte,Retail,Antofagasta,María Vega,agente.25@ventas.example,+56 9 XXXX 1025,+56 XX XXXX 2000,125,Antofagasta Centro,MV
+agente_26,Sur,Empresas,Biobío,Cristóbal Pizarro,agente.26@ventas.example,+56 9 XXXX 1026,+56 XX XXXX 2004,126,Concepción,CP
+agente_27,Norte,Empresas,Tarapacá,Sofía Campos,agente.27@ventas.example,+56 9 XXXX 1027,+56 XX XXXX 2001,127,Iquique,SC
+agente_28,Sur,Retail,Los Lagos,Andrés Valdés,agente.28@ventas.example,+56 9 XXXX 1028,+56 XX XXXX 2005,128,Puerto Montt,AV
+agente_29,Norte,Retail,Atacama,Josefina Bravo,agente.29@ventas.example,+56 9 XXXX 1029,+56 XX XXXX 2002,129,Copiapó,JB
+agente_30,Sur,Empresas,La Araucanía,Pablo Sandoval,agente.30@ventas.example,+56 9 XXXX 1030,+56 XX XXXX 2006,130,Temuco,PS
+agente_31,Norte,Empresas,Coquimbo,Trinidad Molina,agente.31@ventas.example,+56 9 XXXX 1031,+56 XX XXXX 2003,131,La Serena,TM
+agente_32,Sur,Retail,Los Ríos,Martín Gutiérrez,agente.32@ventas.example,+56 9 XXXX 1032,+56 XX XXXX 2007,132,Valdivia,MG
+agente_33,Norte,Retail,Antofagasta,Amanda Ortega,agente.33@ventas.example,+56 9 XXXX 1033,+56 XX XXXX 2000,133,Antofagasta Centro,AO
+agente_34,Sur,Empresas,Biobío,Rodrigo Figueroa,agente.34@ventas.example,+56 9 XXXX 1034,+56 XX XXXX 2004,134,Concepción,RF
+agente_35,Norte,Empresas,Tarapacá,Emilia Leiva,agente.35@ventas.example,+56 9 XXXX 1035,+56 XX XXXX 2001,135,Iquique,EL
+agente_36,Sur,Retail,Los Lagos,Esteban Peña,agente.36@ventas.example,+56 9 XXXX 1036,+56 XX XXXX 2005,136,Puerto Montt,EP
+agente_37,Norte,Retail,Atacama,Renata Vera,agente.37@ventas.example,+56 9 XXXX 1037,+56 XX XXXX 2002,137,Copiapó,RV
+agente_38,Sur,Empresas,La Araucanía,Simón Godoy,agente.38@ventas.example,+56 9 XXXX 1038,+56 XX XXXX 2006,138,Temuco,SG
+agente_39,Norte,Empresas,Coquimbo,Mariana Cáceres,agente.39@ventas.example,+56 9 XXXX 1039,+56 XX XXXX 2003,139,La Serena,MC
+agente_40,Sur,Retail,Los Ríos,Lucas Bustos,agente.40@ventas.example,+56 9 XXXX 1040,+56 XX XXXX 2007,140,Valdivia,LB

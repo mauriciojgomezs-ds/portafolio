@@ -1,0 +1,23 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.ipynb_checkpoints/
+.pytest_cache/
+.local/
+.DS_Store
+Thumbs.db
+
+# Datos y artefactos generados: mantener únicamente las carpetas.
+data/raw/*
+data/intermediate/*
+data/processed/*
+data/output/*
+!data/**/.gitkeep
+models/*
+!models/.gitkeep
+# Los reportes vigentes se pueden versionar para el portafolio.
+# Excluir copias de notebooks y registros de pruebas locales.
+reports/runs/

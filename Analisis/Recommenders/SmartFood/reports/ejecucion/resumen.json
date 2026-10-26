@@ -1,0 +1,34 @@
+{
+  "inicio_utc": "2026-10-26T14:28:30.242857+00:00",
+  "python": "c:\\Users\\mauro\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+  "timeout_por_celda_segundos": 900,
+  "estado": "completado",
+  "notebooks": [
+    {
+      "notebook": "01_preparacion_datos.ipynb",
+      "estado": "completado",
+      "duracion_segundos": 55.05
+    },
+    {
+      "notebook": "02_analisis_exploratorio.ipynb",
+      "estado": "completado",
+      "duracion_segundos": 51.32
+    },
+    {
+      "notebook": "03_baseline_perfil_usuario.ipynb",
+      "estado": "completado",
+      "duracion_segundos": 1.31
+    },
+    {
+      "notebook": "04_filtrado_colaborativo_nmf.ipynb",
+      "estado": "completado",
+      "duracion_segundos": 8.37
+    },
+    {
+      "notebook": "05_clasificacion_ranking_svm.ipynb",
+      "estado": "completado",
+      "duracion_segundos": 3.05
+    }
+  ],
+  "fin_utc": "2026-10-26T14:30:29.570033+00:00"
+}

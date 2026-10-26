@@ -1,0 +1,88 @@
+{
+  "baseline": {
+    "casos": 64374,
+    "accuracy": 0.47368502811694163,
+    "average_precision": 0.47368502811694163,
+    "roc_auc": 0.5,
+    "matriz_confusion": [
+      [
+        0,
+        33881
+      ],
+      [
+        0,
+        30493
+      ]
+    ],
+    "clasificacion": {
+      "0": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 33881.0
+      },
+      "1": {
+        "precision": 0.47368502811694163,
+        "recall": 1.0,
+        "f1-score": 0.6428578957909494,
+        "support": 30493.0
+      },
+      "accuracy": 0.47368502811694163,
+      "macro avg": {
+        "precision": 0.23684251405847082,
+        "recall": 0.5,
+        "f1-score": 0.3214289478954747,
+        "support": 64374.0
+      },
+      "weighted avg": {
+        "precision": 0.22437750586214777,
+        "recall": 0.47368502811694163,
+        "f1-score": 0.3045121604429338,
+        "support": 64374.0
+      }
+    }
+  },
+  "modelo": {
+    "casos": 64374,
+    "accuracy": 0.5809954329387641,
+    "average_precision": 0.6389122828775279,
+    "roc_auc": 0.6887409091078083,
+    "matriz_confusion": [
+      [
+        7288,
+        26593
+      ],
+      [
+        380,
+        30113
+      ]
+    ],
+    "clasificacion": {
+      "0": {
+        "precision": 0.9504434011476265,
+        "recall": 0.21510581151677932,
+        "f1-score": 0.35081470071481863,
+        "support": 33881.0
+      },
+      "1": {
+        "precision": 0.5310372800056431,
+        "recall": 0.9875381235037549,
+        "f1-score": 0.6906730581772726,
+        "support": 30493.0
+      },
+      "accuracy": 0.5809954329387641,
+      "macro avg": {
+        "precision": 0.7407403405766348,
+        "recall": 0.6013219675102671,
+        "f1-score": 0.5207438794460456,
+        "support": 64374.0
+      },
+      "weighted avg": {
+        "precision": 0.7517770008620687,
+        "recall": 0.5809954329387641,
+        "f1-score": 0.5118005163251987,
+        "support": 64374.0
+      }
+    }
+  }
+}

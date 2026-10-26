@@ -1,0 +1,24 @@
+{
+  "fuente": "https://www.kaggle.com/datasets/akash1vishwakarma/call-center-dataset",
+  "sha256": "8d57d20fff56e84c23de6fce05bc31fb23d932ed00c3ee645afbc9494590b807",
+  "llamadas": 5000,
+  "intervalos": 1800,
+  "intervalo_minutos": 30,
+  "horario_asumido": "09:00–19:00 todos los días",
+  "fecha_min": "2021-01-01",
+  "fecha_max": "2021-03-31",
+  "aht_estimado_solo_train_segundos": 256.8421261404205,
+  "wrapup_asumido_segundos": 30,
+  "origen_operativo_no_acreditado": true,
+  "particiones": {
+    "train": {
+      "filas": 1080
+    },
+    "valid": {
+      "filas": 360
+    },
+    "test": {
+      "filas": 360
+    }
+  }
+}

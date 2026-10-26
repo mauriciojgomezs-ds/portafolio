@@ -1,0 +1,271 @@
+{
+  "proyecto": "Demanda y dotación de call center",
+  "generado_utc": "2026-10-07T16:39:20.541352+00:00",
+  "estado": "actualizado_por_etapas",
+  "estado_maestro": "completado",
+  "etapas_sin_reporte": [],
+  "notebooks": [
+    {
+      "notebook": "01_preparacion_datos.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T16:25:03.628249Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "02_analisis_exploratorio.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T16:25:09.328953Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "03_baseline.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T16:25:12.415774Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "04_modelado.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T16:25:15.733919Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "05_evaluacion.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T16:25:21.947572Z",
+      "errores_guardados": 0
+    }
+  ],
+  "resultados": {
+    "preparacion": {
+      "fuente": "https://www.kaggle.com/datasets/akash1vishwakarma/call-center-dataset",
+      "sha256": "8d57d20fff56e84c23de6fce05bc31fb23d932ed00c3ee645afbc9494590b807",
+      "llamadas": 5000,
+      "intervalos": 1800,
+      "intervalo_minutos": 30,
+      "horario_asumido": "09:00–19:00 todos los días",
+      "fecha_min": "2021-01-01",
+      "fecha_max": "2021-03-31",
+      "aht_estimado_solo_train_segundos": 256.8421261404205,
+      "wrapup_asumido_segundos": 30,
+      "origen_operativo_no_acreditado": true,
+      "particiones": {
+        "train": {
+          "filas": 1080
+        },
+        "valid": {
+          "filas": 360
+        },
+        "test": {
+          "filas": 360
+        }
+      }
+    },
+    "eda": {
+      "intervalos_train": 1080,
+      "media_llamadas_intervalo": 2.8703703703703702,
+      "proporcion_intervalos_cero": 0.2861111111111111
+    },
+    "baseline": {
+      "casos": 360,
+      "mae": 1.9149801587301587,
+      "rmse": 2.556046225571094
+    },
+    "modelado": {
+      "criterio": "mae_validacion",
+      "max_leaf_nodes_elegido": 30,
+      "candidatos": [
+        {
+          "max_leaf_nodes": 10,
+          "casos": 360,
+          "mae": 1.9248197348475702,
+          "rmse": 2.5252727634328007
+        },
+        {
+          "max_leaf_nodes": 30,
+          "casos": 360,
+          "mae": 1.9190475532739202,
+          "rmse": 2.54957664715748
+        }
+      ],
+      "atributos": "Solo calendario conocido a futuro; sin AHT ni respuestas futuras"
+    },
+    "evaluacion": {
+      "baseline": {
+        "casos": 360,
+        "mae": 1.6070436507936505,
+        "rmse": 2.1556669041360035
+      },
+      "modelo": {
+        "casos": 360,
+        "mae": 1.6117801039743413,
+        "rmse": 2.142629818567631
+      },
+      "aht_estimado_train_segundos": 256.8421261404205,
+      "target_service_level": 0.8,
+      "target_wait_seconds": 20,
+      "max_occupancy": 0.85,
+      "shrinkage": 0.3,
+      "agentes_programables_maximo": 3,
+      "proporcion_intervalos_sl_teorico_bajo_objetivo": 0.12222222222222222,
+      "escenario_mas20pct_maximo": 5
+    }
+  },
+  "fuentes": [
+    {
+      "ruta": "reports/preparacion/preparacion.json",
+      "sha256": "5c02072b6c2fa07edf344e72e1491793378c1bc2575bfee0440bf45ed8bf3baa",
+      "modificacion_utc": "2026-10-07T16:25:03.609807+00:00"
+    },
+    {
+      "ruta": "reports/preparacion/preparacion.md",
+      "sha256": "7423be00d9149a2ee1cb418a1a87e629a02ad31092194958d8f7f5d338f238ce",
+      "modificacion_utc": "2026-10-07T16:25:03.609807+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.json",
+      "sha256": "9582e630f0578a63716bde5b17ae5299bf00be4eb14a2a4c09f6a1bc44d9119c",
+      "modificacion_utc": "2026-10-07T16:25:09.292063+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.md",
+      "sha256": "f51efa713f4ace05d084d848815705809675863cd29541eca9341c80dd59e72f",
+      "modificacion_utc": "2026-10-07T16:25:09.292063+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.png",
+      "sha256": "19740e96ee8f20cb100e2b2d8256189223594150e6d3c14f9466de7eeb534a83",
+      "modificacion_utc": "2026-10-07T16:25:09.291063+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.json",
+      "sha256": "67d61b0f8ae5c171181cbcce997b2690d0a4ae5ed0598f82f664dd76a35867c8",
+      "modificacion_utc": "2026-10-07T16:25:12.397922+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.md",
+      "sha256": "0f66deebf5a5a98d48e9f006e1a4d1f6decbeec1dcbdb7b0cc21f1ffb0ee2ea8",
+      "modificacion_utc": "2026-10-07T16:25:12.397922+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.json",
+      "sha256": "d3006130859d8e0e4f06a22422379bc3bf68da773ba668cfc66307ee171c8ac0",
+      "modificacion_utc": "2026-10-07T16:25:15.712784+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.md",
+      "sha256": "fae1bc62e9270021b115c9d4f64d097decc8507fa03896e20a6cf9aa3102f787",
+      "modificacion_utc": "2026-10-07T16:25:15.712784+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.json",
+      "sha256": "09f0524c3d7bbd07bfe0ae56493ebd32b7d167d78f74420f86ef90fc2aef06fe",
+      "modificacion_utc": "2026-10-07T16:25:21.917477+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.md",
+      "sha256": "cf7337c94876902d9c7397f8fb3f2c08af65f0d77a3bc797755988ce6fb0e819",
+      "modificacion_utc": "2026-10-07T16:25:21.918478+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.png",
+      "sha256": "73e104f0e13a5b6d75796200df7c0ce985dbc68c99b1b4e6b4b5d6ac138612bb",
+      "modificacion_utc": "2026-10-07T16:25:21.917477+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/dotacion_intervalos.csv",
+      "sha256": "19d65f59fc97627997abeb555ccc44b80fa1cbdff8dfd616d5b646c14be277fa",
+      "modificacion_utc": "2026-10-07T16:25:21.787012+00:00"
+    },
+    {
+      "ruta": "notebooks/01_preparacion_datos.ipynb",
+      "sha256": "2cf3f098567b03282fce7dd91e50d2262c66b10c1b48e618cbaf235fdf645f63",
+      "modificacion_utc": "2026-10-07T16:37:58.188801+00:00"
+    },
+    {
+      "ruta": "notebooks/02_analisis_exploratorio.ipynb",
+      "sha256": "f23b772c9446aef5ff3a24aee7f031acb6a14e7ae1ac700bc13a76c9d66517f4",
+      "modificacion_utc": "2026-10-07T16:37:58.189801+00:00"
+    },
+    {
+      "ruta": "notebooks/03_baseline.ipynb",
+      "sha256": "36d553038f6b219f58711ea719c522d2fbecbf00d41c45811224d448717d0038",
+      "modificacion_utc": "2026-10-07T16:37:58.190801+00:00"
+    },
+    {
+      "ruta": "notebooks/04_modelado.ipynb",
+      "sha256": "619dbc091b05353137c8c67465cdda320027eadcc64335c4151c9d52018c74a3",
+      "modificacion_utc": "2026-10-07T16:37:58.190801+00:00"
+    },
+    {
+      "ruta": "notebooks/05_evaluacion.ipynb",
+      "sha256": "7060f95e7ded81e0573962dc04fe6f2effc17e40186be4d0a80ba9ef7078d298",
+      "modificacion_utc": "2026-10-07T16:37:58.192323+00:00"
+    },
+    {
+      "ruta": "reports/alertas/00_configuracion_entorno.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T16:24:57.843086+00:00"
+    },
+    {
+      "ruta": "reports/alertas/01_preparacion_datos.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T16:25:03.618820+00:00"
+    },
+    {
+      "ruta": "reports/alertas/02_analisis_exploratorio.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T16:25:09.319133+00:00"
+    },
+    {
+      "ruta": "reports/alertas/03_baseline.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T16:25:12.406308+00:00"
+    },
+    {
+      "ruta": "reports/alertas/04_modelado.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T16:25:15.723750+00:00"
+    },
+    {
+      "ruta": "reports/alertas/05_evaluacion.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T16:25:21.936168+00:00"
+    },
+    {
+      "ruta": "reports/alertas/06_ejecucion_completa.json",
+      "sha256": "1e848de256cb42422358d7adab1f486b122d02dfac23f7da952b7659092430df",
+      "modificacion_utc": "2026-10-07T16:25:22.748869+00:00"
+    },
+    {
+      "ruta": "README.md",
+      "sha256": "7b3c7c9911a1aa33a960b2a2f65e8715950a2c7f50f5b9a708c95737653f7fa0",
+      "modificacion_utc": "2026-10-07T16:25:44.832169+00:00"
+    },
+    {
+      "ruta": "config.json",
+      "sha256": "59c0dc5dba1e1242f0cdeb81c760b87025ec84680cccd70634a2086a5cc70a6f",
+      "modificacion_utc": "2026-10-07T16:11:22.106500+00:00"
+    },
+    {
+      "ruta": "reports/ejecucion/resumen.json",
+      "sha256": "9af44c32fc3f570e9f4f08fea124787661603ed3b698492b51ef992f7456a859",
+      "modificacion_utc": "2026-10-07T16:25:22.413231+00:00"
+    },
+    {
+      "ruta": "reports/entorno/environment.json",
+      "sha256": "bdd089f85ec37be9529c9c57a7ad1e951d209729b42188790afa535ef4c61eb8",
+      "modificacion_utc": "2026-10-07T16:24:57.834273+00:00"
+    }
+  ],
+  "limitaciones": "Registros descargados de Kaggle; origen operativo y cobertura completa no acreditados. Horario 09–19 todos los días, wrap-up, servicio objetivo y shrinkage son supuestos. Erlang C supone estacionariedad por intervalo, llegadas Poisson, atención exponencial y ausencia de abandono. No optimiza turnos ni garantiza un SLA real.",
+  "proximos_pasos": [
+    "Revisar fuentes, protocolo y alertas de la ejecución.",
+    "Incluir el baseline como candidato, ampliar cortes temporales y validar cobertura, horarios y supuestos de Erlang C con una operación real."
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "fuente_sintetica": true,
+  "sha256": "f601f14294bcf190f9d720676b7f0aea46a26cde9ab8ebc7b4f8174d9d26b252",
+  "filas_utilizables": 10000,
+  "variables_sensor": [
+    "Air temperature [K]",
+    "Process temperature [K]",
+    "Rotational speed [rpm]",
+    "Torque [Nm]",
+    "Tool wear [min]"
+  ],
+  "variables_excluidas": [
+    "UDI",
+    "Product ID",
+    "Type",
+    "Machine failure",
+    "TWF",
+    "HDF",
+    "PWF",
+    "OSF",
+    "RNF"
+  ],
+  "particiones": {
+    "train": {
+      "filas": 6000,
+      "fallos": 203
+    },
+    "valid": {
+      "filas": 2000,
+      "fallos": 68
+    },
+    "test": {
+      "filas": 2000,
+      "fallos": 68
+    }
+  }
+}

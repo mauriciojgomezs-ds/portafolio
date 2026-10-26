@@ -1,0 +1,34 @@
+{
+  "proyecto": "tmpeg5l8jnb",
+  "generado_utc": "2026-10-26T13:55:27.088037+00:00",
+  "estado": "ejecucion_no_completada",
+  "estado_maestro": "sin_resumen",
+  "etapas_sin_reporte": [
+    "preparacion",
+    "baseline",
+    "modelado",
+    "evaluacion"
+  ],
+  "notebooks": [],
+  "resultados": {
+    "preparacion": {},
+    "eda": {
+      "filas": 17
+    },
+    "baseline": {},
+    "modelado": {},
+    "evaluacion": {}
+  },
+  "fuentes": [
+    {
+      "ruta": "reports/eda/eda.json",
+      "sha256": "917f333b4374cfae061da96a695ceebd4656d4b9966fb6a5fb9acfd1832d177c",
+      "modificacion_utc": "2026-10-26T13:55:26.892167+00:00"
+    }
+  ],
+  "limitaciones": "Benchmark cerrado con imágenes 8×8 e intensidades 0–16. Intensidad y gradientes con SVM no constituyen OCR completo. No se puede verificar independencia por escritor. El desplazamiento artificial mide sensibilidad concreta y no robustez general.",
+  "proximos_pasos": [
+    "Revisar fuentes, protocolo y alertas de la ejecución.",
+    "Estudiar centrado y aumento de imágenes usando train y validación; reservar una evaluación nueva para las siguientes decisiones."
+  ]
+}

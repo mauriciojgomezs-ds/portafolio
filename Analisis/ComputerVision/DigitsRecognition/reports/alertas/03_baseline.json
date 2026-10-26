@@ -1,0 +1,12 @@
+[
+  {
+    "tipo": "UserWarning",
+    "mensaje": "self.within_class_std_dev_ has at least 1 zero standard deviation.Inputs within the same classes for at least 1 feature are identical.",
+    "descripcion": "La biblioteca señala una condición que conviene revisar.",
+    "accion_sugerida": "Leer el detalle original y comprobar cómo afecta esta etapa del análisis.",
+    "apariciones": 1,
+    "origenes": [
+      "c:\\Users\\mauro\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\sklearn\\neighbors\\_nearest_centroid.py:241"
+    ]
+  }
+]

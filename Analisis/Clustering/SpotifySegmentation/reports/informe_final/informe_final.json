@@ -1,0 +1,491 @@
+{
+  "proyecto": "Segmentación de canciones",
+  "generado_utc": "2026-10-07T16:39:16.822343+00:00",
+  "estado": "actualizado_por_etapas",
+  "estado_maestro": "completado",
+  "etapas_sin_reporte": [],
+  "notebooks": [
+    {
+      "notebook": "01_preparacion_datos.ipynb",
+      "celdas_con_salida": 0,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": null,
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "02_analisis_exploratorio.ipynb",
+      "celdas_con_salida": 2,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T14:26:21.950757Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "03_baseline.ipynb",
+      "celdas_con_salida": 0,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": null,
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "04_modelado.ipynb",
+      "celdas_con_salida": 0,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": null,
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "05_evaluacion.ipynb",
+      "celdas_con_salida": 2,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T14:26:25.490634Z",
+      "errores_guardados": 0
+    }
+  ],
+  "resultados": {
+    "preparacion": {
+      "fuente": "Spotify Tracks Dataset.zip",
+      "semilla": 42,
+      "sha256": "be5216c0c811283c5db3e3af83cffa59873cc5fa375222f3280782776e289176",
+      "filas_originales": 114000,
+      "duplicados_track_id": 24259,
+      "filas_preparadas": 20000
+    },
+    "eda": {
+      "poblacion": "catalogo",
+      "filas": 20000,
+      "columnas": 20,
+      "nulos": {
+        "track_id": 0,
+        "artists": 0,
+        "album_name": 0,
+        "track_name": 0,
+        "popularity": 0,
+        "duration_ms": 0,
+        "explicit": 0,
+        "danceability": 0,
+        "energy": 0,
+        "key": 0,
+        "loudness": 0,
+        "mode": 0,
+        "speechiness": 0,
+        "acousticness": 0,
+        "instrumentalness": 0,
+        "liveness": 0,
+        "valence": 0,
+        "tempo": 0,
+        "time_signature": 0,
+        "track_genre": 0
+      },
+      "resumen_numerico": {
+        "popularity": {
+          "count": 20000.0,
+          "mean": 33.0354,
+          "std": 20.5451,
+          "min": 0.0,
+          "25%": 19.0,
+          "50%": 33.0,
+          "75%": 48.0,
+          "max": 99.0
+        },
+        "duration_ms": {
+          "count": 20000.0,
+          "mean": 229305.1365,
+          "std": 117177.2243,
+          "min": 21240.0,
+          "25%": 172709.25,
+          "50%": 213726.0,
+          "75%": 265000.0,
+          "max": 4789026.0
+        },
+        "danceability": {
+          "count": 20000.0,
+          "mean": 0.5633,
+          "std": 0.1773,
+          "min": 0.0,
+          "25%": 0.45,
+          "50%": 0.579,
+          "75%": 0.694,
+          "max": 0.982
+        },
+        "energy": {
+          "count": 20000.0,
+          "mean": 0.6354,
+          "std": 0.2548,
+          "min": 0.0,
+          "25%": 0.459,
+          "50%": 0.675,
+          "75%": 0.853,
+          "max": 1.0
+        },
+        "key": {
+          "count": 20000.0,
+          "mean": 5.2756,
+          "std": 3.5514,
+          "min": 0.0,
+          "25%": 2.0,
+          "50%": 5.0,
+          "75%": 8.0,
+          "max": 11.0
+        },
+        "loudness": {
+          "count": 20000.0,
+          "mean": -8.4592,
+          "std": 5.161,
+          "min": -49.531,
+          "25%": -10.2542,
+          "50%": -7.1785,
+          "75%": -5.1168,
+          "max": 2.574
+        },
+        "mode": {
+          "count": 20000.0,
+          "mean": 0.6352,
+          "std": 0.4814,
+          "min": 0.0,
+          "25%": 0.0,
+          "50%": 1.0,
+          "75%": 1.0,
+          "max": 1.0
+        },
+        "speechiness": {
+          "count": 20000.0,
+          "mean": 0.0873,
+          "std": 0.1133,
+          "min": 0.0,
+          "25%": 0.0357,
+          "50%": 0.0487,
+          "75%": 0.0853,
+          "max": 0.961
+        },
+        "acousticness": {
+          "count": 20000.0,
+          "mean": 0.3285,
+          "std": 0.3373,
+          "min": 0.0,
+          "25%": 0.0175,
+          "50%": 0.192,
+          "75%": 0.624,
+          "max": 0.996
+        },
+        "instrumentalness": {
+          "count": 20000.0,
+          "mean": 0.1729,
+          "std": 0.3236,
+          "min": 0.0,
+          "25%": 0.0,
+          "50%": 0.0001,
+          "75%": 0.0929,
+          "max": 1.0
+        },
+        "liveness": {
+          "count": 20000.0,
+          "mean": 0.215,
+          "std": 0.1936,
+          "min": 0.0,
+          "25%": 0.0975,
+          "50%": 0.131,
+          "75%": 0.276,
+          "max": 0.995
+        },
+        "valence": {
+          "count": 20000.0,
+          "mean": 0.4706,
+          "std": 0.2642,
+          "min": 0.0,
+          "25%": 0.248,
+          "50%": 0.4545,
+          "75%": 0.687,
+          "max": 0.991
+        },
+        "tempo": {
+          "count": 20000.0,
+          "mean": 122.2206,
+          "std": 30.1597,
+          "min": 0.0,
+          "25%": 99.5175,
+          "50%": 122.062,
+          "75%": 140.147,
+          "max": 220.525
+        },
+        "time_signature": {
+          "count": 20000.0,
+          "mean": 3.896,
+          "std": 0.4581,
+          "min": 0.0,
+          "25%": 4.0,
+          "50%": 4.0,
+          "75%": 4.0,
+          "max": 5.0
+        }
+      },
+      "correlacion_destacada": {
+        "variables": [
+          "energy",
+          "loudness"
+        ],
+        "pearson": 0.7555406564444453,
+        "categoria_descriptiva": "alta",
+        "umbrales": {
+          "moderada": 0.3,
+          "alta": 0.7
+        }
+      }
+    },
+    "baseline": {
+      "regla": "Tres grupos por energía: <=0.33, (0.33,0.66], >0.66.",
+      "silhouette": 0.09203497906446187
+    },
+    "modelado": {
+      "criterio": "silhouette_descriptiva",
+      "k_elegido": 5,
+      "candidatos": [
+        {
+          "k": 3,
+          "silhouette": 0.15605279696591803,
+          "inercia": 144932.02954392473
+        },
+        {
+          "k": 4,
+          "silhouette": 0.16441675652971163,
+          "inercia": 132484.43642433168
+        },
+        {
+          "k": 5,
+          "silhouette": 0.17114504141207015,
+          "inercia": 121427.40173368435
+        }
+      ]
+    },
+    "evaluacion": {
+      "k": 5,
+      "ari_entre_semillas": 1.0,
+      "varianza_pca_2d": 0.4387538011497292,
+      "perfiles": [
+        {
+          "cluster": 0,
+          "danceability": 0.5397,
+          "energy": 0.3945,
+          "loudness": -10.355,
+          "speechiness": 0.0543,
+          "acousticness": 0.6662,
+          "instrumentalness": 0.0701,
+          "liveness": 0.181,
+          "valence": 0.4042,
+          "tempo": 114.3272,
+          "duration_ms": 213467.683,
+          "registros": 4637
+        },
+        {
+          "cluster": 1,
+          "danceability": 0.6872,
+          "energy": 0.7348,
+          "loudness": -6.4764,
+          "speechiness": 0.0949,
+          "acousticness": 0.2064,
+          "instrumentalness": 0.0539,
+          "liveness": 0.202,
+          "valence": 0.6964,
+          "tempo": 121.6512,
+          "duration_ms": 212869.2565,
+          "registros": 7676
+        },
+        {
+          "cluster": 2,
+          "danceability": 0.5711,
+          "energy": 0.6768,
+          "loudness": -11.1877,
+          "speechiness": 0.8249,
+          "acousticness": 0.7338,
+          "instrumentalness": 0.0112,
+          "liveness": 0.6723,
+          "valence": 0.4575,
+          "tempo": 103.0946,
+          "duration_ms": 212840.4221,
+          "registros": 244
+        },
+        {
+          "cluster": 3,
+          "danceability": 0.4788,
+          "energy": 0.8143,
+          "loudness": -6.1146,
+          "speechiness": 0.0822,
+          "acousticness": 0.0669,
+          "instrumentalness": 0.2535,
+          "liveness": 0.2504,
+          "valence": 0.3081,
+          "tempo": 135.2028,
+          "duration_ms": 262526.6903,
+          "registros": 5841
+        },
+        {
+          "cluster": 4,
+          "danceability": 0.3445,
+          "energy": 0.1984,
+          "loudness": -20.6047,
+          "speechiness": 0.0525,
+          "acousticness": 0.8284,
+          "instrumentalness": 0.7717,
+          "liveness": 0.1772,
+          "valence": 0.1748,
+          "tempo": 103.376,
+          "duration_ms": 235279.1573,
+          "registros": 1602
+        }
+      ],
+      "baseline": 0.09203497906446187
+    }
+  },
+  "fuentes": [
+    {
+      "ruta": "reports/preparacion/preparacion.json",
+      "sha256": "d1b2963cdeebe8a4298e42372921e24723e578fef1270631b5211aed3f343938",
+      "modificacion_utc": "2026-10-07T13:32:27.526561+00:00"
+    },
+    {
+      "ruta": "reports/preparacion/preparacion.md",
+      "sha256": "61bb8aa3de14ec227f748b5fa3cedda34b0ffdbc24d89190fa767cd1350dd199",
+      "modificacion_utc": "2026-10-07T13:32:27.526561+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.json",
+      "sha256": "5a722e5c951b8056a633f9a76c7f2090f93a686de31ccd8a8e5574e309df44a0",
+      "modificacion_utc": "2026-10-07T14:26:21.945165+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.md",
+      "sha256": "d785da35c257b6791cbb081f71bf16ce5b772ae06f50d6668f4d6faa15f27bf5",
+      "modificacion_utc": "2026-10-07T14:26:21.945165+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.png",
+      "sha256": "a9a95ab24898c19b5fb2802f8f86500d43206b3306b96ccc135e5df8a913ce18",
+      "modificacion_utc": "2026-10-07T14:26:21.943923+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.json",
+      "sha256": "619e4283b8a5c8c9560bdb5d8bc72b3a628d7675ea0291e845cf48581807241b",
+      "modificacion_utc": "2026-10-07T13:32:36.471429+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.md",
+      "sha256": "862b61c0a66fd57413e9d9bbb7f7283cfeea6fe315e8b4db5452eb20a7af6c70",
+      "modificacion_utc": "2026-10-07T13:32:36.471429+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.json",
+      "sha256": "3ce6f0375a23093e9d23ee1738f603dfad45b8e87f5c55433051f238cc5f42cb",
+      "modificacion_utc": "2026-10-07T13:32:40.090791+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.md",
+      "sha256": "040613bda1246db65f6d0e1d3e4f955307940f3d0cdbb3d016a8ed81b273aa99",
+      "modificacion_utc": "2026-10-07T13:32:40.091791+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.json",
+      "sha256": "65f257e35d132ae10f4403936cffbe63522c5a579e7e7de52d2022c96d8583d7",
+      "modificacion_utc": "2026-10-07T14:26:25.472872+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.md",
+      "sha256": "a7f22ff7f5f22349c2bed7ac559b80dd603c63268b0abc98252409eeee5e75e3",
+      "modificacion_utc": "2026-10-07T14:26:25.472872+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/clusters.png",
+      "sha256": "58ae66da2bf876cab12e6f1ca768661fc611195bac42ab27af17769e2551609d",
+      "modificacion_utc": "2026-10-07T14:26:25.470874+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/perfiles_clusters.csv",
+      "sha256": "ceb9c85438f95e4384828fada72c5bf25890653bfe2a235e6c6fdd4ef646fb5e",
+      "modificacion_utc": "2026-10-07T14:26:25.227676+00:00"
+    },
+    {
+      "ruta": "notebooks/01_preparacion_datos.ipynb",
+      "sha256": "1d89ab8732e33ea31982a15282d5783067ef6c08352bde4ceb3ee6ce5c7e6482",
+      "modificacion_utc": "2026-10-07T16:37:58.172180+00:00"
+    },
+    {
+      "ruta": "notebooks/02_analisis_exploratorio.ipynb",
+      "sha256": "0a41cd0420a1b4f98e3d93fd32441a20c6795e3a333669d35d4d117ffc14734e",
+      "modificacion_utc": "2026-10-07T16:37:58.173181+00:00"
+    },
+    {
+      "ruta": "notebooks/03_baseline.ipynb",
+      "sha256": "9281f0e1ae9f55e5496f5d590084f67264f7c5cc0413758fa37267ff3b86771f",
+      "modificacion_utc": "2026-10-07T16:37:58.173181+00:00"
+    },
+    {
+      "ruta": "notebooks/04_modelado.ipynb",
+      "sha256": "d9334aa7a51aa1d079f29fc21d89644b876e275dda61ac46977cb34de915e5e1",
+      "modificacion_utc": "2026-10-07T16:37:58.174181+00:00"
+    },
+    {
+      "ruta": "notebooks/05_evaluacion.ipynb",
+      "sha256": "7dcf8bee3684b74f63409da15860218796288e1c5976947a925c2d745b7008f0",
+      "modificacion_utc": "2026-10-07T16:37:58.175779+00:00"
+    },
+    {
+      "ruta": "reports/alertas/00_configuracion_entorno.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T14:26:18.710482+00:00"
+    },
+    {
+      "ruta": "reports/alertas/01_preparacion_datos.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T13:32:27.535775+00:00"
+    },
+    {
+      "ruta": "reports/alertas/02_analisis_exploratorio.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T14:26:21.952327+00:00"
+    },
+    {
+      "ruta": "reports/alertas/03_baseline.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T13:32:36.486295+00:00"
+    },
+    {
+      "ruta": "reports/alertas/04_modelado.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T13:32:40.098961+00:00"
+    },
+    {
+      "ruta": "reports/alertas/05_evaluacion.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T14:26:25.492363+00:00"
+    },
+    {
+      "ruta": "reports/alertas/06_ejecucion_completa.json",
+      "sha256": "1e848de256cb42422358d7adab1f486b122d02dfac23f7da952b7659092430df",
+      "modificacion_utc": "2026-10-07T13:32:44.414360+00:00"
+    },
+    {
+      "ruta": "README.md",
+      "sha256": "6bc6c03352fb1b4f5a2785f4f8690e57f31a59f5a653f353b8b62c44fa4053c4",
+      "modificacion_utc": "2026-10-07T14:41:02.669745+00:00"
+    },
+    {
+      "ruta": "config.json",
+      "sha256": "35f348d7faa8520cc4732d2f3484d5a2a8a7042d97e94f15a1bfd98c6e62465c",
+      "modificacion_utc": "2026-10-07T14:05:27.332755+00:00"
+    },
+    {
+      "ruta": "reports/ejecucion/resumen.json",
+      "sha256": "37407497099bc63da99ecfed309c382683e3d614ae597e56f1d6bf98044785e5",
+      "modificacion_utc": "2026-10-07T13:32:44.072523+00:00"
+    },
+    {
+      "ruta": "reports/entorno/environment.json",
+      "sha256": "950220e1c04a3e695f7a1d8336a2b2425f4fea34660bd7eb249bf32a35b5e876",
+      "modificacion_utc": "2026-10-07T14:26:18.705065+00:00"
+    }
+  ],
+  "limitaciones": "Silhouette y estabilidad describen el espacio de atributos; no validan géneros ni utilidad para usuarios.",
+  "proximos_pasos": [
+    "Comprobar procedencia, condiciones de uso y disponibilidad temporal de las variables.",
+    "Completar una pasada de 06 y revisar las alertas antes de publicar el informe.",
+    "Validar los perfiles con el uso previsto y estudiar sensibilidad a atributos, escalamiento y muestras."
+  ]
+}

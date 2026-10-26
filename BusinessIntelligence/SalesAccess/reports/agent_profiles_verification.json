@@ -1,0 +1,49 @@
+{
+  "feature": "fichas de agentes ficticias",
+  "tests_passed": 50,
+  "profiles": 40,
+  "validation_date": "2026-10-07",
+  "accounts": [
+    {
+      "account": "gerente",
+      "accessible_profiles": 40,
+      "status": "passed"
+    },
+    {
+      "account": "analista",
+      "accessible_profiles": 40,
+      "status": "passed"
+    },
+    {
+      "account": "supervisor_norte",
+      "accessible_profiles": 20,
+      "status": "passed"
+    },
+    {
+      "account": "supervisor_sur",
+      "accessible_profiles": 20,
+      "status": "passed"
+    },
+    {
+      "account": "agente_1",
+      "accessible_profiles": 1,
+      "status": "passed"
+    },
+    {
+      "account": "agente_2",
+      "accessible_profiles": 1,
+      "status": "passed"
+    },
+    {
+      "account": "agente_39",
+      "accessible_profiles": 1,
+      "status": "passed"
+    },
+    {
+      "account": "agente_40",
+      "accessible_profiles": 1,
+      "status": "passed"
+    }
+  ],
+  "streamlit_health": "ok"
+}

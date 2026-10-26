@@ -1,0 +1,631 @@
+{
+  "proyecto": "Churn de actividad",
+  "generado_utc": "2026-10-26T14:06:54.228517+00:00",
+  "estado": "evidencia_disponible",
+  "estado_maestro": "completado",
+  "etapas_sin_reporte": [],
+  "notebooks": [
+    {
+      "notebook": "01_preparacion_datos.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-26T14:06:34.646697Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "02_analisis_exploratorio.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-26T14:06:46.372151Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "03_baseline.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-26T14:06:48.079259Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "04_modelado.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-26T14:06:51.101636Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "05_evaluacion.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-26T14:06:53.422709Z",
+      "errores_guardados": 0
+    }
+  ],
+  "resultados": {
+    "preparacion": {
+      "fuentes": [
+        {
+          "archivo": "abt_churn.csv",
+          "sha256": "6f0d475e566a6d6c3539b03bca745ce47851169651e98e9ea0693dc8d3528811",
+          "filas_originales": 5496,
+          "filas_sin_target": 0,
+          "filas_utilizables": 5496
+        }
+      ],
+      "particion": "temporal",
+      "semilla": 42,
+      "datasets": {
+        "train": {
+          "filas": 4742,
+          "columnas": 43,
+          "positivos": 2173
+        },
+        "valid": {
+          "filas": 451,
+          "columnas": 43,
+          "positivos": 262
+        },
+        "test": {
+          "filas": 303,
+          "columnas": 43,
+          "positivos": 153
+        }
+      },
+      "ids_compartidos_train_test": 185
+    },
+    "eda": {
+      "filas_train": 4742,
+      "positivos": 2173,
+      "proporcion_positiva": 0.458245466048081,
+      "nulos": {
+        "dtRef": 0,
+        "idUsuario": 0,
+        "qtdeTransacoes": 0,
+        "qtdeDias": 0,
+        "mediaTransacoesDias": 0,
+        "saldoPontos": 0,
+        "qtdePontosPos": 0,
+        "qtdePontosNeg": 0,
+        "qtdeDiasUltimaTransacao": 0,
+        "qtdeDiasPrimeiraTransacao": 0,
+        "qtdSkuDistintos": 0,
+        "qtdeChatMessage": 0,
+        "qtdePresença": 0,
+        "qtdeTrocaStreamElements": 0,
+        "qtdeChurn": 0,
+        "qtdePonei": 0,
+        "qtdeAirflowLover": 0,
+        "qtdePresencaStreak": 0,
+        "qtdeDailyLoot": 0,
+        "qtdeRLover": 0,
+        "qtdeVendaItemRPG": 0,
+        "qtdeTransacoesD7": 0,
+        "qtdeDiasD7": 0,
+        "saldoPontosD7": 0,
+        "qtdePontosPosD7": 0,
+        "qtdePontosNegD7": 0,
+        "qtdeTransacoesD14": 0,
+        "qtdeDiasD14": 0,
+        "saldoPontosD14": 0,
+        "qtdePontosPosD14": 0,
+        "qtdePontosNegD14": 0,
+        "qtdeTransacoesD28": 0,
+        "qtdeDiasD28": 0,
+        "saldoPontosD28": 0,
+        "qtdePontosPosD28": 0,
+        "qtdePontosNegD28": 0,
+        "propAvgQtdeTransacoes": 0,
+        "propAvgQtdeDias": 0,
+        "propAvgMediaTransacoesDias": 0,
+        "propAvgSaldoPontos": 0,
+        "propAvgQtdePontosPos": 0,
+        "propAvgQtdePontosNeg": 0,
+        "flagChurn": 0
+      },
+      "features_excluidas": [
+        "idUsuario",
+        "dtRef",
+        "qtdeChurn"
+      ]
+    },
+    "baseline": {
+      "casos": 451,
+      "accuracy": 0.4190687361419069,
+      "average_precision": 0.5809312638580931,
+      "roc_auc": 0.5,
+      "matriz_confusion": [
+        [
+          189,
+          0
+        ],
+        [
+          262,
+          0
+        ]
+      ],
+      "clasificacion": {
+        "0": {
+          "precision": 0.4190687361419069,
+          "recall": 1.0,
+          "f1-score": 0.590625,
+          "support": 189.0
+        },
+        "1": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 262.0
+        },
+        "accuracy": 0.4190687361419069,
+        "macro avg": {
+          "precision": 0.20953436807095344,
+          "recall": 0.5,
+          "f1-score": 0.2953125,
+          "support": 451.0
+        },
+        "weighted avg": {
+          "precision": 0.17561860561157516,
+          "recall": 0.4190687361419069,
+          "f1-score": 0.24751247228381373,
+          "support": 451.0
+        }
+      }
+    },
+    "modelado": {
+      "decision_protocol": "Última fecha de train para calibración; ajuste solo fechas anteriores",
+      "decision_fit_cases": 4368,
+      "decision_calibration_cases": 374,
+      "decision_validation_cases": 451,
+      "decision_threshold": 0.32,
+      "decision_false_negative_cost": 5.0,
+      "decision_false_positive_cost": 1.0,
+      "decision_candidates": [
+        {
+          "class_weight": null,
+          "average_precision_validacion": 0.8617727802627547
+        },
+        {
+          "class_weight": "balanced",
+          "average_precision_validacion": 0.8620710953258179
+        }
+      ],
+      "decision_criterion": "AP validación para modelo; sigmoid fijo en calibración; coste FN/FP en validación para umbral",
+      "decision_test_used_for_selection": false,
+      "criterio": "average_precision_validacion",
+      "class_weight_elegido": null,
+      "candidatos": [
+        {
+          "class_weight": null,
+          "casos": 451,
+          "accuracy": 0.7782705099778271,
+          "average_precision": 0.8571344648190812,
+          "roc_auc": 0.8352013409265318,
+          "matriz_confusion": [
+            [
+              125,
+              64
+            ],
+            [
+              36,
+              226
+            ]
+          ],
+          "clasificacion": {
+            "0": {
+              "precision": 0.7763975155279503,
+              "recall": 0.6613756613756614,
+              "f1-score": 0.7142857142857143,
+              "support": 189.0
+            },
+            "1": {
+              "precision": 0.7793103448275862,
+              "recall": 0.8625954198473282,
+              "f1-score": 0.8188405797101449,
+              "support": 262.0
+            },
+            "accuracy": 0.7782705099778271,
+            "macro avg": {
+              "precision": 0.7778539301777683,
+              "recall": 0.7619855406114948,
+              "f1-score": 0.7665631469979296,
+              "support": 451.0
+            },
+            "weighted avg": {
+              "precision": 0.7780896691343908,
+              "recall": 0.7782705099778271,
+              "f1-score": 0.7750249043992417,
+              "support": 451.0
+            }
+          }
+        },
+        {
+          "class_weight": "balanced",
+          "casos": 451,
+          "accuracy": 0.7738359201773836,
+          "average_precision": 0.8562089369784873,
+          "roc_auc": 0.8345551112726686,
+          "matriz_confusion": [
+            [
+              118,
+              71
+            ],
+            [
+              31,
+              231
+            ]
+          ],
+          "clasificacion": {
+            "0": {
+              "precision": 0.7919463087248322,
+              "recall": 0.6243386243386243,
+              "f1-score": 0.6982248520710059,
+              "support": 189.0
+            },
+            "1": {
+              "precision": 0.7649006622516556,
+              "recall": 0.8816793893129771,
+              "f1-score": 0.8191489361702128,
+              "support": 262.0
+            },
+            "accuracy": 0.7738359201773836,
+            "macro avg": {
+              "precision": 0.7784234854882439,
+              "recall": 0.7530090068258006,
+              "f1-score": 0.7586868941206093,
+              "support": 451.0
+            },
+            "weighted avg": {
+              "precision": 0.7762346471373106,
+              "recall": 0.7738359201773836,
+              "f1-score": 0.7684734330776405,
+              "support": 451.0
+            }
+          }
+        }
+      ]
+    },
+    "evaluacion": {
+      "decision_probability_scores": [
+        {
+          "modelo": "sin_calibrar",
+          "brier": 0.16433874145978045,
+          "log_loss": 0.4991477961153338,
+          "ece_10_bins": 0.04527070161502512
+        },
+        {
+          "modelo": "sigmoid",
+          "brier": 0.1678348432118002,
+          "log_loss": 0.5062331039270489,
+          "ece_10_bins": 0.08135515173202017
+        }
+      ],
+      "decision_test_policies": [
+        {
+          "politica": "sin_calibrar_05",
+          "umbral": 0.5,
+          "casos": 303,
+          "priorizados": 166,
+          "tp": 125,
+          "fp": 41,
+          "fn": 28,
+          "tn": 109,
+          "precision": 0.7530120481927711,
+          "recall": 0.8169934640522876,
+          "coste_error_total": 181.0,
+          "coste_error_por_caso": 0.5973597359735974
+        },
+        {
+          "politica": "sigmoid_05",
+          "umbral": 0.5,
+          "casos": 303,
+          "priorizados": 181,
+          "tp": 131,
+          "fp": 50,
+          "fn": 22,
+          "tn": 100,
+          "precision": 0.7237569060773481,
+          "recall": 0.8562091503267973,
+          "coste_error_total": 160.0,
+          "coste_error_por_caso": 0.528052805280528
+        },
+        {
+          "politica": "umbral_validacion",
+          "umbral": 0.32,
+          "casos": 303,
+          "priorizados": 227,
+          "tp": 146,
+          "fp": 81,
+          "fn": 7,
+          "tn": 69,
+          "precision": 0.6431718061674009,
+          "recall": 0.954248366013072,
+          "coste_error_total": 116.0,
+          "coste_error_por_caso": 0.38283828382838286
+        },
+        {
+          "politica": "priorizar_todos",
+          "umbral": 0.0,
+          "casos": 303,
+          "priorizados": 303,
+          "tp": 153,
+          "fp": 150,
+          "fn": 0,
+          "tn": 0,
+          "precision": 0.504950495049505,
+          "recall": 1.0,
+          "coste_error_total": 150.0,
+          "coste_error_por_caso": 0.49504950495049505
+        },
+        {
+          "politica": "priorizar_ninguno",
+          "umbral": 1.0000000000000002,
+          "casos": 303,
+          "priorizados": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 153,
+          "tn": 150,
+          "precision": 0.0,
+          "recall": 0.0,
+          "coste_error_total": 765.0,
+          "coste_error_por_caso": 2.5247524752475248
+        }
+      ],
+      "decision_cost_scope": "Penalizaciones ilustrativas de clasificación, no coste real de campaña ni ahorro medido",
+      "baseline": {
+        "casos": 303,
+        "accuracy": 0.49504950495049505,
+        "average_precision": 0.504950495049505,
+        "roc_auc": 0.5,
+        "matriz_confusion": [
+          [
+            150,
+            0
+          ],
+          [
+            153,
+            0
+          ]
+        ],
+        "clasificacion": {
+          "0": {
+            "precision": 0.49504950495049505,
+            "recall": 1.0,
+            "f1-score": 0.6622516556291391,
+            "support": 150.0
+          },
+          "1": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 153.0
+          },
+          "accuracy": 0.49504950495049505,
+          "macro avg": {
+            "precision": 0.24752475247524752,
+            "recall": 0.5,
+            "f1-score": 0.33112582781456956,
+            "support": 303.0
+          },
+          "weighted avg": {
+            "precision": 0.2450740123517302,
+            "recall": 0.49504950495049505,
+            "f1-score": 0.327847354271851,
+            "support": 303.0
+          }
+        }
+      },
+      "modelo": {
+        "casos": 303,
+        "accuracy": 0.7722772277227723,
+        "average_precision": 0.8217988736989877,
+        "roc_auc": 0.8374074074074075,
+        "matriz_confusion": [
+          [
+            113,
+            37
+          ],
+          [
+            32,
+            121
+          ]
+        ],
+        "clasificacion": {
+          "0": {
+            "precision": 0.7793103448275862,
+            "recall": 0.7533333333333333,
+            "f1-score": 0.7661016949152543,
+            "support": 150.0
+          },
+          "1": {
+            "precision": 0.7658227848101266,
+            "recall": 0.7908496732026143,
+            "f1-score": 0.7781350482315113,
+            "support": 153.0
+          },
+          "accuracy": 0.7722772277227723,
+          "macro avg": {
+            "precision": 0.7725665648188564,
+            "recall": 0.7720915032679738,
+            "f1-score": 0.7721183715733828,
+            "support": 303.0
+          },
+          "weighted avg": {
+            "precision": 0.77249979471976,
+            "recall": 0.7722772277227723,
+            "f1-score": 0.7721779426294038,
+            "support": 303.0
+          }
+        }
+      }
+    }
+  },
+  "fuentes": [
+    {
+      "ruta": "reports/preparacion/preparacion.json",
+      "sha256": "b292347a56d7896cfe12b61ffed34b60a49c6c5a02a3bf5d55b152ca874d0c1b",
+      "modificacion_utc": "2026-10-26T14:06:34.628191+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.json",
+      "sha256": "5eae071a86308763d49a2ff0d6971661b81699172e7c15ce7f708ae9313e3b56",
+      "modificacion_utc": "2026-10-26T14:06:46.120624+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.md",
+      "sha256": "3eef24614a35d2dc81f003b12d415505d67d74a966821be565758fab7993cf7f",
+      "modificacion_utc": "2026-10-26T14:06:46.120624+00:00"
+    },
+    {
+      "ruta": "reports/eda/distribucion_target.png",
+      "sha256": "8ac7a3082ee7668edce1ed412ada68cf3a08f33fd981b22362af47da631a8cd5",
+      "modificacion_utc": "2026-10-26T14:06:46.345028+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline_validacion.json",
+      "sha256": "f5a8cef23fe618af8ebe9fa58e1f3d84ecd63ec76cd26d3876712052b99068e5",
+      "modificacion_utc": "2026-10-26T14:06:48.061301+00:00"
+    },
+    {
+      "ruta": "reports/modelado/decisiones_validacion.json",
+      "sha256": "f06a7f2fb067bbca0e69695e447598a2954e88a1616253c48845825bdd47d754",
+      "modificacion_utc": "2026-10-26T14:06:51.077062+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelos_validacion.json",
+      "sha256": "2970eb74d95673e6def1b7667c67130bdbd14f7edde95002fcf0d86caa6bbec5",
+      "modificacion_utc": "2026-10-26T14:06:50.067313+00:00"
+    },
+    {
+      "ruta": "reports/modelado/decisiones.md",
+      "sha256": "3d0874017a2676b5b4b16909e77a6168698a06a20a854ec1cecfe6039d5433bd",
+      "modificacion_utc": "2026-10-26T14:06:51.077062+00:00"
+    },
+    {
+      "ruta": "reports/modelado/particion_calibracion.csv",
+      "sha256": "558536148c726cf1f1b50b47f3f9e89678d20a21671b5c2dd8334434ff3245a3",
+      "modificacion_utc": "2026-10-26T14:06:51.077062+00:00"
+    },
+    {
+      "ruta": "reports/modelado/umbrales_validacion.csv",
+      "sha256": "41e239309eca1d1c6ae29748a3eb859a1058ccff308b8d57fdb433137a47f65a",
+      "modificacion_utc": "2026-10-26T14:06:51.077062+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/decisiones_test.json",
+      "sha256": "27f6e906cff7bb8759e49c7e2584d001f9334ff5fae5c82f5043d9b33e721842",
+      "modificacion_utc": "2026-10-26T14:06:53.393587+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion_test.json",
+      "sha256": "ee36d1ffb91d37399e5b567d237f411c8c720f9b0cd62605c55c593458c9f108",
+      "modificacion_utc": "2026-10-26T14:06:53.013895+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.md",
+      "sha256": "7568ef9a9aa94a74a3701e1c9d9cccde40d90ae0d2689e85419d13b0c0fbc352",
+      "modificacion_utc": "2026-10-26T14:06:53.393587+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/decisiones.png",
+      "sha256": "dcfe9725a1a8cc1bca17e15ebe5940e58a71d9edde18cb1fa043ba4afa13def3",
+      "modificacion_utc": "2026-10-26T14:06:53.392080+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/calibracion_test.csv",
+      "sha256": "65a0f02c1b891822c579790ae7c3870e706c10d2188c5fadc69e647b05133976",
+      "modificacion_utc": "2026-10-26T14:06:53.037383+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/fiabilidad_bins.csv",
+      "sha256": "7f48288a956f147def2080030b73829e5032ae0ce3654934e68098aee74372eb",
+      "modificacion_utc": "2026-10-26T14:06:53.038381+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/politicas_test.csv",
+      "sha256": "44f59fc187812bf6331cf63af6cca397545dcb640f1cf75686641d30a60ccb45",
+      "modificacion_utc": "2026-10-26T14:06:53.039385+00:00"
+    },
+    {
+      "ruta": "notebooks/01_preparacion_datos.ipynb",
+      "sha256": "1ffbfafb78874644c3d349fa0c59b52d8edaa09989c3cea6bfc368e6838f341d",
+      "modificacion_utc": "2026-10-26T14:06:34.981043+00:00"
+    },
+    {
+      "ruta": "notebooks/02_analisis_exploratorio.ipynb",
+      "sha256": "8edeaf5cae65017624c13af626f4ed479afa408ccfde03248e5f00e55b2a0fa8",
+      "modificacion_utc": "2026-10-26T14:06:46.506251+00:00"
+    },
+    {
+      "ruta": "notebooks/03_baseline.ipynb",
+      "sha256": "384ff1d36d863fde96af3632bbc253942502bf4fe9145884fe8735e4756ca04d",
+      "modificacion_utc": "2026-10-26T14:06:48.431252+00:00"
+    },
+    {
+      "ruta": "notebooks/04_modelado.ipynb",
+      "sha256": "4fc0b300b3854ac72b7bef42647a202b9c9dea268418ab8822752c23581196fc",
+      "modificacion_utc": "2026-10-26T14:06:51.448376+00:00"
+    },
+    {
+      "ruta": "notebooks/05_evaluacion.ipynb",
+      "sha256": "b5a6b49829139a074505f8236a11ca61c6bcfae2d1ef3bd72be1b66fb13bebb8",
+      "modificacion_utc": "2026-10-26T14:06:53.979167+00:00"
+    },
+    {
+      "ruta": "reports/alertas/00_configuracion_entorno.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:03:45.359026+00:00"
+    },
+    {
+      "ruta": "reports/alertas/01_preparacion_datos.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:06:34.635152+00:00"
+    },
+    {
+      "ruta": "reports/alertas/02_analisis_exploratorio.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:06:46.361050+00:00"
+    },
+    {
+      "ruta": "reports/alertas/03_baseline.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:06:48.068976+00:00"
+    },
+    {
+      "ruta": "reports/alertas/04_modelado.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:06:51.089596+00:00"
+    },
+    {
+      "ruta": "reports/alertas/05_evaluacion.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-26T14:06:53.412540+00:00"
+    },
+    {
+      "ruta": "README.md",
+      "sha256": "dd021471611e4196c0776accdc2e03348d4789be30f9d624a1edf04801ecc742",
+      "modificacion_utc": "2026-10-08T12:27:49.059878+00:00"
+    },
+    {
+      "ruta": "config.json",
+      "sha256": "198cd63e64ce7a49f58145b80fc96e792d7a47e98e40f400f68eb853dd2b6fdd",
+      "modificacion_utc": "2026-10-08T12:27:49.057483+00:00"
+    },
+    {
+      "ruta": "reports/ejecucion/resumen.json",
+      "sha256": "46b6f5acfc8a0ee0f4a0a7e84723a6a78f4814b8c0f356d6826affa3f0c296c3",
+      "modificacion_utc": "2026-10-26T14:06:53.979167+00:00"
+    },
+    {
+      "ruta": "reports/entorno/environment.json",
+      "sha256": "6443fc8285cfaa70dad3c5f4399c6e19e185d7c1cec94d5fabc697921a3d27c9",
+      "modificacion_utc": "2026-10-26T14:03:45.351870+00:00"
+    }
+  ],
+  "limitaciones": "La definición del churn y la disponibilidad temporal de las variables deben confirmarse. Revisa recall por clase y posibles diferencias entre train y test; las métricas de proyectos distintos no son directamente comparables.",
+  "proximos_pasos": [
+    "Comprobar procedencia, condiciones de uso y disponibilidad temporal de las variables.",
+    "Completar una pasada de 06 y revisar las alertas antes de publicar el informe.",
+    "Revisar métricas por clase y errores frecuentes; ajustar decisiones en validación, conservando test independiente."
+  ]
+}

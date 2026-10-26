@@ -1,0 +1,23 @@
+{
+  "fecha_utc": "2026-10-07T16:48:07.476903+00:00",
+  "alcance": "Actualización documental; sin ejecutar modelos ni aplicaciones",
+  "ubicacion_mvp": "IAG/knowledge_base_mvp",
+  "documentos_comprobados": [
+    "README.md",
+    "Analisis/README.md",
+    "IAG/README.md",
+    "docs/organizacion_portafolio.md",
+    "docs/proyectos_tematicos.md",
+    "IAG/knowledge_base_mvp/README.md",
+    "IAG/knowledge_base_mvp/docs/arquitectura.md",
+    "IAG/knowledge_base_mvp/docs/evaluacion_ia.md",
+    "IAG/knowledge_base_mvp/docs/guia_uso.md",
+    "IAG/knowledge_base_mvp/docs/historial.md",
+    "IAG/knowledge_base_mvp/docs/limitaciones.md",
+    "IAG/knowledge_base_mvp/docs/portafolio.md",
+    "IAG/knowledge_base_mvp/docs/verificacion.md"
+  ],
+  "enlaces_revisados": 116,
+  "proyectos_analisis": 19,
+  "enlaces_invalidos": []
+}

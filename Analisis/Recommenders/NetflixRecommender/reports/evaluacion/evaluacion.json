@@ -1,0 +1,169 @@
+{
+  "baseline": {
+    "consultas": 30,
+    "top_n_solicitado": 10,
+    "cobertura_catalogo": 0.0011354604292040423,
+    "categorias_distintas_promedio": 10.0,
+    "coincidencia_categoria_descriptiva": 0.31
+  },
+  "modelo": {
+    "consultas": 30,
+    "top_n_solicitado": 10,
+    "cobertura_catalogo": 0.034063812876121265,
+    "categorias_distintas_promedio": 6.7,
+    "coincidencia_categoria_descriptiva": 0.79
+  },
+  "ejemplos": {
+    "baseline": {
+      "consulta": "s5668",
+      "recomendaciones": [
+        {
+          "show_id": "s10",
+          "title": "The Starling",
+          "listed_in": "Comedies, Dramas",
+          "description": "A woman adjusting to life after a loss contends with a feisty bird that's taken over her garden — and a husband who's struggling to find a way forward.",
+          "similitud": null
+        },
+        {
+          "show_id": "s100",
+          "title": "On the Verge",
+          "listed_in": "TV Comedies, TV Dramas",
+          "description": "Four women — a chef, a single mom, an heiress and a job seeker — dig into love and work, with a generous side of midlife crises, in pre-pandemic LA.",
+          "similitud": null
+        },
+        {
+          "show_id": "s1000",
+          "title": "Stowaway",
+          "listed_in": "Dramas, International Movies, Thrillers",
+          "description": "A three-person crew on a mission to Mars faces an impossible choice when an unplanned passenger jeopardizes the lives of everyone on board.",
+          "similitud": null
+        },
+        {
+          "show_id": "s1003",
+          "title": "Tell Me When",
+          "listed_in": "Comedies, International Movies",
+          "description": "Workaholic Will puts his humdrum life in LA on hold to fulfill his grandpa's last wish: visiting Mexico City's most iconic sights and falling in love.",
+          "similitud": null
+        },
+        {
+          "show_id": "s1004",
+          "title": "Zero",
+          "listed_in": "International TV Shows, TV Comedies, TV Dramas",
+          "description": "A shy teen with the power to turn invisible must get it under control to help defend his neighborhood, putting aside the pursuit of his artistic dream.",
+          "similitud": null
+        },
+        {
+          "show_id": "s1005",
+          "title": "Izzy's Koala World",
+          "listed_in": "Kids' TV",
+          "description": "Young koala caretaker Izzy Bee and her family rescue cuddly creatures in need and help them head back into the wild on Australia’s Magnetic Island.",
+          "similitud": null
+        },
+        {
+          "show_id": "s1013",
+          "title": "Luis Miguel - The Series",
+          "listed_in": "International TV Shows, Spanish-Language TV Shows, TV Dramas",
+          "description": "This series dramatizes the life story of Mexican superstar singer Luis Miguel, who has captivated audiences in Latin America and beyond for decades.",
+          "similitud": null
+        },
+        {
+          "show_id": "s102",
+          "title": "Untold: Breaking Point",
+          "listed_in": "Documentaries, Sports Movies",
+          "description": "Under pressure to continue a winning tradition in American tennis, Mardy Fish faced mental health challenges that changed his life on and off the court.",
+          "similitud": null
+        },
+        {
+          "show_id": "s1024",
+          "title": "Ajeeb Daastaans",
+          "listed_in": "Dramas, Independent Movies, International Movies",
+          "description": "Four shorts explore the surprising ways in which unexpected catalysts inflame the uncomfortable emotions simmering under fractured relationships.",
+          "similitud": null
+        },
+        {
+          "show_id": "s1025",
+          "title": "Arlo the Alligator Boy",
+          "listed_in": "Children & Family Movies, Comedies, Music & Musicals",
+          "description": "To find the father he never knew, optimistic Arlo leaves his swampy Southern home for New York City, making friends along the way. A musical adventure.",
+          "similitud": null
+        }
+      ]
+    },
+    "modelo": {
+      "consulta": "s5668",
+      "recomendaciones": [
+        {
+          "show_id": "s3641",
+          "title": "My First First Love",
+          "listed_in": "International TV Shows, Korean TV Shows, Romantic TV Shows",
+          "description": "Due to various personal reasons, a group of Yun Tae-o’s friends move into his house, where they experience love, friendship, and everything in between.",
+          "similitud": 0.3246668330403325
+        },
+        {
+          "show_id": "s3462",
+          "title": "Cheese in the Trap",
+          "listed_in": "International TV Shows, Korean TV Shows, Romantic TV Shows",
+          "description": "In this adaptation of a popular webtoon, a poor student trying to navigate college life gains the attention of a wealthy upperclassman with a dark side.",
+          "similitud": 0.3074883740563177
+        },
+        {
+          "show_id": "s6414",
+          "title": "Can We Get Married?",
+          "listed_in": "International TV Shows, Korean TV Shows, Romantic TV Shows",
+          "description": "On the cusp of marriage or divorce, four couples consider the meaning of love, sharing a life, meddling families and the weight of their commitment.",
+          "similitud": 0.3065080622037738
+        },
+        {
+          "show_id": "s5666",
+          "title": "Color of Woman",
+          "listed_in": "International TV Shows, Korean TV Shows, Romantic TV Shows",
+          "description": "Two women at a cosmetics company compete for love and success. One uses her brain and diligence, while the other works her beauty and charm.",
+          "similitud": 0.3026910307176849
+        },
+        {
+          "show_id": "s1504",
+          "title": "Lovestruck in the City",
+          "listed_in": "International TV Shows, Romantic TV Shows, TV Comedies",
+          "description": "Heart stolen by a free-spirited woman after a beachside romance, a passionate architect sets out to reunite with her on the streets of Seoul.",
+          "similitud": 0.29832747522901215
+        },
+        {
+          "show_id": "s4995",
+          "title": "Bad Guys: Vile City",
+          "listed_in": "Crime TV Shows, International TV Shows, Korean TV Shows",
+          "description": "Ordered to take down a villainous business leader who controls the city, a prosecutor gathers a team of men who may not be so clean themselves.",
+          "similitud": 0.29406160638633017
+        },
+        {
+          "show_id": "s3475",
+          "title": "The Liar and His Lover",
+          "listed_in": "International TV Shows, Korean TV Shows, Romantic TV Shows",
+          "description": "A talented singer falls in love at first sight with a music prodigy who has an affinity for lies – and a knack for being a hit-making producer.",
+          "similitud": 0.28731631752222664
+        },
+        {
+          "show_id": "s2350",
+          "title": "It's Okay to Not Be Okay",
+          "listed_in": "International TV Shows, Korean TV Shows, Romantic TV Shows",
+          "description": "An extraordinary road to emotional healing opens up for an antisocial children's book writer and a selfless psych ward caretaker when they cross paths.",
+          "similitud": 0.2859042663269613
+        },
+        {
+          "show_id": "s2607",
+          "title": "Extracurricular",
+          "listed_in": "Crime TV Shows, International TV Shows, Korean TV Shows",
+          "description": "A model high school student who's steeped in a world of serious crime finds his double life upended when a classmate takes an interest in his secret.",
+          "similitud": 0.2828241016460523
+        },
+        {
+          "show_id": "s2943",
+          "title": "My Holo Love",
+          "listed_in": "International TV Shows, Korean TV Shows, Romantic TV Shows",
+          "description": "Unexpected love finds a lonely woman when she forms a connection with a humanlike hologram who looks exactly like his prickly creator.",
+          "similitud": 0.28213005787883216
+        }
+      ]
+    }
+  },
+  "limite": "Sin interacciones ni juicios independientes de relevancia. La coincidencia de categoría no es accuracy ni satisfacción. En Netflix las categorías también son entradas: su coincidencia no constituye una validación independiente."
+}

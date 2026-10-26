@@ -1,0 +1,14 @@
+{
+  "proyecto": "NLP/NetflixGenreClassification",
+  "paquete": "netflix_genre_classification",
+  "estado": "comprobado",
+  "fecha_local": "2026-10-07T11:08:52.717345-03:00",
+  "prueba": "Copia renombrada sin carpeta temática; imports locales y tests ejecutados desde copia",
+  "contextos": [
+    "contenedor",
+    "proyecto_renombrado",
+    "notebooks"
+  ],
+  "fuentes": "data/raw local",
+  "documentacion": "Enlaces locales comprobados"
+}

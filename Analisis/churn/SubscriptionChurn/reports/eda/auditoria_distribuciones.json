@@ -1,0 +1,101 @@
+{
+  "alcance": "Comparacion descriptiva de train y test; no establece causas del cambio de desempeno.",
+  "numericas": {
+    "Age": {
+      "train": {
+        "media": 39.381784412969814,
+        "mediana": 39.0
+      },
+      "test": {
+        "media": 41.97098207350794,
+        "mediana": 42.0
+      }
+    },
+    "Tenure": {
+      "train": {
+        "media": 31.238387705045866,
+        "mediana": 32.0
+      },
+      "test": {
+        "media": 31.994827104110357,
+        "mediana": 33.0
+      }
+    },
+    "Usage Frequency": {
+      "train": {
+        "media": 15.823305403144627,
+        "mediana": 16.0
+      },
+      "test": {
+        "media": 15.080234256066113,
+        "mediana": 15.0
+      }
+    },
+    "Support Calls": {
+      "train": {
+        "media": 3.605639913232104,
+        "mediana": 3.0
+      },
+      "test": {
+        "media": 5.400689719451953,
+        "mediana": 6.0
+      }
+    },
+    "Payment Delay": {
+      "train": {
+        "media": 12.966367515914536,
+        "mediana": 12.0
+      },
+      "test": {
+        "media": 17.13395159536459,
+        "mediana": 19.0
+      }
+    },
+    "Total Spend": {
+      "train": {
+        "media": 631.8890783321282,
+        "mediana": 661.11
+      },
+      "test": {
+        "media": 541.0233790039457,
+        "mediana": 534.0
+      }
+    },
+    "Last Interaction": {
+      "train": {
+        "media": 14.477957835339486,
+        "mediana": 14.0
+      },
+      "test": {
+        "media": 15.498850467580079,
+        "mediana": 15.0
+      }
+    }
+  },
+  "categoricas": {
+    "Subscription Type": {
+      "train": {
+        "Standard": 0.3383068918095076,
+        "Premium": 0.3369316490153545,
+        "Basic": 0.3247614591751379
+      },
+      "test": {
+        "Standard": 0.3340168390965296,
+        "Basic": 0.33322459378009756,
+        "Premium": 0.3327585671233728
+      }
+    },
+    "Contract Length": {
+      "train": {
+        "Annual": 0.40134121616831836,
+        "Quarterly": 0.4006294925779422,
+        "Monthly": 0.1980292912537394
+      },
+      "test": {
+        "Monthly": 0.34377233044396804,
+        "Annual": 0.3325876906825737,
+        "Quarterly": 0.32363997887345825
+      }
+    }
+  }
+}

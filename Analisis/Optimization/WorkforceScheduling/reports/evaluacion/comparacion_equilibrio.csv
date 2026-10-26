@@ -1,0 +1,3 @@
+escenario,coste_unidades,horas_pagadas,rango_horas,desviacion_horas,preferencias_incumplidas,cobertura_completa
+coste_minimo,5904.000000000001,424.0,40.0,16.333263917664517,39,True
+equilibrio_preferencias,6409.6,440.0,8.0,2.0603150145508513,18,True

@@ -1,0 +1,9 @@
+{
+  "proyecto": "SubscriptionChurn",
+  "fecha_utc": "2026-10-07T14:48:36.000022+00:00",
+  "estado_informe": "actualizado_por_etapas",
+  "tests_locales": "aprobados",
+  "enlaces": "validos",
+  "maestro_completo_comprobado_en_esta_revision": false,
+  "informe": "reports/informe_final/informe_final.md"
+}

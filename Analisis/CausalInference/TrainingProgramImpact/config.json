@@ -1,0 +1,9 @@
+{
+  "title": "Efecto de capacitación sobre ingresos",
+  "kind": "causal_inference",
+  "seed": 42,
+  "source_base": "project",
+  "source": "data/raw/nsw_dw.csv",
+  "bootstrap_repetitions": 1000,
+  "confidence_level": 0.95
+}

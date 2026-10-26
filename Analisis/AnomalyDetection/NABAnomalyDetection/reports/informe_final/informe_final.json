@@ -1,0 +1,398 @@
+{
+  "proyecto": "Anomalías en temperatura de una máquina",
+  "generado_utc": "2026-10-07T16:39:07.933664+00:00",
+  "estado": "actualizado_por_etapas",
+  "estado_maestro": "completado",
+  "etapas_sin_reporte": [],
+  "notebooks": [
+    {
+      "notebook": "01_preparacion_datos.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T14:44:31.692249Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "02_analisis_exploratorio.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T14:44:37.877263Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "03_baseline.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T14:44:40.937914Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "04_modelado.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T14:44:44.034021Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "05_evaluacion.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T14:44:47.321604Z",
+      "errores_guardados": 0
+    }
+  ],
+  "resultados": {
+    "preparacion": {
+      "fuente": "data/raw/NAB.zip",
+      "semilla": 42,
+      "sha256": "560c86161cdbd487a52f8e1050f7c4129744d862bcbd9d985a4fe8cf8f788bd5",
+      "filas_originales": 22683,
+      "serie": "realKnownCause/machine_temperature_system_failure.csv",
+      "ventanas": [
+        [
+          "2013-12-10 06:25:00.000000",
+          "2013-12-12 05:35:00.000000"
+        ],
+        [
+          "2013-12-15 17:50:00.000000",
+          "2013-12-17 17:00:00.000000"
+        ],
+        [
+          "2014-01-27 14:20:00.000000",
+          "2014-01-29 13:30:00.000000"
+        ],
+        [
+          "2014-02-07 14:55:00.000000",
+          "2014-02-09 14:05:00.000000"
+        ]
+      ],
+      "filas_preparadas": 22683,
+      "particiones": {
+        "train": {
+          "filas": 13609,
+          "clases": {
+            "0": 12475,
+            "1": 1134
+          }
+        },
+        "valid": {
+          "filas": 4537,
+          "clases": {
+            "0": 3970,
+            "1": 567
+          }
+        },
+        "test": {
+          "filas": 4537,
+          "clases": {
+            "0": 3970,
+            "1": 567
+          }
+        }
+      }
+    },
+    "eda": {
+      "poblacion": "train",
+      "filas": 13609,
+      "columnas": 3,
+      "nulos": {
+        "timestamp": 0,
+        "value": 0,
+        "label": 0
+      },
+      "resumen_numerico": {
+        "value": {
+          "count": 13609.0,
+          "mean": 87.4678,
+          "std": 11.2577,
+          "min": 2.0847,
+          "25%": 84.2734,
+          "50%": 89.2591,
+          "75%": 94.2743,
+          "max": 108.5105
+        },
+        "label": {
+          "count": 13609.0,
+          "mean": 0.0833,
+          "std": 0.2764,
+          "min": 0.0,
+          "25%": 0.0,
+          "50%": 0.0,
+          "75%": 0.0,
+          "max": 1.0
+        }
+      }
+    },
+    "baseline": {
+      "casos": 4537,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "matriz_confusion": [
+        [
+          3970,
+          0
+        ],
+        [
+          567,
+          0
+        ]
+      ],
+      "positivos_reales": 567
+    },
+    "modelado": {
+      "criterio": "f1_validacion_por_punto",
+      "threshold_elegido": 2.649164849848661,
+      "candidatos": [
+        {
+          "quantile_train": 0.95,
+          "threshold": 2.649164849848661,
+          "casos": 4537,
+          "precision": 0.1440329218106996,
+          "recall": 0.06172839506172839,
+          "f1": 0.08641975308641975,
+          "matriz_confusion": [
+            [
+              3762,
+              208
+            ],
+            [
+              532,
+              35
+            ]
+          ],
+          "positivos_reales": 567
+        },
+        {
+          "quantile_train": 0.975,
+          "threshold": 3.043687860017428,
+          "casos": 4537,
+          "precision": 0.16058394160583941,
+          "recall": 0.03880070546737213,
+          "f1": 0.0625,
+          "matriz_confusion": [
+            [
+              3855,
+              115
+            ],
+            [
+              545,
+              22
+            ]
+          ],
+          "positivos_reales": 567
+        },
+        {
+          "quantile_train": 0.99,
+          "threshold": 3.5093809536260427,
+          "casos": 4537,
+          "precision": 0.22727272727272727,
+          "recall": 0.026455026455026454,
+          "f1": 0.04739336492890995,
+          "matriz_confusion": [
+            [
+              3919,
+              51
+            ],
+            [
+              552,
+              15
+            ]
+          ],
+          "positivos_reales": 567
+        }
+      ]
+    },
+    "evaluacion": {
+      "baseline": {
+        "casos": 4537,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matriz_confusion": [
+          [
+            3970,
+            0
+          ],
+          [
+            567,
+            0
+          ]
+        ],
+        "positivos_reales": 567
+      },
+      "modelo": {
+        "casos": 4537,
+        "precision": 0.08064516129032258,
+        "recall": 0.026455026455026454,
+        "f1": 0.0398406374501992,
+        "matriz_confusion": [
+          [
+            3799,
+            171
+          ],
+          [
+            552,
+            15
+          ]
+        ],
+        "positivos_reales": 567
+      },
+      "threshold": 2.649164849848661,
+      "protocolo": "Métricas por punto dentro de ventanas; no puntuación NAB oficial."
+    }
+  },
+  "fuentes": [
+    {
+      "ruta": "reports/preparacion/preparacion.json",
+      "sha256": "79d2940d9624df5c1a6fc4e172e814c9cbceef8bf1c9243ef51db8917699cb7c",
+      "modificacion_utc": "2026-10-07T14:44:31.676542+00:00"
+    },
+    {
+      "ruta": "reports/preparacion/preparacion.md",
+      "sha256": "29594493e4b703701a7066455c2433e7cbc9c898d8024ec31751b9e809732cc0",
+      "modificacion_utc": "2026-10-07T14:44:31.676542+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.json",
+      "sha256": "1d08778d2afb59b0712b81f8704f16962c56f730d8e4ddf092f128f01e8ad61d",
+      "modificacion_utc": "2026-10-07T14:44:37.857334+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.md",
+      "sha256": "8d399fecdf9d309e32949ff0bbdcc7cd5e3c396ac7a4f5aa3938c081da8fc5c8",
+      "modificacion_utc": "2026-10-07T14:44:37.857334+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.png",
+      "sha256": "8a5d7c5e379bdf3f970731711b301b1c285c835853f2cd75b65151466d297405",
+      "modificacion_utc": "2026-10-07T14:44:37.856333+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.json",
+      "sha256": "ab188c60e319a7351bfbaa53792a7fcdbdf518bf554940dd2fac2d83c4a90c85",
+      "modificacion_utc": "2026-10-07T14:44:40.922538+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.md",
+      "sha256": "84b587765ef5f40f002483f0f3cb10f148901629881b4ca590930afb93a27af5",
+      "modificacion_utc": "2026-10-07T14:44:40.922538+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.json",
+      "sha256": "6d96b83ac1b519a4ce4a4c014763cea29eebf81130962d3a6d76df353d9dd5e1",
+      "modificacion_utc": "2026-10-07T14:44:44.019339+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.md",
+      "sha256": "3579708215f83352e42d78557af0e5bfef5dd53f2f1c7bafb75286dd715eccfb",
+      "modificacion_utc": "2026-10-07T14:44:44.019339+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.json",
+      "sha256": "a62bafb76471997b3789d21a358d495c4106116e59d303e42e1b8fc3721e1deb",
+      "modificacion_utc": "2026-10-07T14:44:47.290259+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.md",
+      "sha256": "fa2437eceb73aff110c2cdbcbb57e28ad8558f0de3b6befecf832cfd8955371a",
+      "modificacion_utc": "2026-10-07T14:44:47.290259+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.png",
+      "sha256": "4dedf9229ffd84cebc8538138a3b548a9b9bb88c0ed662a76f904a29f58d468b",
+      "modificacion_utc": "2026-10-07T14:44:47.289258+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/predicciones_test.csv",
+      "sha256": "24903d3b147ed971cf2df3eafb479bb1a7f60739e1675ae8b0d529aef45fbb5e",
+      "modificacion_utc": "2026-10-07T14:44:47.169362+00:00"
+    },
+    {
+      "ruta": "notebooks/01_preparacion_datos.ipynb",
+      "sha256": "bb835fe503e983a5d31fa4c1382c6ef082181ea0c01d6cb3519a7789a509820f",
+      "modificacion_utc": "2026-10-07T16:37:58.140924+00:00"
+    },
+    {
+      "ruta": "notebooks/02_analisis_exploratorio.ipynb",
+      "sha256": "ab61fccdda5488c2b449fc76568d326155be600e4a1b377d7d8ed763fbf08bb2",
+      "modificacion_utc": "2026-10-07T16:37:58.141924+00:00"
+    },
+    {
+      "ruta": "notebooks/03_baseline.ipynb",
+      "sha256": "ec3144a45990a243722861426f71d847fd53c774424174d8e716c122354fb905",
+      "modificacion_utc": "2026-10-07T16:37:58.142626+00:00"
+    },
+    {
+      "ruta": "notebooks/04_modelado.ipynb",
+      "sha256": "938ed14def2661d21203c1221757522a3a44f5a3e12b21ac25f4fa1394138361",
+      "modificacion_utc": "2026-10-07T16:37:58.142626+00:00"
+    },
+    {
+      "ruta": "notebooks/05_evaluacion.ipynb",
+      "sha256": "2f4401e636f9b0bbae54a35e918b9dd2369270c51f2c88cceecb09bdb685cfce",
+      "modificacion_utc": "2026-10-07T16:37:58.142626+00:00"
+    },
+    {
+      "ruta": "reports/alertas/00_configuracion_entorno.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T14:18:39.684018+00:00"
+    },
+    {
+      "ruta": "reports/alertas/01_preparacion_datos.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T14:44:31.681880+00:00"
+    },
+    {
+      "ruta": "reports/alertas/02_analisis_exploratorio.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T14:44:37.868483+00:00"
+    },
+    {
+      "ruta": "reports/alertas/03_baseline.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T14:44:40.927827+00:00"
+    },
+    {
+      "ruta": "reports/alertas/04_modelado.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T14:44:44.024329+00:00"
+    },
+    {
+      "ruta": "reports/alertas/05_evaluacion.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T14:44:47.312397+00:00"
+    },
+    {
+      "ruta": "reports/alertas/06_ejecucion_completa.json",
+      "sha256": "1e848de256cb42422358d7adab1f486b122d02dfac23f7da952b7659092430df",
+      "modificacion_utc": "2026-10-07T14:44:48.114708+00:00"
+    },
+    {
+      "ruta": "README.md",
+      "sha256": "526fb7fde63262c45b35d841debc12c566e024a0632fc4189f0bcca533518e18",
+      "modificacion_utc": "2026-10-07T14:41:02.669745+00:00"
+    },
+    {
+      "ruta": "config.json",
+      "sha256": "f2966751f3c9453fa4624164a94d80efc0d53f770ff438d7eed5ddf6cb08254b",
+      "modificacion_utc": "2026-10-07T14:05:27.434740+00:00"
+    },
+    {
+      "ruta": "reports/ejecucion/resumen.json",
+      "sha256": "438a8205989018b58be035f6c1bb771e68b4f298ccc90f252726bebf17b07ec5",
+      "modificacion_utc": "2026-10-07T14:44:47.777573+00:00"
+    },
+    {
+      "ruta": "reports/entorno/environment.json",
+      "sha256": "cba4278bdb11ba24098b3b45a2efe4f03df22794d20b1c1e5d35496d77dfb952",
+      "modificacion_utc": "2026-10-07T14:18:39.677447+00:00"
+    }
+  ],
+  "limitaciones": "Las métricas se calculan por punto dentro de ventanas; no son la puntuación oficial NAB. Varias alertas pueden pertenecer al mismo evento.",
+  "proximos_pasos": [
+    "Comprobar procedencia, condiciones de uso y disponibilidad temporal de las variables.",
+    "Completar una pasada de 06 y revisar las alertas antes de publicar el informe.",
+    "Ampliar la evaluación temporal con varios cortes; en anomalías, incorporar métricas por evento."
+  ]
+}

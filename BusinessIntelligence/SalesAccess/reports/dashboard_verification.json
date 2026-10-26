@@ -1,0 +1,52 @@
+{
+  "dataset_rows": 2523,
+  "source": "https://www.kaggle.com/datasets/dataregina/datasets-para-proyecto-bi",
+  "accounts": [
+    {
+      "account": "gerente",
+      "status": "passed",
+      "charts": 9,
+      "kpis": 8
+    },
+    {
+      "account": "analista",
+      "status": "passed",
+      "charts": 10,
+      "kpis": 8
+    },
+    {
+      "account": "supervisor_norte",
+      "status": "passed",
+      "charts": 9,
+      "kpis": 8
+    },
+    {
+      "account": "supervisor_sur",
+      "status": "passed",
+      "charts": 9,
+      "kpis": 8
+    },
+    {
+      "account": "agente_1",
+      "status": "passed",
+      "charts": 7,
+      "kpis": 8
+    },
+    {
+      "account": "agente_2",
+      "status": "passed",
+      "charts": 7,
+      "kpis": 8
+    }
+  ],
+  "features": [
+    "rankings",
+    "period_comparison",
+    "segment_mix",
+    "client_frequency",
+    "analyst_heatmap"
+  ],
+  "validation_date": "2026-10-07",
+  "tests_passed": 26,
+  "streamlit_health": "ok"
+}

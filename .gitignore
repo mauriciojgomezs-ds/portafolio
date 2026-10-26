@@ -1,0 +1,19 @@
+*.zip
+**/data/raw/
+**/data/processed/
+back/
+**/data/intermediate/
+**/data/output/
+*.egg-info/
+**/models/
+**/reports/runs/
+**/.local/
+**/__pycache__/
+*.pyc
+.venv/
+**/.env
+**/.env.*
+!**/.env.example
+.ipynb_checkpoints/
+# Sitio estático generado; conservar fuentes y configuración.
+/SitioWeb/dist/

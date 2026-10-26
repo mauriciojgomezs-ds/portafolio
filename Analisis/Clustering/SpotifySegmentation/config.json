@@ -1,0 +1,9 @@
+{
+  "title": "Segmentación de canciones",
+  "kind": "cluster_music",
+  "source": "data/raw/Spotify Tracks Dataset.zip",
+  "seed": 42,
+  "top_n": 10,
+  "max_tracks": 20000,
+  "source_base": "project"
+}

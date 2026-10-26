@@ -1,0 +1,106 @@
+{
+  "meeting_id": "demo-001",
+  "origin": "synthetic_reference",
+  "reviewer": "Anotación de desarrollo; pendiente de revisión independiente",
+  "objectives": [
+    {
+      "objective_id": "O1",
+      "coverage": "discussed",
+      "fulfillment": "fulfilled",
+      "reason": "Se reemplazó una propuesta inicial y se aprobó explícitamente el máximo final.",
+      "evidence": [
+        {
+          "segment_id": "S06",
+          "quote": "De acuerdo con eliminar el servicio adicional. La propuesta de 3.500.000 queda reemplazada por 3.200.000."
+        },
+        {
+          "segment_id": "S07",
+          "quote": "Queda aprobado un máximo de 3.200.000 pesos chilenos para el piloto, sin incluir soporte posterior. Los tres estamos de acuerdo."
+        },
+        {
+          "segment_id": "S20",
+          "quote": "Correcto: el presupuesto aprobado es 3.200.000, el inicio no está confirmado y las entregas de datos y calidad quedan para el 14 y el 16 de octubre. Seguridad y retención se pospone: no hemos analizado permisos ni plazos de conservación y no hay acuerdos sobre ese tema."
+        }
+      ]
+    },
+    {
+      "objective_id": "O2",
+      "coverage": "discussed",
+      "fulfillment": "partial",
+      "reason": "Hay una fecha concreta propuesta, pero el acuerdo exige confirmación posterior.",
+      "evidence": [
+        {
+          "segment_id": "S08",
+          "quote": "Propongo iniciar el piloto el 23 de octubre de 2026, si Operaciones confirma disponibilidad."
+        },
+        {
+          "segment_id": "S09",
+          "quote": "Todavía no tenemos esa confirmación. No presentemos el 23 como fecha definitiva."
+        },
+        {
+          "segment_id": "S10",
+          "quote": "Entonces el 23 de octubre queda como fecha tentativa. Diego consultará a Operaciones y traerá la confirmación el 16 de octubre. Hoy no aprobamos una fecha final."
+        },
+        {
+          "segment_id": "S20",
+          "quote": "Correcto: el presupuesto aprobado es 3.200.000, el inicio no está confirmado y las entregas de datos y calidad quedan para el 14 y el 16 de octubre. Seguridad y retención se pospone: no hemos analizado permisos ni plazos de conservación y no hay acuerdos sobre ese tema."
+        }
+      ]
+    },
+    {
+      "objective_id": "O3",
+      "coverage": "discussed",
+      "fulfillment": "fulfilled",
+      "reason": "Se asignaron las dos tareas con responsable final y fecha. La carga cambió de la propuesta inicial a Diego.",
+      "evidence": [
+        {
+          "segment_id": "S11",
+          "quote": "Inicialmente pensé que Carla podía encargarse de la carga de datos."
+        },
+        {
+          "segment_id": "S12",
+          "quote": "Yo puedo revisar calidad, pero no hacer la carga. Diego tiene acceso al proceso de carga."
+        },
+        {
+          "segment_id": "S13",
+          "quote": "Confirmo que yo haré la carga de datos y la entregaré el 14 de octubre de 2026."
+        },
+        {
+          "segment_id": "S14",
+          "quote": "Confirmo que yo validaré la calidad de los datos y entregaré los resultados el 16 de octubre de 2026."
+        },
+        {
+          "segment_id": "S15",
+          "quote": "Quedan esas dos tareas: carga a cargo de Diego para el 14 y validación de calidad a cargo de Carla para el 16. Son compromisos; todavía no están ejecutados."
+        }
+      ]
+    },
+    {
+      "objective_id": "O4",
+      "coverage": "not_discussed",
+      "fulfillment": "not_fulfilled",
+      "reason": "El cierre confirma que se pospone sin analizar permisos ni retención y que no hay acuerdos. Anunciar o aplazar el tema no es tratarlo sustantivamente.",
+      "evidence": [
+        {
+          "segment_id": "S20",
+          "quote": "Correcto: el presupuesto aprobado es 3.200.000, el inicio no está confirmado y las entregas de datos y calidad quedan para el 14 y el 16 de octubre. Seguridad y retención se pospone: no hemos analizado permisos ni plazos de conservación y no hay acuerdos sobre ese tema."
+        }
+      ]
+    },
+    {
+      "objective_id": "O5",
+      "coverage": "unknown",
+      "fulfillment": "not_evaluable",
+      "reason": "Se anuncia el tema, pero el tramo siguiente está ausente. No es posible confirmar si se discutieron o acordaron sus componentes.",
+      "evidence": [
+        {
+          "segment_id": "S17",
+          "quote": "Ahora pasemos al plan de pruebas del piloto."
+        }
+      ],
+      "gap_ids": [
+        "G1"
+      ]
+    }
+  ]
+}

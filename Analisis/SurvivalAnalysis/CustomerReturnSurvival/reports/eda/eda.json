@@ -1,0 +1,6 @@
+{
+  "clientes_train": 2602,
+  "eventos_train": 1156,
+  "censura_train": 0.5557263643351268,
+  "sin_segunda_compra_a_30_dias_km": 0.7809103032135966
+}

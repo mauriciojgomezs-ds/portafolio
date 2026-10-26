@@ -1,0 +1,63 @@
+{
+  "criterio": "f1_validacion_por_punto",
+  "threshold_elegido": 2.649164849848661,
+  "candidatos": [
+    {
+      "quantile_train": 0.95,
+      "threshold": 2.649164849848661,
+      "casos": 4537,
+      "precision": 0.1440329218106996,
+      "recall": 0.06172839506172839,
+      "f1": 0.08641975308641975,
+      "matriz_confusion": [
+        [
+          3762,
+          208
+        ],
+        [
+          532,
+          35
+        ]
+      ],
+      "positivos_reales": 567
+    },
+    {
+      "quantile_train": 0.975,
+      "threshold": 3.043687860017428,
+      "casos": 4537,
+      "precision": 0.16058394160583941,
+      "recall": 0.03880070546737213,
+      "f1": 0.0625,
+      "matriz_confusion": [
+        [
+          3855,
+          115
+        ],
+        [
+          545,
+          22
+        ]
+      ],
+      "positivos_reales": 567
+    },
+    {
+      "quantile_train": 0.99,
+      "threshold": 3.5093809536260427,
+      "casos": 4537,
+      "precision": 0.22727272727272727,
+      "recall": 0.026455026455026454,
+      "f1": 0.04739336492890995,
+      "matriz_confusion": [
+        [
+          3919,
+          51
+        ],
+        [
+          552,
+          15
+        ]
+      ],
+      "positivos_reales": 567
+    }
+  ]
+}

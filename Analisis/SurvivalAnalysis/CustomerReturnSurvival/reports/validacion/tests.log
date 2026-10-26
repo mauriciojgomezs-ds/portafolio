@@ -1,0 +1,14 @@
+
+Failed to find real location of C:\Users\mauro\AppData\Local\Programs\Python\Python314\python.exe
+test_comparacion_respeta_direccion_y_datos_ausentes (test_informe.InformeTest.test_comparacion_respeta_direccion_y_datos_ausentes) ... ok
+test_fallo_con_resultados_anteriores_no_se_presenta_como_completado (test_informe.InformeTest.test_fallo_con_resultados_anteriores_no_se_presenta_como_completado) ... ok
+test_manifiesto_identifica_artefactos_y_huellas (test_informe.InformeTest.test_manifiesto_identifica_artefactos_y_huellas) ... ok
+test_compra_despues_del_horizonte_no_es_evento (test_survival.SurvivalTests.test_compra_despues_del_horizonte_no_es_evento) ... ok
+test_evento_censura_y_sin_seguimiento (test_survival.SurvivalTests.test_evento_censura_y_sin_seguimiento) ... ok
+test_features_no_cambian_con_importe_futuro (test_survival.SurvivalTests.test_features_no_cambian_con_importe_futuro) ... ok
+test_signo_concordancia_y_bootstrap_reproducible (test_survival.SurvivalTests.test_signo_concordancia_y_bootstrap_reproducible) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.051s
+
+OK

@@ -1,0 +1,34 @@
+{
+  "inicio_utc": "2026-10-07T13:31:17.443394+00:00",
+  "python": "C:\\Users\\mauro\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+  "timeout_por_celda_segundos": 900,
+  "estado": "completado",
+  "notebooks": [
+    {
+      "notebook": "01_preparacion_datos.ipynb",
+      "estado": "completado",
+      "duracion_segundos": 23.65
+    },
+    {
+      "notebook": "02_analisis_exploratorio.ipynb",
+      "estado": "completado",
+      "duracion_segundos": 3.05
+    },
+    {
+      "notebook": "03_baseline.ipynb",
+      "estado": "completado",
+      "duracion_segundos": 23.73
+    },
+    {
+      "notebook": "04_modelado.ipynb",
+      "estado": "completado",
+      "duracion_segundos": 3.53
+    },
+    {
+      "notebook": "05_evaluacion.ipynb",
+      "estado": "completado",
+      "duracion_segundos": 3.38
+    }
+  ],
+  "fin_utc": "2026-10-07T13:32:14.791545+00:00"
+}

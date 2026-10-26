@@ -1,0 +1,43 @@
+{
+  "casos": 4956,
+  "accuracy": 0.5022195318805488,
+  "f1_macro": 0.3343183344526528,
+  "clasificacion": {
+    "negativo": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 2467.0
+    },
+    "positivo": {
+      "precision": 0.5022195318805488,
+      "recall": 1.0,
+      "f1-score": 0.6686366689053056,
+      "support": 2489.0
+    },
+    "accuracy": 0.5022195318805488,
+    "macro avg": {
+      "precision": 0.2511097659402744,
+      "recall": 0.5,
+      "f1-score": 0.3343183344526528,
+      "support": 4956.0
+    },
+    "weighted avg": {
+      "precision": 0.25222445820231754,
+      "recall": 0.5022195318805488,
+      "f1-score": 0.3358023948557921,
+      "support": 4956.0
+    }
+  },
+  "etiquetas_fuera_vocabulario_train": 0,
+  "matriz_confusion": [
+    [
+      0,
+      2467
+    ],
+    [
+      0,
+      2489
+    ]
+  ]
+}

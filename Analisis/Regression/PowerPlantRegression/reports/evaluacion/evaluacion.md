@@ -1,0 +1,3 @@
+# Regresión de potencia eléctrica: evaluacion
+
+En **1906 casos de test**, MAE **2.471 MW**, frente a **14.806 MW**: **mejora** el baseline. R² **0.9629**. Cobertura empírica **88.35%**, nominal **90%**, con ancho **9.884 MW**. Se reporta la cobertura observada sin reajustar el intervalo con test. Diagnóstico de residuos: correlación entre residuo absoluto y predicción **0.035** (sin señal clara de heterocedasticidad); sesgo (skewness) **-0.228**. La galería representa las 80 predicciones menores, no una muestra aleatoria. No se demuestra generalización a plantas distintas, otros regímenes ni futuros periodos.

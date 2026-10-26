@@ -1,0 +1,975 @@
+{
+  "proyecto": "Clasificación visual de prendas",
+  "generado_utc": "2026-10-07T16:39:19.295077+00:00",
+  "estado": "actualizado_por_etapas",
+  "estado_maestro": "completado",
+  "etapas_sin_reporte": [],
+  "notebooks": [
+    {
+      "notebook": "01_preparacion_datos.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T15:52:36.485430Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "02_analisis_exploratorio.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T15:52:39.834092Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "03_baseline.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T15:52:49.113789Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "04_modelado.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T15:52:57.801834Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "05_evaluacion.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T15:53:01.312898Z",
+      "errores_guardados": 0
+    }
+  ],
+  "resultados": {
+    "preparacion": {
+      "desarrollo_original": 60000,
+      "repeticiones_retiradas": 0,
+      "grupos_ambiguos": 0,
+      "filas_coincidentes_test": 0,
+      "desarrollo_deduplicado": 60000,
+      "train_antes_muestreo": 48000,
+      "valid_antes_muestreo": 12000,
+      "particiones": {
+        "train": {
+          "filas": 12000,
+          "por_clase": {
+            "Camiseta/top": 1200,
+            "Pantalón": 1200,
+            "Jersey": 1200,
+            "Vestido": 1200,
+            "Abrigo": 1200,
+            "Sandalia": 1200,
+            "Camisa": 1200,
+            "Zapatilla": 1200,
+            "Bolso": 1200,
+            "Botín": 1200
+          }
+        },
+        "valid": {
+          "filas": 3000,
+          "por_clase": {
+            "Camiseta/top": 300,
+            "Pantalón": 300,
+            "Jersey": 300,
+            "Vestido": 300,
+            "Abrigo": 300,
+            "Sandalia": 300,
+            "Camisa": 300,
+            "Zapatilla": 300,
+            "Bolso": 300,
+            "Botín": 300
+          }
+        },
+        "test": {
+          "filas": 10000,
+          "por_clase": {
+            "Camiseta/top": 1000,
+            "Pantalón": 1000,
+            "Jersey": 1000,
+            "Vestido": 1000,
+            "Abrigo": 1000,
+            "Sandalia": 1000,
+            "Camisa": 1000,
+            "Zapatilla": 1000,
+            "Bolso": 1000,
+            "Botín": 1000
+          }
+        }
+      },
+      "fuentes": [
+        {
+          "archivo": "train-images-idx3-ubyte.gz",
+          "url": "https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/master/data/fashion/train-images-idx3-ubyte.gz",
+          "md5": "8d4fb7e6c68d591d4c3dfef9ec88bf0d",
+          "sha256": "3aede38d61863908ad78613f6a32ed271626dd12800ba2636569512369268a84"
+        },
+        {
+          "archivo": "train-labels-idx1-ubyte.gz",
+          "url": "https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/master/data/fashion/train-labels-idx1-ubyte.gz",
+          "md5": "25c81989df183df01b3e8a0aad5dffbe",
+          "sha256": "a04f17134ac03560a47e3764e11b92fc97de4d1bfaf8ba1a3aa29af54cc90845"
+        },
+        {
+          "archivo": "t10k-images-idx3-ubyte.gz",
+          "url": "https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/master/data/fashion/t10k-images-idx3-ubyte.gz",
+          "md5": "bef4ecab320f06d8554ea6380940ec79",
+          "sha256": "346e55b948d973a97e58d2351dde16a484bd415d4595297633bb08f03db6a073"
+        },
+        {
+          "archivo": "t10k-labels-idx1-ubyte.gz",
+          "url": "https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/master/data/fashion/t10k-labels-idx1-ubyte.gz",
+          "md5": "bb300cfdad3c16e7a12a480ee83cd310",
+          "sha256": "67da17c76eaffca5446c3361aaab5c3cd6d1c2608764d35dfb1850b086bf8dd5"
+        }
+      ]
+    },
+    "eda": {
+      "poblacion": "train",
+      "filas": 12000,
+      "alto": 28,
+      "ancho": 28,
+      "canales": 1,
+      "clases": {
+        "Camiseta/top": 1200,
+        "Pantalón": 1200,
+        "Jersey": 1200,
+        "Vestido": 1200,
+        "Abrigo": 1200,
+        "Sandalia": 1200,
+        "Camisa": 1200,
+        "Zapatilla": 1200,
+        "Bolso": 1200,
+        "Botín": 1200
+      },
+      "rango_pixel": [
+        0,
+        255
+      ],
+      "proporcion_pixeles_cero": 0.5020462372448979
+    },
+    "baseline": {
+      "casos": 3000,
+      "accuracy": 0.833,
+      "f1_macro": 0.8288842946230108,
+      "clasificacion": {
+        "Camiseta/top": {
+          "precision": 0.8245033112582781,
+          "recall": 0.83,
+          "f1-score": 0.8272425249169435,
+          "support": 300.0
+        },
+        "Pantalón": {
+          "precision": 0.9827586206896551,
+          "recall": 0.95,
+          "f1-score": 0.9661016949152542,
+          "support": 300.0
+        },
+        "Jersey": {
+          "precision": 0.735973597359736,
+          "recall": 0.7433333333333333,
+          "f1-score": 0.7396351575456053,
+          "support": 300.0
+        },
+        "Vestido": {
+          "precision": 0.696078431372549,
+          "recall": 0.9466666666666667,
+          "f1-score": 0.8022598870056498,
+          "support": 300.0
+        },
+        "Abrigo": {
+          "precision": 0.724025974025974,
+          "recall": 0.7433333333333333,
+          "f1-score": 0.7335526315789473,
+          "support": 300.0
+        },
+        "Sandalia": {
+          "precision": 0.9,
+          "recall": 0.9,
+          "f1-score": 0.9,
+          "support": 300.0
+        },
+        "Camisa": {
+          "precision": 0.7248677248677249,
+          "recall": 0.45666666666666667,
+          "f1-score": 0.5603271983640081,
+          "support": 300.0
+        },
+        "Zapatilla": {
+          "precision": 0.9146757679180887,
+          "recall": 0.8933333333333333,
+          "f1-score": 0.9038785834738617,
+          "support": 300.0
+        },
+        "Bolso": {
+          "precision": 0.9155844155844156,
+          "recall": 0.94,
+          "f1-score": 0.9276315789473685,
+          "support": 300.0
+        },
+        "Botín": {
+          "precision": 0.9297658862876255,
+          "recall": 0.9266666666666666,
+          "f1-score": 0.9282136894824707,
+          "support": 300.0
+        },
+        "accuracy": 0.833,
+        "macro avg": {
+          "precision": 0.8348233729364047,
+          "recall": 0.8329999999999999,
+          "f1-score": 0.8288842946230108,
+          "support": 3000.0
+        },
+        "weighted avg": {
+          "precision": 0.8348233729364046,
+          "recall": 0.833,
+          "f1-score": 0.8288842946230109,
+          "support": 3000.0
+        }
+      },
+      "matriz_confusion": [
+        [
+          249,
+          0,
+          7,
+          31,
+          1,
+          0,
+          6,
+          0,
+          6,
+          0
+        ],
+        [
+          2,
+          285,
+          2,
+          11,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          9,
+          1,
+          223,
+          10,
+          34,
+          0,
+          20,
+          0,
+          3,
+          0
+        ],
+        [
+          2,
+          2,
+          4,
+          284,
+          4,
+          0,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          27,
+          30,
+          223,
+          0,
+          15,
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          0,
+          270,
+          3,
+          15,
+          5,
+          5
+        ],
+        [
+          38,
+          2,
+          38,
+          33,
+          44,
+          2,
+          137,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          15,
+          1,
+          268,
+          0,
+          16
+        ],
+        [
+          2,
+          0,
+          1,
+          6,
+          2,
+          4,
+          3,
+          0,
+          282,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          0,
+          9,
+          0,
+          10,
+          1,
+          278
+        ]
+      ],
+      "particion": "valid",
+      "modelo": "SGDClassifier lineal con log_loss"
+    },
+    "modelado": {
+      "criterio": "f1_macro_validacion; accuracy desempata",
+      "alpha_elegido": 0.001,
+      "neuronas_ocultas": 64,
+      "max_iter": 40,
+      "candidatos": [
+        {
+          "alpha": 0.0001,
+          "iteraciones": 40,
+          "accuracy": 0.8596666666666667,
+          "f1_macro": 0.8611634653283545
+        },
+        {
+          "alpha": 0.001,
+          "iteraciones": 40,
+          "accuracy": 0.8606666666666667,
+          "f1_macro": 0.8623505509124734
+        }
+      ],
+      "particion_seleccion": "valid"
+    },
+    "evaluacion": {
+      "particion": "test_oficial",
+      "baseline": {
+        "casos": 10000,
+        "accuracy": 0.8101,
+        "f1_macro": 0.8039850202484307,
+        "clasificacion": {
+          "Camiseta/top": {
+            "precision": 0.788,
+            "recall": 0.788,
+            "f1-score": 0.788,
+            "support": 1000.0
+          },
+          "Pantalón": {
+            "precision": 0.9750778816199377,
+            "recall": 0.939,
+            "f1-score": 0.956698930208864,
+            "support": 1000.0
+          },
+          "Jersey": {
+            "precision": 0.6762257169287696,
+            "recall": 0.731,
+            "f1-score": 0.7025468524747718,
+            "support": 1000.0
+          },
+          "Vestido": {
+            "precision": 0.6736918604651163,
+            "recall": 0.927,
+            "f1-score": 0.7803030303030303,
+            "support": 1000.0
+          },
+          "Abrigo": {
+            "precision": 0.6947069943289225,
+            "recall": 0.735,
+            "f1-score": 0.7142857142857143,
+            "support": 1000.0
+          },
+          "Sandalia": {
+            "precision": 0.917098445595855,
+            "recall": 0.885,
+            "f1-score": 0.9007633587786259,
+            "support": 1000.0
+          },
+          "Camisa": {
+            "precision": 0.6904315196998124,
+            "recall": 0.368,
+            "f1-score": 0.4801043705153294,
+            "support": 1000.0
+          },
+          "Zapatilla": {
+            "precision": 0.8882294757665677,
+            "recall": 0.898,
+            "f1-score": 0.8930880159124813,
+            "support": 1000.0
+          },
+          "Bolso": {
+            "precision": 0.9108910891089109,
+            "recall": 0.92,
+            "f1-score": 0.9154228855721394,
+            "support": 1000.0
+          },
+          "Botín": {
+            "precision": 0.9072781655034895,
+            "recall": 0.91,
+            "f1-score": 0.90863704443335,
+            "support": 1000.0
+          },
+          "accuracy": 0.8101,
+          "macro avg": {
+            "precision": 0.8121631149017382,
+            "recall": 0.8100999999999999,
+            "f1-score": 0.8039850202484307,
+            "support": 10000.0
+          },
+          "weighted avg": {
+            "precision": 0.8121631149017382,
+            "recall": 0.8101,
+            "f1-score": 0.8039850202484305,
+            "support": 10000.0
+          }
+        },
+        "matriz_confusion": [
+          [
+            788,
+            3,
+            24,
+            128,
+            6,
+            3,
+            37,
+            0,
+            11,
+            0
+          ],
+          [
+            2,
+            939,
+            8,
+            40,
+            5,
+            0,
+            5,
+            0,
+            1,
+            0
+          ],
+          [
+            24,
+            3,
+            731,
+            36,
+            147,
+            0,
+            46,
+            0,
+            13,
+            0
+          ],
+          [
+            21,
+            8,
+            15,
+            927,
+            13,
+            0,
+            12,
+            0,
+            4,
+            0
+          ],
+          [
+            1,
+            2,
+            117,
+            84,
+            735,
+            1,
+            51,
+            1,
+            8,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            5,
+            0,
+            885,
+            2,
+            59,
+            17,
+            29
+          ],
+          [
+            150,
+            4,
+            172,
+            127,
+            146,
+            0,
+            368,
+            0,
+            33,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            37,
+            0,
+            898,
+            2,
+            63
+          ],
+          [
+            11,
+            2,
+            12,
+            25,
+            6,
+            10,
+            8,
+            5,
+            920,
+            1
+          ],
+          [
+            0,
+            2,
+            2,
+            4,
+            0,
+            29,
+            4,
+            48,
+            1,
+            910
+          ]
+        ]
+      },
+      "modelo": {
+        "casos": 10000,
+        "accuracy": 0.8518,
+        "f1_macro": 0.8536318091338467,
+        "clasificacion": {
+          "Camiseta/top": {
+            "precision": 0.7940038684719536,
+            "recall": 0.821,
+            "f1-score": 0.8072763028515241,
+            "support": 1000.0
+          },
+          "Pantalón": {
+            "precision": 0.9824198552223371,
+            "recall": 0.95,
+            "f1-score": 0.9659379766141332,
+            "support": 1000.0
+          },
+          "Jersey": {
+            "precision": 0.7659352142110762,
+            "recall": 0.733,
+            "f1-score": 0.7491057741440981,
+            "support": 1000.0
+          },
+          "Vestido": {
+            "precision": 0.8932038834951457,
+            "recall": 0.828,
+            "f1-score": 0.8593668915412558,
+            "support": 1000.0
+          },
+          "Abrigo": {
+            "precision": 0.8046783625730994,
+            "recall": 0.688,
+            "f1-score": 0.7417789757412399,
+            "support": 1000.0
+          },
+          "Sandalia": {
+            "precision": 0.9401794616151545,
+            "recall": 0.943,
+            "f1-score": 0.9415876185721418,
+            "support": 1000.0
+          },
+          "Camisa": {
+            "precision": 0.580335731414868,
+            "recall": 0.726,
+            "f1-score": 0.6450466459351399,
+            "support": 1000.0
+          },
+          "Zapatilla": {
+            "precision": 0.9286422200198216,
+            "recall": 0.937,
+            "f1-score": 0.9328023892483823,
+            "support": 1000.0
+          },
+          "Bolso": {
+            "precision": 0.948051948051948,
+            "recall": 0.949,
+            "f1-score": 0.9485257371314343,
+            "support": 1000.0
+          },
+          "Botín": {
+            "precision": 0.9467871485943775,
+            "recall": 0.943,
+            "f1-score": 0.9448897795591182,
+            "support": 1000.0
+          },
+          "accuracy": 0.8518,
+          "macro avg": {
+            "precision": 0.8584237693669781,
+            "recall": 0.8517999999999999,
+            "f1-score": 0.8536318091338467,
+            "support": 10000.0
+          },
+          "weighted avg": {
+            "precision": 0.8584237693669782,
+            "recall": 0.8518,
+            "f1-score": 0.8536318091338467,
+            "support": 10000.0
+          }
+        },
+        "matriz_confusion": [
+          [
+            821,
+            3,
+            10,
+            17,
+            5,
+            1,
+            128,
+            0,
+            15,
+            0
+          ],
+          [
+            8,
+            950,
+            5,
+            24,
+            4,
+            0,
+            8,
+            0,
+            1,
+            0
+          ],
+          [
+            18,
+            1,
+            733,
+            5,
+            66,
+            0,
+            171,
+            0,
+            6,
+            0
+          ],
+          [
+            45,
+            9,
+            28,
+            828,
+            47,
+            0,
+            37,
+            0,
+            6,
+            0
+          ],
+          [
+            1,
+            1,
+            108,
+            25,
+            688,
+            2,
+            167,
+            0,
+            8,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            943,
+            0,
+            32,
+            2,
+            22
+          ],
+          [
+            133,
+            2,
+            65,
+            20,
+            39,
+            1,
+            726,
+            0,
+            14,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            32,
+            0,
+            937,
+            0,
+            31
+          ],
+          [
+            6,
+            1,
+            8,
+            6,
+            6,
+            6,
+            13,
+            5,
+            949,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            1,
+            0,
+            18,
+            1,
+            35,
+            0,
+            943
+          ]
+        ]
+      },
+      "confusiones_principales": [
+        {
+          "casos": 171,
+          "real": "Jersey",
+          "prediccion": "Camisa"
+        },
+        {
+          "casos": 167,
+          "real": "Abrigo",
+          "prediccion": "Camisa"
+        },
+        {
+          "casos": 133,
+          "real": "Camisa",
+          "prediccion": "Camiseta/top"
+        },
+        {
+          "casos": 128,
+          "real": "Camiseta/top",
+          "prediccion": "Camisa"
+        },
+        {
+          "casos": 108,
+          "real": "Abrigo",
+          "prediccion": "Jersey"
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "ruta": "reports/preparacion/preparacion.json",
+      "sha256": "207bd8c39b848d0ddee030ac63c2e4f3b56115b3abd595205cc35675f283e3ad",
+      "modificacion_utc": "2026-10-07T15:52:36.463251+00:00"
+    },
+    {
+      "ruta": "reports/preparacion/preparacion.md",
+      "sha256": "5ad1d261c5c28e94c115ce8869fc3727426745cc528cf53a8e5f307f04f7ae53",
+      "modificacion_utc": "2026-10-07T15:52:36.463251+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.json",
+      "sha256": "9bc2c68d573e56cf552a366d84b23b1704814209c8cf119d1ecce2f2120189d4",
+      "modificacion_utc": "2026-10-07T15:52:39.816727+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.md",
+      "sha256": "8472c7c1346e26c7034c3e212c3e5f36c09b5086be6e79e4b10b195179128c98",
+      "modificacion_utc": "2026-10-07T15:52:39.818873+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.png",
+      "sha256": "c2ea86897f29c93c9cbe84e44c46d35f685939531cd717593c9685a50a4ef458",
+      "modificacion_utc": "2026-10-07T15:52:39.653039+00:00"
+    },
+    {
+      "ruta": "reports/eda/promedios_clase.png",
+      "sha256": "f7014a260971e3e1810346e760848282b5ead3f63dbb8d1d14f55f93d7ca3d3b",
+      "modificacion_utc": "2026-10-07T15:52:39.809041+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.json",
+      "sha256": "1e58dd03bba4a6244526953a0afd8b89e105d2720c32c0c64eeefef464d79394",
+      "modificacion_utc": "2026-10-07T15:52:49.092527+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.md",
+      "sha256": "8e79c54d26e5316ee3b5594991918ee696b8974fdd59f18af6c08281f155b2aa",
+      "modificacion_utc": "2026-10-07T15:52:49.092527+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.json",
+      "sha256": "cd6f1257f5a5f3df7e85f00845ce21871a9a6f13c33dc191f4d9751d2429c816",
+      "modificacion_utc": "2026-10-07T15:52:57.733286+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.md",
+      "sha256": "d047752ee52aae052e538a86a272a691307a99abde2392e4e3eeb829b89f369d",
+      "modificacion_utc": "2026-10-07T15:52:57.774956+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.json",
+      "sha256": "a22f504d538aa8df4216210906d9895e9ce81a13e6818238f35ddfd6f93ac66f",
+      "modificacion_utc": "2026-10-07T15:53:01.242770+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.md",
+      "sha256": "0a4fb0ee109d204b1a09f52ddad396a74382e7aee29fbb599471215f97db7e9b",
+      "modificacion_utc": "2026-10-07T15:53:01.242770+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/errores_visuales.png",
+      "sha256": "e07263abaed70d7df30dd9d3bb6430c15e7e90ee7291d237420ba25735d37f07",
+      "modificacion_utc": "2026-10-07T15:53:01.242770+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.png",
+      "sha256": "5620ecd454d316142c986c8dc27ec7ec7d08af193507c705283d4f1aa3daa1ab",
+      "modificacion_utc": "2026-10-07T15:53:01.019551+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/predicciones_test.csv",
+      "sha256": "c4a8b1bd08c8f1fd7f216ee21cc4604c657009ed986137d3b38c6057c6d2426f",
+      "modificacion_utc": "2026-10-07T15:53:00.790550+00:00"
+    },
+    {
+      "ruta": "notebooks/01_preparacion_datos.ipynb",
+      "sha256": "8f13fe0bef2cb6e1be75a81f964c769b6c4ccc2ed74fe38cc5d9ec964c8b3615",
+      "modificacion_utc": "2026-10-07T16:37:58.182800+00:00"
+    },
+    {
+      "ruta": "notebooks/02_analisis_exploratorio.ipynb",
+      "sha256": "a06c6965877baf32a84d347c4412c19031d2bc81232c410c6c2175fdb23e17f8",
+      "modificacion_utc": "2026-10-07T16:37:58.183801+00:00"
+    },
+    {
+      "ruta": "notebooks/03_baseline.ipynb",
+      "sha256": "ca42bc565aab225ce207991a30cc61a5e1e0f8afe69310ed7c57a4fc9123e3e4",
+      "modificacion_utc": "2026-10-07T16:37:58.183801+00:00"
+    },
+    {
+      "ruta": "notebooks/04_modelado.ipynb",
+      "sha256": "f91efe8c9bfea761bbe20bfe2ed8becd224eff4e8e26a093d174ed921e98f57b",
+      "modificacion_utc": "2026-10-07T16:37:58.184800+00:00"
+    },
+    {
+      "ruta": "notebooks/05_evaluacion.ipynb",
+      "sha256": "c6f0a4454e4399682b8013b35f57c012f9af117709533b8a826337d408b19f04",
+      "modificacion_utc": "2026-10-07T16:37:58.186801+00:00"
+    },
+    {
+      "ruta": "reports/alertas/00_configuracion_entorno.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T15:52:27.778217+00:00"
+    },
+    {
+      "ruta": "reports/alertas/01_preparacion_datos.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T15:52:36.475916+00:00"
+    },
+    {
+      "ruta": "reports/alertas/02_analisis_exploratorio.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T15:52:39.826265+00:00"
+    },
+    {
+      "ruta": "reports/alertas/03_baseline.json",
+      "sha256": "08e0a5e57495a5eebde1638ae092680ec594493ff7c527faa2f21d7f976be810",
+      "modificacion_utc": "2026-10-07T15:52:49.105308+00:00"
+    },
+    {
+      "ruta": "reports/alertas/04_modelado.json",
+      "sha256": "ac3097c0d24b627e9c6c850053a49a14f18b2ac5584a9157636407021371f573",
+      "modificacion_utc": "2026-10-07T15:52:57.791728+00:00"
+    },
+    {
+      "ruta": "reports/alertas/05_evaluacion.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T15:53:01.303450+00:00"
+    },
+    {
+      "ruta": "reports/alertas/06_ejecucion_completa.json",
+      "sha256": "1e848de256cb42422358d7adab1f486b122d02dfac23f7da952b7659092430df",
+      "modificacion_utc": "2026-10-07T15:53:02.089986+00:00"
+    },
+    {
+      "ruta": "README.md",
+      "sha256": "947689a548834a2eef9eb4d2480754066668e08579826cdb3035dbf2c01ea3a3",
+      "modificacion_utc": "2026-10-07T15:55:28.352870+00:00"
+    },
+    {
+      "ruta": "config.json",
+      "sha256": "77d466cb777fc3897e3c1923de008920e19e50c18a89023d1d8055167b318807",
+      "modificacion_utc": "2026-10-07T15:48:17.768381+00:00"
+    },
+    {
+      "ruta": "reports/ejecucion/resumen.json",
+      "sha256": "6adab994cd297fc21fdbfdf8f556aea1b5bea01a1227d99d7352dd1b3bc2c732",
+      "modificacion_utc": "2026-10-07T15:53:01.757268+00:00"
+    },
+    {
+      "ruta": "reports/entorno/environment.json",
+      "sha256": "347da5148ace060ccee999e17e3dc7ae93b89d0110c63556e250ac67eaabab68",
+      "modificacion_utc": "2026-10-07T15:52:27.689852+00:00"
+    }
+  ],
+  "limitaciones": "Imágenes de 28×28 en gris de un benchmark cerrado. Una MLP sobre píxeles no es una CNN y no acredita desempeño con fotografías reales. La muestra de desarrollo limita comparaciones con benchmarks que usan todo el entrenamiento oficial.",
+  "proximos_pasos": [
+    "Comprobar procedencia, condiciones de uso y disponibilidad temporal de las variables.",
+    "Completar una pasada de 06 y revisar las alertas antes de publicar el informe.",
+    "Revisar métricas por clase y errores frecuentes; ajustar decisiones en validación, conservando test independiente.",
+    "Estudiar convergencia y alternativas CNN usando validación; conservar un test independiente para nuevas decisiones."
+  ]
+}

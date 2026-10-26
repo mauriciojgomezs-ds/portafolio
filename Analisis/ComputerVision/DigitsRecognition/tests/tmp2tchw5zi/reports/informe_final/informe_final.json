@@ -1,0 +1,41 @@
+{
+  "proyecto": "tmp2tchw5zi",
+  "generado_utc": "2026-10-26T13:55:26.684333+00:00",
+  "estado": "ejecucion_no_completada",
+  "estado_maestro": "error",
+  "etapas_sin_reporte": [
+    "preparacion",
+    "eda",
+    "baseline",
+    "modelado"
+  ],
+  "notebooks": [],
+  "resultados": {
+    "preparacion": {},
+    "eda": {},
+    "baseline": {},
+    "modelado": {},
+    "evaluacion": {
+      "modelo": {
+        "accuracy": 0.9
+      }
+    }
+  },
+  "fuentes": [
+    {
+      "ruta": "reports/evaluacion/evaluacion.json",
+      "sha256": "9577c7eb406f467760c928009792f7238f9a27cc0d48caea4d9a5e1e3317cf94",
+      "modificacion_utc": "2026-10-26T13:55:26.464630+00:00"
+    },
+    {
+      "ruta": "reports/ejecucion/resumen.json",
+      "sha256": "778080b70f60102894f36d1e6d559234fe655bdd02e264ddffe348bf073a7934",
+      "modificacion_utc": "2026-10-26T13:55:26.417876+00:00"
+    }
+  ],
+  "limitaciones": "Benchmark cerrado con imágenes 8×8 e intensidades 0–16. Intensidad y gradientes con SVM no constituyen OCR completo. No se puede verificar independencia por escritor. El desplazamiento artificial mide sensibilidad concreta y no robustez general.",
+  "proximos_pasos": [
+    "Revisar fuentes, protocolo y alertas de la ejecución.",
+    "Estudiar centrado y aumento de imágenes usando train y validación; reservar una evaluación nueva para las siguientes decisiones."
+  ]
+}

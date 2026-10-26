@@ -1,0 +1,3 @@
+# Demanda y dotación de call center: evaluacion
+
+En **360 intervalos de test**, MAE **1.612**, frente a **1.607** del baseline: el modelo **no mejora** ese error. Erlang C estima hasta **3 agentes programables por intervalo**, y **5** bajo +20 % de volumen. El **12.22%** de intervalos queda bajo el objetivo teórico al sustituir el volumen por el observado. Eso es un diagnóstico del modelo de colas, **no un SLA medido**. AHT fijo, horario y shrinkage son supuestos; no se optimizan turnos, descansos ni rutas por habilidad. Erlang C no incluye abandono, aunque el archivo contiene llamadas no atendidas.

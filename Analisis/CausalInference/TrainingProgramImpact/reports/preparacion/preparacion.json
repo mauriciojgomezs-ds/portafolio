@@ -1,0 +1,20 @@
+{
+  "fuente": "https://users.nber.org/~rdehejia/data/.nswdata2.html",
+  "sha256": "e5a3a38aba34088094d817b7a3939bcfdb2d280474373a18b58dbad7a3fb3176",
+  "filas": 445,
+  "asignados_programa": 185,
+  "controles": 260,
+  "covariables_pretratamiento": [
+    "age",
+    "education",
+    "black",
+    "hispanic",
+    "married",
+    "nodegree",
+    "re74",
+    "re75"
+  ],
+  "resultado": "re78: ingresos anuales de 1978 en USD nominales",
+  "muestra": "Submuestra experimental NSW Dehejia–Wahba; no se incluyen controles CPS/PSID",
+  "particion_predictiva": "No aplica: estimación causal sobre la muestra experimental completa"
+}

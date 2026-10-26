@@ -1,0 +1,71 @@
+{
+  "criterio": "f1_validacion",
+  "threshold_elegido": 0.6239855777963655,
+  "quantile_elegido": 0.99,
+  "normales_entrenamiento": 5797,
+  "candidatos": [
+    {
+      "quantile": 0.95,
+      "threshold": 0.5696474803843664,
+      "casos": 2000,
+      "precision": 0.1440677966101695,
+      "recall": 0.25,
+      "f1": 0.1827956989247312,
+      "average_precision": 0.1729031599460739,
+      "matriz_confusion": [
+        [
+          1831,
+          101
+        ],
+        [
+          51,
+          17
+        ]
+      ],
+      "alertas": 118,
+      "fallos_reales": 68
+    },
+    {
+      "quantile": 0.975,
+      "threshold": 0.5935253166493399,
+      "casos": 2000,
+      "precision": 0.18032786885245902,
+      "recall": 0.16176470588235295,
+      "f1": 0.17054263565891473,
+      "average_precision": 0.1729031599460739,
+      "matriz_confusion": [
+        [
+          1882,
+          50
+        ],
+        [
+          57,
+          11
+        ]
+      ],
+      "alertas": 61,
+      "fallos_reales": 68
+    },
+    {
+      "quantile": 0.99,
+      "threshold": 0.6239855777963655,
+      "casos": 2000,
+      "precision": 0.3333333333333333,
+      "recall": 0.1323529411764706,
+      "f1": 0.18947368421052632,
+      "average_precision": 0.1729031599460739,
+      "matriz_confusion": [
+        [
+          1914,
+          18
+        ],
+        [
+          59,
+          9
+        ]
+      ],
+      "alertas": 27,
+      "fallos_reales": 68
+    }
+  ]
+}

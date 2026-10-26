@@ -1,0 +1,44 @@
+{
+  "criterio": "MAE de validación",
+  "modelo_elegido": "HGB_hojas_31",
+  "candidatos": [
+    {
+      "modelo": "Ridge_alpha_1.0",
+      "casos": 952,
+      "mae_mw": 3.71839776125271,
+      "rmse_mw": 4.821369702675333,
+      "r2": 0.9240395024736417
+    },
+    {
+      "modelo": "Ridge_alpha_10.0",
+      "casos": 952,
+      "mae_mw": 3.720854718554943,
+      "rmse_mw": 4.821585170359705,
+      "r2": 0.9240327129514778
+    },
+    {
+      "modelo": "Ridge_alpha_100.0",
+      "casos": 952,
+      "mae_mw": 3.753620619401894,
+      "rmse_mw": 4.847012354639748,
+      "r2": 0.9232293557623988
+    },
+    {
+      "modelo": "HGB_hojas_15",
+      "casos": 952,
+      "mae_mw": 2.6970842804907287,
+      "rmse_mw": 3.970914208167288,
+      "r2": 0.9484738207392411
+    },
+    {
+      "modelo": "HGB_hojas_31",
+      "casos": 952,
+      "mae_mw": 2.4895331863245307,
+      "rmse_mw": 3.7896117124216087,
+      "r2": 0.95307153384389
+    }
+  ],
+  "calibracion_filas": 953,
+  "radio_intervalo_mw": 4.942154240431819,
+  "cobertura_nominal": 0.9
+}

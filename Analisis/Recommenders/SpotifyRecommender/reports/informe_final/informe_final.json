@@ -1,0 +1,556 @@
+{
+  "proyecto": "Recomendación musical por contenido",
+  "generado_utc": "2026-10-07T16:39:29.647446+00:00",
+  "estado": "actualizado_por_etapas",
+  "estado_maestro": "completado",
+  "etapas_sin_reporte": [],
+  "notebooks": [
+    {
+      "notebook": "01_preparacion_datos.ipynb",
+      "celdas_con_salida": 0,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": null,
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "02_analisis_exploratorio.ipynb",
+      "celdas_con_salida": 2,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T14:25:32.722785Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "03_baseline.ipynb",
+      "celdas_con_salida": 0,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": null,
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "04_modelado.ipynb",
+      "celdas_con_salida": 0,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": null,
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "05_evaluacion.ipynb",
+      "celdas_con_salida": 2,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T14:25:36.562178Z",
+      "errores_guardados": 0
+    }
+  ],
+  "resultados": {
+    "preparacion": {
+      "fuente": "Spotify Tracks Dataset.zip",
+      "semilla": 42,
+      "sha256": "be5216c0c811283c5db3e3af83cffa59873cc5fa375222f3280782776e289176",
+      "filas_originales": 114000,
+      "duplicados_track_id": 24259,
+      "filas_preparadas": 89741
+    },
+    "eda": {
+      "poblacion": "catalogo",
+      "filas": 89741,
+      "columnas": 20,
+      "nulos": {
+        "track_id": 0,
+        "artists": 1,
+        "album_name": 1,
+        "track_name": 1,
+        "popularity": 0,
+        "duration_ms": 0,
+        "explicit": 0,
+        "danceability": 0,
+        "energy": 0,
+        "key": 0,
+        "loudness": 0,
+        "mode": 0,
+        "speechiness": 0,
+        "acousticness": 0,
+        "instrumentalness": 0,
+        "liveness": 0,
+        "valence": 0,
+        "tempo": 0,
+        "time_signature": 0,
+        "track_genre": 0
+      },
+      "resumen_numerico": {
+        "popularity": {
+          "count": 89741.0,
+          "mean": 33.1984,
+          "std": 20.5808,
+          "min": 0.0,
+          "25%": 19.0,
+          "50%": 33.0,
+          "75%": 49.0,
+          "max": 100.0
+        },
+        "duration_ms": {
+          "count": 89741.0,
+          "mean": 229141.8122,
+          "std": 112947.7412,
+          "min": 0.0,
+          "25%": 173040.0,
+          "50%": 213293.0,
+          "75%": 264293.0,
+          "max": 5237295.0
+        },
+        "danceability": {
+          "count": 89741.0,
+          "mean": 0.5622,
+          "std": 0.1767,
+          "min": 0.0,
+          "25%": 0.45,
+          "50%": 0.576,
+          "75%": 0.692,
+          "max": 0.985
+        },
+        "energy": {
+          "count": 89741.0,
+          "mean": 0.6345,
+          "std": 0.2566,
+          "min": 0.0,
+          "25%": 0.457,
+          "50%": 0.676,
+          "75%": 0.853,
+          "max": 1.0
+        },
+        "key": {
+          "count": 89741.0,
+          "mean": 5.2835,
+          "std": 3.5599,
+          "min": 0.0,
+          "25%": 2.0,
+          "50%": 5.0,
+          "75%": 8.0,
+          "max": 11.0
+        },
+        "loudness": {
+          "count": 89741.0,
+          "mean": -8.499,
+          "std": 5.2215,
+          "min": -49.531,
+          "25%": -10.322,
+          "50%": -7.185,
+          "75%": -5.108,
+          "max": 4.532
+        },
+        "mode": {
+          "count": 89741.0,
+          "mean": 0.637,
+          "std": 0.4809,
+          "min": 0.0,
+          "25%": 0.0,
+          "50%": 1.0,
+          "75%": 1.0,
+          "max": 1.0
+        },
+        "speechiness": {
+          "count": 89741.0,
+          "mean": 0.0874,
+          "std": 0.1133,
+          "min": 0.0,
+          "25%": 0.036,
+          "50%": 0.0489,
+          "75%": 0.0859,
+          "max": 0.965
+        },
+        "acousticness": {
+          "count": 89741.0,
+          "mean": 0.3283,
+          "std": 0.3383,
+          "min": 0.0,
+          "25%": 0.0171,
+          "50%": 0.188,
+          "75%": 0.625,
+          "max": 0.996
+        },
+        "instrumentalness": {
+          "count": 89741.0,
+          "mean": 0.1734,
+          "std": 0.3238,
+          "min": 0.0,
+          "25%": 0.0,
+          "50%": 0.0001,
+          "75%": 0.0976,
+          "max": 1.0
+        },
+        "liveness": {
+          "count": 89741.0,
+          "mean": 0.217,
+          "std": 0.1949,
+          "min": 0.0,
+          "25%": 0.0982,
+          "50%": 0.132,
+          "75%": 0.279,
+          "max": 1.0
+        },
+        "valence": {
+          "count": 89741.0,
+          "mean": 0.4695,
+          "std": 0.2629,
+          "min": 0.0,
+          "25%": 0.249,
+          "50%": 0.457,
+          "75%": 0.682,
+          "max": 0.995
+        },
+        "tempo": {
+          "count": 89741.0,
+          "mean": 122.0583,
+          "std": 30.1175,
+          "min": 0.0,
+          "25%": 99.264,
+          "50%": 122.013,
+          "75%": 140.077,
+          "max": 243.372
+        },
+        "time_signature": {
+          "count": 89741.0,
+          "mean": 3.8974,
+          "std": 0.4534,
+          "min": 0.0,
+          "25%": 4.0,
+          "50%": 4.0,
+          "75%": 4.0,
+          "max": 5.0
+        }
+      },
+      "correlacion_destacada": {
+        "variables": [
+          "energy",
+          "loudness"
+        ],
+        "pearson": 0.7587737351048898,
+        "categoria_descriptiva": "alta",
+        "umbrales": {
+          "moderada": 0.3,
+          "alta": 0.7
+        }
+      }
+    },
+    "baseline": {
+      "regla": "popularity",
+      "catalogo": 89741
+    },
+    "modelado": {
+      "filas": 89741,
+      "features": 10,
+      "metrica": "cosine"
+    },
+    "evaluacion": {
+      "baseline": {
+        "consultas": 30,
+        "top_n_solicitado": 10,
+        "cobertura_catalogo": 0.00011143178703156863,
+        "categorias_distintas_promedio": 4.0,
+        "coincidencia_categoria_descriptiva": 0.013333333333333334
+      },
+      "modelo": {
+        "consultas": 30,
+        "top_n_solicitado": 10,
+        "cobertura_catalogo": 0.0033429536109470586,
+        "categorias_distintas_promedio": 7.566666666666666,
+        "coincidencia_categoria_descriptiva": 0.09
+      },
+      "ejemplos": {
+        "baseline": {
+          "consulta": "51hrri99KuNwhALxbRRJnq",
+          "recomendaciones": [
+            {
+              "track_id": "3nqQXoyQOWXiESFLlDF1hG",
+              "track_name": "Unholy (feat. Kim Petras)",
+              "artists": "Sam Smith;Kim Petras",
+              "track_genre": "dance",
+              "similitud": null
+            },
+            {
+              "track_id": "2tTmW7RDtMQtBk7m2rYeSw",
+              "track_name": "Quevedo: Bzrp Music Sessions, Vol. 52",
+              "artists": "Bizarrap;Quevedo",
+              "track_genre": "hip-hop",
+              "similitud": null
+            },
+            {
+              "track_id": "4uUG5RXrOk84mYEfFvj3cK",
+              "track_name": "I'm Good (Blue)",
+              "artists": "David Guetta;Bebe Rexha",
+              "track_genre": "dance",
+              "similitud": null
+            },
+            {
+              "track_id": "5ww2BF9slyYgNOk37BlC4u",
+              "track_name": "La Bachata",
+              "artists": "Manuel Turizo",
+              "track_genre": "latin",
+              "similitud": null
+            },
+            {
+              "track_id": "1IHWl5LamUGEuP4ozKQSXZ",
+              "track_name": "Tití Me Preguntó",
+              "artists": "Bad Bunny",
+              "track_genre": "latin",
+              "similitud": null
+            },
+            {
+              "track_id": "6Sq7ltF9Qa7SNFBsV5Cogx",
+              "track_name": "Me Porto Bonito",
+              "artists": "Bad Bunny;Chencho Corleone",
+              "track_genre": "latin",
+              "similitud": null
+            },
+            {
+              "track_id": "4h9wh7iOZ0GGn8QVp4RAOB",
+              "track_name": "I Ain't Worried",
+              "artists": "OneRepublic",
+              "track_genre": "piano",
+              "similitud": null
+            },
+            {
+              "track_id": "5Eax0qFko2dh7Rl2lYs3bx",
+              "track_name": "Efecto",
+              "artists": "Bad Bunny",
+              "track_genre": "latin",
+              "similitud": null
+            },
+            {
+              "track_id": "5IgjP7X4th6nMNDh4akUHb",
+              "track_name": "Under The Influence",
+              "artists": "Chris Brown",
+              "track_genre": "dance",
+              "similitud": null
+            },
+            {
+              "track_id": "3k3NWokhRRkEPhCzPmV8TW",
+              "track_name": "Ojitos Lindos",
+              "artists": "Bad Bunny;Bomba Estéreo",
+              "track_genre": "latin",
+              "similitud": null
+            }
+          ]
+        },
+        "modelo": {
+          "consulta": "51hrri99KuNwhALxbRRJnq",
+          "recomendaciones": [
+            {
+              "track_id": "7HXPkb3UzwZnGDObppA5e9",
+              "track_name": "Old Macdonald",
+              "artists": "Play School",
+              "track_genre": "children",
+              "similitud": 0.9797384732483144
+            },
+            {
+              "track_id": "33LizV83s7z1gwtmLiKlmv",
+              "track_name": "Dead and Cold",
+              "artists": "SadBoyProlific",
+              "track_genre": "sad",
+              "similitud": 0.9781560737410613
+            },
+            {
+              "track_id": "0hSTmN84rBWsU52Lu6lCj8",
+              "track_name": "Questão de Tempo",
+              "artists": "Yago Oproprio;Skeeter Beats",
+              "track_genre": "brazil",
+              "similitud": 0.9770053270545916
+            },
+            {
+              "track_id": "39I5xXLPaiTqNPBaKo0Rnw",
+              "track_name": "The Story of the Tucks",
+              "artists": "Carolee Carmello;Robert Lenzi;Andrew Keenan-Bolger;Sarah Charles Lewis",
+              "track_genre": "show-tunes",
+              "similitud": 0.9688172258163213
+            },
+            {
+              "track_id": "6xniBg7UJ03jcyvOgfWVJk",
+              "track_name": "FELT",
+              "artists": "Nate Traveller",
+              "track_genre": "chill",
+              "similitud": 0.9660792662220327
+            },
+            {
+              "track_id": "6t8mmZgaYAd9yVnBBhOuQG",
+              "track_name": "Crônicas de Um Babaca, Vol. 1",
+              "artists": "Zarastruta;DJ Cost",
+              "track_genre": "brazil",
+              "similitud": 0.9634063957451002
+            },
+            {
+              "track_id": "39rMmXKNwQkBiD62353haK",
+              "track_name": "I Picked One Pumpkin",
+              "artists": "The Laurie Berkner Band",
+              "track_genre": "children",
+              "similitud": 0.9624191519322084
+            },
+            {
+              "track_id": "5pVFQcYx5ESJDoB9ZZPVdb",
+              "track_name": "Disaster",
+              "artists": "Zamdane",
+              "track_genre": "french",
+              "similitud": 0.9619641649423825
+            },
+            {
+              "track_id": "13had99Svkmg0RAUiKVCq9",
+              "track_name": "Stop! Wait! What?!",
+              "artists": "Bryce Pinkham",
+              "track_genre": "show-tunes",
+              "similitud": 0.9608310026393251
+            },
+            {
+              "track_id": "55ri3hkeez28MnWTqAsg7L",
+              "track_name": "Swear to Jah",
+              "artists": "Vybz Kartel",
+              "track_genre": "j-dance",
+              "similitud": 0.9605498619200256
+            }
+          ]
+        }
+      },
+      "limite": "Sin interacciones ni juicios independientes de relevancia. La coincidencia de categoría no es accuracy ni satisfacción."
+    }
+  },
+  "fuentes": [
+    {
+      "ruta": "reports/preparacion/preparacion.json",
+      "sha256": "c9d3d58b35c38b1de3cd2b6b94c8c1b3d7516e58fb531b54627d8abdfbc78088",
+      "modificacion_utc": "2026-10-07T13:28:45.739086+00:00"
+    },
+    {
+      "ruta": "reports/preparacion/preparacion.md",
+      "sha256": "e7b1ea8f801a160bf8548de1d4e40cf4873e294b781343be2dbb0439aee54e18",
+      "modificacion_utc": "2026-10-07T13:28:45.739086+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.json",
+      "sha256": "0fdf601024432249584b1ce0a5f1e0bc9c4e7d660a9ecbe8c53867df9c05e6d1",
+      "modificacion_utc": "2026-10-07T14:25:32.714656+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.md",
+      "sha256": "22ccef8ab57d332f21937ad07f518e156d5f2942f9669f6edef0aa3bdf46a9b3",
+      "modificacion_utc": "2026-10-07T14:25:32.714656+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.png",
+      "sha256": "9234143ad56a902659d08e82edc01152bb86d79e0909eb852f1f9d5387b88114",
+      "modificacion_utc": "2026-10-07T14:25:32.713649+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.json",
+      "sha256": "73cc5541723f759a781b6176844a6c1aea37219d237b86e09b18662a476bf19d",
+      "modificacion_utc": "2026-10-07T13:28:52.141272+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.md",
+      "sha256": "a8e442a82ba787cc4b2ce43ee88d648b8caa82fef0962ab1f286124b52be0e74",
+      "modificacion_utc": "2026-10-07T13:28:52.141272+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.json",
+      "sha256": "742f54fe4a0887266504ba63b1fff5ae39ab69d4b3dff9b3af4c8f771dbe5001",
+      "modificacion_utc": "2026-10-07T13:28:55.297927+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.md",
+      "sha256": "7bf944d2b6ee2abb84b800d4b4f935195607035540e0f1f0d226acdd3bd11ba4",
+      "modificacion_utc": "2026-10-07T13:28:55.297927+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.json",
+      "sha256": "949c6e5a6391ad26ab6e36630a742779446ebeace5081fd7c81a7e50ec83725a",
+      "modificacion_utc": "2026-10-07T14:25:36.545868+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.md",
+      "sha256": "88f0a5b507933ce0d4a82f883817fda89563d8210ce80d8109d9cf3d85ad55a6",
+      "modificacion_utc": "2026-10-07T14:25:36.545868+00:00"
+    },
+    {
+      "ruta": "notebooks/01_preparacion_datos.ipynb",
+      "sha256": "c372823184e067784c4482e4a6316b026cbd36e635cfda55d39007a9cb62cc9c",
+      "modificacion_utc": "2026-10-07T16:37:58.243001+00:00"
+    },
+    {
+      "ruta": "notebooks/02_analisis_exploratorio.ipynb",
+      "sha256": "b800cc8835fde6f479c957f57ff5e23fca70a75961a760d14b3a84b1ed00de17",
+      "modificacion_utc": "2026-10-07T16:37:58.247988+00:00"
+    },
+    {
+      "ruta": "notebooks/03_baseline.ipynb",
+      "sha256": "4c727de507a4eb8e4de5ec3d6fc77b347263c42394d8e8426a3c4eb2737a7740",
+      "modificacion_utc": "2026-10-07T16:37:58.247988+00:00"
+    },
+    {
+      "ruta": "notebooks/04_modelado.ipynb",
+      "sha256": "e3c9e843f45287c81381ad104e95161f5ffd471d61636b6ce6dc42ce33421917",
+      "modificacion_utc": "2026-10-07T16:37:58.247988+00:00"
+    },
+    {
+      "ruta": "notebooks/05_evaluacion.ipynb",
+      "sha256": "21d62f25b023b7f3dd2dc380b3b090101d21634bcd3d8fc263c1581a7fc31796",
+      "modificacion_utc": "2026-10-07T16:37:58.247988+00:00"
+    },
+    {
+      "ruta": "reports/alertas/00_configuracion_entorno.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T14:25:29.067449+00:00"
+    },
+    {
+      "ruta": "reports/alertas/01_preparacion_datos.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T13:28:45.751826+00:00"
+    },
+    {
+      "ruta": "reports/alertas/02_analisis_exploratorio.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T14:25:32.724337+00:00"
+    },
+    {
+      "ruta": "reports/alertas/03_baseline.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T13:28:52.151218+00:00"
+    },
+    {
+      "ruta": "reports/alertas/04_modelado.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T13:28:55.379658+00:00"
+    },
+    {
+      "ruta": "reports/alertas/05_evaluacion.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T14:25:36.563822+00:00"
+    },
+    {
+      "ruta": "reports/alertas/06_ejecucion_completa.json",
+      "sha256": "1e848de256cb42422358d7adab1f486b122d02dfac23f7da952b7659092430df",
+      "modificacion_utc": "2026-10-07T13:28:59.807394+00:00"
+    },
+    {
+      "ruta": "README.md",
+      "sha256": "254133d6a68f90883cf9f4105f09c3dac6767e6ac9042803100f26a559dba5f5",
+      "modificacion_utc": "2026-10-07T14:41:02.664760+00:00"
+    },
+    {
+      "ruta": "config.json",
+      "sha256": "ab935563f552514fc8f259dab9b26a1fe765a1c49ab37a9f1d35d0bcc07df0c0",
+      "modificacion_utc": "2026-10-07T14:05:26.914486+00:00"
+    },
+    {
+      "ruta": "reports/ejecucion/resumen.json",
+      "sha256": "5ccc46f287700d836f929ad0bd940c6c88bfea2d5f3d964dffab0da9983b5c5a",
+      "modificacion_utc": "2026-10-07T13:28:59.473104+00:00"
+    },
+    {
+      "ruta": "reports/entorno/environment.json",
+      "sha256": "34027c4ad921bd461274503261427dadd794191b74e9798eb6d0b2b4385003ea",
+      "modificacion_utc": "2026-10-07T14:25:29.059047+00:00"
+    }
+  ],
+  "limitaciones": "No hay interacciones ni relevancia personal para evaluar satisfacción. Similitud de contenido no implica preferencias aprendidas.",
+  "proximos_pasos": [
+    "Comprobar procedencia, condiciones de uso y disponibilidad temporal de las variables.",
+    "Completar una pasada de 06 y revisar las alertas antes de publicar el informe.",
+    "Definir relevancia y candidatos, y evaluar ranking con usuarios o interacciones independientes."
+  ]
+}

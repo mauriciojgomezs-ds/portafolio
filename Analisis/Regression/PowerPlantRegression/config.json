@@ -1,0 +1,8 @@
+{
+  "title": "Regresión de potencia eléctrica",
+  "kind": "regression",
+  "seed": 42,
+  "source_base": "project",
+  "source": "data/raw/CCPP.zip",
+  "interval_alpha": 0.1
+}

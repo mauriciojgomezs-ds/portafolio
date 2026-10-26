@@ -1,0 +1,384 @@
+{
+  "baseline": {
+    "casos": 1222,
+    "exact_match_etiquetas_conocidas": 0.0,
+    "f1_macro": 0.0,
+    "clasificacion": {
+      "Action & Adventure": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 175.0
+      },
+      "Anime Features": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 21.0
+      },
+      "Children & Family Movies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 123.0
+      },
+      "Classic Movies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 20.0
+      },
+      "Comedies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 338.0
+      },
+      "Cult Movies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 15.0
+      },
+      "Documentaries": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 173.0
+      },
+      "Dramas": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 511.0
+      },
+      "Faith & Spirituality": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 14.0
+      },
+      "Horror Movies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 73.0
+      },
+      "Independent Movies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 153.0
+      },
+      "International Movies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 559.0
+      },
+      "LGBTQ Movies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 15.0
+      },
+      "Movies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 11.0
+      },
+      "Music & Musicals": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 74.0
+      },
+      "Romantic Movies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 122.0
+      },
+      "Sci-Fi & Fantasy": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 47.0
+      },
+      "Sports Movies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 51.0
+      },
+      "Stand-Up Comedy": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 58.0
+      },
+      "Thrillers": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 111.0
+      },
+      "micro avg": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 2664.0
+      },
+      "macro avg": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 2664.0
+      },
+      "weighted avg": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 2664.0
+      },
+      "samples avg": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 2664.0
+      }
+    },
+    "etiquetas_fuera_vocabulario_train": 0,
+    "etiquetas_train": [
+      "Action & Adventure",
+      "Anime Features",
+      "Children & Family Movies",
+      "Classic Movies",
+      "Comedies",
+      "Cult Movies",
+      "Documentaries",
+      "Dramas",
+      "Faith & Spirituality",
+      "Horror Movies",
+      "Independent Movies",
+      "International Movies",
+      "LGBTQ Movies",
+      "Movies",
+      "Music & Musicals",
+      "Romantic Movies",
+      "Sci-Fi & Fantasy",
+      "Sports Movies",
+      "Stand-Up Comedy",
+      "Thrillers"
+    ],
+    "f1_micro": 0.0,
+    "categorias_con_soporte_sin_deteccion": [
+      "Action & Adventure",
+      "Anime Features",
+      "Children & Family Movies",
+      "Classic Movies",
+      "Comedies",
+      "Cult Movies",
+      "Documentaries",
+      "Dramas",
+      "Faith & Spirituality",
+      "Horror Movies",
+      "Independent Movies",
+      "International Movies",
+      "LGBTQ Movies",
+      "Movies",
+      "Music & Musicals",
+      "Romantic Movies",
+      "Sci-Fi & Fantasy",
+      "Sports Movies",
+      "Stand-Up Comedy",
+      "Thrillers"
+    ]
+  },
+  "modelo": {
+    "casos": 1222,
+    "exact_match_etiquetas_conocidas": 0.10801963993453355,
+    "f1_macro": 0.17164931159847654,
+    "clasificacion": {
+      "Action & Adventure": {
+        "precision": 0.8333333333333334,
+        "recall": 0.14285714285714285,
+        "f1-score": 0.24390243902439024,
+        "support": 175.0
+      },
+      "Anime Features": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 21.0
+      },
+      "Children & Family Movies": {
+        "precision": 1.0,
+        "recall": 0.10569105691056911,
+        "f1-score": 0.19117647058823528,
+        "support": 123.0
+      },
+      "Classic Movies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 20.0
+      },
+      "Comedies": {
+        "precision": 0.7452830188679245,
+        "recall": 0.23372781065088757,
+        "f1-score": 0.35585585585585583,
+        "support": 338.0
+      },
+      "Cult Movies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 15.0
+      },
+      "Documentaries": {
+        "precision": 0.9866666666666667,
+        "recall": 0.4277456647398844,
+        "f1-score": 0.5967741935483871,
+        "support": 173.0
+      },
+      "Dramas": {
+        "precision": 0.7063492063492064,
+        "recall": 0.5225048923679061,
+        "f1-score": 0.6006749156355455,
+        "support": 511.0
+      },
+      "Faith & Spirituality": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 14.0
+      },
+      "Horror Movies": {
+        "precision": 1.0,
+        "recall": 0.0136986301369863,
+        "f1-score": 0.02702702702702703,
+        "support": 73.0
+      },
+      "Independent Movies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 153.0
+      },
+      "International Movies": {
+        "precision": 0.6686507936507936,
+        "recall": 0.6028622540250447,
+        "f1-score": 0.6340545625587959,
+        "support": 559.0
+      },
+      "LGBTQ Movies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 15.0
+      },
+      "Movies": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 11.0
+      },
+      "Music & Musicals": {
+        "precision": 1.0,
+        "recall": 0.05405405405405406,
+        "f1-score": 0.10256410256410256,
+        "support": 74.0
+      },
+      "Romantic Movies": {
+        "precision": 0.46153846153846156,
+        "recall": 0.04918032786885246,
+        "f1-score": 0.08888888888888889,
+        "support": 122.0
+      },
+      "Sci-Fi & Fantasy": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 47.0
+      },
+      "Sports Movies": {
+        "precision": 1.0,
+        "recall": 0.0196078431372549,
+        "f1-score": 0.038461538461538464,
+        "support": 51.0
+      },
+      "Stand-Up Comedy": {
+        "precision": 0.9130434782608695,
+        "recall": 0.3620689655172414,
+        "f1-score": 0.5185185185185185,
+        "support": 58.0
+      },
+      "Thrillers": {
+        "precision": 0.6666666666666666,
+        "recall": 0.018018018018018018,
+        "f1-score": 0.03508771929824561,
+        "support": 111.0
+      },
+      "micro avg": {
+        "precision": 0.7211120764552563,
+        "recall": 0.31156156156156156,
+        "f1-score": 0.4351245085190039,
+        "support": 2664.0
+      },
+      "macro avg": {
+        "precision": 0.4990765812666961,
+        "recall": 0.1276008330141921,
+        "f1-score": 0.17164931159847654,
+        "support": 2664.0
+      },
+      "weighted avg": {
+        "precision": 0.6784597519467289,
+        "recall": 0.31156156156156156,
+        "f1-score": 0.37816731990232016,
+        "support": 2664.0
+      },
+      "samples avg": {
+        "precision": 0.45765139116202946,
+        "recall": 0.31437534097108566,
+        "f1-score": 0.35464110357727385,
+        "support": 2664.0
+      }
+    },
+    "etiquetas_fuera_vocabulario_train": 0,
+    "etiquetas_train": [
+      "Action & Adventure",
+      "Anime Features",
+      "Children & Family Movies",
+      "Classic Movies",
+      "Comedies",
+      "Cult Movies",
+      "Documentaries",
+      "Dramas",
+      "Faith & Spirituality",
+      "Horror Movies",
+      "Independent Movies",
+      "International Movies",
+      "LGBTQ Movies",
+      "Movies",
+      "Music & Musicals",
+      "Romantic Movies",
+      "Sci-Fi & Fantasy",
+      "Sports Movies",
+      "Stand-Up Comedy",
+      "Thrillers"
+    ],
+    "f1_micro": 0.4351245085190039,
+    "categorias_con_soporte_sin_deteccion": [
+      "Anime Features",
+      "Classic Movies",
+      "Cult Movies",
+      "Faith & Spirituality",
+      "Independent Movies",
+      "LGBTQ Movies",
+      "Movies",
+      "Sci-Fi & Fantasy"
+    ]
+  }
+}

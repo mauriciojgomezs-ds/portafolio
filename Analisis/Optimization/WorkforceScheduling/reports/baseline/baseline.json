@@ -1,0 +1,10 @@
+{
+  "restricciones_laborales_cumplidas": true,
+  "cobertura_completa": false,
+  "deficit_agente_intervalos": 1.0,
+  "coste_unidades": 7222.4,
+  "turnos": 63,
+  "horas_pagadas": 504.0,
+  "exceso_agente_horas": 144.0,
+  "errores": []
+}

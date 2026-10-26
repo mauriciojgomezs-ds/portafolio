@@ -1,0 +1,19 @@
+{
+  "fuente": "Netflix Movies and TV Shows.zip",
+  "semilla": 42,
+  "sha256": "1e5477bbbe868845be3b852d80eec2f1da6570340860668549a6dd5da0b00054",
+  "filas_originales": 8807,
+  "filas_preparadas": 6131,
+  "particiones": {
+    "train": {
+      "filas": 3662
+    },
+    "valid": {
+      "filas": 1221
+    },
+    "test": {
+      "filas": 1222
+    }
+  },
+  "textos_compartidos": 0
+}

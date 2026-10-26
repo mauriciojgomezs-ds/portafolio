@@ -1,0 +1,268 @@
+{
+  "proyecto": "Indicadores y devoluciones de retail",
+  "generado_utc": "2026-10-07T16:39:09.155246+00:00",
+  "estado": "actualizado_por_etapas",
+  "estado_maestro": "completado",
+  "etapas_sin_reporte": [],
+  "notebooks": [
+    {
+      "notebook": "01_preparacion_datos.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T16:21:50.841841Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "02_analisis_exploratorio.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T16:21:53.742808Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "03_baseline.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T16:21:56.214285Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "04_modelado.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T16:21:58.757833Z",
+      "errores_guardados": 0
+    },
+    {
+      "notebook": "05_evaluacion.ipynb",
+      "celdas_con_salida": 3,
+      "celdas_codigo": 3,
+      "ultima_ejecucion_utc": "2026-10-07T16:22:01.146282Z",
+      "errores_guardados": 0
+    }
+  ],
+  "resultados": {
+    "preparacion": {
+      "filas_originales": 541909,
+      "duplicados_retirados": 5268,
+      "filas_invalidas_retiradas": 2512,
+      "filas_preparadas": 534129,
+      "sha256": "f5385cbb54bbebf7196389109c6b0621faab0c304e3702548165e71c84aede8b",
+      "fecha_min": "2010-12-01 08:26:00",
+      "fecha_max": "2011-12-09 12:50:00",
+      "cancelaciones_con_importe_positivo": 0,
+      "moneda": "GBP"
+    },
+    "eda": {
+      "filas": 534129,
+      "paises": 38,
+      "meses": 13,
+      "meses_parciales": [
+        "2011-12"
+      ],
+      "sin_cliente": 132565
+    },
+    "baseline": {
+      "mes_referencia": "2011-10",
+      "mes_analizado": "2011-11",
+      "neta_referencia_gbp": 1069368.23,
+      "neta_analizada_gbp": 1456145.8,
+      "variacion_neta": 0.36168791923059107
+    },
+    "modelado": {
+      "moneda": "GBP",
+      "facturacion_positiva": 10642110.804000001,
+      "ajustes_negativos_absolutos": 893979.73,
+      "facturacion_neta": 9748131.074,
+      "ratio_ajustes_sobre_positiva": 0.08400398628287012,
+      "facturas_positivas": 19960,
+      "ticket_medio_factura_positiva": 533.1718839679359,
+      "clientes_identificados": 4371,
+      "filas_sin_cliente": 132565,
+      "reconciliacion_gbp": 1.862645149230957e-09
+    },
+    "evaluacion": {
+      "moneda": "GBP",
+      "facturacion_positiva": 10642110.804000001,
+      "ajustes_negativos_absolutos": 893979.73,
+      "facturacion_neta": 9748131.074,
+      "ratio_ajustes_sobre_positiva": 0.08400398628287012,
+      "facturas_positivas": 19960,
+      "ticket_medio_factura_positiva": 533.1718839679359,
+      "clientes_identificados": 4371,
+      "filas_sin_cliente": 132565,
+      "reconciliacion_gbp": 1.862645149230957e-09,
+      "reconciliacion_mensual_gbp": 1.862645149230957e-09,
+      "reconciliacion_paises_gbp": 0.0,
+      "controles_aprobados": true,
+      "indicadores_descriptivos": true
+    }
+  },
+  "fuentes": [
+    {
+      "ruta": "reports/preparacion/preparacion.json",
+      "sha256": "9de55ae6ea699535dfd85fa015d735df1e6d3f303f185861bccb1a094c929e27",
+      "modificacion_utc": "2026-10-07T16:21:50.796958+00:00"
+    },
+    {
+      "ruta": "reports/preparacion/preparacion.md",
+      "sha256": "d3a81029ef7eddbf6a6c5391729cd591a7a78172663d489d892e00f4d07f02cf",
+      "modificacion_utc": "2026-10-07T16:21:50.796958+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.json",
+      "sha256": "296821e4f5beb5b08486338dcc709d57a98df9b8b8228a0bf5f0a05cd86719e6",
+      "modificacion_utc": "2026-10-07T16:21:53.693810+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.md",
+      "sha256": "8732abecf163c880e2fccb3cdea6b01148bf75ce7b37ef3e082c510c59df6caa",
+      "modificacion_utc": "2026-10-07T16:21:53.709963+00:00"
+    },
+    {
+      "ruta": "reports/eda/eda.png",
+      "sha256": "031bd625f5ce9896f30570ce1cf96a3622eebab8f626cd6e7dd8cda2ff429ff6",
+      "modificacion_utc": "2026-10-07T16:21:53.680047+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.json",
+      "sha256": "11377d45a5c309c0ac22985b4eee69315f6e8b98e7fe06645f636ab82cff9b97",
+      "modificacion_utc": "2026-10-07T16:21:56.196357+00:00"
+    },
+    {
+      "ruta": "reports/baseline/baseline.md",
+      "sha256": "1d3b813a9e85f50f0a6c4521a42f30914968903ce2ed64c3cc70cfaf458638ff",
+      "modificacion_utc": "2026-10-07T16:21:56.198174+00:00"
+    },
+    {
+      "ruta": "reports/modelado/indicadores.json",
+      "sha256": "b645f5a86aee9c9cd5412514b7311c07aec7fe67d1e53df58cd6fb4fe06a2ac4",
+      "modificacion_utc": "2026-10-07T16:21:58.726636+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.json",
+      "sha256": "b645f5a86aee9c9cd5412514b7311c07aec7fe67d1e53df58cd6fb4fe06a2ac4",
+      "modificacion_utc": "2026-10-07T16:21:58.729637+00:00"
+    },
+    {
+      "ruta": "reports/modelado/modelado.md",
+      "sha256": "80d157b48c670fd8867c127a177e984483d00dc03ce32ec5684c59b6a894d650",
+      "modificacion_utc": "2026-10-07T16:21:58.730636+00:00"
+    },
+    {
+      "ruta": "reports/modelado/dashboard.html",
+      "sha256": "744a2ec69aa584356ebf78f66a7c6a37671d7ed0a922570d177623ab3fbc53da",
+      "modificacion_utc": "2026-10-07T16:21:58.729637+00:00"
+    },
+    {
+      "ruta": "reports/modelado/kpis_mensuales.csv",
+      "sha256": "216c9dd288ed5599173a9933f0272146ec557adf19c00d7d9f1ea383d516c376",
+      "modificacion_utc": "2026-10-07T16:21:58.654736+00:00"
+    },
+    {
+      "ruta": "reports/modelado/kpis_paises.csv",
+      "sha256": "2cce64ea8b0d522f473de06f658e11315e002a163e229c20dedf9d8bd0e83f45",
+      "modificacion_utc": "2026-10-07T16:21:58.656736+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.json",
+      "sha256": "c775547113f7253273739084cf149c306ad1882f9c2d1b0c9f90a5b161f2b74b",
+      "modificacion_utc": "2026-10-07T16:22:01.120078+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/evaluacion.md",
+      "sha256": "0b434aef0cce035d3a90115bd03cbf6ba87472d7ce5916e18a338a94fe7d6931",
+      "modificacion_utc": "2026-10-07T16:22:01.120078+00:00"
+    },
+    {
+      "ruta": "reports/evaluacion/resumen_kpis.csv",
+      "sha256": "ee7975e520d29e77d21bae17ea8cef002dcd694a45ca4a6b6d71ab451492fc19",
+      "modificacion_utc": "2026-10-07T16:22:01.118188+00:00"
+    },
+    {
+      "ruta": "notebooks/01_preparacion_datos.ipynb",
+      "sha256": "580b1f021fd10328c147bba503aa3be17b332fc7f6de5c4fa903a42a4e12f627",
+      "modificacion_utc": "2026-10-07T16:37:58.146115+00:00"
+    },
+    {
+      "ruta": "notebooks/02_analisis_exploratorio.ipynb",
+      "sha256": "888d7f58c1c745420c9c5d5aa3558ca8968822923e5f2b2a3cfcf8616db46508",
+      "modificacion_utc": "2026-10-07T16:37:58.146115+00:00"
+    },
+    {
+      "ruta": "notebooks/03_baseline.ipynb",
+      "sha256": "8a3719a881c5633441b3c0a6da4f1450f20ebe0d1666b6fd7f03ecd12b00071a",
+      "modificacion_utc": "2026-10-07T16:37:58.148413+00:00"
+    },
+    {
+      "ruta": "notebooks/04_modelado.ipynb",
+      "sha256": "9be666b7d1c24a4291169d61b4e57e6b9fb27e93ab423bb635e2d1d1e33f05b0",
+      "modificacion_utc": "2026-10-07T16:37:58.148413+00:00"
+    },
+    {
+      "ruta": "notebooks/05_evaluacion.ipynb",
+      "sha256": "91bfa633872fbfda7868e90fa18455d70792a9f3b96002241b984351ff65a81b",
+      "modificacion_utc": "2026-10-07T16:37:58.148413+00:00"
+    },
+    {
+      "ruta": "reports/alertas/00_configuracion_entorno.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T16:21:23.770005+00:00"
+    },
+    {
+      "ruta": "reports/alertas/01_preparacion_datos.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T16:21:50.834268+00:00"
+    },
+    {
+      "ruta": "reports/alertas/02_analisis_exploratorio.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T16:21:53.734096+00:00"
+    },
+    {
+      "ruta": "reports/alertas/03_baseline.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T16:21:56.206789+00:00"
+    },
+    {
+      "ruta": "reports/alertas/04_modelado.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T16:21:58.746529+00:00"
+    },
+    {
+      "ruta": "reports/alertas/05_evaluacion.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "modificacion_utc": "2026-10-07T16:22:01.134969+00:00"
+    },
+    {
+      "ruta": "reports/alertas/06_ejecucion_completa.json",
+      "sha256": "1e848de256cb42422358d7adab1f486b122d02dfac23f7da952b7659092430df",
+      "modificacion_utc": "2026-10-07T16:22:01.833128+00:00"
+    },
+    {
+      "ruta": "README.md",
+      "sha256": "56fccdfbddac8d6e1a00730bcca51493726d063b0c40515efb2b9783eeaf9261",
+      "modificacion_utc": "2026-10-07T16:25:33.817807+00:00"
+    },
+    {
+      "ruta": "config.json",
+      "sha256": "f6342e281778c20723e1d3dcef9f9a1ad4ee416ea2cb12019531c7a5a5f87fb4",
+      "modificacion_utc": "2026-10-07T16:04:40.874149+00:00"
+    },
+    {
+      "ruta": "reports/ejecucion/resumen.json",
+      "sha256": "280a9619af0aecf764e642d38b71c9c83ffb8819d6283a80bfe0575169d49b46",
+      "modificacion_utc": "2026-10-07T16:22:01.486902+00:00"
+    },
+    {
+      "ruta": "reports/entorno/environment.json",
+      "sha256": "81c67ab32b936a18e7144a3af8026c6aeeda095381ad711216722e5cfdabcee1",
+      "modificacion_utc": "2026-10-07T16:21:23.760019+00:00"
+    }
+  ],
+  "limitaciones": "Indicadores descriptivos de facturación en GBP; no rentabilidad ni causalidad. Meses parciales se señalan por cobertura observada. Ajustes negativos se contabilizan en su fecha y no se enlazan al pedido original; clientes ausentes se conservan en importes. Reconciliación valida aritmética, no integridad operativa.",
+  "proximos_pasos": [
+    "Revisar fuentes, protocolo y alertas de la ejecución.",
+    "Validar definiciones de facturación con el negocio y vincular ajustes a sus pedidos originales cuando existan esas relaciones."
+  ]
+}
