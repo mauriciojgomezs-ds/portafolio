@@ -114,7 +114,7 @@ Una concentración alta sirve para orientar preguntas sobre diversificación. Lo
 
 Figura 1. Evolución y contribución en el reporte gerencial.
 
-![Captura del dashboard](../.local/manual_qa/charts.png)
+![Captura del dashboard](capturas/charts.png)
 
 # 5 Rankings y fichas desde el reporte
 
@@ -133,7 +133,7 @@ Los extremos no repiten elementos. Con menos de diez elementos se muestran menos
 
 Figura 2. Top 5 y Bottom 5 de vendedores ordenados por importe.
 
-![Captura del dashboard](../.local/manual_qa/rankings.png)
+![Captura del dashboard](capturas/rankings.png)
 
 # 6 Mezcla territorial y clientes
 
@@ -201,7 +201,7 @@ El directorio no modifica el reporte. Si el filtro Agente del reporte excluye a 
 
 Figura 3. Filtros del directorio y contactos de Mariana Cáceres.
 
-![Captura del dashboard](../.local/manual_qa/directory.png)
+![Captura del dashboard](capturas/directory.png)
 
 # 9 Descargas y ayuda
 

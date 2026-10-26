@@ -3,6 +3,11 @@
 
 Demo de BI con autenticación local, cuatro niveles de acceso y segmentación de ventas. La fuente activa es una **demo completamente sintética** con **40 agentes (20 Norte y 20 Sur), 30.733 operaciones, 600 clientes y 12 productos**, expresada en CLP para enero–septiembre de 2026. También conserva el adaptador y una copia de las 2.523 ventas completas de Kaggle utilizadas inicialmente. Si no existe `data/ventas.csv`, genera la misma demo ampliada en memoria.
 
+![Resumen gerencial del dashboard, con KPIs de venta neta, margen y operaciones](docs/capturas/overview.png)
+![Evolución mensual y contribución por equipo en el reporte de ventas](docs/capturas/charts.png)
+
+Más capturas (rankings, directorio de agentes) en el [manual del dashboard](docs/manual_dashboard_salesaccess.md).
+
 ## Contenido
 
 - [Vistas y cuentas](#vistas-y-cuentas)
