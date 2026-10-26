@@ -17,3 +17,5 @@ back/
 .ipynb_checkpoints/
 # Sitio estático generado; conservar fuentes y configuración.
 /SitioWeb/dist/
+
+.vscode/
